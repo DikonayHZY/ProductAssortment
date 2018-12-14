@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study1</title>
+
+    <script type="text/javascript">
+        
+        var username = "黄梓仪";
+
+        var condition = "attr_tea_brush_shampoo";
+
+	    var tea_config = {
+	        "green_tea":[
+	            [0, "./study1/茶叶图鉴/绿茶-雪水云绿.JPG","银剑出鞘，茸毫隐翠，林间香气","延缓衰老，防癌抗癌"],
+	            [0, "./study1/茶叶图鉴/绿茶-休宁松萝.JPG","紧卷匀壮，色泽绿润，橄榄风味","提神醒脑，清心明目"],
+	            [0, "./study1/茶叶图鉴/绿茶-信阳毛尖.JPG","匀整细直，白毫隐翠，有熟果香","消脂减脂，净化肠胃"],
+	            [0, "./study1/茶叶图鉴/绿茶-西湖龙井.JPG","扁而平直，绿中透黄，有炒豆香","降低血脂，防癌抗癌，抗菌消炎"],
+	            [0, "./study1/茶叶图鉴/绿茶-太平猴魁.JPG","两叶抱芽，绿中隐红，兰香高爽","促进血液循环，松弛平滑肌"],
+	            [0, "./study1/茶叶图鉴/绿茶-千岛玉叶.JPG","扁平挺直，翠绿嫩黄，兰蕙之清","抗老，防癌，养颜，抗菌"],
+	            [0, "./study1/茶叶图鉴/绿茶-蒙顶甘露.JPG","紧凑多毫，浅绿油润，香气馥郁","好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/绿茶-梅尖银毫.JPG","紧细圆直，翠绿显毫，香气浓郁","抗氧化，养颜健身"],
+	            [0, "./study1/茶叶图鉴/绿茶-庐山云雾茶.JPG","条索紧结，青翠多毫，有板栗香","消脂减脂，减肥瘦身"],
+	            [0, "./study1/茶叶图鉴/绿茶-六安瓜片.JPG","瓜子形单叶，叶底嫩黄，熟栗香味","降低血脂，促进消化"],
+	            [0, "./study1/茶叶图鉴/绿茶-莲心绿茶.JPG","芽叶成朵，色泽黄绿，绿豆香气","抵御放射性元素，防治坏血病"],
+	            [0, "./study1/茶叶图鉴/绿茶-开化龙顶.JPG","紧直挺秀，银绿翠隐，淡青草味","清热解毒，固齿防龋"],
+	            [0, "./study1/茶叶图鉴/绿茶-径山茶.JPG","纤细微曲，色泽绿翠，板栗香味","排毒养颜，抗氧化"],
+	            [0, "./study1/茶叶图鉴/绿茶-黄山毛峰.JPG","细扁微卷，银毫显露，香气如兰","利尿消肿，防癌抗癌，固齿防龋"],
+	            [0, "./study1/茶叶图鉴/绿茶-狗牯脑茶.JPG","紧结微勾，黛绿莹润，清心雅郁","利尿解毒，防治心血管疾病"],
+	            [0, "./study1/茶叶图鉴/绿茶-碧螺春.JPG","形状如螺，白毫隐翠，清香淡雅","提神解乏，抗菌消炎"],
+	        ],
+	        "red_tea":[
+	            [0, "./study1/茶叶图鉴/红茶-政和工夫.JPG","条索重实，毫尖金黄，紫罗兰香", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/红茶-正山小种.JPG","条索肥壮，呈红褐色，有松烟香", "利尿排毒，强壮骨骼，护心养胃"],
+	            [0, "./study1/茶叶图鉴/红茶-英红.JPG","外形重实，色泽乌润，香气浓郁", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/红茶-银骏眉.JPG","条索紧细，乌润带金，花果清香", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/红茶-宜红.JPG","条索紧细，略带金毫，花果清香", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/红茶-信阳红.JPG","条索匀整，乌黑披金，有花果香", "消炎杀菌，利尿解毒"],
+	            [0, "./study1/茶叶图鉴/红茶-坦洋工夫.JPG","条索紧细，毫尖金黄，桂圆香气", "减肥瘦身，养胃护胃"],
+	            [0, "./study1/茶叶图鉴/红茶-祁门红茶.JPG","条索紧细，色泽乌润，兰果香气", "防治心血管疾病，清凉消暑"],
+	            [0, "./study1/茶叶图鉴/红茶-宁红.JPG","紧结圆直，略显红筋，鲜香持久", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/红茶-荔枝红.JPG","条索纤秀，乌黑油润，香气清幽", "风味独特，好喝"],
+	            [0, "./study1/茶叶图鉴/红茶-九曲红梅.JPG","细若发丝，金色绒毛，似蜜糖香", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/红茶-金骏眉.JPG","细瘦卷曲，乌中透金，烤红薯香", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/红茶-滇红.JPG","紧结肥壮，色泽乌润，香气鲜锐", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/红茶-川红.JPG","紧细圆直，色泽乌润，带枯糖香", "好喝，身心愉悦"],
+	        ],
+	        "qing_tea":[
+	            [0, "./study1/茶叶图鉴/青茶-永春佛手.JPG","紧结肥壮，砂率乌润，香气悠长", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/青茶-武夷水仙.JPG","叶端扭曲，油润暗绿，兰花香郁", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/青茶-武夷肉桂.JPG","匀整卷曲，褐绿油润，桂皮香味", "改善皮肤敏感溃烂，延缓衰老"],
+	            [0, "./study1/茶叶图鉴/青茶-武夷大红袍.JPG","条索紧结，绿褐鲜润，有兰花香", "美白抗氧化，醒酒敌烟"],
+	            [0, "./study1/茶叶图鉴/青茶-铁罗汉.JPG","条索匀整，褐绿鲜润， 兰香馥郁", "耐泡，好喝"],
+	            [0, "./study1/茶叶图鉴/青茶-水金龟.JPG","条索紧结，色泽青褐，清雅高长", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/青茶-高山乌龙.JPG","半球形状，色泽深绿，花香突出", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/青茶-凤凰水仙.JPG","挺直肥大，鳝鱼皮色，天然花香", "清热解暑，生津止渴"],
+	            [0, "./study1/茶叶图鉴/青茶-凤凰单枞.JPG","条索匀直，黄褐油润，独特花香", "改善皮肤过敏，养颜促代谢"],
+	            [0, "./study1/茶叶图鉴/青茶-冻顶乌龙.JPG","呈半球形，色泽墨绿，有桂花香", "消脂减肥，抗氧化"],
+	            [0, "./study1/茶叶图鉴/青茶-东方美人.JPG","茶心肥厚，满披茸毛，有熟果香", "消脂减肥，降低血脂"],
+	            [0, "./study1/茶叶图鉴/青茶-白芽奇兰.JPG","紧结匀整，翠绿油润，兰花香味", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/青茶-白鸡冠.JPG","条索紧结，色泽灰暗，香气悠长", "清心明目，提神解乏"],
+	            [0, "./study1/茶叶图鉴/青茶-安溪铁观音.JPG","卷曲圆结，色泽砂绿，有兰花香", "抗氧化，防治龋齿"],
+	            [0, "./study1/茶叶图鉴/青茶-阿里山乌龙.JPG","呈半球形，色泽砂绿，清新典雅", "好喝，身心愉悦"],
+	        ],
+	        "hua_tea":[
+	            [0, "./study1/茶叶图鉴/花茶-茉莉花茶.JPG","紧细圆整，黄中带褐，灵香持久", "好喝，身心愉悦"],
+	            [0, "./study1/茶叶图鉴/花茶-玫瑰花茶.JPG","朵大饱满，色泽均匀，香味清淡", "消脂减肥，促进消化"],
+	            [0, "./study1/茶叶图鉴/花茶-苦丁茶.JPG","条索紧结，灰绿相间，清香带苦", "降压降脂，清热消暑"],
+	            [0, "./study1/茶叶图鉴/花茶-黄山贡菊.JPG","朵大均匀，色白蒂绿，菊花香味", "护肤美容，排毒护肝"],
+	            [0, "./study1/茶叶图鉴/花茶-杭白菊.JPG","花形完整，嫩黄鲜亮，香气清冽", "清热解毒，消食醒酒"],
+	        ],
+	    };
+    </script>
+    <script type="text/javascript" src="../common/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../common/FileSaver.js"></script>
+    <script type="text/javascript" src="page_introduction.js"></script>
+    <script type="text/javascript" src="page_tea_introduction.js"></script>
+    <script type="text/javascript" src="page_tea_task.js"></script>
+    <script type="text/javascript" src="page_tea_menu.js"></script>
+    <script type="text/javascript" src="page_tea_greenTea.js"></script>
+    <script type="text/javascript" src="page_tea_redTea.js"></script>
+    <script type="text/javascript" src="page_tea_qingTea.js"></script>
+    <script type="text/javascript" src="page_tea_huaTea.js"></script>
+
+    <style>
+        #main_menu li {
+        	float: left;
+        }
+
+        #main_menu li a {
+        	display:block; 
+        	background: url(./study1/menu2.png);
+        	overflow: hidden;
+        	transition: all 0.2s ease;
+        }
+
+        #main_menu li.i1, li.i1 a {
+			width: 150px; 
+			height: 133px;
+        }
+
+        #main_menu li.i2, li.i2 a  {
+			width: 167px; 
+			height: 133px;
+        }
+
+        #main_menu li a.a1 {background-position: 0 0;}
+        
+        #main_menu li a.a1:hover {background-position: 0 -133px;}
+
+        #main_menu li a.a2 {background-position: -150px 0;}
+
+        #main_menu li a.a2:hover {background-position: -150px -133px;}
+
+        #main_menu li a.a3 {background-position: -317px 0;}
+
+        #main_menu li a.a3:hover {background-position: -317px -133px;}
+
+        #main_menu li a.a4 {background-position: -484px 0;}
+
+        #main_menu li a.a4:hover {background-position: -484px -133px;}
+
+        #left_menu li a {
+            display:block;
+            background: url(./study1/menu3.png);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        #left_menu li.i1, #left_menu li.i1 a {
+            width: 133px;
+            height: 150px;
+        }
+
+        #left_menu li.i2, #left_menu li.i2 a  {
+            width: 133px;
+            height: 167px;
+        }
+
+        #left_menu li a.a1 {background-position: 0 0;}
+
+        #left_menu li a.a1:hover {background-position: -167px 0;}
+
+        #left_menu li a.a2 {background-position: 0 -150px;}
+
+        #left_menu li a.a2:hover {background-position: -167px -150px;}
+
+        #left_menu li a.a3 {background-position: 0 -317px;}
+
+        #left_menu li a.a3:hover {background-position: -167px -317px;}
+
+        #left_menu li a.a4 {background-position: 0 -484px;}
+
+        #left_menu li a.a4:hover {background-position: -167px -484px;}
+
+        .each_product a:link, .each_product a:visited {
+        	color: #000000; 
+			text-decoration: none; 
+        }
+    </style>
+
+</head>
+<body>
+</body>
+
+<script type="text/javascript">
+
+    var config = {
+        "current":1001,
+        "pages": {
+            1001: {"next":1002, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
+            1002: {"next":1003, "html":page_tea_introduction, "wait":45, "auto":0, "before_init":null, "after_init":null},
+            1003: {"next":1004, "html":page_tea_task, "wait":10, "auto":0, "before_init":null, "after_init":null},
+            1004: {"next":1004, "html":page_tea_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_menu_after_init},
+            1005: {"next":1005, "html":page_tea_greenTea, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_greenTea_after_init},
+            1006: {"next":1006, "html":page_tea_redTea, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_redTea_after_init},
+            1007: {"next":1007, "html":page_tea_qingTea, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_qingTea_after_init},
+            1008: {"next":1008, "html":page_tea_huaTea, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_huaTea_after_init},
+        }
+    };
+
+
+
+
+    // 对Date的扩展，将 Date 转化为指定格式的String
+    // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
+    // 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)
+    // 例子：
+    // (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423
+    // (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18
+    Date.prototype.format = function(fmt)
+    { //author: meizz
+        var o = {
+            "M+" : this.getMonth()+1,                 //月份
+            "d+" : this.getDate(),                    //日
+            "h+" : this.getHours(),                   //小时
+            "m+" : this.getMinutes(),                 //分
+            "s+" : this.getSeconds(),                 //秒
+            "q+" : Math.floor((this.getMonth()+3)/3), //季度
+            "S"  : this.getMilliseconds()             //毫秒
+        };
+        if(/(y+)/.test(fmt))
+            fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+        for(var k in o)
+            if(new RegExp("("+ k +")").test(fmt))
+                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+        return fmt;
+    }
+
+    function set_body(html){
+        $("body").html(html)
+    }
+
+    function saveFile(filename, file_content) {
+        var file = new File([file_content], filename, { type:"text/plain;charset=utf-8" });
+        saveAs(file);
+    }
+
+    function print_config(states) {
+        console.log("current: ", states["current"]);
+        for(var item in states["pages"]){
+            var value = states["pages"][item]
+            console.log("page:", item, "next", value["next"], "wait:", value["wait"], "auto:", value["auto"]);
+            console.log(value["html"]);
+            console.log("");
+            console.log("");
+        }
+    }
+
+    function change_state(states){
+        var current = states["current"];
+        var current_page = states["pages"][current];
+        states["next"] = current_page["next"];
+        states["html"] = current_page["html"];
+        states["wait"] = current_page["wait"];
+        states["auto"] = current_page["auto"];
+        states["before_init"] = current_page["before_init"];
+        states["after_init"] = current_page["after_init"];
+        states["start"] = Date.parse(new Date());
+        states["change"] = 0;
+        if(states["before_init"]){
+            states["before_init"]();
+        }
+        set_body(states["html"]);
+        if(states["after_init"]){
+            states["after_init"]();
+        }
+    };
+
+    function working_machine(states) {
+        if(states["change"] && (states["current"] != states["next"])){
+            states["current"] = states["next"];
+            change_state(states);
+        }
+    };
+
+    function check_and_show_next(states){
+        var time_spend = (Date.parse(new Date()) - states["start"]) / 1000;
+        if(time_spend >= states["wait"]){
+            if(states["auto"]){
+                states["change"] = 1;
+            }else{
+                $("#next_tips").css("display","block")
+            }
+        }
+    };
+
+    function register_key_event(status) {
+        // 设置父窗口事件
+        document.onkeydown = function (event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            console.log("press key code: ", e.keyCode);
+            if(e && (e.keyCode == 13 || e.keyCode == 32 ||  e.keyCode == 78)){
+                // keyCode: 13 Enter, keyCode: 32 Space, keyCode: 78 n N
+                if(status["auto"] == 0){
+                    var time_spend = (Date.parse(new Date()) - status["start"]) / 1000;   // 时间s
+                    if(time_spend >= status["wait"]){
+                        status["change"] = 1;
+                    }else{
+                        console.log("current:", status["current"], "spend:", time_spend, "wait:", status["wait"]);
+                    }
+                }else{
+                    console.log("current page auto:", status["current"]);
+                }
+            }
+        };
+    };
+
+    // page_tea_menu 初始化绑定时间
+    function page_tea_menu_after_init(){
+        $("#green_tea_main").unbind();
+        $("#red_tea_main").unbind();
+        $("#qing_tea_main").unbind();
+        $("#hua_tea_main").unbind();
+
+        $("#green_tea_main").on("click",grean_tea_onclick);
+        $("#red_tea_main").on("click",red_tea_onclick);
+        $("#qing_tea_main").on("click",qing_tea_onclick);
+        $("#hua_tea_main").on("click",hua_tea_onclick);
+
+        choise["green_tea"] = random_choise_tea(tea_config["green_tea"], 5);
+        choise["red_tea"] = random_choise_tea(tea_config["red_tea"], 5);
+        choise["qing_tea"] = random_choise_tea(tea_config["qing_tea"], 5);
+        choise["hua_tea"] = random_choise_tea(tea_config["hua_tea"], 5);
+
+        console.log("green_tea:");
+        for (var i = 0; i <choise["green_tea"].length; i++){
+            console.log(choise["green_tea"][i]);
+        }
+        console.log("red_tea:");
+        for (var i = 0; i <choise["red_tea"].length; i++){
+            console.log(choise["red_tea"][i]);
+        }
+        console.log("qing_tea:");
+        for (var i = 0; i <choise["qing_tea"].length; i++){
+            console.log(choise["qing_tea"][i]);
+        }
+        console.log("hua_tea:");
+        for (var i = 0; i <choise["hua_tea"].length; i++){
+            console.log(choise["hua_tea"][i]);
+        }
+    }
+
+    function grean_tea_onclick(){
+        config["current"] = 1005;
+        change_state(config);
+        choise["green_tea_click"] = 1;
+        choise["start_time"] = new Date();
+        console.log("grean_tea_onclick:", choise["start_time"])
+    }
+    function red_tea_onclick(){
+        config["current"] = 1006;
+        change_state(config);
+        choise["red_tea_click"] = 1;
+        choise["start_time"] = new Date();
+        console.log("red_tea_onclick:", choise["start_time"])
+    }
+    function qing_tea_onclick(){
+        config["current"] = 1007;
+        change_state(config);
+        choise["qing_tea_click"] = 1;
+        choise["start_time"] = new Date();
+        console.log("qing_tea_onclick:", choise["start_time"])
+    }
+    function hua_tea_onclick(){
+        config["current"] = 1008;
+        change_state(config);
+        choise["hua_tea_click"] = 1;
+        choise["start_time"] = new Date();
+        console.log("hua_tea_onclick:", choise["start_time"])
+    }
+
+    //page3_1 初始化
+
+    var choise = {
+        "start_time": new Date(),
+        "end_time": new Date(),
+        "spend_time": 0,
+        "green_tea": [],
+        "red_tea": [],
+        "qing_tea": [],
+        "hua_tea": [],
+        "green_tea_click":0,
+        "red_tea_click":0,
+        "qing_tea_click":0,
+        "hua_tea_click":0,
+        "tostring": function () {
+            var str = this["start_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
+                    + this["end_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
+                    + Math.round(this["spend_time"] / 1000) + " "
+            for(var i=0; i < this["green_tea"].length; i++) {
+                var pathname = this["green_tea"][i][1];
+                var index1 = pathname.lastIndexOf("/");
+                var index2 = pathname.lastIndexOf(".");
+                str = str + pathname.substring(index1+1,index2) + " " + this["green_tea"][i][0] + " ";
+            }
+            for(var i=0; i < this["red_tea"].length; i++) {
+                var pathname = this["red_tea"][i][1];
+                var index1 = pathname.lastIndexOf("/");
+                var index2 = pathname.lastIndexOf(".");
+                str = str + pathname.substring(index1+1,index2) + " " + this["red_tea"][i][0] + " ";
+            }
+            for(var i=0; i < this["qing_tea"].length; i++) {
+                var pathname = this["qing_tea"][i][1];
+                var index1 = pathname.lastIndexOf("/");
+                var index2 = pathname.lastIndexOf(".");
+                str = str + pathname.substring(index1+1,index2) + " " + this["qing_tea"][i][0] + " ";
+            }
+            for(var i=0; i < this["hua_tea"].length; i++) {
+                var pathname = this["hua_tea"][i][1];
+                var index1 = pathname.lastIndexOf("/");
+                var index2 = pathname.lastIndexOf(".");
+                str = str + pathname.substring(index1+1,index2) + " " + this["hua_tea"][i][0] + " ";
+            }
+            return str;
+        }
+    }
+
+    function left_init() {
+        $("#left_green_tea").unbind();
+        $("#left_green_tea").on("click", function () {
+            choise["green_tea_click"] = 1;
+            config["current"] = 1005;
+            change_state(config);
+        });
+        $("#left_red_tea").unbind();
+        $("#left_red_tea").on("click", function () {
+            choise["red_tea_click"] = 1;
+            config["current"] = 1006;
+            change_state(config);
+        });
+        $("#left_qing_tea").unbind();
+        $("#left_qing_tea").on("click", function () {
+            choise["qing_tea_click"] = 1;
+            config["current"] = 1007;
+            change_state(config);
+        });
+        $("#left_hua_tea").unbind();
+        $("#left_hua_tea").on("click", function () {
+            choise["hua_tea_click"] = 1;
+            config["current"] = 1008;
+            change_state(config);
+        });
+    }
+    function check_show_buy_button(current_choise_item){
+        var show = false;
+        var show_count = 0;
+        for(var i=0;i<choise["green_tea"].length; i++){
+            if(choise["green_tea"][i][0]){
+                show_count++;
+            }
+        }
+        for(var i=0;i<choise["red_tea"].length; i++){
+            if(choise["red_tea"][i][0]){
+                show_count++;
+            }
+        }
+        for(var i=0;i<choise["qing_tea"].length; i++){
+            if(choise["qing_tea"][i][0]){
+                show_count++;
+            }
+        }
+        for(var i=0;i<choise["hua_tea"].length; i++){
+            if(choise["hua_tea"][i][0]){
+                show_count++;
+            }
+        }
+
+        var type_count = choise["green_tea_click"] + choise["red_tea_click"]+ choise["qing_tea_click"]+choise["hua_tea_click"];
+
+        if(show_count>=5 || type_count>=4) {
+            $("#buy_button").css("visibility","visible");
+            $("#buy_button").unbind();
+            $("#buy_button").on("click",function(){
+                save_on_click(current_choise_item[1]);
+            });
+        }else{
+            $("#buy_button").css("visibility","none");
+            $("#buy_button").unbind();
+            $("#buy_button").on("click",function(){});
+        }
+
+
+    }
+
+    function choice_init(current_choise) {
+        $("#choice_1").unbind();
+        $("#choice_1").on("click", function () {
+            $("#tea_name").html(get_tea_name(current_choise[0][1]));
+            $("#tea_assortment").html(get_tea_assortment(current_choise[0][1]));
+            $("#other_discription").html(current_choise[0][2]);
+            $("#select_pic").attr("src", current_choise[0][1]);
+            $("#tea_benefit").html(current_choise[0][3]);                 
+            $("#product_discription").css("visibility","visible");
+            current_choise[0][0] = 1;
+            check_show_buy_button(current_choise[0]);
+        });
+        $("#choice_2").unbind();
+        $("#choice_2").on("click", function () {
+            $("#tea_name").html(get_tea_name(current_choise[1][1]));
+            $("#tea_assortment").html(get_tea_assortment(current_choise[1][1]));
+            $("#other_discription").html(current_choise[1][2]);
+            $("#select_pic").attr("src", current_choise[1][1]);
+            $("#tea_benefit").html(current_choise[1][3]);
+            $("#product_discription").css("visibility","visible");
+            current_choise[1][0] = 1;
+            check_show_buy_button(current_choise[1]);
+        });
+        $("#choice_3").unbind();
+        $("#choice_3").on("click", function () {
+            $("#tea_name").html(get_tea_name(current_choise[2][1]));
+            $("#tea_assortment").html(get_tea_assortment(current_choise[2][1]));
+            $("#other_discription").html(current_choise[2][2]);
+            $("#select_pic").attr("src", current_choise[2][1]);
+            $("#tea_benefit").html(current_choise[2][3]);
+            $("#product_discription").css("visibility","visible");
+            current_choise[2][0] = 1;
+            check_show_buy_button(current_choise[2]);
+        });
+        $("#choice_4").unbind();
+        $("#choice_4").on("click", function () {
+            $("#tea_name").html(get_tea_name(current_choise[3][1]));
+            $("#tea_assortment").html(get_tea_assortment(current_choise[3][1]));
+            $("#other_discription").html(current_choise[3][2]);
+            $("#select_pic").attr("src", current_choise[3][1]);
+            $("#tea_benefit").html(current_choise[3][3]);
+            $("#product_discription").css("visibility","visible");
+            current_choise[3][0] = 1;
+            check_show_buy_button(current_choise[3]);
+        });
+        $("#choice_5").unbind();
+        $("#choice_5").on("click", function () {
+            $("#tea_name").html(get_tea_name(current_choise[4][1]));
+            $("#tea_assortment").html(get_tea_assortment(current_choise[4][1]));
+            $("#other_discription").html(current_choise[4][2]);
+            $("#select_pic").attr("src", current_choise[4][1]);
+            $("#tea_benefit").html(current_choise[4][3]);
+            $("#product_discription").css("visibility","visible");
+            current_choise[4][0] = 1;
+            check_show_buy_button(current_choise[4]);
+        });
+    }
+
+    function page_tea_greenTea_after_init(){
+        // 四个标签按钮点击事件
+        left_init();
+        // 五个商品点击时间
+        choice_init(choise["green_tea"]);
+        // 设置插图
+        set_pictures(choise["green_tea"]);
+    }
+
+    function page_tea_redTea_after_init(){
+        // 四个标签按钮点击事件
+        left_init();
+        // 五个商品点击时间
+        choice_init(choise["red_tea"]);
+        // 设置插图
+        set_pictures(choise["red_tea"]);
+    }
+
+    function page_tea_qingTea_after_init(){
+        // 四个标签按钮点击事件
+        left_init();
+        // 五个商品点击时间
+        choice_init(choise["qing_tea"]);
+        // 设置插图
+        set_pictures(choise["qing_tea"]);
+    }
+
+    function page_tea_huaTea_after_init(){
+        // 四个标签按钮点击事件
+        left_init();
+        // 五个商品点击时间
+        choice_init(choise["hua_tea"]);
+        // 设置插图
+        set_pictures(choise["hua_tea"]);
+    }
+
+    function get_filename(filepath) {
+        var index1 = filepath.lastIndexOf("/");
+        var index2 = filepath.lastIndexOf(".");
+        return filepath.substring(index1+1,index2);
+    }
+
+    function get_tea_name(filepath) {
+        var index1 = filepath.lastIndexOf("-");
+        var index2 = filepath.lastIndexOf(".");
+        return filepath.substring(index1+1,index2);
+    }
+
+    function get_tea_assortment(filepath) {
+        var index1 = filepath.lastIndexOf("/");
+        var index2 = filepath.lastIndexOf("-");
+        return filepath.substring(index1+1,index2);
+    }
+
+    function set_pictures(choice) {
+        $("#pic_1").attr("src", choice[0][1]);
+        $("#pic_2").attr("src", choice[1][1]);
+        $("#pic_3").attr("src", choice[2][1]);
+        $("#pic_4").attr("src", choice[3][1]);
+        $("#pic_5").attr("src", choice[4][1]);
+        $("#text_1").html(get_tea_name(choice[0][1]));
+        $("#text_2").html(get_tea_name(choice[1][1]));
+        $("#text_3").html(get_tea_name(choice[2][1]));
+        $("#text_4").html(get_tea_name(choice[3][1]));
+        $("#text_5").html(get_tea_name(choice[4][1]));
+
+    }
+
+    function random_choise_tea(tea_arr, num) {
+        var tea_index = Array.from(Array(tea_arr.length).keys())
+        shuffle(tea_index);
+        var tea_chosen = [];
+        for(var i=0; i<num; i++){
+            tea_chosen.push(tea_arr[tea_index[i]]);
+        }
+        return tea_chosen;
+    }
+
+    function shuffle(a) {
+        var len = a.length;
+        for (var i = 0; i < len - 1; i++) {
+            var index = parseInt(Math.random() * (len - i));
+            var temp = a[index];
+            a[index] = a[len - i - 1];
+            a[len - i - 1] = temp;
+        }
+    }
+
+    function save_on_click(final_choose) {
+        console.log("save_in_click", final_choose);
+        choise["end_time"] = new Date();
+        choise["spend_time"] = choise["end_time"] - choise["start_time"];
+        var filename = condition + "_" + choise["start_time"].format("yyyy_MM_dd_hh_mm") + "_" + username + ".txt";
+        var string = condition + " " + username + " " + get_filename(final_choose) + " "+ choise.tostring();
+        console.log(filename);
+        console.log(string);
+        saveFile(filename, string);
+    }
+
+
+
+    function main() {
+        print_config(config);
+        register_key_event(config);
+        change_state(config);
+        window.setInterval(working_machine, 10, config);
+        window.setInterval(check_and_show_next, 10, config);
+    }
+
+
+    main();
+
+
+</script>
+
+</html>
