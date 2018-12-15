@@ -159,8 +159,60 @@
     <script type="text/javascript" src="page_tea_redTea.js"></script>
     <script type="text/javascript" src="page_tea_qingTea.js"></script>
     <script type="text/javascript" src="page_tea_huaTea.js"></script>
+    <script type="text/javascript" src="page_shampoo_menu.js"></script>
+    <script type="text/javascript" src="page_shampoo_bsl.js"></script>
+    <script type="text/javascript" src="page_shampoo_yzj.js"></script>
+    <script type="text/javascript" src="page_shampoo_nyg.js"></script>
+    <script type="text/javascript" src="page_shampoo_bom.js"></script>
 
     <style>
+        body, div, ul, li, a, p, span{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: "Microsoft JhengHei";
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .shampoo_main_menu a:link, .shampoo_main_menu a:visited {
+            color:#FFFFFF; 
+        }
+        .shampoo_main_menu a:hover, .shampoo_main_menu a:active {
+            color:#999999; 
+        }
+
+        .shampoo_main_menu .line {
+            font-size: 50px; 
+            font-weight: 100; 
+            font-family: "NSimSun";
+        }
+
+        .shampoo_left_menu a{
+            font-size: 30px;
+        }
+
+        .shampoo_left_menu a:link, .shampoo_left_menu a:visited {
+            color: #262626; 
+        }
+        .shampoo_left_menu a:hover, .shampoo_left_menu a:active {
+            color: #999999; 
+        }
+
+        a:link, a:visited {
+            color: black; 
+        }
+        a:hover, a:active {
+            color: #999999; 
+        }
+
+
+
+
+
         #main_menu li {
         	float: left;
         }
@@ -243,17 +295,40 @@
 
 <script type="text/javascript">
 
+    var tea_tea_task_after_init = function(){
+        config["base"] = 0;
+    }
+
+    var tea_shampoo_task_after_init = function(){
+        config["base"] = 1000;
+    }
+
+    var tea_brush_task_after_init = function(){
+        config["base"] = 2000;
+    }
+
     var config = {
+        "base": 0,
         "current":1001,
         "pages": {
             1001: {"next":1002, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
+            
             1002: {"next":1003, "html":page_tea_introduction, "wait":2, "auto":0, "before_init":null, "after_init":null},
-            1003: {"next":1004, "html":page_tea_task, "wait":2, "auto":0, "before_init":null, "after_init":null},
+            1003: {"next":1004, "html":page_tea_task, "wait":2, "auto":0, "before_init":null, "after_init":tea_tea_task_after_init},        
             1004: {"next":1004, "html":page_tea_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_menu_after_init},
             1005: {"next":1005, "html":page_tea_greenTea, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_greenTea_after_init},
             1006: {"next":1006, "html":page_tea_redTea, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_redTea_after_init},
             1007: {"next":1007, "html":page_tea_qingTea, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_qingTea_after_init},
             1008: {"next":1008, "html":page_tea_huaTea, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_huaTea_after_init},
+
+            2002: {"next":2003, "html":page_tea_introduction, "wait":2, "auto":0, "before_init":null, "after_init":null},
+            2003: {"next":2004, "html":page_tea_task, "wait":2, "auto":0, "before_init":null, "after_init":tea_shampoo_task_after_init},
+            2004: {"next":2005, "html":page_shampoo_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_menu_after_init},
+            2005: {"next":2005, "html":page_shampoo_bsl, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_greenTea_after_init},
+            2006: {"next":2006, "html":page_shampoo_yzj, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_redTea_after_init},
+            2007: {"next":2007, "html":page_shampoo_nyg, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_qingTea_after_init},
+            2008: {"next":2008, "html":page_shampoo_bom, "wait":10000, "auto":0, "before_init":null, "after_init":page_tea_huaTea_after_init},
+
         }
     };
 
@@ -400,28 +475,28 @@
     }
 
     function grean_tea_onclick(){
-        config["current"] = 1005;
+        config["current"] = 1005 + config["base"];
         change_state(config);
         choise["green_tea_click"] = 1;
         choise["start_time"] = new Date();
         console.log("grean_tea_onclick:", choise["start_time"])
     }
     function red_tea_onclick(){
-        config["current"] = 1006;
+        config["current"] = 1006 + config["base"];
         change_state(config);
         choise["red_tea_click"] = 1;
         choise["start_time"] = new Date();
         console.log("red_tea_onclick:", choise["start_time"])
     }
     function qing_tea_onclick(){
-        config["current"] = 1007;
+        config["current"] = 1007 + config["base"];
         change_state(config);
         choise["qing_tea_click"] = 1;
         choise["start_time"] = new Date();
         console.log("qing_tea_onclick:", choise["start_time"])
     }
     function hua_tea_onclick(){
-        config["current"] = 1008;
+        config["current"] = 1008 + config["base"];
         change_state(config);
         choise["hua_tea_click"] = 1;
         choise["start_time"] = new Date();
@@ -478,25 +553,25 @@
         $("#left_green_tea").unbind();
         $("#left_green_tea").on("click", function () {
             choise["green_tea_click"] = 1;
-            config["current"] = 1005;
+            config["current"] = 1005 + config["base"];
             change_state(config);
         });
         $("#left_red_tea").unbind();
         $("#left_red_tea").on("click", function () {
             choise["red_tea_click"] = 1;
-            config["current"] = 1006;
+            config["current"] = 1006 + config["base"];
             change_state(config);
         });
         $("#left_qing_tea").unbind();
         $("#left_qing_tea").on("click", function () {
             choise["qing_tea_click"] = 1;
-            config["current"] = 1007;
+            config["current"] = 1007 + config["base"];
             change_state(config);
         });
         $("#left_hua_tea").unbind();
         $("#left_hua_tea").on("click", function () {
             choise["hua_tea_click"] = 1;
-            config["current"] = 1008;
+            config["current"] = 1008 + config["base"];
             change_state(config);
         });
     }
