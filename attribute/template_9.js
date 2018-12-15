@@ -47,8 +47,8 @@ template_9 =`
 					</div>
 				</div>
 				<div style="width: 47%; height: 50%; display: flex; align-items: flex-start; justify-content: space-between;">
-					<p>非常不可能</p>
-					<p>非常可能</p>
+					<p id="left">非常不可能</p>
+					<p id="right">非常可能</p>
 				</div>
 
 

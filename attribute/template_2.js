@@ -10,11 +10,11 @@ template_2 = `
 				<div style="width: 100%; height: 50%; min-height: 80px; display: flex; align-items: center; justify-content: center;">
 					<div style="width: 70px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;"> 
  						<input name="one_choice" type="radio" id="choice_1" value="1">
- 						<label for="choice_1">是</label>						
+ 						<label for="choice_1"><p id="left">是</p></label>						
 					</div>
 					<div style="width: 70px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;"> 
  						<input name="one_choice" type="radio" id="choice_2" value="0">
- 						<label for="choice_2">否</label>						
+ 						<label for="choice_2"><p id="right">否</p></label>						
 					</div>
 				</div>
 			</div>

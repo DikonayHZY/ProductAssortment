@@ -31,8 +31,8 @@ template_5 =`
 					</div>
 				</div>
 				<div style="width: 26%; height: 50%; display: flex; align-items: flex-start; justify-content: space-between;">
-					<p>非常不赞同</p>
-					<p>非常赞同</p>
+					<p id="left">非常不赞同</p>
+					<p id="right">非常赞同</p>
 				</div>
 
 
