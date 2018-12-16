@@ -15,8 +15,8 @@
         var age = "18";
         var major = "应用化学";
         var grade = "大一";
-        var phone = "185";
-        var purpose = "测试";
+        var phone = "空";
+        var purpose = "空";
         var condition = "attribute";            // "attribute"
         var order_number = 0;                   // 默认配置后面会改: 如果配置>0则强制指定, 否则根据url最后的数字指定, 如 xxx_2.html => order_number = 2
         var order_sign = "tea_shampoo_brush";   // 跟随 order_number 修改
@@ -997,19 +997,8 @@
         choise["end_time"] = new Date();
         choise["spend_time"] = choise["end_time"] - choise["start_time"];
         var string = product_config["name"] + " "
-            + username + " "
-            + gender + " "
-            + age + " "
-            + major + " "
-            + grade + " "
-            + phone + " "
-            + condition + " "
-            + order_number + " "
-            + order_sign + " "
-            + order_sign + " "
             + get_filename(final_choose) + " "
-            + choise.tostring() + ""
-            + purpose;
+            + choise.tostring();
         console.log(string);
         choise_strings.push(string);
 
@@ -1081,13 +1070,105 @@
     function page_final_submit_after_init() {
         $("#next_phrase").unbind();
         $("#next_phrase").on("click", function () {
+            var _username = $("input[name='username']").val();
+            if(_username == null || _username == ""){
+                alert("请输入姓名");
+                return;
+            }
+
+            var _gender= $('input:radio[name="gender"]:checked').val();
+            if(_gender == null || _gender == ""){
+                alert("请选择性别");
+                return;
+            }
+
+            var _age = $("input[name='age']").val();
+            if(_age == null || _age == ""){
+                alert("请输入年龄");
+                return;
+            }
+
+            var _major = $("input[name='major']").val();
+            if(_major == null || _major == ""){
+                alert("请输入专业");
+                return;
+            }
+
+            var _grade = $("select[name='grade'] option:selected").val();
+            if(_grade == null || _grade == ""){
+                alert("请选择专业");
+                return;
+            }
+
+            var _phone = $("input[name='phone']").val();
+            if(_phone == null || _phone == ""){
+                alert("请输入手机号");
+                return;
+            }
+
+            var _purpose = $("input[name='purpose']").val();
+
+            console.log("username:", _username);
+            console.log("gender:", _gender);
+            console.log("age:", _age);
+            console.log("major:", _major);
+            console.log("grade:", _grade);
+            console.log("phone:", _phone);
+            console.log("purpose:", _purpose);
+
+            if(_username != null && _username != "" ){
+                username = _username;
+            }
+
+            if(_gender != null && _gender != "" ){
+                gender = _gender;
+            }
+
+            if(_age != null && _age != "" ){
+                age = _age;
+            }
+
+            if(_major != null && _major != "" ){
+                major = _major;
+            }
+
+            if(_grade != null && _grade != "" ){
+                grade = _grade;
+            }
+
+            if(_phone != null && _phone != "" ){
+                phone = _phone;
+            }
+
+            if(_purpose != null && _purpose != "" ){
+                purpose = _purpose;
+            }
+
+            // 保存文件
             save_final_file();
         });
     }
     
     function save_final_file() {
-        var filename = condition + "_" + choise["end_time"].format("yyyy_MM_dd_hh_mm") + "_" + username + ".txt";
-        var stringObj = {"choise": choise_strings.sort(), "question_id": answer_id_strings.sort(), "question_answer": answer_answer_strings.sort()}
+        var filename = condition + "_"
+                    + order_number + "_"
+                    + choise["end_time"].format("yyyy_MM_dd_hh_mm") + "_"
+                    + username + ".txt";
+
+        var stringObj = {
+            "userinfo": username,
+            "gender": gender,
+            "age": age,
+            "major": major,
+            "grade": grade,
+            "phone": phone,
+            "condition": condition,
+            "order_number": order_number,
+            "order_sign": order_sign,
+            "purpose": purpose,
+            "choise": choise_strings.sort(),
+            "question_id": answer_id_strings.sort(),
+            "question_answer": answer_answer_strings.sort()}
         var string = JSON.stringify(stringObj,null,"\t")
         console.log("final save:", string)
         saveFile(filename, string);

@@ -15,7 +15,7 @@ page_final_submit =`
 					&emsp;
 					<input type="radio" name="gender" value="1">男
 					&emsp; &emsp; 
-					<input type="radio" name="gender" value="2">女
+					<input type="radio" name="gender" value="0">女
 				</div>
 
 			</div>
