@@ -1,13 +1,13 @@
-page_tea_greenTea = `
+page_tea_product = `
 	<div style="position: fixed; width: 100%; height: 100%; padding: 0; margin: 0; "> <!-- 最大的盒子, position可继承 -->
 		<div style="width: 100%; height: 13%; padding: 0; margin: 0; font-size:0; display: flex; flex-direction:row; /*background-color: blue*/; position: relative;"> <!-- 顶部长条盒子 -->
 			<div style="min-width: 292px; display: flex;" >
 				<img style="height: 62px;" src="../resource/御茗阁2.png">
 				<img style="height: 62px;" src="../resource/cup.png">
 			</div>
-			<div style="width: 66%; height: 100%; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center;font-size: 50px; font-family: SimSun; color: #90A71F;">
+			<div style="width: 66%; height: 100%; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center;font-size: 50px; font-family: SimSun; color: black;">
 				<div>
-					<strong>绿茶</strong>
+					<strong id="assortment_title"></strong>
 				</div>
 			</div>	
 		</div>

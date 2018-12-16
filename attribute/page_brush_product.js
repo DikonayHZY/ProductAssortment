@@ -1,10 +1,10 @@
-page_shampoo_yzj =`
+page_brush_product =`
 	<div style="width: 100%; height: 100%; position: fixed;">
 		<div style="width: 100%; height: 20%;"><!-- 顶部 -->
 			<div style="width: 100%; height: 50%; min-height: 40px; background-color: black; display: flex; align-items: center; justify-content: center;">
 				<img src="../resource/shampoo_logo2.png">
 			</div>
-			<div style="width: 100%; height: 50%; background-color: #262626; display: flex; align-items: center; justify-content: center; font-size: 26px; color: white;">鱼子酱系列</div>
+			<div style="width: 100%; height: 50%; background-color: #262626; display: flex; align-items: center; justify-content: center; font-size: 26px; color: white;">北欧木系列</div>
 		</div>
 
 		<div style="width: 100%; height: 80%; display: flex;"> <!-- 下半部分 -->

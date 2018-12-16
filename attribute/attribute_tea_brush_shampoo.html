@@ -25,6 +25,13 @@
         console.log("order:", order);
         console.log("condition:", condition);
 
+        var title_color_map = {
+            "绿茶1": "#90A71F",
+            "红茶2": "#CA6931",
+            "青茶3": "#B27511",
+            "花茶4": "#CE6E60",
+        }
+
 	    var config_tea = {
             "name": "tea",
 	        "product1":[
@@ -91,9 +98,6 @@
             "questions":[
                 {"id":"tea1", "template": template_2, "content":"绿茶绿茶？", "left": "是", "right": "不是"},
                 {"id":"tea2", "template": template_4, "content":"我感觉完成产品选择的任务需要进行较多的思考？？？", "left": "非常不不符合", "right": "非常符合？"},
-                {"id":"tea3", "template": template_5, "content":"在完成选择任务之时, 我感觉有较多的可选产品？？？", "left": "非常不赞同？？", "right": "非常赞同？"},
-                {"id":"tea4", "template": template_9, "content":"小张打开电子邮箱后收到垃圾邮件？？", "left": "非常不可能？", "right": "非常赞同？？"},
-                {"id":"tea5", "template": template_10, "content":"小张打开电子邮箱后收到垃圾邮件？？？", "left": "非常不了解", "right": "非常了解？？"},
             ]
         };
 
@@ -165,14 +169,6 @@
                 {"id":"shampoo1", "template": template_2, "content":"1绿茶绿茶？", "left": "是111", "right": "不是111"},
                 {"id":"shampoo2", "template": template_4, "content":"2我感觉完成产品选择的任务需要进行较多的思考？？？", "left": "111非常不不符合？？", "right": "2非常符合？"},
                 {"id":"shampoo3", "template": template_5, "content":"3在完成选择任务之时, 我感觉有较多的可选产品？？？", "left": "111非常不赞同？？", "right": "2非常赞同？"},
-                {"id":"shampoo4", "template": template_9, "content":"4小张打开电子邮箱后收到垃圾邮件？？", "left": "111非常不可能？", "right": "22非常赞同？？"},
-                {"id":"shampoo6", "template": template_10, "content":"6小张打开电子邮箱后收到垃圾邮件？？？", "left": "111非常不了解", "right": "22非常了解？？"},
-                {"id":"shampoo7", "template": template_10, "content":"7小张打开电子邮箱后收到垃圾邮件？？？", "left": "111非常不了解", "right": "22非常了解？？"},
-                {"id":"shampoo8", "template": template_10, "content":"8小张打开电子邮箱后收到垃圾邮件？？？", "left": "111非常不了解", "right": "22非常了解？？"},
-                {"id":"shampoo9", "template": template_10, "content":"9小张打开电子邮箱后收到垃圾邮件？？？", "left": "111非常不了解", "right": "22非常了解？？"},
-                {"id":"shampoo10", "template": template_10, "content":"10小张打开电子邮箱后收到垃圾邮件？？？", "left": "111非常不了解", "right": "非2常了解？？"},
-                {"id":"shampoo11", "template": template_10, "content":"11小张打开电子邮箱后收到垃圾邮件？？？", "left": "111非常不了解", "right": "222非常了解？？"},
-                {"id":"shampoo12", "template": template_10, "content":"12小张打开电子邮箱后收到垃圾邮件？？？", "left": "11非常不了解", "right": "222非常了解？？"},
             ]
         };
 
@@ -243,9 +239,6 @@
             "questions":[
                 {"id":"brush1", "template": template_2, "content":"2绿茶绿茶？", "left": "是", "right": "不是"},
                 {"id":"brush2", "template": template_4, "content":"4我感觉完成产品选择的任务需要进行较多的思考？？？", "left": "非常不不符合？？", "right": "非常符合？"},
-                {"id":"brush3", "template": template_5, "content":"5在完成选择任务之时, 我感觉有较多的可选产品？？？", "left": "非常不赞同？？", "right": "非常赞同？"},
-                {"id":"brush4", "template": template_9, "content":"9小张打开电子邮箱后收到垃圾邮件？？", "left": "非常不可能？", "right": "非常赞同？？"},
-                {"id":"brush5", "template": template_10, "content":"10小张打开电子邮箱后收到垃圾邮件？？？", "left": "非常不了解", "right": "非常了解？？"},
             ]
         };
         
@@ -261,18 +254,17 @@
     <script type="text/javascript" src="page_tea_introduction.js"></script>
     <script type="text/javascript" src="page_tea_task.js"></script>
     <script type="text/javascript" src="page_tea_menu.js"></script>
-    <script type="text/javascript" src="page_tea_greenTea.js"></script>
-    <script type="text/javascript" src="page_tea_redTea.js"></script>
-    <script type="text/javascript" src="page_tea_qingTea.js"></script>
-    <script type="text/javascript" src="page_tea_huaTea.js"></script>
+    <script type="text/javascript" src="page_tea_product.js"></script>
 
     <script type="text/javascript" src="page_shampoo_introduction.js"></script>
     <script type="text/javascript" src="page_shampoo_task.js"></script>
     <script type="text/javascript" src="page_shampoo_menu.js"></script>
-    <script type="text/javascript" src="page_shampoo_bsl.js"></script>
-    <script type="text/javascript" src="page_shampoo_yzj.js"></script>
-    <script type="text/javascript" src="page_shampoo_nyg.js"></script>
-    <script type="text/javascript" src="page_shampoo_bom.js"></script>
+    <script type="text/javascript" src="page_shampoo_product.js"></script>
+
+    <script type="text/javascript" src="page_brush_introduction.js"></script>
+    <script type="text/javascript" src="page_brush_task.js"></script>
+    <script type="text/javascript" src="page_brush_menu.js"></script>
+    <script type="text/javascript" src="page_brush_product.js"></script>
 
     <script type="text/javascript" src="page_question.js"></script>
     <script type="text/javascript" src="page_phrase_transition.js"></script>
@@ -418,7 +410,7 @@
 
     var shampoo_task_after_init = function(){
         product_config = config_shampoo;
-        product_question = question_shampoo
+        product_question = question_shampoo;
         config["base"] = 1000;
         clear_choice();
     }
@@ -439,22 +431,32 @@
             1002: {"next":1003, "html":page_tea_introduction, "wait":2, "auto":0, "before_init":null, "after_init":null},
             1003: {"next":1004, "html":page_tea_task, "wait":2, "auto":0, "before_init":null, "after_init":tea_task_after_init},
             1004: {"next":1004, "html":page_tea_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
-            1005: {"next":1005, "html":page_tea_greenTea, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
-            1006: {"next":1006, "html":page_tea_redTea, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
-            1007: {"next":1007, "html":page_tea_qingTea, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
-            1008: {"next":1008, "html":page_tea_huaTea, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
+            1005: {"next":1005, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
+            1006: {"next":1006, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
+            1007: {"next":1007, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
+            1008: {"next":1008, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
             1009: {"next":1009, "html":page_question, "wait":0, "auto":0, "before_init":null, "after_init":page_question_after_init},
             1010: {"next":1010, "html":page_phrase_transition, "wait":0, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
 
             2002: {"next":2003, "html":page_shampoo_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
             2003: {"next":2004, "html":page_shampoo_task, "wait":0, "auto":0, "before_init":null, "after_init":shampoo_task_after_init},
             2004: {"next":2005, "html":page_shampoo_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
-            2005: {"next":2005, "html":page_shampoo_bsl, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
-            2006: {"next":2006, "html":page_shampoo_yzj, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
-            2007: {"next":2007, "html":page_shampoo_nyg, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
-            2008: {"next":2008, "html":page_shampoo_bom, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
+            2005: {"next":2005, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
+            2006: {"next":2006, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
+            2007: {"next":2007, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
+            2008: {"next":2008, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
             2009: {"next":2009, "html":page_question, "wait":0, "auto":0, "before_init":null, "after_init":page_question_after_init},
-            2010: {"next":2010, "html":page_final_submit, "wait":0, "auto":0, "before_init":null, "after_init":page_final_submit_after_init},
+            2010: {"next":2010, "html":page_phrase_transition, "wait":0, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+
+            3002: {"next":3003, "html":page_brush_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
+            3003: {"next":3004, "html":page_brush_task, "wait":0, "auto":0, "before_init":null, "after_init":brush_task_after_init},
+            3004: {"next":3005, "html":page_brush_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
+            3005: {"next":3005, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
+            3006: {"next":3006, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
+            3007: {"next":3007, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
+            3008: {"next":3008, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
+            3009: {"next":3009, "html":page_question, "wait":0, "auto":0, "before_init":null, "after_init":page_question_after_init},
+            3010: {"next":3010, "html":page_final_submit, "wait":0, "auto":0, "before_init":null, "after_init":page_final_submit_after_init},
 
         }
     };
@@ -748,27 +750,27 @@
     function choice_init(current_choise) {
         $("#choice_1").unbind();
         $("#choice_1").on("click", function () {
-            choice_init_item(current_choise[0]);
+            choice_detail_display(current_choise[0]);
         });
         $("#choice_2").unbind();
         $("#choice_2").on("click", function () {
-            choice_init_item(current_choise[1]);
+            choice_detail_display(current_choise[1]);
         });
         $("#choice_3").unbind();
         $("#choice_3").on("click", function () {
-            choice_init_item(current_choise[2]);
+            choice_detail_display(current_choise[2]);
         });
         $("#choice_4").unbind();
         $("#choice_4").on("click", function () {
-            choice_init_item(current_choise[3]);
+            choice_detail_display(current_choise[3]);
         });
         $("#choice_5").unbind();
         $("#choice_5").on("click", function () {
-            choice_init_item(current_choise[4]);
+            choice_detail_display(current_choise[4]);
         });
     }
     
-    function choice_init_item(current_choice_item) {
+    function choice_detail_display(current_choice_item) {
         $("#tea_name").html(get_product_name(current_choice_item));
         $("#tea_assortment").html(get_product_attribute(current_choice_item));
         $("#other_discription").html(get_product_other_description(current_choice_item));
@@ -780,39 +782,39 @@
     }
 
     function page_product1_after_init(){
+        // 设置页面详细信息
+        set_page_detail(choise["product1"]);
         // 四个标签按钮点击事件
         left_init();
         // 五个商品点击事件
         choice_init(choise["product1"]);
-        // 设置插图
-        set_pictures(choise["product1"]);
     }
 
     function page_product2_after_init(){
+        // 设置页面详细信息
+        set_page_detail(choise["product2"]);
         // 四个标签按钮点击事件
         left_init();
         // 五个商品点击事件
         choice_init(choise["product2"]);
-        // 设置插图
-        set_pictures(choise["product2"]);
     }
 
     function page_product3_after_init(){
+        // 设置页面详细信息
+        set_page_detail(choise["product3"]);
         // 四个标签按钮点击事件
         left_init();
         // 五个商品点击事件
         choice_init(choise["product3"]);
-        // 设置插图
-        set_pictures(choise["product3"]);
     }
 
     function page_product4_after_init(){
+        // 设置页面详细信息
+        set_page_detail(choise["product4"]);
         // 四个标签按钮点击事件
         left_init();
         // 五个商品点击事件
         choice_init(choise["product4"]);
-        // 设置插图
-        set_pictures(choise["product4"]);
     }
 
     function get_filename(filepath) {
@@ -849,18 +851,26 @@
         return choice_item[5];
     }
 
-    function set_pictures(choice) {
-        $("#pic_1").attr("src", choice[0][1]);
-        $("#pic_2").attr("src", choice[1][1]);
-        $("#pic_3").attr("src", choice[2][1]);
-        $("#pic_4").attr("src", choice[3][1]);
-        $("#pic_5").attr("src", choice[4][1]);
+    function set_page_detail(choice) {
+        // 设置标题
+        var attribute = get_product_attribute(choice[0]);
+        $("#assortment_title").html(attribute);
+        if(title_color_map[attribute] != null){
+            $("#assortment_title").css("color", title_color_map[attribute]);
+        }
+
+        // 设置名称
         $("#text_1").html(get_product_name(choice[0]));
         $("#text_2").html(get_product_name(choice[1]));
         $("#text_3").html(get_product_name(choice[2]));
         $("#text_4").html(get_product_name(choice[3]));
         $("#text_5").html(get_product_name(choice[4]));
-
+        // 设置图片
+        $("#pic_1").attr("src", get_product_file_path(choice[0]));
+        $("#pic_2").attr("src", get_product_file_path(choice[1]));
+        $("#pic_3").attr("src", get_product_file_path(choice[2]));
+        $("#pic_4").attr("src", get_product_file_path(choice[3]));
+        $("#pic_5").attr("src", get_product_file_path(choice[4]));
     }
 
     function random_choise_product(product_arr, num) {
