@@ -21,7 +21,7 @@
         var order_number = 0;                   // 默认配置后面会改: 如果配置>0则强制指定, 否则根据url最后的数字指定, 如 xxx_2.html => order_number = 2
         var order_sign = "tea_shampoo_brush";   // 跟随 order_number 修改
 
-        console.log("order:", order);
+        console.log("order:", order_number);
         console.log("condition:", condition);
 
         var title_color_map = {
@@ -386,21 +386,21 @@
 
 <script type="text/javascript">
 
-    var tea_task_after_init = function(){
+    function tea_task_after_init(){
         product_config = config_tea;
         product_question = question_tea;
         config["base"] += 1000;
         clear_choice();
     }
 
-    var shampoo_task_after_init = function(){
+    function shampoo_task_after_init(){
         product_config = config_shampoo;
         product_question = question_shampoo;
         config["base"] += 1000;
         clear_choice();
     }
 
-    var brush_task_after_init = function(){
+    function brush_task_after_init(){
         product_config = config_brush;
         product_question = question_brush;
         config["base"] += 1000;
