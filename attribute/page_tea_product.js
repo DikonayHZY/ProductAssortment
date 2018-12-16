@@ -47,7 +47,7 @@ page_tea_product = `
 				<div class="product" style="width: 100%; height: 50%; display: flex; flex-direction:row; justify-content: space-around; align-items: center; ">
 					<div class="each_product" style="width: 110px; height: 150px; margin: 0; padding: 0; display: flex; flex-direction: column;" id="choice_1">
 						<a href="#" style="width: 100%; height: 100%;">
-							<img style="width: 100%; height: 90%;" src="../resource/茶叶图鉴/白茶-白毫银针.JPG" id="pic_1">
+							<img style="width: 100%; height: 90%;" src="../resource/tea/白毫银针.JPG" id="pic_1">
 							<div style="width: 100%; height: 10%; text-align: center;" class="product_name" id="text_1">
 							喵喵喵
 							</div>
@@ -56,7 +56,7 @@ page_tea_product = `
 
 					<div class="each_product" style="width: 110px; height: 150px; margin: 0; padding: 0; display: flex; flex-direction: column;" id="choice_2">
 						<a href="#" style="width: 100%; height: 100%;">
-							<img style="width: 100%; height: 90%;" src="../resource/茶叶图鉴/白茶-白毫银针.JPG" id="pic_2">
+							<img style="width: 100%; height: 90%;" src="../resource/tea/白毫银针.JPG" id="pic_2">
 							<div style="width: 100%; height: 10%; text-align: center;" class="product_name" id="text_2">
 							喵喵喵
 							</div>
@@ -65,7 +65,7 @@ page_tea_product = `
 
 					<div class="each_product" style="width: 110px; height: 150px; margin: 0; padding: 0; display: flex; flex-direction: column;" id="choice_3">
 						<a href="#" style="width: 100%; height: 100%;">
-							<img style="width: 100%; height: 90%;" src="../resource/茶叶图鉴/白茶-白毫银针.JPG" id="pic_3">
+							<img style="width: 100%; height: 90%;" src="../resource/tea/白毫银针.JPG" id="pic_3">
 							<div style="width: 100%; height: 10%; text-align: center;" class="product_name" id="text_3">
 							喵喵喵
 							</div>
@@ -74,7 +74,7 @@ page_tea_product = `
 
 					<div class="each_product" style="width: 110px; height: 150px; margin: 0; padding: 0; display: flex; flex-direction: column;" id="choice_4">
 						<a href="#" style="width: 100%; height: 100%;">
-							<img style="width: 100%; height: 90%;" src="../resource/茶叶图鉴/白茶-白毫银针.JPG" id="pic_4">
+							<img style="width: 100%; height: 90%;" src="../resource/tea/白毫银针.JPG" id="pic_4">
 							<div style="width: 100%; height: 10%; text-align: center;" class="product_name" id="text_4">
 							喵喵喵
 							</div>
@@ -83,7 +83,7 @@ page_tea_product = `
 
 					<div class="each_product" style="width: 110px; height: 150px; margin: 0; padding: 0; display: flex; flex-direction: column;" id="choice_5">
 						<a href="#" style="width: 100%; height: 100%;">
-							<img style="width: 100%; height: 90%;" src="../resource/茶叶图鉴/白茶-白毫银针.JPG" id="pic_5">
+							<img style="width: 100%; height: 90%;" src="../resource/tea/白毫银针.JPG" id="pic_5">
 							<div style="width: 100%; height: 10%; text-align: center;" class="product_name" id="text_5">
 							喵喵喵
 							</div>
@@ -95,7 +95,7 @@ page_tea_product = `
 				<div id="product_discription" style="height: 36%; width: 100%; font-size: 10px; text-align: center; display: flex; align-items: center; visibility: hidden;" >
 
 					<div style=" height: 100%; width: 25%; display: flex; align-items: center; justify-content: center; ">
-						<img  style="height: 90%;" src="../resource/茶叶图鉴/白茶-白毫银针.JPG" id="select_pic">
+						<img  style="height: 90%;" src="../resource/tea/白毫银针.JPG" id="select_pic">
 					</div>
 
 					<div class="tea_discription" style=" height: 100%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center;" >
