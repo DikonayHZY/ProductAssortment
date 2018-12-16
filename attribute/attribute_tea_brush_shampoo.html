@@ -748,59 +748,35 @@
     function choice_init(current_choise) {
         $("#choice_1").unbind();
         $("#choice_1").on("click", function () {
-            $("#tea_name").html(get_product_name(current_choise[0][1]));
-            $("#tea_assortment").html(get_product_attribute(current_choise[0][2]));
-            $("#other_discription").html(current_choise[0][4]);
-            $("#select_pic").attr("src", current_choise[0][1]);
-            $("#tea_benefit").html(current_choise[0][5]);
-            $("#product_discription").css("visibility","visible");
-            current_choise[0][0] = 1;
-            check_show_buy_button(current_choise[0]);
+            choice_init_item(current_choise[0]);
         });
         $("#choice_2").unbind();
         $("#choice_2").on("click", function () {
-            $("#tea_name").html(get_product_name(current_choise[1][1]));
-            $("#tea_assortment").html(get_product_attribute(current_choise[1][2]));
-            $("#other_discription").html(current_choise[1][4]);
-            $("#select_pic").attr("src", current_choise[1][1]);
-            $("#tea_benefit").html(current_choise[1][5]);
-            $("#product_discription").css("visibility","visible");
-            current_choise[1][0] = 1;
-            check_show_buy_button(current_choise[1]);
+            choice_init_item(current_choise[1]);
         });
         $("#choice_3").unbind();
         $("#choice_3").on("click", function () {
-            $("#tea_name").html(get_product_name(current_choise[2][1]));
-            $("#tea_assortment").html(get_product_attribute(current_choise[2][2]));
-            $("#other_discription").html(current_choise[2][4]);
-            $("#select_pic").attr("src", current_choise[2][1]);
-            $("#tea_benefit").html(current_choise[2][5]);
-            $("#product_discription").css("visibility","visible");
-            current_choise[2][0] = 1;
-            check_show_buy_button(current_choise[2]);
+            choice_init_item(current_choise[2]);
         });
         $("#choice_4").unbind();
         $("#choice_4").on("click", function () {
-            $("#tea_name").html(get_product_name(current_choise[3][1]));
-            $("#tea_assortment").html(get_product_attribute(current_choise[3][2]));
-            $("#other_discription").html(current_choise[3][4]);
-            $("#select_pic").attr("src", current_choise[3][1]);
-            $("#tea_benefit").html(current_choise[3][5]);
-            $("#product_discription").css("visibility","visible");
-            current_choise[3][0] = 1;
-            check_show_buy_button(current_choise[3]);
+            choice_init_item(current_choise[3]);
         });
         $("#choice_5").unbind();
         $("#choice_5").on("click", function () {
-            $("#tea_name").html(get_product_name(current_choise[4][1]));
-            $("#tea_assortment").html(get_product_attribute(current_choise[4][2]));
-            $("#other_discription").html(current_choise[4][4]);
-            $("#select_pic").attr("src", current_choise[4][1]);
-            $("#tea_benefit").html(current_choise[4][5]);
-            $("#product_discription").css("visibility","visible");
-            current_choise[4][0] = 1;
-            check_show_buy_button(current_choise[4]);
+            choice_init_item(current_choise[4]);
         });
+    }
+    
+    function choice_init_item(current_choice_item) {
+        $("#tea_name").html(get_product_name(current_choice_item));
+        $("#tea_assortment").html(get_product_attribute(current_choice_item));
+        $("#other_discription").html(get_product_other_description(current_choice_item));
+        $("#select_pic").attr("src", get_product_file_path(current_choice_item));
+        $("#tea_benefit").html(get_product_benefit_description(current_choice_item));
+        set_product_chosen(current_choice_item);
+        check_show_buy_button(current_choice_item);
+        $("#product_discription").css("visibility","visible");
     }
 
     function page_product1_after_init(){
@@ -845,12 +821,32 @@
         return filepath.substring(index1+1,index2);
     }
 
-    function get_product_name(filepath) {
-        return get_filename(filepath);
+    function get_product_name(choice_item) {
+        return get_filename(get_product_file_path(choice_item));
     }
 
-    function get_product_attribute(filepath) {
-        return filepath;
+    function set_product_chosen(choice_item) {
+        choice_item[0] = 1;
+    }
+    
+    function get_product_file_path(choice_item) {
+        return choice_item[1];
+    }
+
+    function get_product_attribute(choice_item) {
+        return choice_item[2];
+    }
+
+    function get_product_benefit(choice_item) {
+        return choice_item[3];
+    }
+
+    function get_product_other_description(choice_item) {
+        return choice_item[4];
+    }
+
+    function get_product_benefit_description(choice_item) {
+        return choice_item[5];
     }
 
     function set_pictures(choice) {
@@ -859,11 +855,11 @@
         $("#pic_3").attr("src", choice[2][1]);
         $("#pic_4").attr("src", choice[3][1]);
         $("#pic_5").attr("src", choice[4][1]);
-        $("#text_1").html(get_product_name(choice[0][1]));
-        $("#text_2").html(get_product_name(choice[1][1]));
-        $("#text_3").html(get_product_name(choice[2][1]));
-        $("#text_4").html(get_product_name(choice[3][1]));
-        $("#text_5").html(get_product_name(choice[4][1]));
+        $("#text_1").html(get_product_name(choice[0]));
+        $("#text_2").html(get_product_name(choice[1]));
+        $("#text_3").html(get_product_name(choice[2]));
+        $("#text_4").html(get_product_name(choice[3]));
+        $("#text_5").html(get_product_name(choice[4]));
 
     }
 
