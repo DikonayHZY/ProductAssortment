@@ -721,7 +721,7 @@
                 save_on_click(current_choise_item[1]);
             });
         }else{
-            $("#buy_button").css("visibility","none");
+            $("#buy_button").css("visibility","hidden");
             $("#buy_button").unbind();
             $("#buy_button").on("click",function(){});
         }
@@ -760,7 +760,8 @@
         $("#tea_benefit").html(get_product_benefit_description(current_choice_item));
         set_product_chosen(current_choice_item);
         check_show_buy_button(current_choice_item);
-        $("#product_discription").css("visibility","visible");
+        $("#product_tips").css("display","none");
+        $("#product_discription").css("display","block");
     }
 
     function page_product1_after_init(){

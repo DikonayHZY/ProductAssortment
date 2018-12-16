@@ -92,39 +92,54 @@ page_tea_product = `
 					
 				</div>
 
-				<div id="product_discription" style="height: 36%; width: 100%; font-size: 10px; text-align: center; display: flex; align-items: center; visibility: hidden;" >
+				<div style="height: 36%; width: 100%; font-size: 10px; text-align: center;" >
+					<div id="product_discription" style="height: 100%; width:100%; display: none;">
 
-					<div style=" height: 100%; width: 25%; display: flex; align-items: center; justify-content: center; ">
-						<img  style="height: 90%;" src="../resource/tea/白毫银针.JPG" id="select_pic">
-					</div>
+						<div style="width:100%; height:100%; display: flex;">
 
-					<div class="tea_discription" style=" height: 100%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center;" >
-						<div id="tea_name" style=" height: 20%; width: 100%; text-align: center; font-size: 22px;" >
-							茶叶名称（去掉前缀）
-						</div>
-
-						<div style="height: 80%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 20px; line-height: 2;">
-							<div style=" height: 100%; width: 40%; display: flex; align-items: center; justify-content: center;">
-								<div style="text-align: center;">性状：<span id="other_discription">绿叶绿汤</span></div>																	
+							<div style=" height: 100%; width: 25%; display: flex; align-items: center; justify-content: center; ">
+								<img  style="height: 90%;" src="../resource/tea/白毫银针.JPG" id="select_pic">
 							</div>
 
-							<div  style=" height: 100%; width: 60%; display: flex; align-items: center; justify-content: center; ">
-								<div style="text-align: center;">
-									品类：<span id="tea_assortment"><strong>绿茶</strong></span><br>
-									功效：<span id="tea_benefit">美容养颜</span>
-								</div>																	
-							</div>							
-							
+							<div class="tea_discription" style=" height: 100%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center;" >
+								<div id="tea_name" style=" height: 20%; width: 100%; text-align: center; font-size: 22px;" >
+									茶叶名称（去掉前缀）
+								</div>
+
+								<div style="height: 80%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 20px; line-height: 2;">
+									<div style=" height: 100%; width: 40%; display: flex; align-items: center; justify-content: center;">
+										<div style="text-align: center;">性状：<span id="other_discription">绿叶绿汤</span></div>																	
+									</div>
+
+									<div  style=" height: 100%; width: 60%; display: flex; align-items: center; justify-content: center; ">
+										<div style="text-align: center;">
+											品类：<span id="tea_assortment"><strong>绿茶</strong></span><br>
+											功效：<span id="tea_benefit">美容养颜</span>
+										</div>																	
+									</div>							
+									
+								</div>
+								
+							</div>
+
+							<div style=" height: 100%; width: 30%; display: flex; align-items: center; justify-content: center;">
+								<button id="buy_button" style="font-size: 28px; visibility: hidden;">下单</button>
+							</div>
 						</div>
-						
+					</div>
+
+					<div id="product_tips" style="width: 100%; height: 100%; display: block;">
+						<div style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+							请点击商品查看详情！
+						</div>
 					</div>
 
 
-					<div style=" height: 100%; width: 30%; display: flex; align-items: center; justify-content: center;">
-						<button id="buy_button" style="font-size: 28px; visibility: hidden;">下单</button>
-					</div>
-					
+
 				</div>
+
+
+
 			
 			</div>
 			

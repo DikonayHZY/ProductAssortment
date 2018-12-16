@@ -46,7 +46,7 @@ page_brush_product =`
 					</div>
 				</div>
 
-				<div id="product_discription" style="width: 100%; height: 55%; visibility: hidden;">
+				<div id="product_discription" style="width: 100%; height: 55%; display: none;">
 					<div style="height: 20%; width: 100%; display: flex;">
 						<div style="width: 40%; height: 100%; display: flex; flex-direction: column;">
 							<div style="width: 100%; height: 50%; border-bottom: 1px solid #262626;"></div>
@@ -81,6 +81,14 @@ page_brush_product =`
 					</div>
 					
 				</div>
+
+
+				<div id="product_tips" style="width: 100%; height: 55%; display: block;">
+					<div style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+						请点击商品查看详情！
+					</div>
+				</div>
+
 
 
 			</div>
