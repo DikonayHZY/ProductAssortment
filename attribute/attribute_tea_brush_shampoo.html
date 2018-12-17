@@ -322,82 +322,76 @@
             color: #999999; 
         }
 
-
-
-
-        #main_menu li {
-        	float: left;
+        #tea_main_menu li {
+            float: left;
         }
 
-        #main_menu li a {
-        	display:block; 
-        	background: url(../resource/menu2.png);
-        	overflow: hidden;
-        	transition: all 0.2s ease;
-        }
-
-        #main_menu li.i1, li.i1 a {
-			width: 150px; 
-			height: 133px;
-        }
-
-        #main_menu li.i2, li.i2 a  {
-			width: 167px; 
-			height: 133px;
-        }
-
-        #main_menu li a.a1 {background-position: 0 0;}
-        
-        #main_menu li a.a1:hover {background-position: 0 -133px;}
-
-        #main_menu li a.a2 {background-position: -150px 0;}
-
-        #main_menu li a.a2:hover {background-position: -150px -133px;}
-
-        #main_menu li a.a3 {background-position: -317px 0;}
-
-        #main_menu li a.a3:hover {background-position: -317px -133px;}
-
-        #main_menu li a.a4 {background-position: -484px 0;}
-
-        #main_menu li a.a4:hover {background-position: -484px -133px;}
-
-        #left_menu li a {
-            display:block;
-            background: url(../resource/menu3.png);
+        #tea_main_menu li a {
+            display:block; 
+            background: url(../resource/menu2.png);
             overflow: hidden;
             transition: all 0.2s ease;
         }
 
-        #left_menu li.i1, #left_menu li.i1 a {
-            width: 133px;
-            height: 150px;
+        #tea_main_menu li.i1, li.i1 a {
+            width: 150px; 
+            height: 133px;
         }
 
-        #left_menu li.i2, #left_menu li.i2 a  {
-            width: 133px;
-            height: 167px;
+        #tea_main_menu li.i2, li.i2 a  {
+            width: 167px; 
+            height: 133px;
         }
 
-        #left_menu li a.a1 {background-position: 0 0;}
+        #tea_main_menu li a.a1 {background-position: 0 0;}
+        
+        #tea_main_menu li a.a1:hover {background-position: 0 -133px;}
 
-        #left_menu li a.a1:hover {background-position: -167px 0;}
+        #tea_main_menu li a.a2 {background-position: -150px 0;}
 
-        #left_menu li a.a2 {background-position: 0 -150px;}
+        #tea_main_menu li a.a2:hover {background-position: -150px -133px;}
 
-        #left_menu li a.a2:hover {background-position: -167px -150px;}
+        #tea_main_menu li a.a3 {background-position: -317px 0;}
 
-        #left_menu li a.a3 {background-position: 0 -317px;}
+        #tea_main_menu li a.a3:hover {background-position: -317px -133px;}
 
-        #left_menu li a.a3:hover {background-position: -167px -317px;}
+        #tea_main_menu li a.a4 {background-position: -484px 0;}
 
-        #left_menu li a.a4 {background-position: 0 -484px;}
+        #tea_main_menu li a.a4:hover {background-position: -484px -133px;}
 
-        #left_menu li a.a4:hover {background-position: -167px -484px;}
+        #tea_left_menu li a {
+            display:block;
+            background: url(../resource/menu4.png);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
 
-        .each_product a:link, .each_product a:visited {
-        	color: #000000; 
-			text-decoration: none; 
+        #tea_left_menu li.i1, #tea_left_menu li.i1 a {
+            width: 133px;
+            height: 133px;
+        }
+
+        #tea_left_menu li.i2, #tea_left_menu li.i2 a  {
+            width: 133px;
+            height: 133px;
+        }
+
+        #tea_left_menu li a.a1 {background-position: 0 0;}
+
+        #tea_left_menu li a.a1:hover {background-position: -133px 0;}
+
+        #tea_left_menu li a.a2 {background-position: 0 -133px;}
+
+        #tea_left_menu li a.a2:hover {background-position: -133px -133px;}
+
+        #tea_left_menu li a.a3 {background-position: 0 -266px;}
+
+        #tea_left_menu li a.a3:hover {background-position: -133px -266px;}
+
+        #tea_left_menu li a.a4 {background-position: 0 -399px;}
+
+        #tea_left_menu li a.a4:hover {background-position: -133px -399px;}
+
         }
     </style>
 
@@ -1133,7 +1127,7 @@
         var attribute = get_product_attribute(choice[0]);
         $("#assortment_title").html(attribute);
         if(title_color_map[attribute] != null){
-            $("#assortment_title").css("color", title_color_map[attribute]);
+            $("#assortment_title").css("background-color", title_color_map[attribute]);
         }
 
         // 设置名称
@@ -1220,7 +1214,7 @@
             var val=$('input:radio[name="one_choice"]:checked').val();
             if(val==null){
                 console.log("question select nothing", question)
-                alert("请至少选择一个选项");
+                alert("请选择一个选项");
                 return;
             }
             answers["ids"].push(question["id"])

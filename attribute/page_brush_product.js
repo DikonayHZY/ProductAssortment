@@ -67,15 +67,15 @@ page_brush_product =`
 						</div>
 						<div style="height: 100%; width: 55%; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; font-size: 22px; line-height: 2.0;">
 
-							<p><strong>特性成分：</strong><span id="tea_assortment">白松露</span></p>							
-							<p><strong>产品功效：</strong><span id="tea_benefit">祛屑止痒</span></p>
+							<p><strong>电机类型：</strong><span id="tea_assortment">白松露</span></p>							
+							<p><strong>产品功能：</strong><span id="tea_benefit">祛屑止痒</span></p>
 
 							<p id="other_discription">不含防腐剂，无硅油，不含硫酸盐</p>							
 
 						</div>
 
-						<div style=" height: 100%; width: 25%; display: flex; align-items: center; justify-content: center; ">
-							<a id="buy_button" href="#" style="width: 70%; height: 40px; border: 2px solid black; font-size: 28px; font-weight: 600;/*visibility: hidden*/;">选择</a>
+						<div style=" height: 100%; width: 25%; display: flex; align-items: center; justify-content: flex-start; ">
+							<a id="buy_button" href="#" style="width: 70%; height: 40px; border: 2px solid black; font-size: 28px; font-weight: 600; visibility: hidden; text-align: center;">选择</a>
 						</div>
 
 					</div>

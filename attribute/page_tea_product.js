@@ -1,19 +1,16 @@
-page_tea_product = `
-	<div style="position: fixed; width: 100%; height: 100%; padding: 0; margin: 0; "> <!-- 最大的盒子, position可继承 -->
-		<div style="width: 100%; height: 13%; padding: 0; margin: 0; font-size:0; display: flex; flex-direction:row; /*background-color: blue*/; position: relative;"> <!-- 顶部长条盒子 -->
-			<div style="min-width: 292px; display: flex;" >
-				<img style="height: 62px;" src="../resource/御茗阁2.png">
-				<img style="height: 62px;" src="../resource/cup.png">
+page_tea_product =`
+	<div style="width: 100%; height: 100%; position: fixed;">
+		<div style="width: 100%; height: 20%;"><!-- 顶部 -->
+			<div style="width: 100%; height: 50%; min-height: 40px; display: flex; align-items: center; justify-content: center;">
+				<img style="height: 80%;" src="../resource/御茗阁2.png">
+				<img style="height: 80%;" src="../resource/cup.png">
 			</div>
-			<div style="width: 66%; height: 100%; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center;font-size: 50px; font-family: SimSun; color: black;">
-				<div>
-					<strong id="assortment_title"></strong>
-				</div>
-			</div>	
+			<div style="width: 100%; height: 50%; background-color: #90A71F; display: flex; align-items: center; justify-content: center; font-size: 40px; color: white; font-family: SimSun;" id="assortment_title">绿茶</div>
 		</div>
-		<div style="width: 100%; height: 87%; padding: 0; margin: 0; display: flex;">
-			<div style="min-width: 133px; height: 100%; padding: 0; margin: 0; overflow: hidden;">
-				<ul id="left_menu" style="width: 133px; height: 634px; padding: 0; margin: 0; list-style: none; /*background-color: red*/;">
+
+		<div style="width: 100%; height: 80%; display: flex;"> <!-- 下半部分 -->
+			<div style="width: 15%; height: 100%; min-width: 133px; display: flex; align-items: center; justify-content: center;"> <!-- 左侧导航栏 -->
+				<ul id="tea_left_menu" style="width: 133px; height: 532px; list-style: none;">
 					<li class="i1" id="left_green_tea" >
 						<a href="#" class="a1">
 						</a>
@@ -33,117 +30,78 @@ page_tea_product = `
 				</ul>
 			</div>
 
-			<div style=" height: 100%; width: 100%; /*background-color: yellow;*/ display: flex; flex-direction: column; ">
-
-				<div class="information" style="width: 100%; height: 14%; display:flex; margin: 0; padding: 0; align-items: center; justify-content: center;">
-					<div style="font-size: 22px; text-align: center;line-height: 1.5;">
-						请点击下方<strong>绿茶</strong>的图片或文字，更多信息！<br>
-						点击右边的导航栏可以切换茶叶类别<br>
-						当您选定想要的茶叶后，请点击下方的“下单”按钮<br>
-						<span style="color: red;">“下单”按钮只有在您<strong>浏览5个茶叶的详细信息后</strong>才会出现！</span>
-					</div>					
+			<div style="width: 85%; height: 100%;"> <!-- 正文部分 -->
+				<div style="width: 100%; height: 45%; display: flex; justify-content: center;"> <!-- 商品陈列区 -->
+					<div class="brush_chenlie" style="width: 80%; height: 100%; display: flex; justify-content: space-around;">					
+						<a href="#" style="width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="choice_1">
+							<img id="pic_1" src="1.png" style="width: 100%; height: 60%;">
+							<p id="text_1">洗发水</p>
+						</a>
+						<a href="#" style="width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="choice_2">
+							<img id="pic_2" src="2.png" style="width: 100%; height: 60%;">
+							<p id="text_2">洗发水</p>
+						</a>
+						<a href="#" style="width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="choice_3">
+							<img id="pic_3" src="3.png" style="width: 100%; height: 60%;">
+							<p id="text_3">洗发水</p>
+						</a>						
+						<a href="#" style="width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="choice_4">
+							<img id="pic_4" src="4.png" style="width: 100%; height: 60%;">
+							<p id="text_4">洗发水</p>
+						</a>
+						<a href="#" style="width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="choice_5">
+							<img id="pic_5" src="5.png" style="width: 100%; height: 60%;">
+							<p id="text_5">洗发水</p>
+						</a>						
+					</div>
 				</div>
 
-				<div class="product" style="width: 100%; height: 50%; display: flex; flex-direction:row; justify-content: space-around; align-items: center; ">
-					<div class="each_product" style="width: 110px; height: 150px; margin: 0; padding: 0; display: flex; flex-direction: column;" id="choice_1">
-						<a href="#" style="width: 100%; height: 100%;">
-							<img style="width: 100%; height: 90%;" src="../resource/tea/白毫银针.JPG" id="pic_1">
-							<div style="width: 100%; height: 10%; text-align: center;" class="product_name" id="text_1">
-							喵喵喵
-							</div>
-						</a>												
-					</div>
+				<div id="product_discription" style="width: 100%; height: 55%; display: none;">
+					<div style="height: 20%; width: 100%; display: flex;">
+						<div style="width: 40%; height: 100%; display: flex; flex-direction: column;">
+							<div style="width: 100%; height: 50%; border-bottom: 1px solid #262626;"></div>
+							<div style="width: 100%; height: 50%;"></div>
+						</div>
+						<div  id="tea_name" style="width: 20%; min-width: 200px; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+							选中的牙刷
+						</div>
+						<div style="width: 40%; height: 100%; display: flex; flex-direction: column;">
+							<div style="width: 100%; height: 50%; border-bottom: 1px solid #262626;"></div>
+							<div style="width: 100%; height: 50%;"></div>
+						</div>						
 
-					<div class="each_product" style="width: 110px; height: 150px; margin: 0; padding: 0; display: flex; flex-direction: column;" id="choice_2">
-						<a href="#" style="width: 100%; height: 100%;">
-							<img style="width: 100%; height: 90%;" src="../resource/tea/白毫银针.JPG" id="pic_2">
-							<div style="width: 100%; height: 10%; text-align: center;" class="product_name" id="text_2">
-							喵喵喵
-							</div>
-						</a>												
 					</div>
+					<div style="height: 80%; width: 100%; display: flex;">
+						<div style=" height: 100%; width: 20%; display: flex; align-items: center; justify-content: center; ">
+							<img  style="height: 90%;" src="3.png" id="select_pic">
+						</div>
+						<div style="height: 100%; width: 55%; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; font-size: 22px; line-height: 2.0;">
 
-					<div class="each_product" style="width: 110px; height: 150px; margin: 0; padding: 0; display: flex; flex-direction: column;" id="choice_3">
-						<a href="#" style="width: 100%; height: 100%;">
-							<img style="width: 100%; height: 90%;" src="../resource/tea/白毫银针.JPG" id="pic_3">
-							<div style="width: 100%; height: 10%; text-align: center;" class="product_name" id="text_3">
-							喵喵喵
-							</div>
-						</a>												
-					</div>
+							<p><strong>品类：</strong><span id="tea_assortment">白松露</span></p>							
+							<p><strong>功效：</strong><span id="tea_benefit">祛屑止痒</span></p>
 
-					<div class="each_product" style="width: 110px; height: 150px; margin: 0; padding: 0; display: flex; flex-direction: column;" id="choice_4">
-						<a href="#" style="width: 100%; height: 100%;">
-							<img style="width: 100%; height: 90%;" src="../resource/tea/白毫银针.JPG" id="pic_4">
-							<div style="width: 100%; height: 10%; text-align: center;" class="product_name" id="text_4">
-							喵喵喵
-							</div>
-						</a>												
-					</div>
+							<p id="other_discription">不含防腐剂，无硅油，不含硫酸盐</p>							
 
-					<div class="each_product" style="width: 110px; height: 150px; margin: 0; padding: 0; display: flex; flex-direction: column;" id="choice_5">
-						<a href="#" style="width: 100%; height: 100%;">
-							<img style="width: 100%; height: 90%;" src="../resource/tea/白毫银针.JPG" id="pic_5">
-							<div style="width: 100%; height: 10%; text-align: center;" class="product_name" id="text_5">
-							喵喵喵
-							</div>
-						</a>												
+						</div>
+
+						<div style=" height: 100%; width: 25%; display: flex; align-items: center; justify-content: flex-start; ">
+							<a id="buy_button" href="#" style="width: 70%; height: 40px; border: 2px solid black; font-size: 28px; font-weight: 600; visibility: hidden; text-align: center;">选择</a>
+						</div>
+
 					</div>
 					
 				</div>
 
-				<div style="height: 36%; width: 100%; font-size: 10px; text-align: center;" >
-					<div id="product_discription" style="height: 100%; width:100%; display: none;">
 
-						<div style="width:100%; height:100%; display: flex;">
-
-							<div style=" height: 100%; width: 25%; display: flex; align-items: center; justify-content: center; ">
-								<img  style="height: 90%;" src="../resource/tea/白毫银针.JPG" id="select_pic">
-							</div>
-
-							<div class="tea_discription" style=" height: 100%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center;" >
-								<div id="tea_name" style=" height: 20%; width: 100%; text-align: center; font-size: 22px;" >
-									茶叶名称（去掉前缀）
-								</div>
-
-								<div style="height: 80%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 20px; line-height: 2;">
-									<div style=" height: 100%; width: 40%; display: flex; align-items: center; justify-content: center;">
-										<div style="text-align: center;">性状：<span id="other_discription">绿叶绿汤</span></div>																	
-									</div>
-
-									<div  style=" height: 100%; width: 60%; display: flex; align-items: center; justify-content: center; ">
-										<div style="text-align: center;">
-											品类：<span id="tea_assortment"><strong>绿茶</strong></span><br>
-											功效：<span id="tea_benefit">美容养颜</span>
-										</div>																	
-									</div>							
-									
-								</div>
-								
-							</div>
-
-							<div style=" height: 100%; width: 30%; display: flex; align-items: center; justify-content: center;">
-								<button id="buy_button" style="font-size: 28px; visibility: hidden;">下单</button>
-							</div>
-						</div>
+				<div id="product_tips" style="width: 100%; height: 55%; display: block;">
+					<div style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+						请点击茶叶查看详情！
 					</div>
-
-					<div id="product_tips" style="width: 100%; height: 100%; display: block;">
-						<div style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
-							请点击商品查看详情！
-						</div>
-					</div>
-
-
-
 				</div>
 
 
 
-			
 			</div>
-			
 		</div>
-
-	</div>
+	</div>	
 `;

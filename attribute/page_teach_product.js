@@ -61,7 +61,7 @@ page_teach_product =`
 					</div>
 					<div style="height: 80%; width: 100%; display: flex; justify-content: center;">
 						<div style=" height: 100%; width: 30%; display: flex; align-items: center; justify-content: center; ">
-							<img  style="height: 90%;" src="" id="select_pic">
+							<img  style="height: 70%;" src="" id="select_pic">
 						</div>
 						<div style=" height: 100%; width: 30%; display: flex; align-items: center; justify-content: center; ">
 							<a id="buy_button" href="#" style="width: 50%; height: 40px; display: flex; align-items: center; justify-content: center; border: 2px solid black; font-size: 28px; font-weight: 600; ">选择</a>
