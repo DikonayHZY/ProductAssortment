@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>练习</title>
-	<style type="text/css">
-		body, div, ul, li, a, p, span{
-			margin: 0;
-			padding: 0;
-			border: 0;
-			font-family: "Microsoft JhengHei";
-		}
-
-		a {
-			text-decoration: none;
-		}
-
-		.brush_main_menu a:link, .brush_main_menu a:visited {
-			color:#000000; 
-		}
-		.brush_main_menu a:hover, .brush_main_menu a:active {
-			color:#005a8e; 
-		}
-
-		.brush_main_menu .line {
-			font-size: 50px; 
-			font-weight: 100; 
-			font-family: "NSimSun";
-			color: #89827b;
-		}
-
-	</style>
-</head>
-<body>
+page_teach_menu = `
 	<div style="width: 100%; height: 100%; position: fixed;">
 		<div style="width: 100%; height: 20%; display: flex;"><!-- 顶部 -->
 			<div style="width: 40%; height: 100%; display: flex; flex-direction: column;">
@@ -57,5 +25,4 @@
 			
 		</div>
 	</div>	
-</body>
-</html>
+`;

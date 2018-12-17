@@ -215,6 +215,12 @@
     <script type="text/javascript" src="../common/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="../common/FileSaver.js"></script>
     <script type="text/javascript" src="page_introduction.js"></script>
+
+    <script type="text/javascript" src="page_teach_preview.js"></script>
+    <script type="text/javascript" src="page_teach_menu.js"></script>
+    <script type="text/javascript" src="page_teach_product.js"></script>
+    <script type="text/javascript" src="page_teach_transition.js"></script>
+
     <script type="text/javascript" src="page_tea_introduction.js"></script>
     <script type="text/javascript" src="page_tea_task.js"></script>
     <script type="text/javascript" src="page_tea_menu.js"></script>
@@ -281,6 +287,21 @@
         }
         a:hover, a:active {
             color: #999999; 
+        }
+
+
+        .brush_main_menu a:link, .brush_main_menu a:visited {
+            color:#000000; 
+        }
+        .brush_main_menu a:hover, .brush_main_menu a:active {
+            color:#005a8e; 
+        }
+
+        .brush_main_menu .line {
+            font-size: 50px; 
+            font-weight: 100; 
+            font-family: "NSimSun";
+            color: #89827b;
         }
 
         .brush_left_menu a{
@@ -445,7 +466,13 @@
 
     function generate_pages(first, second, third){
         var pages = {
-            1001: {"next":1002, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
+            900: {"next":901, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
+            901: {"next":902, "html":page_teach_preview, "wait":10000, "auto":0, "before_init":null, "after_init":null},
+            902: {"next":902, "html":page_teach_menu, "wait":10000, "auto":0, "before_init":null, "after_init":null},
+            903: {"next":903, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":null},
+            904: {"next":904, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":null},
+            905: {"next":905, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":null},
+            906: {"next":1002, "html":page_teach_transition, "wait":10000, "auto":0, "before_init":null, "after_init":null},
         };
         var max_index = 0;
         var base = 1000;
@@ -483,7 +510,7 @@
 
     var config = {
         "base": -1000,
-        "current":1001,
+        "current":903,
         "pages": {
             1001: {"next":1002, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
             

@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>草本植物</title>
-	<style type="text/css">
-		body, div, ul, li, a, p, span{
-			margin: 0;
-			padding: 0;
-			border: 0;
-			font-family: "Microsoft JhengHei";
-			text-align: center;
-		}
-
-		a {
-			text-decoration: none;
-		}
-
-		.shampoo_left_menu a{
-			font-size: 30px;
-		}
-
-		.shampoo_left_menu a:link, .shampoo_left_menu a:visited {
-			color: #262626; 
-		}
-		.shampoo_left_menu a:hover, .shampoo_left_menu a:active {
-			color: #999999; 
-		}
-
-		a:link, a:visited {
-			color: black; 
-		}
-		a:hover, a:active {
-			color: #999999; 
-		}
-
-
-	</style>
-</head>
-<body>
+page_teach_product =`
 	<div style="width: 100%; height: 100%; position: fixed;">
 		<div style="width: 100%; height: 20%;"><!-- 顶部 -->
 			<div style="width: 100%; height: 50%; min-height: 40px; display: flex; align-items: center; justify-content: center; font-size: 26px;">
@@ -102,7 +64,7 @@
 							<img  style="height: 90%;" src="3.png" id="select_pic">
 						</div>
 						<div style=" height: 100%; width: 30%; display: flex; align-items: center; justify-content: center; ">
-							<a id="buy_button" href="#" style="width: 50%; height: 40px; display: flex; align-items: center; justify-content: center; border: 2px solid black; font-size: 28px; font-weight: 600; visibility: hidden;">选择</a>
+							<a id="buy_button" href="#" style="width: 50%; height: 40px; display: flex; align-items: center; justify-content: center; border: 2px solid black; font-size: 28px; font-weight: 600; ">选择</a>
 						</div>
 
 					</div>
@@ -115,14 +77,10 @@
 					</div>
 				</div>
 
-
-
-
 			</div>
 
 		</div>
 
 
 	</div>	
-</body>
-</html>
+`;
