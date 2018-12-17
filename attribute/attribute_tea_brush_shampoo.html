@@ -583,7 +583,6 @@
     }
 
     var page_tea_item = {
-        2: {"next":3, "html":page_tea_introduction, "wait":2, "auto":0, "before_init":null, "after_init":null},
         3: {"next":4, "html":page_tea_task, "wait":2, "auto":0, "before_init":null, "after_init":tea_task_after_init},
         4: {"next":4, "html":page_tea_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
         5: {"next":5, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
@@ -595,7 +594,6 @@
     };
 
     var page_shampoo_item = {
-        2: {"next":3, "html":page_shampoo_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
         3: {"next":4, "html":page_shampoo_task, "wait":0, "auto":0, "before_init":null, "after_init":shampoo_task_after_init},
         4: {"next":4, "html":page_shampoo_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
         5: {"next":5, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
@@ -607,7 +605,6 @@
     };
 
     var page_brush_item = {
-        2: {"next":3, "html":page_brush_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
         3: {"next":4, "html":page_brush_task, "wait":0, "auto":0, "before_init":null, "after_init":brush_task_after_init},
         4: {"next":4, "html":page_brush_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
         5: {"next":5, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
@@ -821,7 +818,7 @@
             if(states["auto"]){
                 states["change"] = 1;
             }else{
-                $("#next_tips").css("display","block")
+                $("#next_tips").css("visibility","visible")
             }
         }
     };
@@ -1242,7 +1239,7 @@
     function page_phrase_transition_after_init() {
         $("#next_phrase").unbind();
         $("#next_phrase").on("click", function () {
-            config["current"] = 1002 + config["base"] + 1000;
+            config["current"] = 1003 + config["base"] + 1000;
             change_state(config);
         });
     }
