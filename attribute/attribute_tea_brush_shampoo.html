@@ -407,6 +407,160 @@
 
 <script type="text/javascript">
 
+    var teach_answer = "水仙";
+
+    var teach_choice = {
+        "start_time": new Date(),
+        "end_time": new Date(),
+        "spend_time": 0,
+        "product1": [
+            [0, "../resource/teach/水仙.JPG", "草本植物", "", ""],
+            [0, "../resource/teach/菊花.JPG", "草本植物", "", ""],
+            [0, "../resource/teach/牡丹.JPG", "草本植物", "", ""],
+            [0, "../resource/teach/紫罗兰.JPG", "草本植物", "", ""],
+            [0, "../resource/teach/郁金香.JPG", "草本植物", "", ""],
+        ],
+        "product2": [
+            [0, "../resource/teach/浮萍.JPG", "水生植物", "", ""],
+            [0, "../resource/teach/碗莲.JPG", "水生植物", "", ""],
+            [0, "../resource/teach/鸢尾.JPG", "水生植物", "", ""],
+            [0, "../resource/teach/马蹄莲.JPG", "水生植物", "", ""],
+            [0, "../resource/teach/水葫芦.JPG", "水生植物", "", ""],
+        ],
+        "product3": [
+            [0, "../resource/teach/梅花.JPG", "木本植物", "", ""],
+            [0, "../resource/teach/桂花.JPG", "木本植物", "", ""],
+            [0, "../resource/teach/月季花.JPG", "木本植物", "", ""],
+            [0, "../resource/teach/茉莉花.JPG", "木本植物", "", ""],
+            [0, "../resource/teach/栀子花.JPG", "木本植物", "", ""],
+        ],
+        "product4": [],
+        "product1_click":0,
+        "product2_click":0,
+        "product3_click":0,
+        "product4_click":0,
+    }
+
+
+    function page_teach_preview_after_init() {
+        $("#next_phrase").unbind();
+        $("#next_phrase").on("click", function () {
+            config["current"] = 4;
+            change_state(config);
+        });
+    }
+
+    function page_teach_menu_after_init() {
+        $("#teach_answer").html(teach_answer);
+
+        $("#green_tea_main").unbind();
+        $("#red_tea_main").unbind();
+        $("#qing_tea_main").unbind();
+
+        $("#green_tea_main").on("click",function () {
+            config["current"] = 1005 + config["base"];
+            change_state(config);
+        });
+
+        $("#red_tea_main").on("click",function () {
+            config["current"] = 1006 + config["base"];
+            change_state(config);
+        });
+
+        $("#qing_tea_main").on("click",function () {
+            config["current"] = 1007 + config["base"];
+            change_state(config);
+        });
+    }
+
+    function teach_left_init() {
+        $("#left_green_tea").unbind();
+        $("#left_green_tea").on("click", function () {
+            config["current"] = 1005 + config["base"];
+            change_state(config);
+        });
+        $("#left_red_tea").unbind();
+        $("#left_red_tea").on("click", function () {
+            config["current"] = 1006 + config["base"];
+            change_state(config);
+        });
+        $("#left_qing_tea").unbind();
+        $("#left_qing_tea").on("click", function () {
+            config["current"] = 1007 + config["base"];
+            change_state(config);
+        });
+    }
+
+    function teach_choice_init(current_choise) {
+        $("#choice_1").unbind();
+        $("#choice_1").on("click", function () {
+            teach_choice_detail_display(current_choise[0]);
+        });
+        $("#choice_2").unbind();
+        $("#choice_2").on("click", function () {
+            teach_choice_detail_display(current_choise[1]);
+        });
+        $("#choice_3").unbind();
+        $("#choice_3").on("click", function () {
+            teach_choice_detail_display(current_choise[2]);
+        });
+        $("#choice_4").unbind();
+        $("#choice_4").on("click", function () {
+            teach_choice_detail_display(current_choise[3]);
+        });
+        $("#choice_5").unbind();
+        $("#choice_5").on("click", function () {
+            teach_choice_detail_display(current_choise[4]);
+        });
+    }
+
+    function teach_choice_detail_display(current_choice_item) {
+        $("#tea_name").html(get_product_name(current_choice_item));
+        $("#tea_assortment").html(get_product_attribute(current_choice_item));
+        $("#other_discription").html(get_product_other_description(current_choice_item));
+        $("#select_pic").attr("src", get_product_file_path(current_choice_item));
+        $("#tea_benefit").html(get_product_benefit_description(current_choice_item));
+        $("#product_tips").css("display","none");
+        $("#product_discription").css("display","block");
+        $("#buy_button").unbind();
+        $("#buy_button").on("click", function () {
+            var name = get_product_name(current_choice_item);
+            if(name != teach_answer){
+                alert("请找到" + teach_answer);
+                return;
+            }
+            config["current"] = 1010 + config["base"];
+            change_state(config);
+        })
+    }
+
+    function page_teach_product1_after_init() {
+        // 设置页面详细信息
+        set_page_detail(teach_choice["product1"]);
+        // 四个标签按钮点击事件
+        teach_left_init();
+        // 五个商品点击事件
+        teach_choice_init(teach_choice["product1"]);
+    }
+
+    function page_teach_product2_after_init() {
+        // 设置页面详细信息
+        set_page_detail(teach_choice["product2"]);
+        // 四个标签按钮点击事件
+        teach_left_init();
+        // 五个商品点击事件
+        teach_choice_init(teach_choice["product2"]);
+    }
+
+    function page_teach_product3_after_init() {
+        // 设置页面详细信息
+        set_page_detail(teach_choice["product3"]);
+        // 四个标签按钮点击事件
+        teach_left_init();
+        // 五个商品点击事件
+        teach_choice_init(teach_choice["product3"]);
+    }
+
     function tea_task_after_init(){
         product_config = config_tea;
         product_question = question_tea;
@@ -466,13 +620,13 @@
 
     function generate_pages(first, second, third){
         var pages = {
-            900: {"next":901, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
-            901: {"next":902, "html":page_teach_preview, "wait":10000, "auto":0, "before_init":null, "after_init":null},
-            902: {"next":902, "html":page_teach_menu, "wait":10000, "auto":0, "before_init":null, "after_init":null},
-            903: {"next":903, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":null},
-            904: {"next":904, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":null},
-            905: {"next":905, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":null},
-            906: {"next":1002, "html":page_teach_transition, "wait":10000, "auto":0, "before_init":null, "after_init":null},
+            1: {"next":3, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
+            3: {"next":4, "html":page_teach_preview, "wait":10, "auto":0, "before_init":null, "after_init":page_teach_preview_after_init},
+            4: {"next":4, "html":page_teach_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_menu_after_init},
+            5: {"next":5, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product1_after_init},
+            6: {"next":6, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product2_after_init},
+            7: {"next":7, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product3_after_init},
+            10: {"next":10, "html":page_teach_transition, "wait":10000, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
         };
         var max_index = 0;
         var base = 1000;
@@ -510,7 +664,7 @@
 
     var config = {
         "base": -1000,
-        "current":903,
+        "current":1,
         "pages": {
             1001: {"next":1002, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
             

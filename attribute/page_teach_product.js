@@ -22,23 +22,23 @@ page_teach_product =`
 				<div style="width: 100%; height: 45%; /*background-color: green;*/ display: flex; justify-content: center;"> <!-- 商品陈列区 -->
 					<div class="shampoo_chenlie" style="width: 80%; height: 100%; display: flex; justify-content: space-around;">					
 						<a href="#" style="width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="choice_1">
-							<img id="pic_1" src="../../resource/teach/水仙.jpg" style="width: 100%;">
+							<img id="pic_1" src="" style="width: 100%;">
 							<p id="text_1">水仙</p>
 						</a>
 						<a href="#" style="width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="choice_2">
-							<img id="pic_2" src="../../resource/teach/菊花.jpg" style="width: 100%;">
+							<img id="pic_2" src="" style="width: 100%;">
 							<p id="text_2">菊花</p>
 						</a>
 						<a href="#" style="width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="choice_3">
-							<img id="pic_3" src="../../resource/teach/牡丹.jpg" style="width: 100%;">
+							<img id="pic_3" src="" style="width: 100%;">
 							<p id="text_3">牡丹</p>
 						</a>						
 						<a href="#" style="width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="choice_4">
-							<img id="pic_4" src="../../resource/teach/紫罗兰.jpg" style="width: 100%;">
+							<img id="pic_4" src="" style="width: 100%;">
 							<p id="text_4">紫罗兰</p>
 						</a>
 						<a href="#" style="width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="choice_5">
-							<img id="pic_5" src="../../resource/teach/郁金香.jpg" style="width: 100%;">
+							<img id="pic_5" src="" style="width: 100%;">
 							<p id="text_5">郁金香</p>
 						</a>						
 					</div>
@@ -61,7 +61,7 @@ page_teach_product =`
 					</div>
 					<div style="height: 80%; width: 100%; display: flex; justify-content: center;">
 						<div style=" height: 100%; width: 30%; display: flex; align-items: center; justify-content: center; ">
-							<img  style="height: 90%;" src="3.png" id="select_pic">
+							<img  style="height: 90%;" src="" id="select_pic">
 						</div>
 						<div style=" height: 100%; width: 30%; display: flex; align-items: center; justify-content: center; ">
 							<a id="buy_button" href="#" style="width: 50%; height: 40px; display: flex; align-items: center; justify-content: center; border: 2px solid black; font-size: 28px; font-weight: 600; ">选择</a>
