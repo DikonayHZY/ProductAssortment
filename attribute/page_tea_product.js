@@ -42,7 +42,7 @@ page_tea_product =`
 							<p id="text_2">洗发水</p>
 						</a>
 						<a href="#" style="width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="choice_3">
-							<img id="pic_3" src="3.png" style="width: 100%; height: 60%;">
+							<img id="pic_3" src="" style="width: 100%; height: 60%;">
 							<p id="text_3">洗发水</p>
 						</a>						
 						<a href="#" style="width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="choice_4">
@@ -73,7 +73,7 @@ page_tea_product =`
 					</div>
 					<div style="height: 80%; width: 100%; display: flex;">
 						<div style=" height: 100%; width: 20%; display: flex; align-items: center; justify-content: center; ">
-							<img  style="height: 90%;" src="3.png" id="select_pic">
+							<img  style="height: 90%;" src="" id="select_pic">
 						</div>
 						<div style="height: 100%; width: 55%; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; font-size: 22px; line-height: 2.0;">
 

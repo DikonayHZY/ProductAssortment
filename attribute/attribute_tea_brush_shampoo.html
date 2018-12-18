@@ -812,27 +812,32 @@
             if(states["auto"]){
                 states["change"] = 1;
             }else{
-                $("#next_tips").css("visibility","visible")
+                $("#next_tips").css("visibility","visible");
+                $("#next_tips").unbind();
+                $("#next_tips").on("click",function(){
+                    console.log("press next_tips")
+                    states["change"] = 1;
+                });
             }
         }
     };
 
-    function register_key_event(status) {
+    function register_key_event(states) {
         // 设置父窗口事件
         document.onkeydown = function (event) {
             var e = event || window.event || arguments.callee.caller.arguments[0];
             console.log("press key code: ", e.keyCode);
             if(e && (e.keyCode == 13 || e.keyCode == 32 ||  e.keyCode == 78 || e.keyCode == 88)){
                 // keyCode: 13 Enter, keyCode: 32 Space, keyCode: 78 n N, keyCode:88 x X
-                if(status["auto"] == 0){
-                    var time_spend = (Date.parse(new Date()) - status["start"]) / 1000;   // 时间s
-                    if(time_spend >= status["wait"]){
-                        status["change"] = 1;
+                if(states["auto"] == 0){
+                    var time_spend = (Date.parse(new Date()) - states["start"]) / 1000;   // 时间s
+                    if(time_spend >= states["wait"]){
+                        states["change"] = 1;
                     }else{
-                        console.log("current:", status["current"], "spend:", time_spend, "wait:", status["wait"]);
+                        console.log("current:", states["current"], "spend:", time_spend, "wait:", states["wait"]);
                     }
                 }else{
-                    console.log("current page auto:", status["current"]);
+                    console.log("current page auto:", states["current"]);
                 }
             }
         };
