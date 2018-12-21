@@ -1,7 +1,7 @@
 template_4 = `
 	<div style="width: 100%; height: 100%; position: fixed;">
 		<div style="width: 100%; height: 25%; display: flex; align-items: center; justify-content: center;"><!-- 题目说明 -->
-			<div style="width: 80%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-size: 24px; line-height: 2;"> 任务难度量表：<br>“1”= 非常不符合, “4” = 非常符合
+			<div style="width: 80%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-size: 24px; line-height: 2;"> <p>请仔细阅读下列问题，并选择最能表达你心中感受的数字。<strong style="color: red;">答案没有对错之分</strong>，请按照真实感受来回答：<br>“1”= 非常不符合, “4” = 非常符合</p>
 </div>			
 		</div>
 

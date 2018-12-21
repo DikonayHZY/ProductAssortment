@@ -10,13 +10,13 @@ page_shampoo_product =`
 		<div style="width: 100%; height: 80%; display: flex;"> <!-- 下半部分 -->
 			<div style="width: 15%; height: 100%; min-width: 150px; /*background-color: green; */display: flex; align-items: center; justify-content: center;"> <!-- 左侧导航栏 -->
 				<div class="shampoo_left_menu" style="width: 100%; height: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center; ">
-					<a href="#" id="left_green_tea">白松露</a><br>
+					<a href="#" id="left_green_tea">丝滑水润</a><br>
 					&emsp;<br>
-					<a href="#" id="left_red_tea">鱼子酱</a><br>
+					<a href="#" id="left_red_tea">防晒锁色</a><br>
 					&emsp;<br>
-					<a href="#" id="left_qing_tea">牛油果</a><br>
+					<a href="#" id="left_qing_tea">清爽控油</a><br>
 					&emsp;<br>
-					<a href="#" id="left_hua_tea">北欧木</a>
+					<a href="#" id="left_hua_tea">强效修护</a>
 				</div>
 			</div>
 

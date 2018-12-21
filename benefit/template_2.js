@@ -1,7 +1,7 @@
 template_2 = `
 	<div style="width: 100%; height: 100%; position: fixed;">
 		<div style="width: 100%; height: 25%; display: flex; align-items: center; justify-content: center;"><!-- 题目说明 -->
-			<div style="width: 80%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-size: 24px;"> 记忆测试：请根据刚才的回忆，判断下列描述的对错</div>			
+			<div style="width: 80%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-size: 24px;"> 请回忆刚才浏览的页面，判断下列描述的对错</div>			
 		</div>
 
 		<div style="width: 100%; height: 55%; display: flex; flex-direction: column; align-items: center; justify-content: center;"><!-- 题目部分 -->

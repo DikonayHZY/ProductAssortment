@@ -1,41 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<style type="text/css">
-		body, div, p, span {
-			margin: 0;
-			padding: 0;
-			border: none;
-		}
-
-
-		a {
-			text-decoration: none;
-		}
-
-		a:link, a:visited {
-			color: black; 
-		}
-		a:hover, a:active {
-			color: #999999; 
-		}
-
-
-
-	</style>
-</head>
-<body>
+template_7 = `
 	<div style="width: 100%; height: 100%; position: fixed;">
 		<div style="width: 100%; height: 25%; display: flex; align-items: center; justify-content: center;"><!-- 题目说明 -->
-			<div style="width: 85%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-size: 24px; line-height: 2;">
-				<p>请仔细阅读下列问题，并选择最能表达你心中感受的数字。<strong style="color: red;">答案没有对错之分</strong>，请按照真实感受来回答：<br>“1”= 非常不符合, “4” = 非常符合</p>
-			</div>			
+			<div style="width: 80%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-size: 24px; line-height: 2;"> 请根据真实感受回答下面的问题：<br>“1”= 完全不相似, “7” = 非常相似</div>			
 		</div>
 
 		<div style="width: 100%; height: 55%; display: flex; flex-direction: column; align-items: center; justify-content: center;"><!-- 题目部分 -->
-			<div style="width: 80%; height: 30%; display: flex; align-items: flex-end; justify-content: center; font-size: 26px; line-height: 1.5;" id="content">我感觉完成产品选择的任务需要进行较多的思考
-</div>
+			<div style="width: 80%; height: 30%; display: flex; align-items: flex-end; justify-content: center; font-size: 26px; line-height: 1.5;" id="content">在完成选择任务之时, 我感觉有较多的可选产品</div>
 			<div style="width: 100%; height: 50%; display: flex; flex-direction: column; align-items: center; justify-content: space-around;"> 
 				<div style="width: 100%; height: 50%; min-height: 80px; display: flex; align-items: center; justify-content: center;">
 					<div style="width: 70px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;"> 
@@ -54,10 +24,22 @@
  						<input name="one_choice" type="radio" id="choice_4" value="4">
  						<label for="choice_4">4</label>						
 					</div>
+					<div style="width: 70px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;"> 
+ 						<input name="one_choice" type="radio" id="choice_5" value="5">
+ 						<label for="choice_5">5</label>						
+					</div>
+					<div style="width: 70px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;"> 
+ 						<input name="one_choice" type="radio" id="choice_5" value="5">
+ 						<label for="choice_6">5</label>						
+					</div>
+					<div style="width: 70px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;"> 
+ 						<input name="one_choice" type="radio" id="choice_5" value="5">
+ 						<label for="choice_7">5</label>						
+					</div>										
 				</div>
-				<div style="width: 22%; height: 50%; display: flex; align-items: flex-start; justify-content: space-between;">
-					<p>非常不符合</p>
-					<p>非常符合</p>
+				<div style="width: 36%; height: 50%; display: flex; align-items: flex-start; justify-content: space-between;">
+					<p>完全不相似</p>
+					<p>非常相似</p>
 				</div>
 
 
@@ -68,6 +50,4 @@
 			<a id="next_page" href="#" style="width: 160px; height: 40px; border: 2px solid black; text-align: center; font-size: 26px;/*visibility: hidden*/;">下一页</a>
 		</div>		
 	</div>
-
-</body>
-</html>
+`;
