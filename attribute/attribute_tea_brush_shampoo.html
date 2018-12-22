@@ -449,6 +449,36 @@
 
         #tea_left_menu li a.a4:hover {background-position: -133px -399px;}
 
+        .TF_radio_box input { 
+            display: none; 
+        }
+
+        .TF_radio_box label{
+            display: inline-block;
+            content: "";
+            width: 15px;
+            height: 15px;
+/*          border-radius: 50%;*/
+            border:2px solid #ef4949;
+            background: #fff;
+            cursor:pointer;
+        }
+
+
+        .TF_radio_box input:checked + label:after { 
+            display: inline-block; 
+            float: left;
+            content:""; 
+            width: 9px; 
+            height: 9px; 
+            position: relative;
+            top: 3px;
+            left: 3px;
+            background: #ef4949; 
+/*          border-radius: 50%;*/
+        }
+        
+
         }
     </style>
 

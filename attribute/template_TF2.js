@@ -6,34 +6,40 @@ template_TF2 =`
 				<div style="width: 50%; height: 65%; display: flex; align-items: center; justify-content: space-around;">
 					<div style="width: 300px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-between; border: 1px solid black;">
 						<div style="width: 100%; height: 77%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-							<img src="../../resource/shampoo/ALTERNA-PB.png" style="height: 85%;">
-							<p id="pic1_name" style=" font-size: 20px; line-height: 1.8;"><strong>ALTERNA-PB</strong></p>							
+							<img id="TF_pic1" src="../resource/shampoo/ALTERNA-PB.png" style="height: 85%;">
+							<p style=" font-size: 20px; line-height: 1.8;"><strong id="TF_name1"><span>ALTERNA-PB</span></strong></p>							
 						</div>
 						<div style="width: 100%; height: 23%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 20px; line-height: 1.8;">
-							<p><strong>品类：</strong><span id="tea_assortment">绿茶</span></p>							
-							<p><strong>功效：</strong><span id="tea_benefit">减肥瘦身</span></p>							
+							<p><strong>品类：</strong><span id="TF_attribute1">绿茶</span></p>							
+							<p><strong>功效：</strong><span id="TF_benefit1">减肥瘦身</span></p>							
 						</div>
 					</div>
 					<div style="width: 300px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-between; border: 1px solid black;">
 						<div style="width: 100%; height: 77%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-							<img src="../../resource/shampoo/ALTERNA-PB.png" style="height: 85%;">
-							<p id="pic1_name" style=" font-size: 20px; line-height: 1.8;"><strong>ALTERNA-PB</strong></p>							
+							<img id="TF_pic2" src="../resource/shampoo/ALTERNA-PB.png" style="height: 85%;">
+							<p style=" font-size: 20px; line-height: 1.8;"><strong id="TF_name2"><span>ALTERNA-PB</span></strong></p>							
 						</div>
 						<div style="width: 100%; height: 23%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 20px; line-height: 1.8;">
-							<p><strong>品类：</strong><span id="tea_assortment">绿茶</span></p>							
-							<p><strong>功效：</strong><span id="tea_benefit">减肥瘦身</span></p>							
+							<p><strong>品类：</strong><span id="TF_attribute2">绿茶</span></p>							
+							<p><strong>功效：</strong><span id="TF_benefit2">减肥瘦身</span></p>							
 						</div>
 					</div>					
 					
 				</div>
 				<div style="width: 50%; height: 15%; display: flex; align-items: center; justify-content: space-around;"> 
-					<div <!-- class="TF_radio_box" --> style="width:300px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;"> 
-	 					<input name="one_choice" type="radio" id="choice_1" value="1">
-	 					<label for="choice_1"><p>ALTERNA-PB</p></label>						
+					<div style="width:300px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+						<div class="TF_radio_box" style="width: 20px; height: 20px;">
+							<input name="one_choice" type="radio" id="choice_1" value="1">
+	 						<label for="choice_1"></label>	
+						</div> 
+	 					<p style="line-height: 2;">ALTERNA-PB</p>						
 					</div>
-					<div <!-- class="TF_radio_box" --> style="width: 300px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;"> 
-	 					<input name="one_choice" type="radio" id="choice_2" value="2">
-	 					<label for="choice_2"><p>ALTERNA-PH</p></label>						
+					<div style="width:300px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+						<div class="TF_radio_box" style="width: 20px; height: 20px;">
+							<input name="one_choice" type="radio" id="choice_2" value="2">
+	 						<label for="choice_2"></label>	
+						</div> 
+	 					<p style="line-height: 2;">ALTERNA-PH</p>						
 					</div>
 				</div>
 			</div>
