@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<style type="text/css">
-		body, div, p, span {
-			margin: 0;
-			padding: 0;
-			border: none;
-		}
-
-
-		a {
-			text-decoration: none;
-		}
-
-		a:link, a:visited {
-			color: black; 
-		}
-		a:hover, a:active {
-			color: #999999; 
-		}
-
-	</style>
-</head>
-<body>
+template_TF2 =`
 	<div style="width: 100%; height: 100%; position: fixed;">
 		<div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
 			<div style="width: 100%; height: 80%; display: flex; flex-direction: column; align-items: center; justify-content: center;"><!-- 题目部分 -->
@@ -67,6 +42,4 @@
 			</div>			
 		</div>	
 	</div>
-
-</body>
-</html>
+`;
