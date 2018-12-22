@@ -1,0 +1,27 @@
+﻿{
+	"username": "曹洪彬",
+	"gender": "1",
+	"age": "30",
+	"major": "妹子学",
+	"grade": "在职学生",
+	"phone": "110",
+	"condition": "benefit",
+	"order_number": 1,
+	"order_sign": "tea_shampoo_brush",
+	"purpose": "空",
+	"choice": [
+		"bursh P6809_02 2018-12-21_22:09:57 2018-12-21_22:10:45 47 P6809_02 1 P9924_22 1 P3216_01 1 P6275_63 1 P6859_12 1 P6712_04 0 P6215_29 0 P6851_59 0 P8911_03 0 P6877_27 0 P3226_51 0 P3216_31 0 P6225_16 0 P6721_33 0 P6855_12 0 P6730_02 0 P6972_10 1 P3226_22 1 P6263_62 1 P9903_42 0 ",
+		"shampoo ALTERNA-TH 2018-12-21_22:04:55 2018-12-21_22:06:07 72 ALTERNA-ZG 0 ALTERNA-TN 0 ALTERNA-ZS 0 ALTERNA-VS 0 ALTERNA-TS 0 ALTERNA-TG 0 ALTERNA-VG 0 ALTERNA-VJ 0 ALTERNA-PJ 0 ALTERNA-ZJ 0 ALTERNA-TD 1 ALTERNA-TH 1 ALTERNA-VD 1 ALTERNA-PH 1 ALTERNA-PD 1 ALTERNA-VH 0 ALTERNA-TB 0 ALTERNA-ZH 0 ALTERNA-ZB 0 ALTERNA-PB 0 ",
+		"tea 蒙顶甘露 2018-12-21_21:59:47 2018-12-21_22:00:51 64 玫瑰花茶 0 六安瓜片 0 冻顶乌龙 0 坦洋工夫 0 信阳毛尖 0 太平猴魁 0 阿里山乌龙 0 蒙顶甘露 1 凤凰水仙 0 金骏眉 0 碧螺春 0 杭白菊 0 信阳红 0 莲心绿茶 0 正山小种 0 雪水云绿 1 武夷肉桂 1 梅尖银毫 1 黄山贡菊 1 千岛玉叶 0 "
+	],
+	"question_id": [
+		"bursh brush1 brush2 brush3 brush4 brush5 brush6 brush7 brush8 brush9 brush10 brush11 brush12 brush13 brush14 brush15 brush16",
+		"shampoo shampoo1 shampoo2 shampoo3 shampoo4 shampoo5 shampoo6 shampoo7 shampoo8 shampoo9 shampoo10 shampoo11 shampoo12 shampoo13 shampoo14 shampoo15 shampoo16",
+		"tea tea1 tea2 tea3 tea4 tea5 tea6 tea7 tea8 tea9 tea10 tea11 tea12 tea13 tea14 tea15 tea16"
+	],
+	"question_answer": [
+		"bursh 0 6 5 5 6 5 4 6 7 3 3 3 4 4 4 4",
+		"shampoo 0 6 6 6 6 6 5 4 4 2 2 4 4 4 4 4",
+		"tea 0 9 7 8 9 6 5 6 6 4 4 4 3 2 3 4"
+	]
+}
