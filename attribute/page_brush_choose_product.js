@@ -84,7 +84,7 @@ page_brush_choose_product =`
 
 
 				<div id="product_tips" style="width: 100%; height: 55%; display: block;">
-					<div style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+					<div style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 26px; line-height: 2;">
 						<p>
 							请找到商品“<span id="answer">P8880_68</span>”，然后点击“确定”按钮<br>
 							点击商品查看详情！

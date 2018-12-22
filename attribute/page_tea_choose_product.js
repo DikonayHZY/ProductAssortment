@@ -94,7 +94,7 @@ page_tea_choose_product =`
 
 
 				<div id="product_tips" style="width: 100%; height: 55%; display: block;">
-					<div style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+					<div style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 26px; line-height: 2;">
 						<p>
 							请找到茶叶“<span id="answer">武夷大红袍</span>”，然后点击“确定”按钮<br>
 							点击茶叶查看详情！
