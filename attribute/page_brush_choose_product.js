@@ -75,7 +75,7 @@ page_brush_choose_product =`
 						</div>
 
 						<div style=" height: 100%; width: 25%; display: flex; align-items: center; justify-content: flex-start; ">
-							<a id="buy_button" href="#" style="width: 70%; height: 40px; border: 2px solid black; font-size: 28px; font-weight: 600; visibility: hidden; text-align: center;">选择</a>
+							<a id="buy_button" href="#" style="width: 70%; height: 40px; border: 2px solid black; font-size: 28px; font-weight: 600; visibility: visiable; text-align: center;">选择</a>
 						</div>
 
 					</div>

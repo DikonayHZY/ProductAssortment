@@ -2,7 +2,7 @@ page_shampoo_choose_product = `
 	<div style="width: 100%; height: 100%; position: fixed;">
 		<div style="width: 100%; height: 20%;"><!-- 顶部 -->
 			<div style="width: 100%; height: 50%; min-height: 40px; background-color: black; display: flex; align-items: center; justify-content: center;">
-				<img src="../../resource/shampoo_logo2.png">
+				<img src="../resource/shampoo_logo2.png">
 			</div>
 			<div style="width: 100%; height: 50%; background-color: #262626; display: flex; align-items: center; justify-content: center; font-size: 26px; color: white;" id="assortment_title">白松露</div>
 		</div>
@@ -75,7 +75,7 @@ page_shampoo_choose_product = `
 						</div>
 
 						<div style=" height: 100%; width: 25%; display: flex; align-items: center; justify-content: flex-start; ">
-							<a id="buy_button" href="#" style="width: 70%; height: 40px; border: 2px solid black; font-size: 28px; font-weight: 600; visibility: hidden; text-align: center;">选择</a>
+							<a id="buy_button" href="#" style="width: 70%; height: 40px; border: 2px solid black; font-size: 28px; font-weight: 600; visibility: visiable; text-align: center;">选择</a>
 						</div>
 
 					</div>
