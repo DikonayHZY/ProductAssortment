@@ -13,7 +13,7 @@ page_shampoo_choose_menu = `
 				<div style="width: 100%; height: 50%;"></div>
 			</div>
 		</div>
-		<div style="width: 100%; height: 80%; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; background:url(1.jpg); background-size: 100% 100%; background-repeat:no-repeat;"> <!-- 下半部分 -->
+		<div style="width: 100%; height: 80%; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; background:url(../resource/1.jpg); background-size: 100% 100%; background-repeat:no-repeat;"> <!-- 下半部分 -->
 			<div style="width: 100%; height: 15%; background-color: black; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">任务<span id="choose_task_number">1</span>：请找到商品“<span id="answer">ALTERNA-PH</span>”，然后点击“确定”按钮</div>
 			<div style="width: 100%; height: 70%; background-color: rgba(0,0,0,0.8); display: flex; flex-direction: column; justify-content: center;">
 				<div style="width: 100%; height: 30%; display: flex; align-items: center; justify-content: center; color: white; font-size: 35px;">产品系列</div>

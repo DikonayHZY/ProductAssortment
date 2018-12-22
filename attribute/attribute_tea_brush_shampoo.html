@@ -95,6 +95,7 @@
 	    };
 
         var choose_tea =  {
+            "current": 0,
             "names": [
                 "雪水云绿",
                 "正山小种",
@@ -167,11 +168,12 @@
         };
 
         var choose_shampoo =  {
+            "current": 0,
             "names": [
                 "ALTERNA-PS",
                 "ALTERNA-VB",
-                "ALTERNA-ZH",
-                "ALTERNA-TN",
+                "ALTERNA-ZB",
+                "ALTERNA-TG",
             ]
         };
 
@@ -247,6 +249,7 @@
         };
 
         var choose_brush =  {
+            "current": 0,
             "names": [
                 "P3216_01",
                 "P6215_29",
@@ -487,7 +490,6 @@
 
         #tea_left_menu li a.a4:hover {background-position: -133px -399px;}
 
-        }
     </style>
 
 </head>
@@ -531,7 +533,7 @@
     }
 
 
-    function page_teach_preview_after_init() {
+    function page_preview_after_init() {
         $("#next_phrase").unbind();
         $("#next_phrase").on("click", function () {
             config["change"] = 1;
@@ -544,6 +546,7 @@
         $("#green_tea_main").unbind();
         $("#red_tea_main").unbind();
         $("#qing_tea_main").unbind();
+        $("#hua_tea_main").unbind();
 
         $("#green_tea_main").on("click",function () {
             config["current"] = 1011 + config["base"];
@@ -557,6 +560,11 @@
 
         $("#qing_tea_main").on("click",function () {
             config["current"] = 1013 + config["base"];
+            change_state(config);
+        });
+
+        $("#hua_tea_main").on("click",function () {
+            config["current"] = 1014 + config["base"];
             change_state(config);
         });
     }
@@ -575,6 +583,12 @@
         $("#left_qing_tea").unbind();
         $("#left_qing_tea").on("click", function () {
             config["current"] = 1013 + config["base"];
+            change_state(config);
+        });
+
+        $("#left_hua_tea").unbind();
+        $("#left_hua_tea").on("click", function () {
+            config["current"] = 1014 + config["base"];
             change_state(config);
         });
     }
@@ -610,6 +624,7 @@
         $("#tea_benefit").html(get_product_benefit(current_choice_item));
         $("#product_tips").css("display","none");
         $("#product_discription").css("display","block");
+        $("#buy_button").css("visibility", "visiable");
         $("#buy_button").unbind();
         $("#buy_button").on("click", function () {
             var name = get_product_name(current_choice_item);
@@ -661,6 +676,7 @@
         product_config = config_tea;
         product_question = question_tea;
         product_choose = choose_tea;
+        product_choose["names"] =  random_choice_product(product_choose["names"], product_choose["names"].length);
         config["base"] += 1000;
         clear_choice();
     }
@@ -669,6 +685,7 @@
         product_config = config_shampoo;
         product_question = question_shampoo;
         product_choose = choose_shampoo
+        product_choose["names"] =  random_choice_product(product_choose["names"], product_choose["names"].length);
         config["base"] += 1000;
         clear_choice();
     }
@@ -677,70 +694,224 @@
         product_config = config_brush;
         product_question = question_brush;
         product_choose = choose_brush;
+        product_choose["names"] =  random_choice_product(product_choose["names"], product_choose["names"].length);
         config["base"] += 1000;
         clear_choice();
     }
 
+
+    // choose menu
+    function page_choose_menu_after_init() {
+        var current = product_choose["current"];
+        var answer = product_choose["names"][current];
+        $("#choose_task_number").html(current + 1);
+        $("#answer").html(answer);
+
+        $("#green_tea_main").unbind();
+        $("#red_tea_main").unbind();
+        $("#qing_tea_main").unbind();
+        $("#hua_tea_main").unbind();
+
+        $("#green_tea_main").on("click",function () {
+            config["current"] = 1031 + config["base"];
+            change_state(config);
+        });
+
+        $("#red_tea_main").on("click",function () {
+            config["current"] = 1032 + config["base"];
+            change_state(config);
+        });
+
+        $("#qing_tea_main").on("click",function () {
+            config["current"] = 1033 + config["base"];
+            change_state(config);
+        });
+
+        $("#hua_tea_main").on("click",function () {
+            config["current"] = 1034 + config["base"];
+            change_state(config);
+        });
+    }
+
+    function choose_left_init() {
+        $("#left_green_tea").unbind();
+        $("#left_green_tea").on("click", function () {
+            config["current"] = 1031 + config["base"];
+            change_state(config);
+        });
+        $("#left_red_tea").unbind();
+        $("#left_red_tea").on("click", function () {
+            config["current"] = 1032 + config["base"];
+            change_state(config);
+        });
+        $("#left_qing_tea").unbind();
+        $("#left_qing_tea").on("click", function () {
+            config["current"] = 1033 + config["base"];
+            change_state(config);
+        });
+
+        $("#left_hua_tea").unbind();
+        $("#left_hua_tea").on("click", function () {
+            config["current"] = 1034 + config["base"];
+            change_state(config);
+        });
+    }
+
+    function choose_choice_init(current_choice) {
+        $("#choice_1").unbind();
+        $("#choice_1").on("click", function () {
+            choose_choice_detail_display(current_choice[0]);
+        });
+        $("#choice_2").unbind();
+        $("#choice_2").on("click", function () {
+            choose_choice_detail_display(current_choice[1]);
+        });
+        $("#choice_3").unbind();
+        $("#choice_3").on("click", function () {
+            choose_choice_detail_display(current_choice[2]);
+        });
+        $("#choice_4").unbind();
+        $("#choice_4").on("click", function () {
+            choose_choice_detail_display(current_choice[3]);
+        });
+        $("#choice_5").unbind();
+        $("#choice_5").on("click", function () {
+            choose_choice_detail_display(current_choice[4]);
+        });
+    }
+
+    function choose_choice_detail_display(current_choice_item) {
+        $("#tea_name").html(get_product_name(current_choice_item));
+        $("#tea_assortment").html(get_product_attribute(current_choice_item));
+        $("#other_discription").html(get_product_other_description(current_choice_item));
+        $("#select_pic").attr("src", get_product_file_path(current_choice_item));
+        $("#tea_benefit").html(get_product_benefit(current_choice_item));
+        $("#product_tips").css("display","none");
+        $("#product_discription").css("display","block");
+        $("#buy_button").css("visibility", "visiable");
+        $("#buy_button").unbind();
+        $("#buy_button").on("click", function () {
+            var name = get_product_name(current_choice_item);
+            var current = product_choose["current"];
+            var answer = product_choose["names"][current];
+            if(name != answer){
+                alert("请找到" + answer);
+                return;
+            }
+            product_choose["current"] += 1;
+            if (product_choose["current"] < product_choose["names"].length){
+                config["current"] = 1030 + config["base"];
+                change_state(config);
+                return;
+            }
+            config["change"] = 1;
+        })
+    }
+    
+    function choose_set_page_detail(choice) {
+        set_page_detail(choice);
+        var current = product_choose["current"];
+        var answer = product_choose["names"][current];
+        $("#answer").html(answer);
+    }
+
+    function page_choose_product1_after_init() {
+        // 设置页面详细信息
+        choose_set_page_detail(choice["product1"]);
+        // 四个标签按钮点击事件
+        choose_left_init();
+        // 五个商品点击事件
+        choose_choice_init(choice["product1"]);
+    }
+
+    function page_choose_product2_after_init() {
+        // 设置页面详细信息
+        choose_set_page_detail(choice["product2"]);
+        // 四个标签按钮点击事件
+        choose_left_init();
+        // 五个商品点击事件
+        choose_choice_init(choice["product2"]);
+    }
+
+    function page_choose_product3_after_init() {
+        // 设置页面详细信息
+        choose_set_page_detail(choice["product3"]);
+        // 四个标签按钮点击事件
+        choose_left_init();
+        // 五个商品点击事件
+        choose_choice_init(choice["product3"]);
+    }
+
+    function page_choose_product4_after_init() {
+        // 设置页面详细信息
+        choose_set_page_detail(choice["product4"]);
+        // 四个标签按钮点击事件
+        choose_left_init();
+        // 五个商品点击事件
+        choose_choice_init(choice["product4"]);
+    }
+
+
     var page_tea_item = {
         3: {"next":10, "html":page_tea_task, "wait":0, "auto":0, "before_init":null, "after_init":tea_task_after_init},
         10: {"next":10, "html":page_tea_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
-        11: {"next":30, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
-        12: {"next":30, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
-        13: {"next":30, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
-        14: {"next":30, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
-        20: {"next":20, "html":page_choose_preview, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_preview_after_init},
-        21: {"next":21, "html":page_tea_choose_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_menu_after_init},
-        22: {"next":22, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product1_after_init},
-        23: {"next":23, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product2_after_init},
-        24: {"next":24, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product3_after_init},
-        25: {"next":25, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product4_after_init},
-        30: {"next":40, "html":page_question, "wait":0, "auto":0, "before_init":null, "after_init":page_question_after_init},
-        40: {"next":40, "html":page_phrase_transition, "wait":0, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+        11: {"next":20, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
+        12: {"next":20, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
+        13: {"next":20, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
+        14: {"next":20, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
+        20: {"next":30, "html":page_choose_preview, "wait":10000, "auto":0, "before_init":null, "after_init":page_preview_after_init},
+        30: {"next":30, "html":page_tea_choose_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_menu_after_init},
+        31: {"next":40, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product1_after_init},
+        32: {"next":40, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product2_after_init},
+        33: {"next":40, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product3_after_init},
+        34: {"next":40, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product4_after_init},
+        40: {"next":50, "html":page_question, "wait":10000, "auto":0, "before_init":null, "after_init":page_question_after_init},
+        50: {"next":50, "html":page_phrase_transition, "wait":1, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
     };
 
     var page_shampoo_item = {
         3: {"next":10, "html":page_shampoo_task, "wait":0, "auto":0, "before_init":null, "after_init":shampoo_task_after_init},
         10: {"next":10, "html":page_shampoo_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
-        11: {"next":30, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
-        12: {"next":30, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
-        13: {"next":30, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
-        14: {"next":30, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
-        20: {"next":20, "html":page_choose_preview, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_preview_after_init},
-        21: {"next":21, "html":page_shampoo_choose_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_menu_after_init},
-        22: {"next":22, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product1_after_init},
-        23: {"next":23, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product2_after_init},
-        24: {"next":24, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product3_after_init},
-        25: {"next":25, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product4_after_init},
-        30: {"next":40, "html":page_question, "wait":0, "auto":0, "before_init":null, "after_init":page_question_after_init},
-        40: {"next":40, "html":page_phrase_transition, "wait":0, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+        11: {"next":20, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
+        12: {"next":20, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
+        13: {"next":20, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
+        14: {"next":20, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
+        20: {"next":30, "html":page_choose_preview, "wait":10000, "auto":0, "before_init":null, "after_init":page_preview_after_init},
+        30: {"next":30, "html":page_shampoo_choose_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_menu_after_init},
+        31: {"next":40, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product1_after_init},
+        32: {"next":40, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product2_after_init},
+        33: {"next":40, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product3_after_init},
+        34: {"next":40, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product4_after_init},
+        40: {"next":50, "html":page_question, "wait":10000, "auto":0, "before_init":null, "after_init":page_question_after_init},
+        50: {"next":50, "html":page_phrase_transition, "wait":1, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
     };
 
     var page_brush_item = {
         3: {"next":10, "html":page_brush_task, "wait":0, "auto":0, "before_init":null, "after_init":brush_task_after_init},
         10: {"next":10, "html":page_brush_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
-        11: {"next":30, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
-        12: {"next":30, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
-        13: {"next":30, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
-        14: {"next":30, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
-        20: {"next":20, "html":page_choose_preview, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_preview_after_init},
-        21: {"next":21, "html":page_brush_choose_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_menu_after_init},
-        22: {"next":22, "html":page_brush_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product1_after_init},
-        23: {"next":23, "html":page_brush_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product2_after_init},
-        24: {"next":24, "html":page_brush_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product3_after_init},
-        25: {"next":25, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product4_after_init},
-        30: {"next":40, "html":page_question, "wait":0, "auto":0, "before_init":null, "after_init":page_question_after_init},
-        40: {"next":40, "html":page_phrase_transition, "wait":0, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+        11: {"next":20, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
+        12: {"next":20, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
+        13: {"next":20, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
+        14: {"next":20, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
+        20: {"next":30, "html":page_choose_preview, "wait":10000, "auto":0, "before_init":null, "after_init":page_preview_after_init},
+        30: {"next":30, "html":page_brush_choose_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_menu_after_init},
+        31: {"next":40, "html":page_brush_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product1_after_init},
+        32: {"next":40, "html":page_brush_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product2_after_init},
+        33: {"next":40, "html":page_brush_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product3_after_init},
+        34: {"next":40, "html":page_brush_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product4_after_init},
+        40: {"next":50, "html":page_question, "wait":10000, "auto":0, "before_init":null, "after_init":page_question_after_init},
+        50: {"next":50, "html":page_phrase_transition, "wait":1, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
     };
 
     function generate_pages(first, second, third){
         var pages = {
             1: {"next":3, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
-            3: {"next":10, "html":page_teach_preview, "wait":10, "auto":0, "before_init":null, "after_init":page_teach_preview_after_init},
+            3: {"next":10, "html":page_teach_preview, "wait":10, "auto":0, "before_init":null, "after_init":page_preview_after_init},
             10: {"next":10, "html":page_teach_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_menu_after_init},
             11: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product1_after_init},
             12: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product2_after_init},
             13: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product3_after_init},
-            40: {"next":40, "html":page_teach_transition, "wait":10000, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+            40: {"next":40, "html":page_teach_transition, "wait":1, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
         };
         var max_index = 0;
         var base = 1000;
@@ -959,6 +1130,7 @@
                     }else{
                         console.log("current:", states["current"], "spend:", time_spend, "wait:", states["wait"]);
                     }
+                    $("#next_page").trigger('click');
                 }else{
                     console.log("current page auto:", states["current"]);
                 }
