@@ -7,7 +7,7 @@ template_TF2 =`
 					<div style="width: 300px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-between; border: 1px solid black;">
 						<div style="width: 100%; height: 77%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
 							<img id="TF_pic1" src="../resource/shampoo/ALTERNA-PB.png" style="height: 85%;">
-							<p style=" font-size: 20px; line-height: 1.8;"><strong id="TF_name1"><span>ALTERNA-PB</span></strong></p>							
+							<p style=" font-size: 20px; line-height: 1.8;"><strong><span id="TF_name1">ALTERNA-PB</span></strong></p>							
 						</div>
 						<div style="width: 100%; height: 23%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 20px; line-height: 1.8;">
 							<p><strong>品类：</strong><span id="TF_attribute1">绿茶</span></p>							
@@ -17,7 +17,7 @@ template_TF2 =`
 					<div style="width: 300px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-between; border: 1px solid black;">
 						<div style="width: 100%; height: 77%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
 							<img id="TF_pic2" src="../resource/shampoo/ALTERNA-PB.png" style="height: 85%;">
-							<p style=" font-size: 20px; line-height: 1.8;"><strong id="TF_name2"><span>ALTERNA-PB</span></strong></p>							
+							<p style=" font-size: 20px; line-height: 1.8;"><strong><span id="TF_name2">ALTERNA-PB</span></strong></p>							
 						</div>
 						<div style="width: 100%; height: 23%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 20px; line-height: 1.8;">
 							<p><strong>品类：</strong><span id="TF_attribute2">绿茶</span></p>							
@@ -32,14 +32,14 @@ template_TF2 =`
 							<input name="one_choice" type="radio" id="choice_1" value="1">
 	 						<label for="choice_1"></label>	
 						</div> 
-	 					<p style="line-height: 2;">ALTERNA-PB</p>						
+	 					<p style="line-height: 2;" id="left">ALTERNA-PB</p>						
 					</div>
 					<div style="width:300px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
 						<div class="TF_radio_box" style="width: 20px; height: 20px;">
 							<input name="one_choice" type="radio" id="choice_2" value="2">
 	 						<label for="choice_2"></label>	
 						</div> 
-	 					<p style="line-height: 2;">ALTERNA-PH</p>						
+	 					<p style="line-height: 2;" id="right">ALTERNA-PH</p>						
 					</div>
 				</div>
 			</div>

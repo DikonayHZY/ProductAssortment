@@ -9,6 +9,9 @@
     <script type="text/javascript" src="template_7.js"></script>
     <script type="text/javascript" src="template_9.js"></script>
     <script type="text/javascript" src="template_10.js"></script>
+    <script type="text/javascript" src="page_test.js"></script>
+    <script type="text/javascript" src="template_TF1.js"></script>
+    <script type="text/javascript" src="template_TF2.js"></script>
     <script type="text/javascript">
         
         var username = "黄梓仪";
@@ -98,9 +101,9 @@
             "current": 0,
             "names": [
                 "雪水云绿",
-                "正山小种",
-                "武夷肉桂",
-                "黄山贡菊",
+//                "正山小种",
+//                "武夷肉桂",
+//                "黄山贡菊",
             ]
         };
 
@@ -108,21 +111,53 @@
             "questions":[
                 {"id":"tea1", "template": template_2, "content":"绿茶绿茶？", "left": "是", "right": "不是"},
                 {"id":"tea2", "template": template_9, "content":"李明正在考虑周末去拜访一个朋友。他去拜访的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"tea3", "template": template_9, "content":"小红正在考虑给自己买一双新鞋。她买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"tea4", "template": template_9, "content":"小张正在查看他的邮件。他收到垃圾邮件的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"tea5", "template": template_9, "content":"小郭正在考虑是否要养一只宠物。他养宠物可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"tea6", "template": template_9, "content":"小杨正在参加公司年会的抽奖活动。他抽中大奖可能性有多大？", "left": "非常不可能", "right": "非常可能"},  
-                {"id":"tea7", "template": template_7, "content":"总的来说，你认为御茗阁茶叶目录中的茶叶之间有多相似？", "left": "完全不相似", "right": "非常相似"},
-                {"id":"tea8", "template": template_9, "content":"御茗阁为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea9", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款茶叶", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea11", "template": template_4, "content":"我感觉完成茶叶选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea12", "template": template_4, "content":"我感觉完成茶叶选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea13", "template": template_4, "content":"我感觉完成茶叶选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea14", "template": template_4, "content":"我感觉完成茶叶选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea15", "template": template_4, "content":"我了解御茗阁这个品牌", "left": "非常不赞同", "right": "非常赞同"}, 
-                {"id":"tea16", "template": template_4, "content":"我了解茶叶知识", "left": "非常不赞同", "right": "非常赞同"},
-            ]
+//                {"id":"tea3", "template": template_9, "content":"小红正在考虑给自己买一双新鞋。她买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+//                {"id":"tea4", "template": template_9, "content":"小张正在查看他的邮件。他收到垃圾邮件的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+//                {"id":"tea5", "template": template_9, "content":"小郭正在考虑是否要养一只宠物。他养宠物可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+//                {"id":"tea6", "template": template_9, "content":"小杨正在参加公司年会的抽奖活动。他抽中大奖可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+//                {"id":"tea7", "template": template_7, "content":"总的来说，你认为御茗阁茶叶目录中的茶叶之间有多相似？", "left": "完全不相似", "right": "非常相似"},
+//                {"id":"tea8", "template": template_9, "content":"御茗阁为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"tea9", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"tea10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款茶叶", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"tea11", "template": template_4, "content":"我感觉完成茶叶选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"tea12", "template": template_4, "content":"我感觉完成茶叶选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"tea13", "template": template_4, "content":"我感觉完成茶叶选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"tea14", "template": template_4, "content":"我感觉完成茶叶选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"tea15", "template": template_4, "content":"我了解御茗阁这个品牌", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"tea16", "template": template_4, "content":"我了解茶叶知识", "left": "非常不赞同", "right": "非常赞同"},
+            ],
+        };
+
+	    var test_tea = {
+            // 问卷的第一张控件, 图片: TF_pic1, 名称 TF_name1, TF_benefit1, TF_attribute1,
+            "tests":[
+                [
+                    {"id":"tea_test1", "template": template_TF1, "content":"茶叶茶叶1-1？--1正确", "left": "左边", "right": "右边", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/武夷大红袍.JPG", "name":"武夷大红袍", "benefit":"美容养颜", "attribute":"青茶"},
+                        ],
+                    },
+                    {"id":"tea_test2", "template": template_TF1, "content":"茶叶茶叶1-2？--2正确", "left": "", "right": "", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/铁罗汉.JPG", "name":"铁罗汉", "benefit":"舒缓压力", "attribute":"青茶"},
+                        ],
+                    },
+                ],
+                [
+                    {"id":"tea_test3", "template": template_TF2, "content":"茶叶茶叶2-1？--1正确", "left": "左左", "right": "右右", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/雪水云绿.JPG", "name":"雪水云绿", "benefit":"美容养颜", "attribute":"绿茶"},
+                            {"src":"../resource/tea/杭白菊.JPG", "name":"杭白菊", "benefit":"保健养生", "attribute":"花茶"},
+                        ],
+                    },
+                    {"id":"tea_test4", "template": template_TF2, "content":"茶叶茶叶2-2？--2正确", "left": "", "right": "", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/政和工夫.JPG", "name":"政和工夫", "benefit":"舒缓压力", "attribute":"红茶"},
+                            {"src":"../resource/tea/银骏眉.JPG", "name":"银骏眉", "benefit":"保健养生", "attribute":"红茶"},
+                        ],
+                    },
+                ],
+            ],
         };
 
 
@@ -171,9 +206,9 @@
             "current": 0,
             "names": [
                 "ALTERNA-PS",
-                "ALTERNA-VB",
-                "ALTERNA-ZB",
-                "ALTERNA-TG",
+//                "ALTERNA-VB",
+//                "ALTERNA-ZB",
+//                "ALTERNA-TG",
             ]
         };
 
@@ -182,21 +217,42 @@
             "questions":[
                 {"id":"shampoo1", "template": template_2, "content":"1洗发水洗发水？", "left": "是111", "right": "不是111"},
                 {"id":"shampoo2", "template": template_9, "content":"小王正在考虑是否参加一个美食烹饪培训课。他报名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"shampoo3", "template": template_9, "content":"小李正在考虑买一台新笔记本电脑。他买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},  
-                {"id":"shampoo4", "template": template_9, "content":"小陈正在等高铁。这趟高铁晚点的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"shampoo5", "template": template_9, "content":"小张打算去超市买洗衣液。这件商品降价的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"shampoo6", "template": template_9, "content":"小刘每天开车去上班。她的车被撞凹的可能性有多大？", "left": "非常不可能", "right": "非常可能"}, 
-                {"id":"shampoo7", "template": template_7, "content":"总的来说，你认为ALTERNA提供的这些洗发水产品之间有多相似？", "left": "完全不相似", "right": "非常相似"},  
-                {"id":"shampoo8", "template": template_9, "content":"ALTERNA为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"shampoo9", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"shampoo10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款洗发水", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"shampoo11", "template": template_4, "content":"我感觉完成洗发水选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"shampoo12", "template": template_4, "content":"我感觉完成洗发水选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"shampoo13", "template": template_4, "content":"我感觉完成洗发水选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"}, 
-                {"id":"shampoo14", "template": template_4, "content":"我感觉完成洗发水选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},  
-                {"id":"shampoo15", "template": template_4, "content":"我了解ALTERNA这个品牌", "left": "非常不赞同", "right": "非常赞同"}, 
-                {"id":"shampoo16", "template": template_4, "content":"我了解洗发水知识", "left": "非常不赞同", "right": "非常赞同"},                                
-            ]
+//                {"id":"shampoo3", "template": template_9, "content":"小李正在考虑买一台新笔记本电脑。他买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+//                {"id":"shampoo4", "template": template_9, "content":"小陈正在等高铁。这趟高铁晚点的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+//                {"id":"shampoo5", "template": template_9, "content":"小张打算去超市买洗衣液。这件商品降价的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+//                {"id":"shampoo6", "template": template_9, "content":"小刘每天开车去上班。她的车被撞凹的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+//                {"id":"shampoo7", "template": template_7, "content":"总的来说，你认为ALTERNA提供的这些洗发水产品之间有多相似？", "left": "完全不相似", "right": "非常相似"},
+//                {"id":"shampoo8", "template": template_9, "content":"ALTERNA为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"shampoo9", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"shampoo10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款洗发水", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"shampoo11", "template": template_4, "content":"我感觉完成洗发水选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"shampoo12", "template": template_4, "content":"我感觉完成洗发水选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"shampoo13", "template": template_4, "content":"我感觉完成洗发水选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"shampoo14", "template": template_4, "content":"我感觉完成洗发水选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"shampoo15", "template": template_4, "content":"我了解ALTERNA这个品牌", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"shampoo16", "template": template_4, "content":"我了解洗发水知识", "left": "非常不赞同", "right": "非常赞同"},
+            ],
+        };
+
+        var test_shampoo = {
+            // 问卷的第一张控件, 图片: TF_pic1, 名称 TF_name1, TF_benefit1, TF_attribute1,
+            "tests":[
+                [
+                    {"id":"shampoo_test1", "template": template_TF1, "content":"香水香水1-1？--2正确", "left": "", "right": "", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-PB.png", "name":"ALTERNA-PB", "benefit":"强效修护", "attribute":"白松露"},
+                        ],
+                    },
+                ],
+                [
+                    {"id":"shampoo_test2", "template": template_TF2, "content":"香水香水2-1？--2正确", "left": "", "right": "", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-TB.png", "name":"ALTERNA-TB", "benefit":"强效修护", "attribute":"北欧木"},
+                            {"src":"../resource/shampoo/ALTERNA-TS.png", "name":"ALTERNA-TS", "benefit":"丝滑水润", "attribute":"北欧木"},
+                        ],
+                    },
+                ],
+            ],
         };
 
 
@@ -252,53 +308,73 @@
             "current": 0,
             "names": [
                 "P3216_01",
-                "P6215_29",
-                "P6859_12",
-                "P9172_19",
+//                "P6215_29",
+//                "P6859_12",
+//                "P9172_19",
             ]
         };
 
 
         var question_brush = {
             "questions":[
+                {"id":"brush0", "template": template_2, "content":"牙刷牙刷？", "left": "是", "right": "不是"},
                 {"id":"brush1", "template": template_9, "content":"小兰主修哲学，正在考虑上法律学院。她申请的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"brush2", "template": template_9, "content":"小凡正在决定要不要举办一个新居乔迁宴会。她举办的可能性有多大？", "left": "非常不可能", "right": "非常可能"},  
-                {"id":"brush3", "template": template_9, "content":"小王打算进行一次全国公路越野旅行。他途中遇到老乡的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"brush4", "template": template_9, "content":"小陈下周六有一门辅修课，该次上课老师点名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"brush5", "template": template_9, "content":"小杨走进一家服装店。他购买的可能性有多大？", "left": "非常不可能", "right": "非常可能"}, 
-                {"id":"brush6", "template": template_7, "content":"总的来说，你认为GOVINO提供的这些电动牙刷之间有多相似？", "left": "完全不相似", "right": "非常相似"},  
-                {"id":"brush7", "template": template_9, "content":"GOVINO为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"brush8", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},  
-                {"id":"brush9", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款电动牙刷", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"brush10", "template": template_4, "content":"我感觉完成电动牙刷选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"brush11", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"brush12", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"}, 
-                {"id":"brush13", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},  
-                {"id":"brush14", "template": template_4, "content":"我了解GOVINO这个品牌", "left": "非常不赞同", "right": "非常赞同"}, 
-                {"id":"brush15", "template": template_4, "content":"我了解GOVINO知识", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"brush2", "template": template_9, "content":"小凡正在决定要不要举办一个新居乔迁宴会。她举办的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+//                {"id":"brush3", "template": template_9, "content":"小王打算进行一次全国公路越野旅行。他途中遇到老乡的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+//                {"id":"brush4", "template": template_9, "content":"小陈下周六有一门辅修课，该次上课老师点名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+//                {"id":"brush5", "template": template_9, "content":"小杨走进一家服装店。他购买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+//                {"id":"brush6", "template": template_7, "content":"总的来说，你认为GOVINO提供的这些电动牙刷之间有多相似？", "left": "完全不相似", "right": "非常相似"},
+//                {"id":"brush7", "template": template_9, "content":"GOVINO为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"brush8", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"brush9", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款电动牙刷", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"brush10", "template": template_4, "content":"我感觉完成电动牙刷选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"brush11", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"brush12", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"brush13", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"brush14", "template": template_4, "content":"我了解GOVINO这个品牌", "left": "非常不赞同", "right": "非常赞同"},
+//                {"id":"brush15", "template": template_4, "content":"我了解GOVINO知识", "left": "非常不赞同", "right": "非常赞同"},
             ],
-            "TF_trans": {"id":"trans", "template": template_2, "content":""},
-            "TF_test1":[
-                {"id":"brush_q1", "template": template_2, "content":"我了解GOVINO知识", "left": "", "right": "", "TF_pic":"", "True":"0"},
-                {"id":"brush_q2", "template": template_2, "content":"2牙刷牙刷？", "left": "", "right": "", "pic1":"", "pic1_name":"", "pic1_benefit":"", "pic1_attribute":"", "Ture":"0" },                
-            ],
-            "TF_test2":[
-                {"id":"brush_q2", "template": template_2, "content":"2牙刷牙刷？", "left": "", "right": "", "true":"0",
-                  "pictures":[
-                      {"src":"", "name":"", "benefit":"", "attribute":""},
-                      {"src":"", "name":"", "benefit":"", "attribute":""},
-                  ],
-                },                
-            ],
-            // 问卷的第一张控件, 图片: TF_pic1, 名称 TF_name1, TF_benefit1, TF_attribute1, 
+
         };
 
-
+        var test_brush = {
+            // 问卷的第一张控件, 图片: TF_pic1, 名称 TF_name1, TF_benefit1, TF_attribute1,
+            "tests":[
+                [
+                    {"id":"tea_brush1", "template": template_TF1, "content":"牙刷牙刷1-1？--1正确", "left": "左边", "right": "右边", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/P3216_01.png", "name":"P3216_01", "benefit":"健康清洁", "attribute":"机械转动型"},
+                        ],
+                    },
+                ],
+                [
+                    {"id":"tea_brush2", "template": template_TF2, "content":"牙刷牙刷2-1？--2正确", "left": "左左", "right": "右右", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/P8880_68.png", "name":"P8880_68", "benefit":"健康清洁", "attribute":"电动喷雾型"},
+                            {"src":"../resource/brush/P8911_03.png", "name":"P8911_03", "benefit":"抗敏护龈", "attribute":"电动喷雾型"},
+                        ],
+                    },
+                    {"id":"tea_brush3", "template": template_TF2, "content":"牙刷牙刷2-2？--2正确", "left": "", "right": "", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/brush/P6857_20.png", "name":"P6857_20", "benefit":"深层美白", "attribute":"超声波型"},
+                            {"src":"../resource/brush/P6859_12.png", "name":"P6859_12", "benefit":"健康清洁", "attribute":"超声波型"},
+                        ],
+                    },
+                    {"id":"tea_brush3", "template": template_TF2, "content":"牙刷牙刷2-3？--1正确", "left": "", "right": "", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/P8962_05.png", "name":"P8962_05", "benefit":"杀菌祛斑", "attribute":"电动喷雾型"},
+                            {"src":"../resource/brush/P9172_19.png", "name":"P9172_19", "benefit":"深层美白", "attribute":"电动喷雾型"},
+                        ],
+                    },
+                ],
+            ],
+        };
         
 
         var product_config = config_tea;
         var product_question = question_tea;
         var product_choose = choose_tea;
+        var product_test = test_tea;
 
 
     </script>
@@ -518,9 +594,7 @@
             background: #ef4949; 
 /*          border-radius: 50%;*/
         }
-        
 
-        }
     </style>
 
 </head>
@@ -708,6 +782,10 @@
         product_question = question_tea;
         product_choose = choose_tea;
         product_choose["names"] =  random_choice_product(product_choose["names"], product_choose["names"].length);
+        product_test = test_tea;
+        for(var i = 0; i < product_test["tests"].length; ++i){
+            product_test["tests"][i] = random_choice_product(product_test["tests"][i], product_test["tests"][i].length);
+        }
         config["base"] += 1000;
         clear_choice();
     }
@@ -717,6 +795,10 @@
         product_question = question_shampoo;
         product_choose = choose_shampoo
         product_choose["names"] =  random_choice_product(product_choose["names"], product_choose["names"].length);
+        product_test = test_shampoo;
+        for(var i = 0; i < product_test["tests"].length; ++i){
+            product_test["tests"][i] = random_choice_product(product_test["tests"][i], product_test["tests"][i].length);
+        }
         config["base"] += 1000;
         clear_choice();
     }
@@ -726,6 +808,10 @@
         product_question = question_brush;
         product_choose = choose_brush;
         product_choose["names"] =  random_choice_product(product_choose["names"], product_choose["names"].length);
+        product_test = test_brush;
+        for(var i = 0; i < product_test["tests"].length; ++i){
+            product_test["tests"][i] = random_choice_product(product_test["tests"][i], product_test["tests"][i].length);
+        }
         config["base"] += 1000;
         clear_choice();
     }
@@ -897,7 +983,8 @@
         33: {"next":40, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product3_after_init},
         34: {"next":40, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product4_after_init},
         40: {"next":50, "html":page_question, "wait":10000, "auto":0, "before_init":null, "after_init":page_question_after_init},
-        50: {"next":50, "html":page_phrase_transition, "wait":1, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+        50: {"next":60, "html":page_test, "wait":10000, "auto":0, "before_init":null, "after_init":page_test_after_init},
+        60: {"next":60, "html":page_phrase_transition, "wait":10000, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
     };
 
     var page_shampoo_item = {
@@ -914,7 +1001,8 @@
         33: {"next":40, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product3_after_init},
         34: {"next":40, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product4_after_init},
         40: {"next":50, "html":page_question, "wait":10000, "auto":0, "before_init":null, "after_init":page_question_after_init},
-        50: {"next":50, "html":page_phrase_transition, "wait":1, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+        50: {"next":60, "html":page_test, "wait":10000, "auto":0, "before_init":null, "after_init":page_test_after_init},
+        60: {"next":60, "html":page_phrase_transition, "wait":10000, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
     };
 
     var page_brush_item = {
@@ -931,7 +1019,8 @@
         33: {"next":40, "html":page_brush_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product3_after_init},
         34: {"next":40, "html":page_brush_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product4_after_init},
         40: {"next":50, "html":page_question, "wait":10000, "auto":0, "before_init":null, "after_init":page_question_after_init},
-        50: {"next":50, "html":page_phrase_transition, "wait":1, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+        50: {"next":60, "html":page_test, "wait":10000, "auto":0, "before_init":null, "after_init":page_test_after_init},
+        60: {"next":60, "html":page_phrase_transition, "wait":10000, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
     };
 
     function generate_pages(first, second, third){
@@ -1516,19 +1605,18 @@
 
     
     // page question
-    var answers = {
-        "current_question":0,
-        "ids":[],
+    var questions = {
+        "current":0,
         "answers":[]
     }
-    var answer_id_strings = [];
-    var answer_answer_strings = [];
+    var question_answers = [];
     function show_current_question() {
-        var index = answers["current_question"];
+        var index = questions["current"];
         if(index >= product_question["questions"].length){
-            console.log("question end, index: ", index)
-            answer_id_strings.push(product_config["name"] + " " + answers["ids"].join(" "));
-            answer_answer_strings.push(product_config["name"] + " " + answers["answers"].join(" "));
+            console.log("question end, index: ", index);
+            var question_answer = {};
+            question_answer[product_config["name"]] = questions["answers"];
+            question_answers.push(question_answer);
             config["change"] = 1;
             return;
         }
@@ -1551,22 +1639,123 @@
                 alert("请选择一个选项");
                 return;
             }
-            answers["ids"].push(question["id"])
-            answers["answers"].push(val)
-            answers["current_question"] = index + 1;
+            var val_int = parseInt(val);
+            questions["answers"].push({"id": question["id"], "answer": val_int});
+            questions["current"] = index + 1;
             show_current_question();
         });
     }
     
     function page_question_after_init() {
-        answers["current_question"] = 0;
-        show_current_question();
+        // 此时要页面
+        $("#next_tips").unbind();
+        $("#next_tips").on("click", function () {
+            questions["current"] = 0;
+            show_current_question();
+        })
+
+        // 此时不要页面
+//        questions["current"] = 0;
+//        show_current_question();
     }
 
     // page_test1
+    var tests = {
+        "start":0,
+        "group":0,
+        "current":0,
+        "answers":[]
+    }
+    var test_answers = [];
+    function show_current_test() {
+
+        while(tests["current"] >= product_test["tests"][tests["group"]].length){
+            tests["group"] += 1;
+            tests["current"] = 0;
+            if(tests["group"] >= product_test["tests"].length){
+                console.log("test end, index: ", tests["group"]);
+                var test_answer = {};
+                test_answer[product_config["name"]] = tests["answers"];
+                test_answers.push(test_answer);
+                config["change"] = 1;
+                return;
+            }
+        }
+        var index = tests["current"];
+        var group = tests["group"];
+        var test = product_test["tests"][group][index];
+
+        set_body(test["template"]);
+        if(test.hasOwnProperty("content") && test["content"]!=""){
+            $("#content").html(test["content"]);
+        }
+        if(test.hasOwnProperty("left") && test["left"]!=""){
+            $("#left").html(test["left"]);
+        }
+        if(test.hasOwnProperty("right") && test["right"]!=""){
+            $("#right").html(test["right"]);
+        }
+
+        for(var i = 0; i < test["pictures"].length; i++){
+            var pic = i + 1;
+            var pic_str = pic + "";
+
+            var name_id = "#TF_name" + pic_str;
+            var picture_id = "#TF_pic" + pic_str;
+            var attribute_id = "#TF_attribute" + pic_str;
+            var benefit_id = "#TF_benefit" + pic_str;
+            $(name_id).html(test["pictures"][i]["name"]);
+            $(picture_id).attr("src", test["pictures"][i]["src"]);
+            $(attribute_id).html(test["pictures"][i]["attribute"]);
+            $(benefit_id).html(test["pictures"][i]["benefit"]);
+        }
 
 
-    // page_test2
+        if(!test.hasOwnProperty("true") || test["true"]==""){
+            alert("这个问题没有正确答案！！！");
+            $("#next_page").unbind();
+            return;
+        }
+
+        $("#next_page").unbind();
+        $("#next_page").on("click",function () {
+            var val=$('input:radio[name="one_choice"]:checked').val();
+            if(val==null){
+                console.log("test select nothing", test)
+                //alert("请选择一个选项");
+                return;
+            }
+            var correct = (val == test["true"]) ? 1 : 0;
+            var spend = new Date() - tests["start"];
+            tests["answers"].push({"id": test["id"], "answer": correct, "RT":spend});
+            tests["current"] = index + 1;
+            tests["start"] = new Date();
+            show_current_test();
+        });
+
+        $("#choice_1").unbind();
+        $("#choice_2").unbind();
+        $("#choice_1").on("click", function () {
+            $("#next_page").trigger('click');
+        });
+        $("#choice_2").on("click", function () {
+            $("#next_page").trigger('click');
+        });
+
+        tests["start"] = new Date();
+    }
+
+
+    function page_test_after_init() {
+        $("#next_tips").unbind();
+        $("#next_tips").on("click", function () {
+            tests["start"] = new Date();
+            tests["group"] = 0;
+            tests["current"] = 0;
+            show_current_test();
+        })
+    }
+
 
 
     // page phrase transition
@@ -1679,8 +1868,9 @@
             "order_sign": order_sign,
             "purpose": purpose,
             "choice": choice_strings.sort(),
-            "question_id": answer_id_strings.sort(),
-            "question_answer": answer_answer_strings.sort()}
+            "questions": question_answers,
+            "tests": test_answers,
+        };
         var string = JSON.stringify(stringObj,null,"\t")
         console.log("final save:", string)
         saveFile(filename, string);
@@ -1729,13 +1919,19 @@
                 }
                 return str;
             }
-        }
+        };
 
-        answers = {
-            "current_question":0,
-            "ids":[],
+        questions = {
+            "current":0,
             "answers":[]
-        }
+        };
+
+        tests = {
+            "start":0,
+            "group":0,
+            "current":0,
+            "answers":[]
+        };
     }
 
     function main() {
