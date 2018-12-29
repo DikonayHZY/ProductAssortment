@@ -1,7 +1,7 @@
 template_4 = `
 	<div style="width: 100%; height: 100%; position: fixed;">
 		<div style="width: 100%; height: 25%; display: flex; align-items: center; justify-content: center;"><!-- 题目说明 -->
-			<div style="width: 80%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-size: 24px; line-height: 2;"> <p>请仔细阅读下列问题，并选择最能表达你心中感受的数字。<strong style="color: red;">答案没有对错之分</strong>，请按照真实感受来回答：<br>“1”= 非常不符合, “4” = 非常符合</p>
+			<div style="width: 80%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-size: 24px; line-height: 2;"> <p>请仔细阅读下列问题，并选择最能表达你心中感受的数字。<strong style="color: red;">答案没有对错之分</strong>，请按照真实感受来回答：<br>“1”= 非常不赞同, “4” = 非常赞同</p>
 </div>			
 		</div>
 
@@ -37,7 +37,7 @@ template_4 = `
 			</div>
 		</div>
 		<div style="width: 100%; height: 20%; display: flex; align-items: center; justify-content: center;">
-			<a id="next_page" href="#" style="width: 160px; height: 40px; border: 2px solid black; text-align: center; font-size: 26px;/*visibility: hidden*/;">下一页</a>
+			<a id="next_page" href="#" style="width: 200px; height: 40px; border: 2px solid black; text-align: center; font-size: 26px;/*visibility: hidden*/;">按“空格”翻页</a>
 		</div>		
 	</div>
 `;

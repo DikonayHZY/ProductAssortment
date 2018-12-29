@@ -43,7 +43,7 @@ template_brush_TF2 =`
 					</div>
 				</div>
 			</div>
-			<div style="width: 100%; height: 15%; display: flex; align-items: center; justify-content: center;">
+			<div style="width: 100%; height: 15%; display: flex; align-items: center; justify-content: center; visibility: hidden;">
 				<a id="next_page" href="#" style="width: 160px; height: 40px; border: 2px solid black; text-align: center; font-size: 26px;/*visibility: hidden*/;">下一题</a>
 			</div>			
 		</div>	

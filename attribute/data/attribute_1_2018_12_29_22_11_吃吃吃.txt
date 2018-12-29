@@ -1,0 +1,465 @@
+﻿{
+	"username": "吃吃吃",
+	"gender": "0",
+	"age": "2",
+	"major": "磁场",
+	"grade": "大一",
+	"phone": "211",
+	"condition": "attribute",
+	"order_number": 1,
+	"order_sign": "tea_shampoo_brush",
+	"purpose": "空",
+	"choice": [
+		"bursh GOVINO-γD 2018-12-29_22:11:39 2018-12-29_22:11:43 4 GOVINO-αG 0 GOVINO-αS 0 GOVINO-αD 0 GOVINO-αJ 0 GOVINO-αH 0 GOVINO-βJ 0 GOVINO-βS 0 GOVINO-βG 0 GOVINO-βD 0 GOVINO-βH 0 GOVINO-γD 1 GOVINO-γS 1 GOVINO-γJ 1 GOVINO-γG 1 GOVINO-γH 1 GOVINO-δS 0 GOVINO-δJ 0 GOVINO-δH 0 GOVINO-δG 0 GOVINO-δD 0 ",
+		"shampoo ALTERNA-αG 2018-12-29_22:10:14 2018-12-29_22:10:17 3 ALTERNA-αS 1 ALTERNA-αD 1 ALTERNA-αH 1 ALTERNA-αJ 1 ALTERNA-αG 1 ALTERNA-βH 0 ALTERNA-βS 0 ALTERNA-βG 0 ALTERNA-βJ 0 ALTERNA-βD 0 ALTERNA-γG 0 ALTERNA-γD 0 ALTERNA-γH 0 ALTERNA-γS 0 ALTERNA-γJ 0 ALTERNA-δS 0 ALTERNA-δG 0 ALTERNA-δH 0 ALTERNA-δD 0 ALTERNA-δJ 0 ",
+		"tea 太平猴魁 2018-12-29_22:08:43 2018-12-29_22:08:49 6 太平猴魁 1 雪水云绿 0 狗牯脑茶 0 六安瓜片 0 千岛玉叶 0 金骏眉 0 政和工夫 0 正山小种 0 信阳红 0 坦洋工夫 0 永春佛手 0 冻顶乌龙 0 东方美人 0 凤凰单枞 0 水金龟 0 茉莉花茶 0 杭白菊 0 玫瑰花茶 0 苦丁茶 0 黄山贡菊 0 "
+	],
+	"questions": [
+		{
+			"tea": [
+				{
+					"id": "tea2",
+					"answer": 9
+				},
+				{
+					"id": "tea3",
+					"answer": 9
+				},
+				{
+					"id": "tea4",
+					"answer": 9
+				},
+				{
+					"id": "tea5",
+					"answer": 9
+				},
+				{
+					"id": "tea6",
+					"answer": 9
+				},
+				{
+					"id": "tea7",
+					"answer": 5
+				},
+				{
+					"id": "tea8",
+					"answer": 9
+				},
+				{
+					"id": "tea9",
+					"answer": 9
+				},
+				{
+					"id": "tea10",
+					"answer": 4
+				},
+				{
+					"id": "tea11",
+					"answer": 4
+				},
+				{
+					"id": "tea12",
+					"answer": 4
+				},
+				{
+					"id": "tea13",
+					"answer": 4
+				},
+				{
+					"id": "tea14",
+					"answer": 4
+				},
+				{
+					"id": "tea15",
+					"answer": 4
+				},
+				{
+					"id": "tea16",
+					"answer": 4
+				}
+			]
+		},
+		{
+			"shampoo": [
+				{
+					"id": "shampoo2",
+					"answer": 9
+				},
+				{
+					"id": "shampoo3",
+					"answer": 9
+				},
+				{
+					"id": "shampoo4",
+					"answer": 9
+				},
+				{
+					"id": "shampoo5",
+					"answer": 9
+				},
+				{
+					"id": "shampoo6",
+					"answer": 9
+				},
+				{
+					"id": "shampoo7",
+					"answer": 5
+				},
+				{
+					"id": "shampoo8",
+					"answer": 9
+				},
+				{
+					"id": "shampoo9",
+					"answer": 9
+				},
+				{
+					"id": "shampoo10",
+					"answer": 4
+				},
+				{
+					"id": "shampoo11",
+					"answer": 4
+				},
+				{
+					"id": "shampoo12",
+					"answer": 4
+				},
+				{
+					"id": "shampoo13",
+					"answer": 4
+				},
+				{
+					"id": "shampoo14",
+					"answer": 4
+				},
+				{
+					"id": "shampoo15",
+					"answer": 4
+				},
+				{
+					"id": "shampoo16",
+					"answer": 4
+				}
+			]
+		},
+		{
+			"bursh": [
+				{
+					"id": "brush1",
+					"answer": 9
+				},
+				{
+					"id": "brush2",
+					"answer": 9
+				},
+				{
+					"id": "brush3",
+					"answer": 9
+				},
+				{
+					"id": "brush4",
+					"answer": 9
+				},
+				{
+					"id": "brush5",
+					"answer": 9
+				},
+				{
+					"id": "brush6",
+					"answer": 5
+				},
+				{
+					"id": "brush7",
+					"answer": 8
+				},
+				{
+					"id": "brush8",
+					"answer": 8
+				},
+				{
+					"id": "brush9",
+					"answer": 4
+				},
+				{
+					"id": "brush10",
+					"answer": 4
+				},
+				{
+					"id": "brush11",
+					"answer": 4
+				},
+				{
+					"id": "brush12",
+					"answer": 4
+				},
+				{
+					"id": "brush13",
+					"answer": 4
+				},
+				{
+					"id": "brush14",
+					"answer": 4
+				},
+				{
+					"id": "brush15",
+					"answer": 4
+				}
+			]
+		}
+	],
+	"tests": [
+		{
+			"tea": [
+				{
+					"id": "tea_7",
+					"answer": 1,
+					"RT": 21272
+				},
+				{
+					"id": "tea_8",
+					"answer": 1,
+					"RT": 2474
+				},
+				{
+					"id": "tea_1",
+					"answer": 1,
+					"RT": 1280
+				},
+				{
+					"id": "tea_6",
+					"answer": 1,
+					"RT": 1168
+				},
+				{
+					"id": "tea_3",
+					"answer": 1,
+					"RT": 1078
+				},
+				{
+					"id": "tea_2",
+					"answer": 1,
+					"RT": 1045
+				},
+				{
+					"id": "tea_4",
+					"answer": 1,
+					"RT": 1292
+				},
+				{
+					"id": "tea_5",
+					"answer": 1,
+					"RT": 1631
+				},
+				{
+					"id": "tea_15",
+					"answer": 1,
+					"RT": 2125
+				},
+				{
+					"id": "tea_16",
+					"answer": 1,
+					"RT": 1900
+				},
+				{
+					"id": "tea_12",
+					"answer": 1,
+					"RT": 1023
+				},
+				{
+					"id": "tea_10",
+					"answer": 1,
+					"RT": 999
+				},
+				{
+					"id": "tea_14",
+					"answer": 1,
+					"RT": 1191
+				},
+				{
+					"id": "tea_9",
+					"answer": 1,
+					"RT": 1732
+				},
+				{
+					"id": "tea_11",
+					"answer": 1,
+					"RT": 2113
+				},
+				{
+					"id": "tea_13",
+					"answer": 1,
+					"RT": 1607
+				}
+			]
+		},
+		{
+			"shampoo": [
+				{
+					"id": "shampoo_8",
+					"answer": 1,
+					"RT": 3757
+				},
+				{
+					"id": "shampoo_7",
+					"answer": 1,
+					"RT": 2756
+				},
+				{
+					"id": "shampoo_4",
+					"answer": 0,
+					"RT": 1259
+				},
+				{
+					"id": "shampoo_5",
+					"answer": 1,
+					"RT": 4083
+				},
+				{
+					"id": "shampoo_3",
+					"answer": 1,
+					"RT": 1337
+				},
+				{
+					"id": "shampoo_2",
+					"answer": 0,
+					"RT": 685
+				},
+				{
+					"id": "shampoo_1",
+					"answer": 1,
+					"RT": 2316
+				},
+				{
+					"id": "shampoo_6",
+					"answer": 1,
+					"RT": 1890
+				},
+				{
+					"id": "shampoo_14",
+					"answer": 1,
+					"RT": 2676
+				},
+				{
+					"id": "shampoo_13",
+					"answer": 1,
+					"RT": 1506
+				},
+				{
+					"id": "shampoo_16",
+					"answer": 1,
+					"RT": 1619
+				},
+				{
+					"id": "shampoo_10",
+					"answer": 1,
+					"RT": 3070
+				},
+				{
+					"id": "shampoo_9",
+					"answer": 1,
+					"RT": 2395
+				},
+				{
+					"id": "shampoo_11",
+					"answer": 1,
+					"RT": 1709
+				},
+				{
+					"id": "shampoo_15",
+					"answer": 1,
+					"RT": 898
+				},
+				{
+					"id": "shampoo_12",
+					"answer": 1,
+					"RT": 1383
+				}
+			]
+		},
+		{
+			"bursh": [
+				{
+					"id": "brush_1",
+					"answer": 1,
+					"RT": 3014
+				},
+				{
+					"id": "brush_2",
+					"answer": 1,
+					"RT": 1663
+				},
+				{
+					"id": "brush_7",
+					"answer": 1,
+					"RT": 1631
+				},
+				{
+					"id": "brush_3",
+					"answer": 1,
+					"RT": 695
+				},
+				{
+					"id": "brush_4",
+					"answer": 1,
+					"RT": 1575
+				},
+				{
+					"id": "brush_6",
+					"answer": 1,
+					"RT": 786
+				},
+				{
+					"id": "brush_8",
+					"answer": 1,
+					"RT": 1529
+				},
+				{
+					"id": "brush_5",
+					"answer": 1,
+					"RT": 1428
+				},
+				{
+					"id": "brush_12",
+					"answer": 1,
+					"RT": 1595
+				},
+				{
+					"id": "brush_9",
+					"answer": 1,
+					"RT": 1888
+				},
+				{
+					"id": "brush_10",
+					"answer": 1,
+					"RT": 1562
+				},
+				{
+					"id": "brush_13",
+					"answer": 1,
+					"RT": 2833
+				},
+				{
+					"id": "brush_11",
+					"answer": 1,
+					"RT": 1000
+				},
+				{
+					"id": "brush_16",
+					"answer": 1,
+					"RT": 1629
+				},
+				{
+					"id": "brush_14",
+					"answer": 1,
+					"RT": 1382
+				},
+				{
+					"id": "brush_15",
+					"answer": 1,
+					"RT": 2283
+				}
+			]
+		}
+	]
+}
