@@ -18,10 +18,10 @@ page_shampoo_choose_menu = `
 			<div style="width: 100%; height: 70%; background-color: rgba(0,0,0,0.8); display: flex; flex-direction: column; justify-content: center;">
 				<div style="width: 100%; height: 30%; display: flex; align-items: center; justify-content: center; color: white; font-size: 35px;">产品系列</div>
 				<div class="shampoo_main_menu" style="width: 100%; height: 40%; display: flex; align-items: center; justify-content: center; color: white; font-size: 40px;">
-					<a href="#" id="green_tea_main">白松露</a>&emsp;<span class="line">&#124;</span>&emsp;
-					<a href="#" id="red_tea_main">鱼子酱</a>&emsp;<span class="line">&#124;</span>&emsp;
-					<a href="#" id="qing_tea_main">牛油果</a>&emsp;<span class="line">&#124;</span>&emsp;
-					<a href="#" id="hua_tea_main">北欧木</a>
+					<a href="#" id="green_tea_main">海洋味</a>&emsp;<span class="line">&#124;</span>&emsp;
+					<a href="#" id="red_tea_main">柠檬香</a>&emsp;<span class="line">&#124;</span>&emsp;
+					<a href="#" id="qing_tea_main">迷迭香</a>&emsp;<span class="line">&#124;</span>&emsp;
+					<a href="#" id="hua_tea_main">松木香</a></div>
 				</div>
 			</div>			
 		</div>
