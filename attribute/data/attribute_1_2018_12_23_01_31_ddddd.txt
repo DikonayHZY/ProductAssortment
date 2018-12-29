@@ -1,0 +1,27 @@
+﻿{
+	"username": "ddddd",
+	"gender": "0",
+	"age": "11",
+	"major": "dddddddd",
+	"grade": "中学生",
+	"phone": "1111",
+	"condition": "attribute",
+	"order_number": 1,
+	"order_sign": "tea_shampoo_brush",
+	"purpose": "dddddddddddd",
+	"choice": [
+		"bursh P6859_12 2018-12-23_01:31:26 2018-12-23_01:31:31 5 P3226_41 0 P3226_22 0 P3216_13 0 P3216_01 0 P3216_31 0 P6215_29 0 P6263_62 0 P6225_16 0 P6211_46 0 P6275_63 0 P6851_59 1 P6859_12 1 P6855_12 1 P6809_02 1 P6857_20 1 P8911_03 0 P8962_05 0 P9172_19 0 P9322_14 0 P8880_68 0 ",
+		"shampoo ALTERNA-ZJ 2018-12-23_01:29:43 2018-12-23_01:29:49 5 ALTERNA-PB 0 ALTERNA-PD 1 ALTERNA-PS 1 ALTERNA-PJ 1 ALTERNA-PG 1 ALTERNA-VB 0 ALTERNA-VD 0 ALTERNA-VG 0 ALTERNA-VS 0 ALTERNA-VJ 0 ALTERNA-ZB 0 ALTERNA-ZJ 1 ALTERNA-ZG 0 ALTERNA-ZS 0 ALTERNA-ZD 0 ALTERNA-TD 0 ALTERNA-TJ 0 ALTERNA-TS 0 ALTERNA-TB 0 ALTERNA-TG 0 ",
+		"tea 信阳毛尖 2018-12-23_01:27:52 2018-12-23_01:28:05 12 西湖龙井 1 太平猴魁 1 雪水云绿 1 休宁松萝 1 信阳毛尖 1 正山小种 0 银骏眉 0 宜红 0 政和工夫 0 英红 0 武夷大红袍 1 永春佛手 1 武夷水仙 0 武夷肉桂 0 铁罗汉 0 苦丁茶 0 玫瑰花茶 0 茉莉花茶 0 黄山贡菊 0 杭白菊 0 "
+	],
+	"question_id": [
+		"bursh brush1 brush2 brush3 brush4 brush5 brush6 brush7 brush8 brush9 brush10 brush11 brush12 brush13 brush14 brush15",
+		"shampoo shampoo1 shampoo2 shampoo3 shampoo4 shampoo5 shampoo6 shampoo7 shampoo8 shampoo9 shampoo10 shampoo11 shampoo12 shampoo13 shampoo14 shampoo15 shampoo16",
+		"tea tea1 tea2 tea3 tea4 tea5 tea6 tea7 tea8 tea9 tea10 tea11 tea12 tea13 tea14 tea15 tea16"
+	],
+	"question_answer": [
+		"bursh 9 9 9 9 9 5 9 9 4 4 4 4 4 4 4",
+		"shampoo 1 9 9 9 9 9 5 9 9 4 3 4 4 4 4 4",
+		"tea 1 9 9 9 9 8 5 7 7 4 4 4 4 4 4 4"
+	]
+}

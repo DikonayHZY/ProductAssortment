@@ -10,13 +10,13 @@ page_brush_product =`
 		<div style="width: 100%; height: 80%; display: flex;"> <!-- 下半部分 -->
 			<div style="width: 15%; height: 100%; min-width: 150px; /*background-color: green; */display: flex; align-items: center; justify-content: center;"> <!-- 左侧导航栏 -->
 				<div class="brush_left_menu" style="width: 100%; height: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center; ">
-					<a href="#" id="left_green_tea">机械转动型</a><br>
+					<a href="#" id="left_green_tea">电动喷雾型</a><br>
 					&emsp;<br>
 					<a href="#" id="left_red_tea">声波振动型</a><br>
 					&emsp;<br>
-					<a href="#" id="left_qing_tea">超声波型</a><br>
+					<a href="#" id="left_qing_tea">机械转动型</a><br>
 					&emsp;<br>
-					<a href="#" id="left_hua_tea">电动喷雾型</a>
+					<a href="#" id="left_hua_tea">超声波型</a>
 				</div>
 			</div>
 
