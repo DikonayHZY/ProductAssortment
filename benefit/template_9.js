@@ -2,7 +2,9 @@ template_9 =`
 	<div style="width: 100%; height: 100%; position: fixed;">
 		<div style="width: 100%; height: 25%; display: flex; align-items: center; justify-content: center;"><!-- 题目说明 -->
 			<div style="width: 80%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-size: 24px; line-height: 2;"> 
-			<p>请仔细阅读下列描述，并判断事件的可能性。<strong style="color: red;">回答不分对错</strong>，请按照真实感受来回答<br>“1”= 非常不可能, “9” = 非常可能</p>
+			<p>本题与你之前浏览的所有页面均无关联<br>
+			   请仔细阅读下列描述，并判断事件发生的可能性：比如“明天会下雨”，如果你认为这个事情非常可能发生，就选择“9”<br>
+			   <strong style="color: red;">回答不分对错</strong>，请按照真实感受来回答<br>“1”= 非常不可能, “9” = 非常可能</p>
 			</div>			
 		</div>
 
@@ -57,7 +59,7 @@ template_9 =`
 			</div>
 		</div>
 		<div style="width: 100%; height: 20%; display: flex; align-items: center; justify-content: center;">
-			<a id="next_page" href="#" style="width: 160px; height: 40px; border: 2px solid black; text-align: center; font-size: 26px;/*visibility: hidden*/;">下一页</a>
+			<a id="next_page" href="#" style="width: 200px; height: 40px; border: 2px solid black; text-align: center; font-size: 26px;/*visibility: hidden*/;">按“空格”翻页</a>
 		</div>		
 	</div>
 `;

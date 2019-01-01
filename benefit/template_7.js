@@ -30,11 +30,11 @@ template_7 = `
 					</div>
 					<div style="width: 70px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;"> 
  						<input name="one_choice" type="radio" id="choice_5" value="5">
- 						<label for="choice_6">5</label>						
+ 						<label for="choice_6">6</label>						
 					</div>
 					<div style="width: 70px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;"> 
  						<input name="one_choice" type="radio" id="choice_5" value="5">
- 						<label for="choice_7">5</label>						
+ 						<label for="choice_7">7</label>						
 					</div>										
 				</div>
 				<div style="width: 36%; height: 50%; display: flex; align-items: flex-start; justify-content: space-between;">
@@ -47,7 +47,7 @@ template_7 = `
 			</div>
 		</div>
 		<div style="width: 100%; height: 20%; display: flex; align-items: center; justify-content: center;">
-			<a id="next_page" href="#" style="width: 160px; height: 40px; border: 2px solid black; text-align: center; font-size: 26px;/*visibility: hidden*/;">下一页</a>
+			<a id="next_page" href="#" style="width: 200px; height: 40px; border: 2px solid black; text-align: center; font-size: 26px;/*visibility: hidden*/;">按“空格”翻页</a>
 		</div>		
 	</div>
 `;
