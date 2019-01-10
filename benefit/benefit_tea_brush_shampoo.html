@@ -2,13 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>benefit</title>
+    <title>Study1</title>
     <script type="text/javascript" src="template_2.js"></script>
     <script type="text/javascript" src="template_4.js"></script>
     <script type="text/javascript" src="template_5.js"></script>
     <script type="text/javascript" src="template_7.js"></script>
-    <script type="text/javascript" src="template_9.js"></script>
+    <script type="text/javascript" src="template_9.js"></script>    
+    <script type="text/javascript" src="template_9_dyh.js"></script>
     <script type="text/javascript" src="template_10.js"></script>
+    <script type="text/javascript" src="page_test.js"></script>
+    <script type="text/javascript" src="template_tea_TF1.js"></script>
+    <script type="text/javascript" src="template_tea_TF2.js"></script>
+    <script type="text/javascript" src="template_shampoo_TF1.js"></script>
+    <script type="text/javascript" src="template_shampoo_TF2.js"></script>
+    <script type="text/javascript" src="template_brush_TF1.js"></script>
+    <script type="text/javascript" src="template_brush_TF2.js"></script>    
     <script type="text/javascript">
         
         var username = "黄梓仪";
@@ -32,95 +40,206 @@
             "花茶": "#CE6E60",
         }
 
-        var config_tea = {
+	    var config_tea = {
             "name": "tea",
-            "product1":[
-                [0, "../resource/tea/信阳毛尖.JPG", "绿茶", "减肥瘦身", "匀整细直，白毫隐翠，有熟果香","消脂减脂，净化肠胃"],
-                [0, "../resource/tea/庐山云雾茶.JPG", "绿茶", "减肥瘦身", "条索紧结，青翠多毫，有板栗香","消脂减脂，减肥瘦身"],
+	        "product1":[//减肥瘦身                      
                 [0, "../resource/tea/六安瓜片.JPG", "绿茶", "减肥瘦身", "瓜子形单叶，叶底嫩黄，熟栗香味","降低血脂，促进消化"],
-                [0, "../resource/tea/坦洋工夫.JPG", "红茶", "减肥瘦身", "条索紧细，毫尖金黄，桂圆香气", "减肥瘦身，养胃护胃"],
-
-                [0, "../resource/tea/东方美人.JPG", "青茶", "减肥瘦身","茶心肥厚，满披茸毛，有熟果香", "消脂减肥，降低血脂"],
-                [0, "../resource/tea/玫瑰花茶.JPG", "花茶", "减肥瘦身","朵大饱满，色泽均匀，香味清淡", "消脂减肥，促进消化"],
                 [0, "../resource/tea/苦丁茶.JPG", "花茶", "减肥瘦身","条索紧结，灰绿相间，清香带苦", "降压降脂，清热消暑"],
-
-            ],
-            "product2":[
-                [0, "../resource/tea/高山乌龙.JPG", "青茶", "舒缓压力","半球形状，色泽深绿，花香突出", "好喝，身心愉悦"],
-                [0, "../resource/tea/休宁松萝.JPG", "绿茶", "舒缓压力", "紧卷匀壮，色泽绿润，橄榄风味","提神醒脑，清心明目"],
+                [0, "../resource/tea/玫瑰花茶.JPG", "花茶", "减肥瘦身","朵大饱满，色泽均匀，香味清淡", "消脂减肥，促进消化"],
+                [0, "../resource/tea/坦洋工夫.JPG", "红茶", "减肥瘦身", "条索紧细，毫尖金黄，桂圆香气", "减肥瘦身，养胃护胃"],
+                [0, "../resource/tea/东方美人.JPG", "青茶", "减肥瘦身","茶心肥厚，满披茸毛，有熟果香", "消脂减肥，降低血脂"],
+	            // [0, "../resource/tea/庐山云雾茶.JPG", "绿茶", "减肥瘦身", "条索紧结，青翠多毫，有板栗香","消脂减脂，减肥瘦身"],
+                // [0, "../resource/tea/信阳毛尖.JPG", "绿茶", "减肥瘦身", "匀整细直，白毫隐翠，有熟果香","消脂减脂，净化肠胃"],
+	        ],
+	        "product2":[//舒缓压力
                 [0, "../resource/tea/太平猴魁.JPG", "绿茶", "舒缓压力", "两叶抱芽，绿中隐红，兰香高爽","促进血液循环，松弛平滑肌"],
-                [0, "../resource/tea/蒙顶甘露.JPG", "绿茶", "舒缓压力", "紧凑多毫，浅绿油润，香气馥郁","好喝，身心愉悦"],
-                [0, "../resource/tea/政和工夫.JPG", "红茶", "舒缓压力", "条索重实，毫尖金黄，紫罗兰香", "好喝，身心愉悦"],
-                [0, "../resource/tea/英红.JPG", "红茶", "舒缓压力", "外形重实，色泽乌润，香气浓郁", "好喝，身心愉悦"],
-                [0, "../resource/tea/银骏眉.JPG", "红茶", "舒缓压力", "条索紧细，乌润带金，花果清香", "好喝，身心愉悦"],
-                [0, "../resource/tea/宜红.JPG", "红茶", "舒缓压力", "条索紧细，略带金毫，花果清香", "好喝，身心愉悦"],
-                [0, "../resource/tea/宁红.JPG", "红茶", "舒缓压力", "紧结圆直，略显红筋，鲜香持久", "好喝，身心愉悦"],
-                [0, "../resource/tea/荔枝红.JPG", "红茶", "舒缓压力", "条索纤秀，乌黑油润，香气清幽", "风味独特，好喝"],
-                [0, "../resource/tea/九曲红梅.JPG", "红茶", "舒缓压力", "细若发丝，金色绒毛，似蜜糖香", "好喝，身心愉悦"],
-                [0, "../resource/tea/滇红.JPG", "红茶", "舒缓压力", "紧结肥壮，色泽乌润，香气鲜锐", "好喝，身心愉悦"],
-                [0, "../resource/tea/川红.JPG", "红茶", "舒缓压力", "紧细圆直，色泽乌润，带枯糖香", "好喝，身心愉悦"],
-                [0, "../resource/tea/永春佛手.JPG", "青茶", "舒缓压力","紧结肥壮，砂率乌润，香气悠长", "好喝，身心愉悦"],
-                [0, "../resource/tea/武夷水仙.JPG", "青茶", "舒缓压力","叶端扭曲，油润暗绿，兰花香郁", "好喝，身心愉悦"],
-                [0, "../resource/tea/铁罗汉.JPG", "青茶", "舒缓压力","条索匀整，褐绿鲜润， 兰香馥郁", "耐泡，好喝"],
-                [0, "../resource/tea/水金龟.JPG", "青茶", "舒缓压力","条索紧结，色泽青褐，清雅高长", "好喝，身心愉悦"],
-                [0, "../resource/tea/凤凰水仙.JPG", "青茶", "舒缓压力","挺直肥大，鳝鱼皮色，天然花香", "清热解暑，生津止渴"],
-                [0, "../resource/tea/白芽奇兰.JPG", "青茶", "舒缓压力","紧结匀整，翠绿油润，兰花香味", "好喝，身心愉悦"],
-                [0, "../resource/tea/白鸡冠.JPG", "青茶", "舒缓压力","条索紧结，色泽灰暗，香气悠长", "清心明目，提神解乏"],
-                [0, "../resource/tea/阿里山乌龙.JPG", "青茶", "舒缓压力","呈半球形，色泽砂绿，清新典雅", "好喝，身心愉悦"],
                 [0, "../resource/tea/茉莉花茶.JPG", "花茶", "舒缓压力","紧细圆整，黄中带褐，灵香持久", "好喝，身心愉悦"],
-
-            ],
-            "product3":[
-                [0, "../resource/tea/西湖龙井.JPG", "绿茶", "保健养生", "扁而平直，绿中透黄，有炒豆香","降低血脂，防癌抗癌，抗菌消炎"],
-                [0, "../resource/tea/莲心绿茶.JPG", "绿茶", "保健养生", "芽叶成朵，色泽黄绿，绿豆香气","抵御放射性元素，防治坏血病"],
-                [0, "../resource/tea/开化龙顶.JPG", "绿茶", "保健养生","紧直挺秀，银绿翠隐，淡青草味","清热解毒，固齿防龋"],
-                [0, "../resource/tea/黄山毛峰.JPG", "绿茶", "保健养生","细扁微卷，银毫显露，香气如兰","利尿消肿，防癌抗癌，固齿防龋"],
+	            [0, "../resource/tea/政和工夫.JPG", "红茶", "舒缓压力", "条索重实，毫尖金黄，紫罗兰香", "好喝，身心愉悦"],
+                [0, "../resource/tea/水金龟.JPG", "青茶", "舒缓压力","条索紧结，色泽青褐，清雅高长", "好喝，身心愉悦"],                
+	            [0, "../resource/tea/永春佛手.JPG", "青茶", "舒缓压力","紧结肥壮，砂率乌润，香气悠长", "回甘，身心愉悦"],
+	            // [0, "../resource/tea/英红.JPG", "红茶", "舒缓压力", "外形重实，色泽乌润，香气浓郁", "好喝，身心愉悦"],
+	            // [0, "../resource/tea/宜红.JPG", "红茶", "舒缓压力", "条索紧细，略带金毫，花果清香", "好喝，身心愉悦"],
+                // [0, "../resource/tea/休宁松萝.JPG", "绿茶", "舒缓压力", "紧卷匀壮，色泽绿润，橄榄风味","提神醒脑，清心明目"],
+	            // [0, "../resource/tea/蒙顶甘露.JPG", "绿茶", "舒缓压力", "紧凑多毫，浅绿油润，香气馥郁","好喝，身心愉悦"],
+	            // [0, "../resource/tea/宁红.JPG", "红茶", "舒缓压力", "紧结圆直，略显红筋，鲜香持久", "好喝，身心愉悦"],
+	            // [0, "../resource/tea/荔枝红.JPG", "红茶", "舒缓压力", "条索纤秀，乌黑油润，香气清幽", "风味独特，好喝"],
+	            // [0, "../resource/tea/九曲红梅.JPG", "红茶", "舒缓压力", "细若发丝，金色绒毛，似蜜糖香", "好喝，身心愉悦"],
+	            // [0, "../resource/tea/银骏眉.JPG", "红茶", "舒缓压力", "细瘦卷曲，乌中透金，烤红薯香", "好喝，身心愉悦"],
+	            // [0, "../resource/tea/滇红.JPG", "红茶", "舒缓压力", "紧结肥壮，色泽乌润，香气鲜锐", "好喝，身心愉悦"],
+	            // [0, "../resource/tea/川红.JPG", "红茶", "舒缓压力", "紧细圆直，色泽乌润，带枯糖香", "好喝，身心愉悦"],
+                // [0, "../resource/tea/武夷水仙.JPG", "青茶", "舒缓压力","叶端扭曲，油润暗绿，兰花香郁", "好喝，身心愉悦"],
+	            // [0, "../resource/tea/铁罗汉.JPG", "青茶", "舒缓压力","条索匀整，褐绿鲜润， 兰香馥郁", "耐泡，好喝"],
+	            // [0, "../resource/tea/高山乌龙.JPG", "青茶", "舒缓压力","半球形状，色泽深绿，花香突出", "好喝，身心愉悦"],
+	            // [0, "../resource/tea/凤凰水仙.JPG", "青茶", "舒缓压力","挺直肥大，鳝鱼皮色，天然花香", "清热解暑，生津止渴"],
+                // [0, "../resource/tea/白芽奇兰.JPG", "青茶", "舒缓压力","紧结匀整，翠绿油润，兰花香味", "好喝，身心愉悦"],
+	            // [0, "../resource/tea/白鸡冠.JPG", "青茶", "舒缓压力","条索紧结，色泽灰暗，香气悠长", "清心明目，提神解乏"],           
+	            // [0, "../resource/tea/阿里山乌龙.JPG", "青茶", "舒缓压力","呈半球形，色泽砂绿，清新典雅", "好喝，身心愉悦"],
+	        ],
+	        "product3":[//保健养生
+                [0, "../resource/tea/杭白菊.JPG", "花茶", "保健养生","花形完整，嫩黄鲜亮，香气清冽", "清热解毒，消食醒酒"],
                 [0, "../resource/tea/狗牯脑茶.JPG", "绿茶", "保健养生","紧结微勾，黛绿莹润，清心雅郁","利尿解毒，防治心血管疾病"],
-                [0, "../resource/tea/碧螺春.JPG", "绿茶", "保健养生","形状如螺，白毫隐翠，清香淡雅","提神解乏，抗菌消炎"],
+                [0, "../resource/tea/冻顶乌龙.JPG", "青茶", "保健养生","呈半球形，色泽墨绿，有桂花香", "抗氧化，防治龋齿"],
                 [0, "../resource/tea/正山小种.JPG", "红茶", "保健养生", "条索肥壮，呈红褐色，有松烟香", "利尿排毒，强壮骨骼，护心养胃"],
                 [0, "../resource/tea/信阳红.JPG", "红茶", "保健养生", "条索匀整，乌黑披金，有花果香", "消炎杀菌，利尿解毒"],
-                [0, "../resource/tea/祁门红茶.JPG", "红茶", "保健养生", "条索紧细，色泽乌润，兰果香气", "防治心血管疾病，清凉消暑"],
-                [0, "../resource/tea/杭白菊.JPG", "花茶", "保健养生","花形完整，嫩黄鲜亮，香气清冽", "清热解毒，消食醒酒"],
-                [0, "../resource/tea/冻顶乌龙.JPG", "青茶", "保健养生","呈半球形，色泽墨绿，有桂花香", "消脂减肥，抗氧化"],
-            ],
-            "product4":[
+                // [0, "../resource/tea/西湖龙井.JPG", "绿茶", "保健养生", "扁而平直，绿中透黄，有炒豆香","降低血脂，防癌抗癌，抗菌消炎"],
+                // [0, "../resource/tea/祁门红茶.JPG", "红茶", "保健养生", "条索紧细，色泽乌润，兰果香气", "防治心血管疾病，清凉消暑"],    
+	            // [0, "../resource/tea/莲心绿茶.JPG", "绿茶", "保健养生", "芽叶成朵，色泽黄绿，绿豆香气","抵御放射性元素，防治坏血病"],
+                // [0, "../resource/tea/开化龙顶.JPG", "绿茶", "保健养生","紧直挺秀，银绿翠隐，淡青草味","清热解毒，固齿防龋"],    
+	            // [0, "../resource/tea/黄山毛峰.JPG", "绿茶", "保健养生","细扁微卷，银毫显露，香气如兰","利尿消肿，防癌抗癌，固齿防龋"],
+	            // [0, "../resource/tea/碧螺春.JPG", "绿茶", "保健养生","形状如螺，白毫隐翠，清香淡雅","提神解乏，抗菌消炎"],
+
+	        ],
+	        "product4":[//美容养颜 
                 [0, "../resource/tea/雪水云绿.JPG", "绿茶", "美容养颜", "银剑出鞘，茸毫隐翠，林间香气","延缓衰老，防癌抗癌"],
                 [0, "../resource/tea/千岛玉叶.JPG", "绿茶", "美容养颜", "扁平挺直，翠绿嫩黄，兰蕙之清","抗老，防癌，养颜，抗菌"],
-                [0, "../resource/tea/梅尖银毫.JPG", "绿茶", "美容养颜", "紧细圆直，翠绿显毫，香气浓郁","抗氧化，养颜健身"],
-                [0, "../resource/tea/径山茶.JPG", "绿茶", "美容养颜","纤细微曲，色泽绿翠，板栗香味","排毒养颜，抗氧化"],
-                [0, "../resource/tea/武夷肉桂.JPG", "青茶", "美容养颜","匀整卷曲，褐绿油润，桂皮香味", "改善皮肤敏感溃烂，延缓衰老"],
-                [0, "../resource/tea/武夷大红袍.JPG", "青茶", "美容养颜","条索紧结，绿褐鲜润，有兰花香", "美白抗氧化，醒酒敌烟"],
-                [0, "../resource/tea/凤凰单枞.JPG", "青茶", "美容养颜","条索匀直，黄褐油润，独特花香", "改善皮肤过敏，养颜促代谢"],
-                [0, "../resource/tea/安溪铁观音.JPG", "青茶", "美容养颜","卷曲圆结，色泽砂绿，有兰花香", "抗氧化，防治龋齿"],
                 [0, "../resource/tea/黄山贡菊.JPG", "花茶", "美容养颜","朵大均匀，色白蒂绿，菊花香味", "护肤美容，排毒护肝"],
-                [0, "../resource/tea/金骏眉.JPG", "红茶", "美容养颜", "细瘦卷曲，乌中透金，烤红薯香", "排毒养颜，抗氧化"],                
+                [0, "../resource/tea/金骏眉.JPG", "红茶", "美容养颜", "条索紧细，乌润带金，花果清香", "排毒养颜，抗氧化"],
+                [0, "../resource/tea/凤凰单枞.JPG", "青茶", "美容养颜","条索匀直，黄褐油润，独特花香", "改善皮肤过敏，养颜促代谢"],
+	            // [0, "../resource/tea/武夷肉桂.JPG", "青茶", "美容养颜","匀整卷曲，褐绿油润，桂皮香味", "改善皮肤敏感溃烂，延缓衰老"],
+	            // [0, "../resource/tea/武夷大红袍.JPG", "青茶", "美容养颜","条索紧结，绿褐鲜润，有兰花香", "美白抗氧化，醒酒敌烟"],
+                // [0, "../resource/tea/安溪铁观音.JPG", "青茶", "美容养颜","卷曲圆结，色泽砂绿，有兰花香", "抗氧化，防治龋齿"],
+	            // [0, "../resource/tea/梅尖银毫.JPG", "绿茶", "美容养颜", "紧细圆直，翠绿显毫，香气浓郁","抗氧化，养颜健身"],
+                // [0, "../resource/tea/径山茶.JPG", "绿茶", "美容养颜","纤细微曲，色泽绿翠，板栗香味","排毒养颜，抗氧化"],
+	            
+	            
+	            
+	        ],
+	    };
 
-            ],
-        };
-
-        var question_tea = {
-            "questions":[
-                {"id":"tea1", "template": template_2, "content":"绿茶绿茶？", "left": "是", "right": "不是"},
-                {"id":"tea2", "template": template_9, "content":"李明正在考虑周末去拜访一个朋友。他去拜访的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"tea3", "template": template_9, "content":"小红正在考虑给自己买一双新鞋。她买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"tea4", "template": template_9, "content":"小张正在查看他的邮件。他收到垃圾邮件的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"tea5", "template": template_9, "content":"小郭正在考虑是否要养一只宠物。他养宠物可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"tea6", "template": template_9, "content":"小杨正在参加公司年会的抽奖活动。他抽中大奖可能性有多大？", "left": "非常不可能", "right": "非常可能"},  
-                {"id":"tea7", "template": template_7, "content":"总的来说，你认为御茗阁茶叶目录中的茶叶之间有多相似？", "left": "完全不相似", "right": "非常相似"},
-                {"id":"tea8", "template": template_9, "content":"御茗阁为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea9", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款茶叶", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea11", "template": template_4, "content":"我感觉完成茶叶选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea12", "template": template_4, "content":"我感觉完成茶叶选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea13", "template": template_4, "content":"我感觉完成茶叶选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea14", "template": template_4, "content":"我感觉完成茶叶选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"tea15", "template": template_4, "content":"我了解御茗阁这个品牌", "left": "非常不赞同", "right": "非常赞同"}, 
-                {"id":"tea16", "template": template_4, "content":"我了解茶叶知识", "left": "非常不赞同", "right": "非常赞同"},
+        var choose_tea =  {
+            "current": 0,
+            "names": [
+               "雪水云绿",
+               "正山小种",
+               "东方美人",
+               "茉莉花茶",
             ]
         };
 
+	    var question_tea = {
+            "questions":[
+               {"id":"tea2", "template": template_9, "content":"李明正在考虑周末去拜访一个朋友。他去拜访的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"tea3", "template": template_9, "content":"小红正在考虑给自己买一双新鞋。她买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"tea4", "template": template_9, "content":"小张正在查看他的邮件。他收到垃圾邮件的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"tea5", "template": template_9, "content":"小郭正在考虑是否要养一只宠物。他养宠物可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"tea6", "template": template_9, "content":"小杨正在参加公司年会的抽奖活动。他抽中大奖可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"tea7", "template": template_7, "content":"总的来说，你认为御茗阁茶叶目录中的茶叶之间有多相似？", "left": "完全不相似", "right": "非常相似"},
+               {"id":"tea8", "template": template_9_dyh, "content":"御茗阁为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"tea9", "template": template_9_dyh, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"tea10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款茶叶", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"tea11", "template": template_4, "content":"我感觉完成茶叶选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"tea12", "template": template_4, "content":"我感觉完成茶叶选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"tea13", "template": template_4, "content":"我感觉完成茶叶选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"tea14", "template": template_4, "content":"我感觉完成茶叶选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"tea15", "template": template_4, "content":"我了解御茗阁这个品牌", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"tea16", "template": template_4, "content":"我了解茶叶知识", "left": "非常不赞同", "right": "非常赞同"},
+            ],
+        };
+
+	    var test_tea = {
+            // 问卷的第一张控件, 图片: TF_pic1, 名称 TF_name1, TF_benefit1, TF_attribute1,
+            "tests":[
+                [
+                    {"id":"tea_1", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/千岛玉叶.JPG", "name":"千岛玉叶", "benefit":"美容养颜", "attribute":"绿茶"},
+                        ],
+                    },
+                    {"id":"tea_2", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/莲心绿茶.JPG", "name":"莲心绿茶", "benefit":"保健养生", "attribute":"绿茶"},
+                        ],
+                    },
+                    {"id":"tea_3", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/正山小种.JPG", "name":"正山小种", "benefit":"保健养生", "attribute":"红茶"},
+                        ],
+                    },
+                    {"id":"tea_4", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/银骏眉.JPG", "name":"银骏眉", "benefit":"舒缓压力", "attribute":"红茶"},
+                        ],
+                    },
+                    {"id":"tea_5", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/永春佛手.JPG", "name":"永春佛手", "benefit":"舒缓压力", "attribute":"青茶"},
+                        ],
+                    },
+                    {"id":"tea_6", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/武夷大红袍.JPG", "name":"武夷大红袍", "benefit":"美容养颜", "attribute":"青茶"},
+                        ],
+                    },
+                    {"id":"tea_7", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/苦丁茶.JPG", "name":"苦丁茶", "benefit":"减肥瘦身", "attribute":"花茶"},
+                        ],
+                    },
+                    {"id":"tea_8", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/白芽奇兰.JPG", "name":"白芽奇兰", "benefit":"舒缓压力", "attribute":"花茶"},
+                        ],
+                    },
+                ],
+
+
+                [
+                    {"id":"tea_9", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/六安瓜片.JPG", "name":"六安瓜片", "benefit":"减肥瘦身", "attribute":"绿茶"},
+                            {"src":"../resource/tea/碧螺春.JPG", "name":"碧螺春", "benefit":"保健养生", "attribute":"绿茶"},
+                        ],
+                    },
+                    {"id":"tea_10", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/信阳毛尖.JPG", "name":"信阳毛尖", "benefit":"减肥瘦身", "attribute":"绿茶"},
+                            {"src":"../resource/tea/狗牯脑茶.JPG", "name":"狗牯脑茶", "benefit":"保健养生", "attribute":"绿茶"},
+                        ],
+                    },
+                    {"id":"tea_11", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/信阳红.JPG", "name":"信阳红", "benefit":"保健养生", "attribute":"红茶"},
+                            {"src":"../resource/tea/荔枝红.JPG", "name":"荔枝红", "benefit":"舒缓压力", "attribute":"红茶"},
+                        ],
+                    },
+                    {"id":"tea_12", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/九曲红梅.JPG", "name":"九曲红梅", "benefit":"舒缓压力", "attribute":"红茶"},
+                            {"src":"../resource/tea/政和工夫.JPG", "name":"政和工夫", "benefit":"舒缓压力", "attribute":"红茶"},
+                        ],
+                    },
+                    {"id":"tea_13", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/水金龟.JPG", "name":"水金龟", "benefit":"舒缓压力", "attribute":"青茶"},
+                            {"src":"../resource/tea/白鸡冠.JPG", "name":"白鸡冠", "benefit":"舒缓压力", "attribute":"青茶"},
+                        ],
+                    },
+                    {"id":"tea_14", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/凤凰水仙.JPG", "name":"凤凰水仙", "benefit":"舒缓压力", "attribute":"青茶"},
+                            {"src":"../resource/tea/凤凰单枞.JPG", "name":"凤凰单枞", "benefit":"美容养颜", "attribute":"青茶"},
+                        ],
+                    },
+                    {"id":"tea_15", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/黄山贡菊.JPG", "name":"黄山贡菊", "benefit":"美容养颜", "attribute":"花茶"},
+                            {"src":"../resource/tea/武夷肉桂.JPG", "name":"武夷肉桂", "benefit":"美容养颜", "attribute":"花茶"},
+                        ],
+                    },
+                    {"id":"tea_16", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/径山茶.JPG", "name":"径山茶", "benefit":"美容养颜", "attribute":"花茶"},
+                            {"src":"../resource/tea/杭白菊.JPG", "name":"杭白菊", "benefit":"保健养生", "attribute":"花茶"},
+                        ],
+                    },
+                ],
+            ],
+        };
+
+
         var config_shampoo = {
             "name": "shampoo",
+<<<<<<< HEAD
             "product1":[
                 [0, "../resource/shampoo/ALTERNA-αD.png", "海洋味", "丝滑水润", "不含硅油，无防腐剂添加，不含硫酸盐","提神醒脑，清心明目"],
                 [0, "../resource/shampoo/ALTERNA-βD.png", "柠檬香", "丝滑水润","不含硅油，无防腐剂添加，不含硫酸盐", "消脂减肥，促进消化"],
@@ -151,104 +270,344 @@
                 [0, "../resource/shampoo/ALTERNA-γJ.png", "迷迭香", "强效修护","不含硅油，无防腐剂添加，不含硫酸盐", "耐泡，好喝"],
                 [0, "../resource/shampoo/ALTERNA-δJ.png", "松木香", "强效修护", "不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦"],
                 [0, "../resource/shampoo/ALTERNA-ωS.png", "松木香", "强效修护", "不含硅油，无防腐剂添加，不含硫酸盐", "消炎杀菌，利尿解毒"],
+=======
+            "product1":[//丝滑水润
+                [0, "../resource/shampoo/ALTERNA-αS.png", "海洋味", "丝滑水润", "不含硅油，无防腐剂添加，不含硫酸盐","提神醒脑，清心明目"],
+                [0, "../resource/shampoo/ALTERNA-δS.png", "松木香", "丝滑水润", "不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦"],
+                [0, "../resource/shampoo/ALTERNA-βS.png", "柠檬香", "丝滑水润","不含硅油，无防腐剂添加，不含硫酸盐", "消脂减肥，促进消化"],
+                [0, "../resource/shampoo/ALTERNA-γS.png", "迷迭香", "丝滑水润","不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦"],
+                // [0, "../resource/shampoo/ALTERNA-δB.png", "松木香", "丝滑水润", "不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦"],  
             ],
+
+            "product2":[//防晒锁色
+                [0, "../resource/shampoo/ALTERNA-δJ.png", "松木香", "防晒锁色", "不含硅油，无防腐剂添加，不含硫酸盐", "利尿排毒，强壮骨骼，护心养胃"],
+                [0, "../resource/shampoo/ALTERNA-αD.png", "海洋味", "防晒锁色", "不含硅油，无防腐剂添加，不含硫酸盐","消脂减脂，净化肠胃"],
+                [0, "../resource/shampoo/ALTERNA-βD.png", "柠檬香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "降压降脂，清热消暑"],
+                [0, "../resource/shampoo/ALTERNA-βJ.png", "柠檬香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "护肤美容，排毒护肝"],
+                [0, "../resource/shampoo/ALTERNA-γD.png", "迷迭香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "改善皮肤敏感溃烂，延缓衰老"],
+                // [0, "../resource/shampoo/ALTERNA-βN.png", "柠檬香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "清热解毒，消食醒酒"],            
+                // [0, "../resource/shampoo/ALTERNA-αB.png", "海洋味", "防晒锁色", "不含硅油，无防腐剂添加，不含硫酸盐","延缓衰老，防癌抗癌"],
+
+            ],
+            "product3":[//清爽控油
+                [0, "../resource/shampoo/ALTERNA-αJ.png", "海洋味", "清爽控油", "不含硅油，无防腐剂添加，不含硫酸盐","降低血脂，防癌抗癌，抗菌消炎"],
+                [0, "../resource/shampoo/ALTERNA-γJ.png", "迷迭香", "清爽控油","不含硅油，无防腐剂添加，不含硫酸盐", "美白抗氧化，醒酒敌烟"],
+                [0, "../resource/shampoo/ALTERNA-γH.png", "迷迭香", "清爽控油","不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦"],
+                [0, "../resource/shampoo/ALTERNA-βG.png", "柠檬香", "清爽控油","不含硅油，无防腐剂添加，不含硫酸盐", "清热解毒，消食醒酒"],
+                [0, "../resource/shampoo/ALTERNA-δD.png", "松木香", "清爽控油", "不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦"],
+                // [0, "../resource/shampoo/ALTERNA-βB.png", "柠檬香", "清爽控油","不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦"],
+            ],
+            "product4":[//强效修护             
+                [0, "../resource/shampoo/ALTERNA-βH.png", "柠檬草", "强效修护","不含硅油，无防腐剂添加，不含硫酸盐", "清热解毒，消食醒酒"],
+                [0, "../resource/shampoo/ALTERNA-γG.png", "迷迭香", "强效修护","不含硅油，无防腐剂添加，不含硫酸盐", "耐泡，好喝"],
+                [0, "../resource/shampoo/ALTERNA-δG.png", "松木香", "强效修护", "不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦"],
+                [0, "../resource/shampoo/ALTERNA-δH.png", "松木香", "强效修护", "不含硅油，无防腐剂添加，不含硫酸盐", "消炎杀菌，利尿解毒"],  
+                [0, "../resource/shampoo/ALTERNA-αG.png", "海洋味", "强效修护", "不含硅油，无防腐剂添加，不含硫酸盐","促进血液循环，松弛平滑肌"],
+                [0, "../resource/shampoo/ALTERNA-αH.png", "海洋味", "强效修护", "不含硅油，无防腐剂添加，不含硫酸盐","抗老，防癌，养颜，抗菌"],
+                // [0, "../resource/shampoo/ALTERNA-γB.png", "迷迭香", "强效修护","不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦"],
+>>>>>>> 4bc54ab3bc0f38a51dd0d9dbff9e62eb054d5bb6
+            ],
+        };
+
+        var choose_shampoo =  {
+            "current": 0,
+            "names": [
+               "ALTERNA-αS",
+               "ALTERNA-βD",
+               "ALTERNA-γJ",
+               "ALTERNA-δG",
+            ]
         };
 
 
         var question_shampoo = {
             "questions":[
-                {"id":"shampoo1", "template": template_2, "content":"1洗发水洗发水？", "left": "是111", "right": "不是111"},
-                {"id":"shampoo2", "template": template_9, "content":"小王正在考虑是否参加一个美食烹饪培训课。他报名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"shampoo3", "template": template_9, "content":"小李正在考虑买一台新笔记本电脑。他买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},  
-                {"id":"shampoo4", "template": template_9, "content":"小陈正在等高铁。这趟高铁晚点的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"shampoo5", "template": template_9, "content":"小张打算去超市买洗衣液。这件商品降价的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"shampoo6", "template": template_9, "content":"小刘每天开车去上班。她的车被撞凹的可能性有多大？", "left": "非常不可能", "right": "非常可能"}, 
-                {"id":"shampoo7", "template": template_7, "content":"总的来说，你认为ALTERNA提供的这些洗发水产品之间有多相似？", "left": "完全不相似", "right": "非常相似"},  
-                {"id":"shampoo8", "template": template_9, "content":"ALTERNA为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"shampoo9", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"shampoo10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款洗发水", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"shampoo11", "template": template_4, "content":"我感觉完成洗发水选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"shampoo12", "template": template_4, "content":"我感觉完成洗发水选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"shampoo13", "template": template_4, "content":"我感觉完成洗发水选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"}, 
-                {"id":"shampoo14", "template": template_4, "content":"我感觉完成洗发水选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},  
-                {"id":"shampoo15", "template": template_4, "content":"我了解ALTERNA这个品牌", "left": "非常不赞同", "right": "非常赞同"}, 
-                {"id":"shampoo16", "template": template_4, "content":"我了解洗发水知识", "left": "非常不赞同", "right": "非常赞同"},
-            ]
+               {"id":"shampoo2", "template": template_9, "content":"小王正在考虑是否参加一个美食烹饪培训课。他报名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"shampoo3", "template": template_9, "content":"小李正在考虑买一台新笔记本电脑。他买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"shampoo4", "template": template_9, "content":"小陈正在等高铁。这趟高铁晚点的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"shampoo5", "template": template_9, "content":"小张打算去超市买洗衣液。这件商品降价的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"shampoo6", "template": template_9, "content":"小刘每天开车去上班。她的车被撞凹的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"shampoo7", "template": template_7, "content":"总的来说，你认为ALTERNA提供的这些洗发水产品之间有多相似？", "left": "完全不相似", "right": "非常相似"},
+               {"id":"shampoo8", "template": template_9, "content":"ALTERNA为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"shampoo9", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"shampoo10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款洗发水", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"shampoo11", "template": template_4, "content":"我感觉完成洗发水选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"shampoo12", "template": template_4, "content":"我感觉完成洗发水选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"shampoo13", "template": template_4, "content":"我感觉完成洗发水选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"shampoo14", "template": template_4, "content":"我感觉完成洗发水选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"shampoo15", "template": template_4, "content":"我了解ALTERNA这个品牌", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"shampoo16", "template": template_4, "content":"我了解洗发水知识", "left": "非常不赞同", "right": "非常赞同"},
+            ],
         };
 
-        var config_brush = {
+        var test_shampoo = {
+            // 问卷的第一张控件, 图片: TF_pic1, 名称 TF_name1, TF_benefit1, TF_attribute1,
+            "tests":[
+                [
+                    {"id":"shampoo_1", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-αJ.png", "name":"ALTERNA-αJ", "benefit":"清爽控油", "attribute":"海洋味"},
+                        ],
+                    },                                         
+                    {"id":"shampoo_2", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-αB.png", "name":"ALTERNA-αB", "benefit":"强效修护", "attribute":"海洋味"},
+                        ],
+                    },
+                    {"id":"shampoo_3", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-βS.png", "name":"ALTERNA-βS", "benefit":"丝滑水润", "attribute":"柠檬香"},
+                        ],
+                    },
+                    {"id":"shampoo_4", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-βB.png", "name":"ALTERNA-βB", "benefit":"清爽控油", "attribute":"柠檬香"},
+                        ],
+                    }, 
+                    {"id":"shampoo_5", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-γD.png", "name":"ALTERNA-γD", "benefit":"防晒锁色", "attribute":"迷迭香"},
+                        ],
+                    },
+                    {"id":"shampoo_6", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-γY.png", "name":"ALTERNA-γY", "benefit":"丝滑水润", "attribute":"迷迭香"},
+                        ],
+                    }, 
+                    {"id":"shampoo_7", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-δH.png", "name":"ALTERNA-δH", "benefit":"强效修护", "attribute":"松木香"},
+                        ],
+                    },
+                    {"id":"shampoo_8", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-δW.png", "name":"ALTERNA-δW", "benefit":"防晒锁色", "attribute":"松木香"},
+                        ],
+                    },
+                ],
+
+                [
+                    {"id":"shampoo_9", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-αD.png", "name":"ALTERNA-αD", "benefit":"防晒锁色", "attribute":"海洋味"},
+                            {"src":"../resource/shampoo/ALTERNA-αA.png", "name":"ALTERNA-αA", "benefit":"丝滑水润", "attribute":"海洋味"},
+                        ],
+                    },
+                    {"id":"shampoo_10", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-αW.png", "name":"ALTERNA-αW", "benefit":"清爽控油", "attribute":"海洋味"},
+                            {"src":"../resource/shampoo/ALTERNA-αS.png", "name":"ALTERNA-αS", "benefit":"丝滑水润", "attribute":"海洋味"},
+                        ],
+                    },
+                    {"id":"shampoo_11", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-βJ.png", "name":"ALTERNA-βJ", "benefit":"防晒锁色", "attribute":"柠檬香"},
+                            {"src":"../resource/shampoo/ALTERNA-βY.png", "name":"ALTERNA-βY", "benefit":"强效修护", "attribute":"柠檬香"},
+                        ],
+                    },
+                    {"id":"shampoo_12", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-βW.png", "name":"ALTERNA-βW", "benefit":"丝滑水润", "attribute":"柠檬香"},
+                            {"src":"../resource/shampoo/ALTERNA-βG.png", "name":"ALTERNA-βG", "benefit":"强效修护", "attribute":"柠檬香"},
+                        ],
+                    },     
+                    {"id":"shampoo_13", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-γJ.png", "name":"ALTERNA-γJ", "benefit":"清爽控油", "attribute":"迷迭香"},
+                            {"src":"../resource/shampoo/ALTERNA-γA.png", "name":"ALTERNA-γA", "benefit":"强效修护", "attribute":"迷迭香"},
+                        ],
+                    },
+                    {"id":"shampoo_14", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-γB.png", "name":"ALTERNA-γB", "benefit":"防晒锁色", "attribute":"迷迭香"},
+                            {"src":"../resource/shampoo/ALTERNA-γS.png", "name":"ALTERNA-γS", "benefit":"丝滑水润", "attribute":"迷迭香"},
+                        ],
+                    },
+                    {"id":"shampoo_15", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-δG.png", "name":"ALTERNA-δG", "benefit":"强效修护", "attribute":"松木香"},
+                            {"src":"../resource/shampoo/ALTERNA-δY.png", "name":"ALTERNA-δY", "benefit":"清爽控油", "attribute":"松木香"},
+                        ],
+                    },
+                    {"id":"shampoo_16", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-δA.png", "name":"ALTERNA-δA", "benefit":"丝滑水润", "attribute":"松木香"},
+                            {"src":"../resource/shampoo/ALTERNA-δJ.png", "name":"ALTERNA-δJ", "benefit":"防晒锁色", "attribute":"松木香"},
+                        ],
+                    },
+                ],
+            ],
+        };
+
+
+        var config_brush = { 
             "name": "bursh",
-            "product1":[
-                [0, "../resource/brush/P3216_01.png", "机械转动型", "健康清洁", "个性化辅导，精锐感知科技，智能刷头感应","延缓衰老，防癌抗癌"],
-                [0, "../resource/brush/P3226_41.png", "机械转动型", "健康清洁", "个性化辅导，精锐感知科技，智能刷头感应","促进血液循环，松弛平滑肌"],
-                [0, "../resource/brush/P6211_46.png", "声波振动型", "健康清洁", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
-                [0, "../resource/brush/P6275_63.png", "声波振动型", "健康清洁", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
-                [0, "../resource/brush/P6809_02.png", "超声波型", "健康清洁","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
-                [0, "../resource/brush/P6859_12.png", "超声波型", "健康清洁","个性化辅导，精锐感知科技，智能刷头感应", "耐泡，好喝"],
-                [0, "../resource/brush/P8880_68.png", "电动喷雾型", "健康清洁","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
-                [0, "../resource/brush/P9322_14.png", "电动喷雾型", "健康清洁","个性化辅导，精锐感知科技，智能刷头感应", "清热解毒，消食醒酒"],
-                [0, "../resource/brush/P9924_22.png", "电动喷雾型", "健康清洁","个性化辅导，精锐感知科技，智能刷头感应", "清热解毒，消食醒酒"],
+            "product1":[//健康清洁
+                [0, "../resource/brush/GOVINO-αS.png", "电动喷雾型", "健康清洁", "个性化辅导，精锐感知科技，智能刷头感应","延缓衰老，防癌抗癌"],
+                [0, "../resource/brush/GOVINO-βS.png", "声波振动型", "健康清洁", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
+                [0, "../resource/brush/GOVINO-αH.png", "电动喷雾型", "健康清洁", "个性化辅导，精锐感知科技，智能刷头感应","促进血液循环，松弛平滑肌"],
+                [0, "../resource/brush/GOVINO-γS.png", "机械转动型", "健康清洁","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
+                [0, "../resource/brush/GOVINO-δS.png", "超声波型", "健康清洁","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
             ],
-            
-            "product2":[
-                [0, "../resource/brush/P3216_13.png", "机械转动型", "抗敏护龈", "个性化辅导，精锐感知科技，智能刷头感应","提神醒脑，清心明目"],
-                [0, "../resource/brush/P6215_29.png", "声波振动型", "抗敏护龈", "个性化辅导，精锐感知科技，智能刷头感应", "利尿排毒，强壮骨骼，护心养胃"],
-                [0, "../resource/brush/P6712_04.png", "声波振动型", "抗敏护龈", "个性化辅导，精锐感知科技，智能刷头感应", "消炎杀菌，利尿解毒"],
-                [0, "../resource/brush/P6761_03.png", "声波振动型", "抗敏护龈", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
-                [0, "../resource/brush/P6851_59.png", "超声波型", "抗敏护龈","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
-                [0, "../resource/brush/P6877_27.png", "超声波型", "抗敏护龈","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
-                [0, "../resource/brush/P8911_03.png", "电动喷雾型", "抗敏护龈","个性化辅导，精锐感知科技，智能刷头感应", "消脂减肥，促进消化"],
-                [0, "../resource/brush/P9351_52.png", "电动喷雾型", "抗敏护龈","个性化辅导，精锐感知科技，智能刷头感应", "清热解毒，消食醒酒"],
-                [0, "../resource/brush/P9924_12.png", "电动喷雾型", "抗敏护龈","个性化辅导，精锐感知科技，智能刷头感应", "清热解毒，消食醒酒"],
+            "product2":[//抗敏护龈
+                [0, "../resource/brush/GOVINO-δD.png", "超声波型", "抗敏护龈","个性化辅导，精锐感知科技，智能刷头感应", "消脂减肥，促进消化"],
+                [0, "../resource/brush/GOVINO-βD.png", "声波振动型", "抗敏护龈", "个性化辅导，精锐感知科技，智能刷头感应", "利尿排毒，强壮骨骼，护心养胃"],
+                [0, "../resource/brush/GOVINO-αD.png", "电动喷雾型", "抗敏护龈", "个性化辅导，精锐感知科技，智能刷头感应","提神醒脑，清心明目"],
+                [0, "../resource/brush/GOVINO-γD.png", "机械转动型", "抗敏护龈","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
+                [0, "../resource/brush/GOVINO-βH.png", "声波振动型", "抗敏护龈", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
             ],
+            "product3":[//杀菌祛斑
+                [0, "../resource/brush/GOVINO-αJ.png", "电动喷雾型", "杀菌祛斑", "个性化辅导，精锐感知科技，智能刷头感应","消脂减脂，净化肠胃"],
+                [0, "../resource/brush/GOVINO-δJ.png", "超声波型", "杀菌祛斑","个性化辅导，精锐感知科技，智能刷头感应", "降压降脂，清热消暑"],
+                [0, "../resource/brush/GOVINO-βJ.png", "声波振动型", "杀菌祛斑", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
+                [0, "../resource/brush/GOVINO-γJ.png", "机械转动型", "杀菌祛斑","个性化辅导，精锐感知科技，智能刷头感应", "改善皮肤敏感溃烂，延缓衰老"],
+                [0, "../resource/brush/GOVINO-γH.png", "机械转动型", "杀菌祛斑","个性化辅导，精锐感知科技，智能刷头感应", "耐泡，好喝"],
+            ],
+            "product4":[//深层美白
+                [0, "../resource/brush/GOVINO-αG.png", "电动喷雾型", "深层美白", "个性化辅导，精锐感知科技，智能刷头感应","降低血脂，防癌抗癌，抗菌消炎"],
+                [0, "../resource/brush/GOVINO-βG.png", "声波振动型", "深层美白", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
+                [0, "../resource/brush/GOVINO-γG.png", "机械转动型", "深层美白","个性化辅导，精锐感知科技，智能刷头感应", "美白抗氧化，醒酒敌烟"],
+                [0, "../resource/brush/GOVINO-δG.png", "超声波型", "深层美白","个性化辅导，精锐感知科技，智能刷头感应", "护肤美容，排毒护肝"],
+                [0, "../resource/brush/GOVINO-δH.png", "超声波型", "深层美白","个性化辅导，精锐感知科技，智能刷头感应", "清热解毒，消食醒酒"],
+            ],
+        };
 
-            "product3":[
-                [0, "../resource/brush/P3216_31.png", "机械转动型", "杀菌祛斑", "个性化辅导，精锐感知科技，智能刷头感应","消脂减脂，净化肠胃"],
-                [0, "../resource/brush/P3226_51.png", "机械转动型", "杀菌祛斑", "个性化辅导，精锐感知科技，智能刷头感应","抗老，防癌，养颜，抗菌"],
-                [0, "../resource/brush/P6225_16.png", "声波振动型", "杀菌祛斑", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
-                [0, "../resource/brush/P6721_33.png", "声波振动型", "杀菌祛斑", "个性化辅导，精锐感知科技，智能刷头感应", "减肥瘦身，养胃护胃"],
-                [0, "../resource/brush/P6855_12.png", "超声波型", "杀菌祛斑","个性化辅导，精锐感知科技，智能刷头感应", "改善皮肤敏感溃烂，延缓衰老"],
-                [0, "../resource/brush/P6921_01.png", "超声波型", "杀菌祛斑","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
-                [0, "../resource/brush/P8962_05.png", "电动喷雾型", "杀菌祛斑","个性化辅导，精锐感知科技，智能刷头感应", "降压降脂，清热消暑"],
-                [0, "../resource/brush/P9901_33.png", "电动喷雾型", "杀菌祛斑","个性化辅导，精锐感知科技，智能刷头感应", "清热解毒，消食醒酒"],
-            ],
-
-            "product4":[
-                [0, "../resource/brush/P3226_22.png", "机械转动型", "深层美白", "个性化辅导，精锐感知科技，智能刷头感应","降低血脂，防癌抗癌，抗菌消炎"],
-                [0, "../resource/brush/P6263_62.png", "声波振动型", "深层美白", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦"],
-                [0, "../resource/brush/P6730_02.png", "声波振动型", "深层美白", "个性化辅导，精锐感知科技，智能刷头感应", "防治心血管疾病，清凉消暑"],
-                [0, "../resource/brush/P6857_20.png", "超声波型", "深层美白","个性化辅导，精锐感知科技，智能刷头感应", "美白抗氧化，醒酒敌烟"],
-                [0, "../resource/brush/P6972_10.png", "超声波型", "深层美白","个性化辅导，精锐感知科技，智能刷头感应", "清热解暑，生津止渴"],
-                [0, "../resource/brush/P9172_19.png", "电动喷雾型", "深层美白","个性化辅导，精锐感知科技，智能刷头感应", "护肤美容，排毒护肝"],
-                [0, "../resource/brush/P9903_42.png", "电动喷雾型", "深层美白","个性化辅导，精锐感知科技，智能刷头感应", "清热解毒，消食醒酒"],
-            ],
+        var choose_brush =  {
+            "current": 0,
+            "names": [
+               "GOVINO-αD",
+               "GOVINO-βJ",
+               "GOVINO-γG",
+               "GOVINO-δS",
+            ]
         };
 
 
         var question_brush = {
             "questions":[
-                {"id":"brush1", "template": template_2, "content":"2牙刷牙刷？", "left": "是", "right": "不是"},
-                {"id":"brush2", "template": template_9, "content":"小兰主修哲学，正在考虑上法律学院。她申请的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"brush3", "template": template_9, "content":"小凡正在决定要不要举办一个新居乔迁宴会。她举办的可能性有多大？", "left": "非常不可能", "right": "非常可能"},  
-                {"id":"brush4", "template": template_9, "content":"小王打算进行一次全国公路越野旅行。他途中遇到老乡的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"brush5", "template": template_9, "content":"小陈下周六有一门辅修课，该次上课老师点名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"brush6", "template": template_9, "content":"小杨走进一家服装店。他购买的可能性有多大？", "left": "非常不可能", "right": "非常可能"}, 
-                {"id":"brush7", "template": template_7, "content":"总的来说，你认为GOVINO提供的这些电动牙刷之间有多相似？", "left": "完全不相似", "right": "非常相似"},  
-                {"id":"brush8", "template": template_9, "content":"GOVINO为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"brush9", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},  
-               {"id":"brush10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款电动牙刷", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"brush11", "template": template_4, "content":"我感觉完成电动牙刷选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"brush12", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
-                {"id":"brush13", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"}, 
-                {"id":"brush14", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},  
-                {"id":"brush15", "template": template_4, "content":"我了解GOVINO这个品牌", "left": "非常不赞同", "right": "非常赞同"}, 
-                {"id":"brush16", "template": template_4, "content":"我了解GOVINO知识", "left": "非常不赞同", "right": "非常赞同"},
-            ]
+                {"id":"brush1", "template": template_9, "content":"小兰主修哲学，正在考虑上法律学院。她申请的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"brush2", "template": template_9, "content":"小凡正在决定要不要举办一个新居乔迁宴会。她举办的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"brush3", "template": template_9, "content":"小王打算进行一次全国公路越野旅行。他途中遇到老乡的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"brush4", "template": template_9, "content":"小陈下周六有一门辅修课，该次上课老师点名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"brush5", "template": template_9, "content":"小杨走进一家服装店。他购买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+               {"id":"brush6", "template": template_7, "content":"总的来说，你认为GOVINO提供的这些电动牙刷之间有多相似？", "left": "完全不相似", "right": "非常相似"},
+               {"id":"brush7", "template": template_9, "content":"GOVINO为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"brush8", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"brush9", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款电动牙刷", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"brush10", "template": template_4, "content":"我感觉完成电动牙刷选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"brush11", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"brush12", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"brush13", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"brush14", "template": template_4, "content":"我了解GOVINO这个品牌", "left": "非常不赞同", "right": "非常赞同"},
+               {"id":"brush15", "template": template_4, "content":"我了解GOVINO知识", "left": "非常不赞同", "right": "非常赞同"},
+            ],
+
+        };
+
+        var test_brush = {
+            // 问卷的第一张控件, 图片: TF_pic1, 名称 TF_name1, TF_benefit1, TF_attribute1,
+            "tests":[
+                [
+                    {"id":"brush_1", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-αJ.png", "name":"GOVINO-αJ", "benefit":"杀菌祛斑", "attribute":"电动喷雾型"},
+                        ],
+                    },                                         
+                    {"id":"brush_2", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-αB.png", "name":"GOVINO-αB", "benefit":"抗敏护龈", "attribute":"电动喷雾型"},
+                        ],
+                    },
+                    {"id":"brush_3", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-βS.png", "name":"GOVINO-βS", "benefit":"健康清洁", "attribute":"声波振动型"},
+                        ],
+                    },
+                    {"id":"brush_4", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-βB.png", "name":"GOVINO-βB", "benefit":"深层美白", "attribute":"声波振动型"},
+                        ],
+                    }, 
+                    {"id":"brush_5", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-γD.png", "name":"GOVINO-γD", "benefit":"抗敏护龈", "attribute":"机械转动型"},
+                        ],
+                    },
+                    {"id":"brush_6", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-γY.png", "name":"GOVINO-γY", "benefit":"杀菌祛斑", "attribute":"机械转动型"},
+                        ],
+                    }, 
+                    {"id":"brush_7", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-δH.png", "name":"GOVINO-δH", "benefit":"深层美白", "attribute":"超声波型"},
+                        ],
+                    },
+                    {"id":"brush_8", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-δW.png", "name":"GOVINO-δW", "benefit":"健康清洁", "attribute":"超声波型"},
+                        ],
+                    },
+                ],
+
+                [
+                    {"id":"brush_9", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-αD.png", "name":"GOVINO-αD", "benefit":"抗敏护龈", "attribute":"电动喷雾型"},
+                            {"src":"../resource/brush/GOVINO-αA.png", "name":"GOVINO-αA", "benefit":"健康清洁", "attribute":"电动喷雾型"},
+                        ],
+                    },
+                    {"id":"brush_10", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-αW.png", "name":"GOVINO-αW", "benefit":"杀菌祛斑", "attribute":"电动喷雾型"},
+                            {"src":"../resource/brush/GOVINO-αS.png", "name":"GOVINO-αS", "benefit":"健康清洁", "attribute":"电动喷雾型"},
+                        ],
+                    },
+                    {"id":"brush_11", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-βJ.png", "name":"GOVINO-βJ", "benefit":"杀菌祛斑", "attribute":"声波振动型"},
+                            {"src":"../resource/brush/GOVINO-βY.png", "name":"GOVINO-βY", "benefit":"抗敏护龈", "attribute":"声波振动型"},
+                        ],
+                    },
+                    {"id":"brush_12", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-βW.png", "name":"GOVINO-βW", "benefit":"深层美白", "attribute":"声波振动型"},
+                            {"src":"../resource/brush/GOVINO-βG.png", "name":"GOVINO-βG", "benefit":"深层美白", "attribute":"声波振动型"},
+                        ],
+                    },     
+                    {"id":"brush_13", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-γJ.png", "name":"GOVINO-γJ", "benefit":"杀菌祛斑", "attribute":"机械转动型"},
+                            {"src":"../resource/brush/GOVINO-γA.png", "name":"GOVINO-γA", "benefit":"健康清洁", "attribute":"机械转动型"},
+                        ],
+                    },
+                    {"id":"brush_14", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-γB.png", "name":"GOVINO-γB", "benefit":"抗敏护龈", "attribute":"机械转动型"},
+                            {"src":"../resource/brush/GOVINO-γS.png", "name":"GOVINO-γS", "benefit":"健康清洁", "attribute":"机械转动型"},
+                        ],
+                    },
+                    {"id":"brush_15", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-δG.png", "name":"GOVINO-δG", "benefit":"深层美白", "attribute":"超声波型"},
+                            {"src":"../resource/brush/GOVINO-δY.png", "name":"GOVINO-δY", "benefit":"杀菌祛斑", "attribute":"超声波型"},
+                        ],
+                    },
+                    {"id":"brush_16", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-δA.png", "name":"GOVINO-δA", "benefit":"深层美白", "attribute":"超声波型"},
+                            {"src":"../resource/brush/GOVINO-δJ.png", "name":"GOVINO-δJ", "benefit":"杀菌祛斑", "attribute":"超声波型"},
+                        ],
+                    },
+                ],
+            ],
         };
         
 
         var product_config = config_tea;
         var product_question = question_tea;
+        var product_choose = choose_tea;
+        var product_test = test_tea;
 
 
     </script>
@@ -261,20 +620,28 @@
     <script type="text/javascript" src="page_teach_product.js"></script>
     <script type="text/javascript" src="page_teach_transition.js"></script>
 
+    <script type="text/javascript" src="page_choose_preview.js"></script>
+
     <script type="text/javascript" src="page_tea_introduction.js"></script>
     <script type="text/javascript" src="page_tea_task.js"></script>
     <script type="text/javascript" src="page_tea_menu.js"></script>
     <script type="text/javascript" src="page_tea_product.js"></script>
+    <script type="text/javascript" src="page_tea_choose_menu.js"></script>
+    <script type="text/javascript" src="page_tea_choose_product.js"></script>
 
     <script type="text/javascript" src="page_shampoo_introduction.js"></script>
     <script type="text/javascript" src="page_shampoo_task.js"></script>
     <script type="text/javascript" src="page_shampoo_menu.js"></script>
     <script type="text/javascript" src="page_shampoo_product.js"></script>
+    <script type="text/javascript" src="page_shampoo_choose_menu.js"></script>
+    <script type="text/javascript" src="page_shampoo_choose_product.js"></script>
 
     <script type="text/javascript" src="page_brush_introduction.js"></script>
     <script type="text/javascript" src="page_brush_task.js"></script>
     <script type="text/javascript" src="page_brush_menu.js"></script>
     <script type="text/javascript" src="page_brush_product.js"></script>
+    <script type="text/javascript" src="page_brush_choose_menu.js"></script>
+    <script type="text/javascript" src="page_brush_choose_product.js"></script>
 
     <script type="text/javascript" src="page_question.js"></script>
     <script type="text/javascript" src="page_phrase_transition.js"></script>
@@ -432,7 +799,35 @@
 
         #tea_left_menu li a.a4:hover {background-position: -133px -399px;}
 
+        .TF_radio_box input { 
+            display: none; 
         }
+
+        .TF_radio_box label{
+            display: inline-block;
+            content: "";
+            width: 15px;
+            height: 15px;
+/*          border-radius: 50%;*/
+            border:2px solid #ef4949;
+            background: #fff;
+            cursor:pointer;
+        }
+
+
+        .TF_radio_box input:checked + label:after { 
+            display: inline-block; 
+            float: left;
+            content:""; 
+            width: 9px; 
+            height: 9px; 
+            position: relative;
+            top: 3px;
+            left: 3px;
+            background: #ef4949; 
+/*          border-radius: 50%;*/
+        }
+
     </style>
 
 </head>
@@ -476,11 +871,10 @@
     }
 
 
-    function page_teach_preview_after_init() {
+    function page_preview_after_init() {
         $("#next_phrase").unbind();
         $("#next_phrase").on("click", function () {
-            config["current"] = 4;
-            change_state(config);
+            config["change"] = 1;
         });
     }
 
@@ -490,19 +884,25 @@
         $("#green_tea_main").unbind();
         $("#red_tea_main").unbind();
         $("#qing_tea_main").unbind();
+        $("#hua_tea_main").unbind();
 
         $("#green_tea_main").on("click",function () {
-            config["current"] = 1005 + config["base"];
+            config["current"] = 1011 + config["base"];
             change_state(config);
         });
 
         $("#red_tea_main").on("click",function () {
-            config["current"] = 1006 + config["base"];
+            config["current"] = 1012 + config["base"];
             change_state(config);
         });
 
         $("#qing_tea_main").on("click",function () {
-            config["current"] = 1007 + config["base"];
+            config["current"] = 1013 + config["base"];
+            change_state(config);
+        });
+
+        $("#hua_tea_main").on("click",function () {
+            config["current"] = 1014 + config["base"];
             change_state(config);
         });
     }
@@ -510,17 +910,23 @@
     function teach_left_init() {
         $("#left_green_tea").unbind();
         $("#left_green_tea").on("click", function () {
-            config["current"] = 1005 + config["base"];
+            config["current"] = 1011 + config["base"];
             change_state(config);
         });
         $("#left_red_tea").unbind();
         $("#left_red_tea").on("click", function () {
-            config["current"] = 1006 + config["base"];
+            config["current"] = 1012 + config["base"];
             change_state(config);
         });
         $("#left_qing_tea").unbind();
         $("#left_qing_tea").on("click", function () {
-            config["current"] = 1007 + config["base"];
+            config["current"] = 1013 + config["base"];
+            change_state(config);
+        });
+
+        $("#left_hua_tea").unbind();
+        $("#left_hua_tea").on("click", function () {
+            config["current"] = 1014 + config["base"];
             change_state(config);
         });
     }
@@ -556,6 +962,7 @@
         $("#tea_benefit").html(get_product_benefit(current_choice_item));
         $("#product_tips").css("display","none");
         $("#product_discription").css("display","block");
+        $("#buy_button").css("visibility", "visiable");
         $("#buy_button").unbind();
         $("#buy_button").on("click", function () {
             var name = get_product_name(current_choice_item);
@@ -563,8 +970,7 @@
                 alert("请找到" + teach_answer);
                 return;
             }
-            config["current"] = 1010 + config["base"];
-            change_state(config);
+            config["change"] = 1;
         })
     }
 
@@ -595,9 +1001,24 @@
         teach_choice_init(teach_choice["product3"]);
     }
 
+    function page_teach_product4_after_init() {
+        // 设置页面详细信息
+        set_page_detail(teach_choice["product4"]);
+        // 四个标签按钮点击事件
+        teach_left_init();
+        // 五个商品点击事件
+        teach_choice_init(teach_choice["product4"]);
+    }
+
     function tea_task_after_init(){
         product_config = config_tea;
         product_question = question_tea;
+        product_choose = choose_tea;
+        product_choose["names"] =  random_choice_product(product_choose["names"], product_choose["names"].length);
+        product_test = test_tea;
+        for(var i = 0; i < product_test["tests"].length; ++i){
+            product_test["tests"][i] = random_choice_product(product_test["tests"][i], product_test["tests"][i].length);
+        }
         config["base"] += 1000;
         clear_choice();
     }
@@ -605,6 +1026,12 @@
     function shampoo_task_after_init(){
         product_config = config_shampoo;
         product_question = question_shampoo;
+        product_choose = choose_shampoo
+        product_choose["names"] =  random_choice_product(product_choose["names"], product_choose["names"].length);
+        product_test = test_shampoo;
+        for(var i = 0; i < product_test["tests"].length; ++i){
+            product_test["tests"][i] = random_choice_product(product_test["tests"][i], product_test["tests"][i].length);
+        }
         config["base"] += 1000;
         clear_choice();
     }
@@ -612,52 +1039,232 @@
     function brush_task_after_init(){
         product_config = config_brush;
         product_question = question_brush;
+        product_choose = choose_brush;
+        product_choose["names"] =  random_choice_product(product_choose["names"], product_choose["names"].length);
+        product_test = test_brush;
+        for(var i = 0; i < product_test["tests"].length; ++i){
+            product_test["tests"][i] = random_choice_product(product_test["tests"][i], product_test["tests"][i].length);
+        }
         config["base"] += 1000;
         clear_choice();
     }
 
+
+    // choose menu
+    function page_choose_menu_after_init() {
+        var current = product_choose["current"];
+        var answer = product_choose["names"][current];
+        $("#choose_task_number").html(current + 1);
+        $("#answer").html(answer);
+
+        $("#green_tea_main").unbind();
+        $("#red_tea_main").unbind();
+        $("#qing_tea_main").unbind();
+        $("#hua_tea_main").unbind();
+
+        $("#green_tea_main").on("click",function () {
+            config["current"] = 1031 + config["base"];
+            change_state(config);
+        });
+
+        $("#red_tea_main").on("click",function () {
+            config["current"] = 1032 + config["base"];
+            change_state(config);
+        });
+
+        $("#qing_tea_main").on("click",function () {
+            config["current"] = 1033 + config["base"];
+            change_state(config);
+        });
+
+        $("#hua_tea_main").on("click",function () {
+            config["current"] = 1034 + config["base"];
+            change_state(config);
+        });
+    }
+
+    function choose_left_init() {
+        $("#left_green_tea").unbind();
+        $("#left_green_tea").on("click", function () {
+            config["current"] = 1031 + config["base"];
+            change_state(config);
+        });
+        $("#left_red_tea").unbind();
+        $("#left_red_tea").on("click", function () {
+            config["current"] = 1032 + config["base"];
+            change_state(config);
+        });
+        $("#left_qing_tea").unbind();
+        $("#left_qing_tea").on("click", function () {
+            config["current"] = 1033 + config["base"];
+            change_state(config);
+        });
+
+        $("#left_hua_tea").unbind();
+        $("#left_hua_tea").on("click", function () {
+            config["current"] = 1034 + config["base"];
+            change_state(config);
+        });
+    }
+
+    function choose_choice_init(current_choice) {
+        $("#choice_1").unbind();
+        $("#choice_1").on("click", function () {
+            choose_choice_detail_display(current_choice[0]);
+        });
+        $("#choice_2").unbind();
+        $("#choice_2").on("click", function () {
+            choose_choice_detail_display(current_choice[1]);
+        });
+        $("#choice_3").unbind();
+        $("#choice_3").on("click", function () {
+            choose_choice_detail_display(current_choice[2]);
+        });
+        $("#choice_4").unbind();
+        $("#choice_4").on("click", function () {
+            choose_choice_detail_display(current_choice[3]);
+        });
+        $("#choice_5").unbind();
+        $("#choice_5").on("click", function () {
+            choose_choice_detail_display(current_choice[4]);
+        });
+    }
+
+    function choose_choice_detail_display(current_choice_item) {
+        $("#tea_name").html(get_product_name(current_choice_item));
+        $("#tea_assortment").html(get_product_attribute(current_choice_item));
+        $("#other_discription").html(get_product_other_description(current_choice_item));
+        $("#select_pic").attr("src", get_product_file_path(current_choice_item));
+        $("#tea_benefit").html(get_product_benefit(current_choice_item));
+        $("#product_tips").css("display","none");
+        $("#product_discription").css("display","block");
+        $("#buy_button").css("visibility", "visiable");
+        $("#buy_button").unbind();
+        $("#buy_button").on("click", function () {
+            var name = get_product_name(current_choice_item);
+            var current = product_choose["current"];
+            var answer = product_choose["names"][current];
+            if(name != answer){
+                alert("请找到" + answer);
+                return;
+            }
+            product_choose["current"] += 1;
+            if (product_choose["current"] < product_choose["names"].length){
+                config["current"] = 1030 + config["base"];
+                change_state(config);
+                return;
+            }
+            config["change"] = 1;
+        })
+    }
+    
+    function choose_set_page_detail(choice) {
+        set_page_detail(choice);
+        var current = product_choose["current"];
+        var answer = product_choose["names"][current];
+        $("#answer").html(answer);
+    }
+
+    function page_choose_product1_after_init() {
+        // 设置页面详细信息
+        choose_set_page_detail(choice["product1"]);
+        // 四个标签按钮点击事件
+        choose_left_init();
+        // 五个商品点击事件
+        choose_choice_init(choice["product1"]);
+    }
+
+    function page_choose_product2_after_init() {
+        // 设置页面详细信息
+        choose_set_page_detail(choice["product2"]);
+        // 四个标签按钮点击事件
+        choose_left_init();
+        // 五个商品点击事件
+        choose_choice_init(choice["product2"]);
+    }
+
+    function page_choose_product3_after_init() {
+        // 设置页面详细信息
+        choose_set_page_detail(choice["product3"]);
+        // 四个标签按钮点击事件
+        choose_left_init();
+        // 五个商品点击事件
+        choose_choice_init(choice["product3"]);
+    }
+
+    function page_choose_product4_after_init() {
+        // 设置页面详细信息
+        choose_set_page_detail(choice["product4"]);
+        // 四个标签按钮点击事件
+        choose_left_init();
+        // 五个商品点击事件
+        choose_choice_init(choice["product4"]);
+    }
+
+
     var page_tea_item = {
-        3: {"next":4, "html":page_tea_task, "wait":0, "auto":0, "before_init":null, "after_init":tea_task_after_init},
-        4: {"next":4, "html":page_tea_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
-        5: {"next":5, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
-        6: {"next":6, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
-        7: {"next":7, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
-        8: {"next":8, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
-        9: {"next":9, "html":page_question, "wait":0, "auto":0, "before_init":null, "after_init":page_question_after_init},
-        10: {"next":10, "html":page_phrase_transition, "wait":0, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+        3: {"next":10, "html":page_tea_task, "wait":0, "auto":0, "before_init":null, "after_init":tea_task_after_init},
+        10: {"next":10, "html":page_tea_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
+        11: {"next":20, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
+        12: {"next":20, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
+        13: {"next":20, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
+        14: {"next":20, "html":page_tea_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
+        20: {"next":30, "html":page_choose_preview, "wait":10000, "auto":0, "before_init":null, "after_init":page_preview_after_init},
+        30: {"next":30, "html":page_tea_choose_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_menu_after_init},
+        31: {"next":40, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product1_after_init},
+        32: {"next":40, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product2_after_init},
+        33: {"next":40, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product3_after_init},
+        34: {"next":40, "html":page_tea_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product4_after_init},
+        40: {"next":50, "html":page_question, "wait":10000, "auto":0, "before_init":null, "after_init":page_question_after_init},
+        50: {"next":60, "html":page_test, "wait":10000, "auto":0, "before_init":null, "after_init":page_test_after_init},
+        60: {"next":60, "html":page_phrase_transition, "wait":10000, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
     };
 
     var page_shampoo_item = {
-        3: {"next":4, "html":page_shampoo_task, "wait":0, "auto":0, "before_init":null, "after_init":shampoo_task_after_init},
-        4: {"next":4, "html":page_shampoo_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
-        5: {"next":5, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
-        6: {"next":6, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
-        7: {"next":7, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
-        8: {"next":8, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
-        9: {"next":9, "html":page_question, "wait":0, "auto":0, "before_init":null, "after_init":page_question_after_init},
-        10: {"next":10, "html":page_phrase_transition, "wait":0, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+        3: {"next":10, "html":page_shampoo_task, "wait":0, "auto":0, "before_init":null, "after_init":shampoo_task_after_init},
+        10: {"next":10, "html":page_shampoo_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
+        11: {"next":20, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
+        12: {"next":20, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
+        13: {"next":20, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
+        14: {"next":20, "html":page_shampoo_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
+        20: {"next":30, "html":page_choose_preview, "wait":10000, "auto":0, "before_init":null, "after_init":page_preview_after_init},
+        30: {"next":30, "html":page_shampoo_choose_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_menu_after_init},
+        31: {"next":40, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product1_after_init},
+        32: {"next":40, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product2_after_init},
+        33: {"next":40, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product3_after_init},
+        34: {"next":40, "html":page_shampoo_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product4_after_init},
+        40: {"next":50, "html":page_question, "wait":10000, "auto":0, "before_init":null, "after_init":page_question_after_init},
+        50: {"next":60, "html":page_test, "wait":10000, "auto":0, "before_init":null, "after_init":page_test_after_init},
+        60: {"next":60, "html":page_phrase_transition, "wait":10000, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
     };
 
     var page_brush_item = {
-        3: {"next":4, "html":page_brush_task, "wait":0, "auto":0, "before_init":null, "after_init":brush_task_after_init},
-        4: {"next":4, "html":page_brush_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
-        5: {"next":5, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
-        6: {"next":6, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
-        7: {"next":7, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
-        8: {"next":8, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
-        9: {"next":9, "html":page_question, "wait":0, "auto":0, "before_init":null, "after_init":page_question_after_init},
-        10: {"next":10, "html":page_phrase_transition, "wait":0, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+        3: {"next":10, "html":page_brush_task, "wait":0, "auto":0, "before_init":null, "after_init":brush_task_after_init},
+        10: {"next":10, "html":page_brush_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_product_menu_after_init},
+        11: {"next":20, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product1_after_init},
+        12: {"next":20, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product2_after_init},
+        13: {"next":20, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product3_after_init},
+        14: {"next":20, "html":page_brush_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_product4_after_init},
+        20: {"next":30, "html":page_choose_preview, "wait":10000, "auto":0, "before_init":null, "after_init":page_preview_after_init},
+        30: {"next":30, "html":page_brush_choose_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_menu_after_init},
+        31: {"next":40, "html":page_brush_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product1_after_init},
+        32: {"next":40, "html":page_brush_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product2_after_init},
+        33: {"next":40, "html":page_brush_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product3_after_init},
+        34: {"next":40, "html":page_brush_choose_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_choose_product4_after_init},
+        40: {"next":50, "html":page_question, "wait":10000, "auto":0, "before_init":null, "after_init":page_question_after_init},
+        50: {"next":60, "html":page_test, "wait":10000, "auto":0, "before_init":null, "after_init":page_test_after_init},
+        60: {"next":60, "html":page_phrase_transition, "wait":10000, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
     };
 
     function generate_pages(first, second, third){
         var pages = {
             1: {"next":3, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
-            3: {"next":4, "html":page_teach_preview, "wait":10, "auto":0, "before_init":null, "after_init":page_teach_preview_after_init},
-            4: {"next":4, "html":page_teach_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_menu_after_init},
-            5: {"next":5, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product1_after_init},
-            6: {"next":6, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product2_after_init},
-            7: {"next":7, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product3_after_init},
-            10: {"next":10, "html":page_teach_transition, "wait":10000, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+            3: {"next":10, "html":page_teach_preview, "wait":10, "auto":0, "before_init":null, "after_init":page_preview_after_init},
+            10: {"next":10, "html":page_teach_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_menu_after_init},
+            11: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product1_after_init},
+            12: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product2_after_init},
+            13: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product3_after_init},
+            40: {"next":40, "html":page_teach_transition, "wait":1, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
         };
         var max_index = 0;
         var base = 1000;
@@ -876,6 +1483,7 @@
                     }else{
                         console.log("current:", states["current"], "spend:", time_spend, "wait:", states["wait"]);
                     }
+                    $("#next_page").trigger('click');
                 }else{
                     console.log("current page auto:", states["current"]);
                 }
@@ -919,28 +1527,28 @@
     }
 
     function product1_onclick(){
-        config["current"] = 1005 + config["base"];
+        config["current"] = 1011 + config["base"];
         change_state(config);
         choice["product1_click"] = 1;
         choice["start_time"] = new Date();
         console.log("product1_onclick:", choice["start_time"])
     }
     function product2_onclick(){
-        config["current"] = 1006 + config["base"];
+        config["current"] = 1012 + config["base"];
         change_state(config);
         choice["product2click"] = 1;
         choice["start_time"] = new Date();
         console.log("product2_onclick:", choice["start_time"])
     }
     function product3_onclick(){
-        config["current"] = 1007 + config["base"];
+        config["current"] = 1013 + config["base"];
         change_state(config);
         choice["product3_click"] = 1;
         choice["start_time"] = new Date();
         console.log("product3_onclick:", choice["start_time"])
     }
     function product4_onclick(){
-        config["current"] = 1008 + config["base"];
+        config["current"] = 1014 + config["base"];
         change_state(config);
         choice["product4_click"] = 1;
         choice["start_time"] = new Date();
@@ -999,25 +1607,25 @@
         $("#left_green_tea").unbind();
         $("#left_green_tea").on("click", function () {
             choice["product1_click"] = 1;
-            config["current"] = 1005 + config["base"];
+            config["current"] = 1011 + config["base"];
             change_state(config);
         });
         $("#left_red_tea").unbind();
         $("#left_red_tea").on("click", function () {
             choice["product2_click"] = 1;
-            config["current"] = 1006 + config["base"];
+            config["current"] = 1012 + config["base"];
             change_state(config);
         });
         $("#left_qing_tea").unbind();
         $("#left_qing_tea").on("click", function () {
             choice["product3_click"] = 1;
-            config["current"] = 1007 + config["base"];
+            config["current"] = 1013 + config["base"];
             change_state(config);
         });
         $("#left_hua_tea").unbind();
         $("#left_hua_tea").on("click", function () {
             choice["product4_click"] = 1;
-            config["current"] = 1008 + config["base"];
+            config["current"] = 1014 + config["base"];
             change_state(config);
         });
     }
@@ -1219,9 +1827,7 @@
         console.log(string);
         choice_strings.push(string);
 
-        config["current"] = 1009 + config["base"];
-        change_state(config);
-
+        config["change"] = 1;
 
         console.log("choice_strings:")
         for(var i = 0; i < choice_strings.length; ++i){
@@ -1232,28 +1838,32 @@
 
     
     // page question
-    var answers = {
-        "current_question":0,
-        "ids":[],
+    var questions = {
+        "current":0,
         "answers":[]
     }
-    var answer_id_strings = [];
-    var answer_answer_strings = [];
+    var question_answers = [];
     function show_current_question() {
-        var index = answers["current_question"];
+        var index = questions["current"];
         if(index >= product_question["questions"].length){
-            console.log("question end, index: ", index)
-            answer_id_strings.push(product_config["name"] + " " + answers["ids"].join(" "));
-            answer_answer_strings.push(product_config["name"] + " " + answers["answers"].join(" "));
-            config["current"] = 1010 + config["base"];
-            change_state(config);
+            console.log("question end, index: ", index);
+            var question_answer = {};
+            question_answer[product_config["name"]] = questions["answers"];
+            question_answers.push(question_answer);
+            config["change"] = 1;
             return;
         }
         var question = product_question["questions"][index];
-        set_body(question["template"])
-        $("#content").html(question["content"]);
-        $("#left").html(question["left"]);
-        $("#right").html(question["right"]);
+        set_body(question["template"]);
+        if(question.hasOwnProperty("content") && question["content"]!=""){
+            $("#content").html(question["content"]);
+        }
+        if(question.hasOwnProperty("left") && question["left"]!=""){
+            $("#left").html(question["left"]);
+        }
+        if(question.hasOwnProperty("right") && question["right"]!=""){
+            $("#right").html(question["right"]);
+        }
         $("#next_page").unbind();
         $("#next_page").on("click",function () {
             var val=$('input:radio[name="one_choice"]:checked').val();
@@ -1262,17 +1872,124 @@
                 alert("请选择一个选项");
                 return;
             }
-            answers["ids"].push(question["id"])
-            answers["answers"].push(val)
-            answers["current_question"] = index + 1;
+            var val_int = parseInt(val);
+            questions["answers"].push({"id": question["id"], "answer": val_int});
+            questions["current"] = index + 1;
             show_current_question();
         });
     }
     
     function page_question_after_init() {
-        answers["current_question"] = 0;
-        show_current_question();
+        // 此时要页面
+        $("#next_tips").unbind();
+        $("#next_tips").on("click", function () {
+            questions["current"] = 0;
+            show_current_question();
+        })
+
+        // 此时不要页面
+//        questions["current"] = 0;
+//        show_current_question();
     }
+
+    // page_test1
+    var tests = {
+        "start":0,
+        "group":0,
+        "current":0,
+        "answers":[]
+    }
+    var test_answers = [];
+    function show_current_test() {
+
+        while(tests["current"] >= product_test["tests"][tests["group"]].length){
+            tests["group"] += 1;
+            tests["current"] = 0;
+            if(tests["group"] >= product_test["tests"].length){
+                console.log("test end, index: ", tests["group"]);
+                var test_answer = {};
+                test_answer[product_config["name"]] = tests["answers"];
+                test_answers.push(test_answer);
+                config["change"] = 1;
+                return;
+            }
+        }
+        var index = tests["current"];
+        var group = tests["group"];
+        var test = product_test["tests"][group][index];
+
+        set_body(test["template"]);
+        if(test.hasOwnProperty("content") && test["content"]!=""){
+            $("#content").html(test["content"]);
+        }
+        if(test.hasOwnProperty("left") && test["left"]!=""){
+            $("#left").html(test["left"]);
+        }
+        if(test.hasOwnProperty("right") && test["right"]!=""){
+            $("#right").html(test["right"]);
+        }
+
+        for(var i = 0; i < test["pictures"].length; i++){
+            var pic = i + 1;
+            var pic_str = pic + "";
+
+            var name_id = "#TF_name" + pic_str;
+            var picture_id = "#TF_pic" + pic_str;
+            var attribute_id = "#TF_attribute" + pic_str;
+            var benefit_id = "#TF_benefit" + pic_str;
+            $(name_id).html(test["pictures"][i]["name"]);
+            $(picture_id).attr("src", test["pictures"][i]["src"]);
+            $(attribute_id).html(test["pictures"][i]["attribute"]);
+            $(benefit_id).html(test["pictures"][i]["benefit"]);
+        }
+
+
+        if(!test.hasOwnProperty("true") || test["true"]==""){
+            alert("这个问题没有正确答案！！！");
+            $("#next_page").unbind();
+            return;
+        }
+
+        $("#next_page").unbind();
+        $("#next_page").on("click",function () {
+            var val=$('input:radio[name="one_choice"]:checked').val();
+            if(val==null){
+                console.log("test select nothing", test)
+                //alert("请选择一个选项");
+                return;
+            }
+            var correct = (val == test["true"]) ? 1 : 0;
+            var spend = new Date() - tests["start"];
+            tests["answers"].push({"id": test["id"], "answer": correct, "RT":spend});
+            tests["current"] = index + 1;
+            tests["start"] = new Date();
+            show_current_test();
+        });
+
+        $("#choice_1").unbind();
+        $("#choice_2").unbind();
+        $("#choice_1").on("click", function () {
+            $("#next_page").trigger('click');
+        });
+        $("#choice_2").on("click", function () {
+            $("#next_page").trigger('click');
+        });
+
+        tests["start"] = new Date();
+    }
+
+
+    function page_test_after_init() {
+        $("#next_tips").unbind();
+        $("#next_tips").on("click", function () {
+            tests["start"] = new Date();
+            tests["group"] = 0;
+            tests["current"] = 0;
+            show_current_test();
+        })
+    }
+
+
 
     // page phrase transition
     function page_phrase_transition_after_init() {
@@ -1384,8 +2101,9 @@
             "order_sign": order_sign,
             "purpose": purpose,
             "choice": choice_strings.sort(),
-            "question_id": answer_id_strings.sort(),
-            "question_answer": answer_answer_strings.sort()}
+            "questions": question_answers,
+            "tests": test_answers,
+        };
         var string = JSON.stringify(stringObj,null,"\t")
         console.log("final save:", string)
         saveFile(filename, string);
@@ -1434,13 +2152,19 @@
                 }
                 return str;
             }
-        }
+        };
 
-        answers = {
-            "current_question":0,
-            "ids":[],
+        questions = {
+            "current":0,
             "answers":[]
-        }
+        };
+
+        tests = {
+            "start":0,
+            "group":0,
+            "current":0,
+            "answers":[]
+        };
     }
 
     function main() {
