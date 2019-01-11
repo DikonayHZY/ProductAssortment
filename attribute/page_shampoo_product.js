@@ -9,7 +9,7 @@ page_shampoo_product =`
 
 		<div style="width: 100%; height: 80%; display: flex;"> <!-- 下半部分 -->
 			<div style="width: 15%; height: 100%; min-width: 150px; /*background-color: green; */display: flex; align-items: center; justify-content: center;"> <!-- 左侧导航栏 -->
-				<div class="shampoo_left_menu" style="width: 100%; height: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center; ">
+				<div class="shampoo_left_menu" style="width: 100%; height: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center; border: black 1px solid; ">
 					<a href="#" id="left_green_tea">海洋味</a><br>
 					&emsp;<br>
 					<a href="#" id="left_red_tea">柠檬香</a><br>
