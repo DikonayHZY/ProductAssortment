@@ -7,6 +7,7 @@ page_test = `
 						接下来将进行记忆测试<br>
 						请<strong>仔细回忆</strong>之前看到的产品页面，回答接下来的问题<br>
 						题目均为<strong>判断题</strong><br>
+						所有呈现的商品信息都是正确的（没有配对错误）<br>
 						请<strong style="color: red;">又快又准确</strong>地做出回答<br>
 						一旦回答则自动进入下一题				
 					</p>
