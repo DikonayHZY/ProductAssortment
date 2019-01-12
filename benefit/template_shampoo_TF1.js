@@ -9,7 +9,7 @@ template_shampoo_TF1 =`
 							<img id="TF_pic1" src="../resource/shampoo/ALTERNA-PB.png" style="height: 85%;">
 							<p style=" font-size: 20px; line-height: 1.8;"><strong><span id="TF_name1">ALTERNA-PB</span></strong></p>							
 						</div>
-						<div style="width: 100%; height: 23%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 20px; line-height: 1.8;">						
+						<div style="width: 100%; height: 23%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 20px; line-height: 1.8;">
 							<p><strong>功效：</strong><span id="TF_benefit1">减肥瘦身</span></p>							
 							<p><strong>香氛：</strong><span id="TF_attribute1">绿茶</span></p>	
 						</div>
