@@ -10,8 +10,8 @@ template_shampoo_TF1_example =`
 							<p style=" font-size: 20px; line-height: 1.8;"><strong><span>ALTERNA-elegant.png</span></strong></p>							
 						</div>
 						<div style="width: 100%; height: 23%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 20px; line-height: 1.8;">
-							<p><strong>香氛：</strong><span id="TF_attribute1">薰衣草</span></p>							
-							<p><strong>功效：</strong><span id="TF_benefit1">滋养发根</span></p>							
+							<p><strong>香氛：</strong><span>薰衣草</span></p>							
+							<p><strong>功效：</strong><span>滋养发根</span></p>							
 						</div>
 					</div>										
 				</div>
