@@ -24,12 +24,20 @@
         var age = "18";
         var major = "应用化学";
         var grade = "大一";
+        var grade_id = "2";
         var phone = "空";
         var purpose = "空";
         var condition = "attribute";            // "attribute"
+        var assortment = 0;
+        if(condition == "attribute"){
+            assortment = 1;
+        }else if(condition == "benefit"){
+            assortment = 2;
+        }
         var name_type = 1;
         var order_number = 1;                   // 默认配置后面会改: 如果配置>0则强制指定, 否则根据url最后的数字指定, 如 xxx_2.html => order_number = 2
         var order_sign = "shampoo_brush";       // 跟随 order_number 修改
+        var output_order = ["shampoo","brush"]; // 输出顺序
 
         console.log("order:", order_number);
         console.log("condition:", condition);
@@ -402,7 +410,7 @@
 
 
         var config_brush = { 
-            "name": "bursh",
+            "name": "brush",
             "product1":[
                 [0, "../resource/brush/GOVINO-αD.png", "电动喷雾型", "健康清洁", "个性化辅导，精锐感知科技，智能刷头感应","延缓衰老，防癌抗癌","1"],
                 [0, "../resource/brush/GOVINO-αG.png", "电动喷雾型", "抗敏护龈", "个性化辅导，精锐感知科技，智能刷头感应","提神醒脑，清心明目","2"],
@@ -1585,39 +1593,9 @@
         "product2_click":0,
         "product3_click":0,
         "product4_click":0,
-        "tostring": function () {
-            var str = this["start_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
-                    + this["end_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
-                    + Math.round(this["spend_time"] / 1000) + " "
-            for(var i=0; i < this["product1"].length; i++) {
-                var pathname = this["product1"][i][1];
-                var index1 = pathname.lastIndexOf("/");
-                var index2 = pathname.lastIndexOf(".");
-                str = str + pathname.substring(index1+1,index2) + " " + this["product1"][i][0] + " ";
-            }
-            for(var i=0; i < this["product2"].length; i++) {
-                var pathname = this["product2"][i][1];
-                var index1 = pathname.lastIndexOf("/");
-                var index2 = pathname.lastIndexOf(".");
-                str = str + pathname.substring(index1+1,index2) + " " + this["product2"][i][0] + " ";
-            }
-            for(var i=0; i < this["product3"].length; i++) {
-                var pathname = this["product3"][i][1];
-                var index1 = pathname.lastIndexOf("/");
-                var index2 = pathname.lastIndexOf(".");
-                str = str + pathname.substring(index1+1,index2) + " " + this["product3"][i][0] + " ";
-            }
-            for(var i=0; i < this["product4"].length; i++) {
-                var pathname = this["product4"][i][1];
-                var index1 = pathname.lastIndexOf("/");
-                var index2 = pathname.lastIndexOf(".");
-                str = str + pathname.substring(index1+1,index2) + " " + this["product4"][i][0] + " ";
-            }
-            return str;
-        }
-    }
+    };
 
-    var choice_strings = [];
+    var choice_infos = {};
 
     function left_init() {
         $("#left_green_tea").unbind();
@@ -1675,7 +1653,7 @@
             $("#buy_button").css("visibility","visible");
             $("#buy_button").unbind();
             $("#buy_button").on("click",function(){
-                save_on_click(current_choice_item[1]);
+                save_on_click(current_choice_item);
             });
         }else{
             $("#buy_button").css("visibility","hidden");
@@ -1770,6 +1748,10 @@
     function set_product_chosen(choice_item) {
         choice_item[0] = 1;
     }
+
+    function get_product_chosen(choice_item) {
+        return choice_item[0];
+    }
     
     function get_product_file_path(choice_item) {
         return choice_item[1];
@@ -1789,6 +1771,10 @@
 
     function get_product_benefit_description(choice_item) {
         return choice_item[5];
+    }
+
+    function get_product_id(choice_item) {
+        return choice_item[6];
     }
 
     function set_page_detail(choice) {
@@ -1833,23 +1819,71 @@
         }
     }
 
+    function choice_result(choice){
+        var obj = {};
+        obj["start"] = choice["start_time"].format("yyyy-MM-dd_hh:mm:ss");
+        obj["end"] = choice["end_time"].format("yyyy-MM-dd_hh:mm:ss");
+        obj["spend"] = Math.round(choice["spend_time"] / 1000);
+        obj["product"] = [];
+
+        var product1 = {};
+        product1["rate"] = 0;
+        for(var i=0; i < choice["product1"].length; i++) {
+            var pathname = get_product_name(choice["product1"][i]);
+            var chosen = get_product_chosen(choice["product1"][i]);
+            product1[pathname] = chosen;
+            product1["rate"] += chosen;
+        }
+        product1["rate"] /= choice["product1"].length;
+        obj["product"].push(product1);
+
+        var product2 = {};
+        product2["rate"] = 0;
+        for(var i=0; i < choice["product2"].length; i++) {
+            var pathname = get_product_name(choice["product2"][i]);
+            var chosen = get_product_chosen(choice["product2"][i]);
+            product2[pathname] = chosen;
+            product2["rate"] += chosen;
+        }
+        product2["rate"] /= choice["product2"].length;
+        obj["product"].push(product2);
+
+        var product3 = {};
+        product3["rate"] = 0;
+        for(var i=0; i < choice["product3"].length; i++) {
+            var pathname = get_product_name(choice["product3"][i]);
+            var chosen = get_product_chosen(choice["product3"][i]);
+            product3[pathname] = chosen;
+            product3["rate"] += chosen;
+        }
+        product3["rate"] /= choice["product3"].length;
+        obj["product"].push(product3);
+
+        var product4 = {};
+        product4["rate"] = 0;
+        for(var i=0; i < choice["product4"].length; i++) {
+            var pathname = get_product_name(choice["product4"][i]);
+            var chosen = get_product_chosen(choice["product4"][i]);
+            product4[pathname] = chosen;
+            product4["rate"] += chosen;
+        }
+        product4["rate"] /= choice["product4"].length;
+        obj["product"].push(product4);
+
+        return obj;
+    }
+
     function save_on_click(final_choose) {
         console.log("save_in_click", final_choose);
         choice["end_time"] = new Date();
         choice["spend_time"] = choice["end_time"] - choice["start_time"];
-        var string = product_config["name"] + " "
-            + get_filename(final_choose) + " "
-            + choice.tostring();
-        console.log(string);
-        choice_strings.push(string);
-
+        var result = choice_result(choice);
+        result["choose"] = get_product_name(final_choose);
+        result["choose_id"] = get_product_id(final_choose);
+        var name = product_config["name"];
+        choice_infos[name] = result;
+        console.log("choice_infos:", choice_infos);
         config["change"] = 1;
-
-        console.log("choice_strings:")
-        for(var i = 0; i < choice_strings.length; ++i){
-            console.log(i+1, ":", choice_strings[i])
-        }
-
     }
 
     
@@ -1858,14 +1892,12 @@
         "current":0,
         "answers":[]
     }
-    var question_answers = [];
+    var question_answers = {};
     function show_current_question() {
         var index = questions["current"];
         if(index >= product_question["questions"].length){
             console.log("question end, index: ", index);
-            var question_answer = {};
-            question_answer[product_config["name"]] = questions["answers"];
-            question_answers.push(question_answer);
+            question_answers[product_config["name"]] = questions["answers"];
             config["change"] = 1;
             return;
         }
@@ -1915,7 +1947,7 @@
         "current":0,
         "answers":[]
     }
-    var test_answers = [];
+    var test_answers = {};
     function show_current_test() {
 
         while(tests["current"] >= product_test["tests"][tests["group"]].length){
@@ -1923,9 +1955,13 @@
             tests["current"] = 0;
             if(tests["group"] >= product_test["tests"].length){
                 console.log("test end, index: ", tests["group"]);
-                var test_answer = {};
-                test_answer[product_config["name"]] = tests["answers"];
-                test_answers.push(test_answer);
+                // tests["answers"] 排序
+                tests["answers"].sort(function (answer1, answer2) {
+                    if(answer1["id"] < answer2["id"]) return -1;
+                    else if(answer1["id"] > answer2["id"]) return 1;
+                    else return 0;
+                });
+                test_answers[product_config["name"]] = tests["answers"];
                 config["change"] = 1;
                 return;
             }
@@ -2083,7 +2119,13 @@
             }
 
             if(_grade != null && _grade != "" ){
-                grade = _grade;
+                var gradeinfo = _grade.split("|")
+                if(gradeinfo.length>=1){
+                    grade = gradeinfo[0]
+                }
+                if(gradeinfo.length>=2){
+                    grade_id = gradeinfo[1];
+                }
             }
 
             if(_phone != null && _phone != "" ){
@@ -2116,10 +2158,60 @@
             "order_number": order_number,
             "order_sign": order_sign,
             "purpose": purpose,
-            "choice": choice_strings.sort(),
+            "choice": choice_infos,
             "questions": question_answers,
             "tests": test_answers,
+            "output": "",
         };
+
+        var arr = [];
+        arr.push("1");                                          // ID
+        for(var i=0; i<output_order.length; ++i){
+            var name = output_order[i];
+            var choose_info = choice_infos[name];
+            arr.push(choose_info["start"]);                     // startTime
+        }
+        arr.push(username);                                     // user
+        arr.push(gender);                                       // gender
+        arr.push(age);                                          // age
+        arr.push(grade);                                        // grade_sign
+        arr.push(grade_id);                                     // grade
+        arr.push(major);                                        // major
+        arr.push(assortment);                                   // assortment
+        arr.push(name_type);                                    // name_type
+        arr.push(order_sign);                                   // order_sign
+        arr.push(order_number);                                 // order_number
+        for(var i=0; i<output_order.length; ++i){
+            var name = output_order[i];
+
+            var choose_info = choice_infos[name];
+            arr.push(choose_info["spend"]);                     // chooseTime
+            for(var j=0; j<choose_info["product"].length; ++j){
+                arr.push(choose_info["product"][j]["rate"]);    // checkRate
+            }
+            arr.push(choose_info["choose"]);                    // choose_sign
+            arr.push(choose_info["choose_id"]);                 // choose
+
+            var question_answer = question_answers[name];
+            for(var j=0; j<question_answer.length; ++j){
+                arr.push(question_answer[j]["answer"]);         // question_answers
+            }
+
+            var test_answer = test_answers[name];
+            var correct = 0;
+            for(var j=0; j<test_answer.length; ++j){
+                arr.push(test_answer[j]["answer"]);             // test_answers
+                correct += test_answer[j]["answer"];
+            }
+            arr.push(correct/test_answer.length);               // test_rate
+            for(var j=0; j<test_answer.length; ++j){
+                arr.push(test_answer[j]["RT"]);                 // test_RTs
+            }
+        }
+        arr.push(phone);                                        // phone
+        arr.push(purpose);                                      // purpose
+        stringObj["output"] = arr.join("|");
+
         var string = JSON.stringify(stringObj,null,"\t")
         console.log("final save:", string)
         saveFile(filename, string);
@@ -2138,36 +2230,6 @@
             "product2_click":0,
             "product3_click":0,
             "product4_click":0,
-            "tostring": function () {
-                var str = this["start_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
-                    + this["end_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
-                    + Math.round(this["spend_time"] / 1000) + " "
-                for(var i=0; i < this["product1"].length; i++) {
-                    var pathname = this["product1"][i][1];
-                    var index1 = pathname.lastIndexOf("/");
-                    var index2 = pathname.lastIndexOf(".");
-                    str = str + pathname.substring(index1+1,index2) + " " + this["product1"][i][0] + " ";
-                }
-                for(var i=0; i < this["product2"].length; i++) {
-                    var pathname = this["product2"][i][1];
-                    var index1 = pathname.lastIndexOf("/");
-                    var index2 = pathname.lastIndexOf(".");
-                    str = str + pathname.substring(index1+1,index2) + " " + this["product2"][i][0] + " ";
-                }
-                for(var i=0; i < this["product3"].length; i++) {
-                    var pathname = this["product3"][i][1];
-                    var index1 = pathname.lastIndexOf("/");
-                    var index2 = pathname.lastIndexOf(".");
-                    str = str + pathname.substring(index1+1,index2) + " " + this["product3"][i][0] + " ";
-                }
-                for(var i=0; i < this["product4"].length; i++) {
-                    var pathname = this["product4"][i][1];
-                    var index1 = pathname.lastIndexOf("/");
-                    var index2 = pathname.lastIndexOf(".");
-                    str = str + pathname.substring(index1+1,index2) + " " + this["product4"][i][0] + " ";
-                }
-                return str;
-            }
         };
 
         questions = {

@@ -29,11 +29,11 @@ template_7 = `
  						<label for="choice_5">5</label>						
 					</div>
 					<div style="width: 70px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;"> 
- 						<input name="one_choice" type="radio" id="choice_5" value="5">
+ 						<input name="one_choice" type="radio" id="choice_6" value="6">
  						<label for="choice_6">6</label>						
 					</div>
 					<div style="width: 70px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;"> 
- 						<input name="one_choice" type="radio" id="choice_5" value="5">
+ 						<input name="one_choice" type="radio" id="choice_7" value="7">
  						<label for="choice_7">7</label>						
 					</div>										
 				</div>
