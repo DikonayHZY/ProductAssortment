@@ -7,14 +7,12 @@
     <script type="text/javascript" src="template_4.js"></script>
     <script type="text/javascript" src="template_5.js"></script>
     <script type="text/javascript" src="template_7.js"></script>
-    <script type="text/javascript" src="template_9.js"></script>
-    <script type="text/javascript" src="template_9_example.js"></script>    
+    <script type="text/javascript" src="template_9.js"></script>    
     <script type="text/javascript" src="template_9_dyh.js"></script>
     <script type="text/javascript" src="template_10.js"></script>
     <script type="text/javascript" src="page_test.js"></script>
     <script type="text/javascript" src="template_tea_TF1.js"></script>
     <script type="text/javascript" src="template_tea_TF2.js"></script>
-    <script type="text/javascript" src="template_shampoo_TF1_example.js"></script>
     <script type="text/javascript" src="template_shampoo_TF1.js"></script>
     <script type="text/javascript" src="template_shampoo_TF2.js"></script>
     <script type="text/javascript" src="template_brush_TF1.js"></script>
@@ -26,12 +24,20 @@
         var age = "18";
         var major = "应用化学";
         var grade = "大一";
+        var grade_id = "2";
         var phone = "空";
         var purpose = "空";
         var condition = "attribute";            // "attribute"
+        var assortment = 0;
+        if(condition == "attribute"){
+            assortment = 1;
+        }else if(condition == "benefit"){
+            assortment = 2;
+        }
         var name_type = 1;
         var order_number = 1;                   // 默认配置后面会改: 如果配置>0则强制指定, 否则根据url最后的数字指定, 如 xxx_2.html => order_number = 2
-        var order_sign = "tea_shampoo_brush";   // 跟随 order_number 修改
+        var order_sign = "shampoo_brush";       // 跟随 order_number 修改
+        var output_order = ["shampoo","brush"]; // 输出顺序
 
         console.log("order:", order_number);
         console.log("condition:", condition);
@@ -43,7 +49,7 @@
             "花茶": "#CE6E60",
         }
 
-    var config_tea = {
+	    var config_tea = {
             "name": "tea",
 	        "product1":[
 	            [0, "../resource/tea/雪水云绿.JPG", "绿茶", "美容养颜", "银剑出鞘，茸毫隐翠，林间香气","延缓衰老，防癌抗癌","1"],
@@ -120,21 +126,21 @@
 
 	    var question_tea = {
             "questions":[
-                {"id":"tea2", "template": template_9_example, "content":"例题：李明正在考虑周末去拜访一个朋友。他去拜访的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea3", "template": template_9, "content":"小红正在考虑给自己买一双新鞋。她买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea4", "template": template_9, "content":"小张正在查看他的邮件。他收到垃圾邮件的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea5", "template": template_9, "content":"小郭正在考虑是否要养一只宠物。他养宠物可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea6", "template": template_9, "content":"小杨正在参加公司年会的抽奖活动。他抽中大奖可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea7", "template": template_7, "content":"总的来说，你认为御茗阁茶叶目录中的茶叶之间有多相似？", "left": "完全不相似", "right": "非常相似"},
-               {"id":"tea8", "template": template_9_dyh, "content":"御茗阁为我提供了多样化的选择", "left": "非常不符合", "right": "非常符合"},
-               {"id":"tea9", "template": template_9_dyh, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不符合", "right": "非常符合"},
-               {"id":"tea10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款茶叶", "left": "非常不符合", "right": "非常符合"},
-               {"id":"tea11", "template": template_4, "content":"我感觉完成茶叶选择的任务是困难的", "left": "非常不符合", "right": "非常符合"},
-               {"id":"tea12", "template": template_4, "content":"我感觉完成茶叶选择的任务需要耗费精力", "left": "非常不符合", "right": "非常符合"},
-               {"id":"tea13", "template": template_4, "content":"我感觉完成茶叶选择的任务需要进行较多的思考", "left": "非常不符合", "right": "非常符合"},
-               {"id":"tea14", "template": template_4, "content":"我感觉完成茶叶选择的任务需要花费了较长的时间", "left": "非常不符合", "right": "非常符合"},
-               {"id":"tea15", "template": template_4, "content":"我了解御茗阁这个品牌", "left": "非常不符合", "right": "非常符合"},
-               {"id":"tea16", "template": template_4, "content":"我了解茶叶知识", "left": "非常不符合", "right": "非常符合"},
+                {"id":"tea2", "template": template_9, "content":"李明正在考虑周末去拜访一个朋友。他去拜访的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea3", "template": template_9, "content":"小红正在考虑给自己买一双新鞋。她买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea4", "template": template_9, "content":"小张正在查看他的邮件。他收到垃圾邮件的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea5", "template": template_9, "content":"小郭正在考虑是否要养一只宠物。他养宠物可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea6", "template": template_9, "content":"小杨正在参加公司年会的抽奖活动。他抽中大奖可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea7", "template": template_7, "content":"总的来说，你认为御茗阁茶叶目录中的茶叶之间有多相似？", "left": "完全不相似", "right": "非常相似"},
+                {"id":"tea8", "template": template_9_dyh, "content":"御茗阁为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea9", "template": template_9_dyh, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款茶叶", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea11", "template": template_4, "content":"我感觉完成茶叶选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea12", "template": template_4, "content":"我感觉完成茶叶选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea13", "template": template_4, "content":"我感觉完成茶叶选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea14", "template": template_4, "content":"我感觉完成茶叶选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea15", "template": template_4, "content":"我了解御茗阁这个品牌", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea16", "template": template_4, "content":"我了解茶叶知识", "left": "非常不赞同", "right": "非常赞同"},
             ],
         };
 
@@ -285,38 +291,27 @@
 
         var question_shampoo = {
             "questions":[
-                {"id":"construal_0", "template": template_9_example, "content":"例题：小明买了一张彩票，他中奖的可能性有多大？", "left": "非常不可能", "right": "非常可能"},            
-                {"id":"construal_1", "template": template_9, "content":"Jeff正在考虑周末去拜访一个朋友。他去拜访的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"construal_2", "template": template_9, "content":"Mary正在考虑给自己买一双新鞋。她买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"construal_3", "template": template_9, "content":"Diko正在查看某一天的天气预报。那天下雨的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"construal_4", "template": template_9, "content":"Akemy打算去超市买洗发水。该商品降价的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"construal_5", "template": template_9, "content":"Andy正在决定要不要举办一个新居乔迁宴会。她举办的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"construal_6", "template": template_9, "content":"Rob主修哲学，正在考虑上法律学院。她向法律学院发出申请的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"shampoo7", "template": template_7, "content":"总的来说，你认为ALTERNA提供的这些洗发水产品之间有多相似？", "left": "完全不相似", "right": "非常相似"},
-               {"id":"shampoo8", "template": template_9_dyh, "content":"ALTERNA为我提供了多样化的选择", "left": "非常不符合", "right": "非常符合"},
-               {"id":"shampoo9", "template": template_9_dyh, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不符合", "right": "非常符合"},
-               {"id":"shampoo10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款洗发水", "left": "非常不符合", "right": "非常符合"},
-               {"id":"shampoo11", "template": template_4, "content":"我感觉完成洗发水选择的任务是困难的", "left": "非常不符合", "right": "非常符合"},
-               {"id":"shampoo12", "template": template_4, "content":"我感觉完成洗发水选择的任务需要耗费精力", "left": "非常不符合", "right": "非常符合"},
-               {"id":"shampoo13", "template": template_4, "content":"我感觉完成洗发水选择的任务需要进行较多的思考", "left": "非常不符合", "right": "非常符合"},
-               {"id":"shampoo14", "template": template_4, "content":"我感觉完成洗发水选择的任务需要花费了较长的时间", "left": "非常不符合", "right": "非常符合"},
-               {"id":"shampoo15", "template": template_4, "content":"我了解ALTERNA这个品牌", "left": "非常不符合", "right": "非常符合"},
-               {"id":"shampoo16", "template": template_4, "content":"我了解洗发水知识", "left": "非常不符合", "right": "非常符合"},
+                {"id":"shampoo2", "template": template_9, "content":"小王正在考虑是否参加一个美食烹饪培训课。他报名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"shampoo3", "template": template_9, "content":"小李正在考虑买一台新笔记本电脑。他买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"shampoo4", "template": template_9, "content":"小陈正在等高铁。这趟高铁晚点的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"shampoo5", "template": template_9, "content":"小张打算去超市买洗衣液。这件商品降价的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"shampoo6", "template": template_9, "content":"小刘每天开车去上班。她的车被撞凹的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"shampoo7", "template": template_7, "content":"总的来说，你认为ALTERNA提供的这些洗发水产品之间有多相似？", "left": "完全不相似", "right": "非常相似"},
+                {"id":"shampoo8", "template": template_9, "content":"ALTERNA为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo9", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款洗发水", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo11", "template": template_4, "content":"我感觉完成洗发水选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo12", "template": template_4, "content":"我感觉完成洗发水选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo13", "template": template_4, "content":"我感觉完成洗发水选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo14", "template": template_4, "content":"我感觉完成洗发水选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo15", "template": template_4, "content":"我了解ALTERNA这个品牌", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo16", "template": template_4, "content":"我了解洗发水知识", "left": "非常不赞同", "right": "非常赞同"},
             ],
         };
 
         var test_shampoo = {
             // 问卷的第一张控件, 图片: TF_pic1, 名称 TF_name1, TF_benefit1, TF_attribute1,
             "tests":[
-                [
-                    {"id":"shampoo_0", "template": template_shampoo_TF1_example, "content":"下图所示的商品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
-                        "pictures":[
-                            {"src":"../resource/shampoo/ALTERNA-elegant.png", "name":"ALTERNA-elegant", "benefit":"滋养发根", "attribute":"薰衣草"},
-                        ],
-                    },
-                ],
-                   
-
                 [
                     {"id":"shampoo_1", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
@@ -358,13 +353,9 @@
                             {"src":"../resource/shampoo/miss1/ALTERNA-δB.png", "name":"ALTERNA-δB", "benefit":"丝滑水润", "attribute":"樟树香"},
                         ],
                     },
-                    {"id":"shampoo_8", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
-                        "pictures":[
-                            {"src":"../resource/shampoo/miss1/ALTERNA-δB.png", "name":"ALTERNA-δB", "benefit":"丝滑水润", "attribute":"樟树香"},
-                        ],
-                    }, 
+                ],
 
-
+                [
                     {"id":"shampoo_9", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
                         "pictures":[
                             {"src":"../resource/shampoo/ALTERNA-αG.png", "name":"ALTERNA-αG", "benefit":"防晒锁色", "attribute":"海洋味"},
@@ -419,7 +410,7 @@
 
 
         var config_brush = { 
-            "name": "bursh",
+            "name": "brush",
             "product1":[
                 [0, "../resource/brush/GOVINO-αD.png", "电动喷雾型", "健康清洁", "个性化辅导，精锐感知科技，智能刷头感应","延缓衰老，防癌抗癌","1"],
                 [0, "../resource/brush/GOVINO-αG.png", "电动喷雾型", "抗敏护龈", "个性化辅导，精锐感知科技，智能刷头感应","提神醒脑，清心明目","2"],
@@ -454,32 +445,31 @@
             "current": 0,
             "names": [
                 "GOVINO-αD",
-               "GOVINO-βG",
-               "GOVINO-γH",
-               "GOVINO-δJ",
+                "GOVINO-βG",
+                "GOVINO-γH",
+                "GOVINO-δJ",
             ]
         };
 
 
         var question_brush = {
             "questions":[
-                {"id":"construal_0", "template": template_9_example, "content":"例题：小明买了一张彩票，他中奖的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_1", "template": template_9, "content":"Lee正在考虑是否参加一个美食烹饪培训课。他报名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_2", "template": template_9, "content":"Charley正在考虑给自己买一件外套。他买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_3", "template": template_9, "content":"Nube刚刚收到一条短信。她收到垃圾短信的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_4", "template": template_9, "content":"Alex打算进行一次全国公路越野旅行。他途中遇到老乡的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_5", "template": template_9, "content":"Gataka正在候机。这趟飞机晚点的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_6", "template": template_9, "content":"Kaila每天自己开车上下班。她的车发生碰撞的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_1", "template": template_9, "content":"小兰主修哲学，正在考虑上法律学院。她申请的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_2", "template": template_9, "content":"小凡正在决定要不要举办一个新居乔迁宴会。她举办的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_3", "template": template_9, "content":"小王打算进行一次全国公路越野旅行。他途中遇到老乡的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_4", "template": template_9, "content":"小陈下周六有一门辅修课，该次上课老师点名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_5", "template": template_9, "content":"小杨走进一家服装店。他购买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_6", "template": template_9, "content":"小杨走进一家服装店。他购买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
                 {"id":"similarity", "template": template_7, "content":"总的来说，你认为GOVINO提供的这些电动牙刷之间有多相似？", "left": "完全不相似", "right": "非常相似"},
-                {"id":"variety_1", "template": template_9_dyh, "content":"GOVINO为我提供了多样化的选择", "left": "非常不符合", "right": "非常符合"},
-                {"id":"variety_2", "template": template_9_dyh, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不符合", "right": "非常符合"},
-                {"id":"difficulty_1", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款电动牙刷", "left": "非常不符合", "right": "非常符合"},
-                {"id":"difficulty_2", "template": template_4, "content":"我感觉完成电动牙刷选择的任务是困难的", "left": "非常不符合", "right": "非常符合"},
-                {"id":"difficulty_3", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要耗费精力", "left": "非常不符合", "right": "非常符合"},
-                {"id":"difficulty_4", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要进行较多的思考", "left": "非常不符合", "right": "非常符合"},
-                {"id":"difficulty_5", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要花费了较长的时间", "left": "非常不符合", "right": "非常符合"},
-                {"id":"brandFamiliarity", "template": template_4, "content":"我了解GOVINO这个品牌", "left": "非常不符合", "right": "非常符合"},
-                {"id":"productFamiliarity", "template": template_4, "content":"我了解关于电动牙刷的知识", "left": "非常不符合", "right": "非常符合"},
+                {"id":"variety_1", "template": template_9, "content":"GOVINO为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"variety_2", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"difficulty_1", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款电动牙刷", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"difficulty_2", "template": template_4, "content":"我感觉完成电动牙刷选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"difficulty_3", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"difficulty_4", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"difficulty_5", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"brandFamiliarity", "template": template_4, "content":"我了解GOVINO这个品牌", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"productFamiliarity", "template": template_4, "content":"我了解关于电动牙刷的知识", "left": "非常不赞同", "right": "非常赞同"},
             ],
 
         };
@@ -1236,7 +1226,43 @@
         60: {"next":60, "html":page_phrase_transition, "wait":10000, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
     };
 
-    function generate_pages(first, second, third){
+    function generate_pages_2(first, second){
+        var pages = {
+            1: {"next":3, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
+            3: {"next":10, "html":page_teach_preview, "wait":10, "auto":0, "before_init":null, "after_init":page_preview_after_init},
+            10: {"next":10, "html":page_teach_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_menu_after_init},
+            11: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product1_after_init},
+            12: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product2_after_init},
+            13: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product3_after_init},
+            40: {"next":40, "html":page_teach_transition, "wait":1, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+        };
+        var max_index = 0;
+        var base = 1000;
+        for(var item in first){
+            item = parseInt(item)
+            pages[item + base] = first[item];
+            pages[item + base]["next"] += base;
+            max_index = Math.max(max_index, item + base);
+        }
+        console.log(pages)
+        base = 2000;
+        for(var item in second){
+            item = parseInt(item)
+            pages[item + base] = second[item];
+            pages[item + base]["next"] += base;
+            max_index = Math.max(max_index, item + base);
+        }
+        console.log(pages)
+        // 找到最后一项, 最大一项
+
+        pages[max_index]["html"] = page_final_submit;
+        pages[max_index]["after_init"] = page_final_submit_after_init;
+        console.log("max index:", max_index);
+        console.log(pages)
+        return pages;
+    }
+
+    function generate_pages_3(first, second, third){
         var pages = {
             1: {"next":3, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
             3: {"next":10, "html":page_teach_preview, "wait":10, "auto":0, "before_init":null, "after_init":page_preview_after_init},
@@ -1319,47 +1345,65 @@
         }
     };
 
-
-    function reset_config(number) {
+    function reset_config_2(number) {
         console.log("number:", number)
         if(number == 1){
-            config["pages"] = generate_pages(page_tea_item, page_shampoo_item, page_brush_item);
+            config["pages"] = generate_pages_2(page_shampoo_item, page_brush_item);
+            order_number = 1;
+            order_sign = "shampoo_brush";
+            console.log("page_shampoo_item, page_brush_item", order_number, order_sign)
+        }else if (number == 2){
+            config["pages"] = generate_pages_2(page_brush_item, page_shampoo_item);
+            order_number = 2;
+            order_sign = "brush_shampoo";
+            console.log("page_brush_item, page_shampoo_item", order_number, order_sign)
+        }else{
+            config["pages"] = generate_pages_2(page_shampoo_item, page_brush_item);
+            order_number = 1;
+            order_sign = "shampoo_brush";
+            console.log("page_shampoo_item, page_brush_item", order_number, order_sign)
+        }
+    }
+
+    function reset_config_3(number) {
+        console.log("number:", number)
+        if(number == 1){
+            config["pages"] = generate_pages_3(page_tea_item, page_shampoo_item, page_brush_item);
             order_number = 1;
             order_sign = "tea_shampoo_brush";
             console.log("page_tea_item, page_shampoo_item, page_brush_item", order_number, order_sign)
         }else if (number == 2){
-            config["pages"] = generate_pages(page_tea_item, page_brush_item, page_shampoo_item);
+            config["pages"] = generate_pages_3(page_tea_item, page_brush_item, page_shampoo_item);
             order_number = 2;
             order_sign = "tea_brush_shampoo";
             console.log("page_tea_item, page_brush_item, page_shampoo_item", order_number, order_sign)
         }else if (number == 3){
-            config["pages"] = generate_pages(page_shampoo_item, page_tea_item, page_brush_item);
+            config["pages"] = generate_pages_3(page_shampoo_item, page_tea_item, page_brush_item);
             order_number = 3;
             order_sign = "shampoo_tea_brush";
             console.log("page_shampoo_item, page_tea_item, page_brush_item", order_number, order_sign)
         }else if (number == 4){
-            config["pages"] = generate_pages(page_shampoo_item, page_brush_item, page_tea_item);
+            config["pages"] = generate_pages_3(page_shampoo_item, page_brush_item, page_tea_item);
             order_number = 4;
             order_sign = "shampoo_brush_tea";
             console.log("page_shampoo_item, page_brush_item, page_tea_item", order_number, order_sign)
         }else if (number == 5){
-            config["pages"] = generate_pages(page_brush_item, page_tea_item, page_shampoo_item);
+            config["pages"] = generate_pages_3(page_brush_item, page_tea_item, page_shampoo_item);
             order_number = 5;
             order_sign = "brush_tea_shampoo";
             console.log("page_brush_item, page_tea_item, page_shampoo_item", order_number, order_sign)
         }else if (number == 6){
-            config["pages"] = generate_pages(page_brush_item, page_shampoo_item, page_tea_item);
+            config["pages"] = generate_pages_3(page_brush_item, page_shampoo_item, page_tea_item);
             order_number = 6;
             order_sign = "brush_shampoo_tea";
             console.log("page_brush_item, page_shampoo_item, page_tea_item", order_number, order_sign)
         }else{
-            config["pages"] = generate_pages(page_tea_item, page_shampoo_item, page_brush_item);
+            config["pages"] = generate_pages_3(page_tea_item, page_shampoo_item, page_brush_item);
             order_number = 1;
             order_sign = "tea_shampoo_brush";
             console.log("page_tea_item, page_shampoo_item, page_brush_item", order_number, order_sign)
         }
     }
-
 
     // 对Date的扩展，将 Date 转化为指定格式的String
     // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
@@ -1549,39 +1593,9 @@
         "product2_click":0,
         "product3_click":0,
         "product4_click":0,
-        "tostring": function () {
-            var str = this["start_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
-                    + this["end_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
-                    + Math.round(this["spend_time"] / 1000) + " "
-            for(var i=0; i < this["product1"].length; i++) {
-                var pathname = this["product1"][i][1];
-                var index1 = pathname.lastIndexOf("/");
-                var index2 = pathname.lastIndexOf(".");
-                str = str + pathname.substring(index1+1,index2) + " " + this["product1"][i][0] + " ";
-            }
-            for(var i=0; i < this["product2"].length; i++) {
-                var pathname = this["product2"][i][1];
-                var index1 = pathname.lastIndexOf("/");
-                var index2 = pathname.lastIndexOf(".");
-                str = str + pathname.substring(index1+1,index2) + " " + this["product2"][i][0] + " ";
-            }
-            for(var i=0; i < this["product3"].length; i++) {
-                var pathname = this["product3"][i][1];
-                var index1 = pathname.lastIndexOf("/");
-                var index2 = pathname.lastIndexOf(".");
-                str = str + pathname.substring(index1+1,index2) + " " + this["product3"][i][0] + " ";
-            }
-            for(var i=0; i < this["product4"].length; i++) {
-                var pathname = this["product4"][i][1];
-                var index1 = pathname.lastIndexOf("/");
-                var index2 = pathname.lastIndexOf(".");
-                str = str + pathname.substring(index1+1,index2) + " " + this["product4"][i][0] + " ";
-            }
-            return str;
-        }
-    }
+    };
 
-    var choice_strings = [];
+    var choice_infos = {};
 
     function left_init() {
         $("#left_green_tea").unbind();
@@ -1639,7 +1653,7 @@
             $("#buy_button").css("visibility","visible");
             $("#buy_button").unbind();
             $("#buy_button").on("click",function(){
-                save_on_click(current_choice_item[1]);
+                save_on_click(current_choice_item);
             });
         }else{
             $("#buy_button").css("visibility","hidden");
@@ -1734,6 +1748,10 @@
     function set_product_chosen(choice_item) {
         choice_item[0] = 1;
     }
+
+    function get_product_chosen(choice_item) {
+        return choice_item[0];
+    }
     
     function get_product_file_path(choice_item) {
         return choice_item[1];
@@ -1753,6 +1771,10 @@
 
     function get_product_benefit_description(choice_item) {
         return choice_item[5];
+    }
+
+    function get_product_id(choice_item) {
+        return choice_item[6];
     }
 
     function set_page_detail(choice) {
@@ -1797,23 +1819,71 @@
         }
     }
 
+    function choice_result(choice){
+        var obj = {};
+        obj["start"] = choice["start_time"].format("yyyy-MM-dd_hh:mm:ss");
+        obj["end"] = choice["end_time"].format("yyyy-MM-dd_hh:mm:ss");
+        obj["spend"] = Math.round(choice["spend_time"] / 1000);
+        obj["product"] = [];
+
+        var product1 = {};
+        product1["rate"] = 0;
+        for(var i=0; i < choice["product1"].length; i++) {
+            var pathname = get_product_name(choice["product1"][i]);
+            var chosen = get_product_chosen(choice["product1"][i]);
+            product1[pathname] = chosen;
+            product1["rate"] += chosen;
+        }
+        product1["rate"] /= choice["product1"].length;
+        obj["product"].push(product1);
+
+        var product2 = {};
+        product2["rate"] = 0;
+        for(var i=0; i < choice["product2"].length; i++) {
+            var pathname = get_product_name(choice["product2"][i]);
+            var chosen = get_product_chosen(choice["product2"][i]);
+            product2[pathname] = chosen;
+            product2["rate"] += chosen;
+        }
+        product2["rate"] /= choice["product2"].length;
+        obj["product"].push(product2);
+
+        var product3 = {};
+        product3["rate"] = 0;
+        for(var i=0; i < choice["product3"].length; i++) {
+            var pathname = get_product_name(choice["product3"][i]);
+            var chosen = get_product_chosen(choice["product3"][i]);
+            product3[pathname] = chosen;
+            product3["rate"] += chosen;
+        }
+        product3["rate"] /= choice["product3"].length;
+        obj["product"].push(product3);
+
+        var product4 = {};
+        product4["rate"] = 0;
+        for(var i=0; i < choice["product4"].length; i++) {
+            var pathname = get_product_name(choice["product4"][i]);
+            var chosen = get_product_chosen(choice["product4"][i]);
+            product4[pathname] = chosen;
+            product4["rate"] += chosen;
+        }
+        product4["rate"] /= choice["product4"].length;
+        obj["product"].push(product4);
+
+        return obj;
+    }
+
     function save_on_click(final_choose) {
         console.log("save_in_click", final_choose);
         choice["end_time"] = new Date();
         choice["spend_time"] = choice["end_time"] - choice["start_time"];
-        var string = product_config["name"] + " "
-            + get_filename(final_choose) + " "
-            + choice.tostring();
-        console.log(string);
-        choice_strings.push(string);
-
+        var result = choice_result(choice);
+        result["choose"] = get_product_name(final_choose);
+        result["choose_id"] = get_product_id(final_choose);
+        var name = product_config["name"];
+        choice_infos[name] = result;
+        console.log("choice_infos:", choice_infos);
         config["change"] = 1;
-
-        console.log("choice_strings:")
-        for(var i = 0; i < choice_strings.length; ++i){
-            console.log(i+1, ":", choice_strings[i])
-        }
-
     }
 
     
@@ -1822,14 +1892,12 @@
         "current":0,
         "answers":[]
     }
-    var question_answers = [];
+    var question_answers = {};
     function show_current_question() {
         var index = questions["current"];
         if(index >= product_question["questions"].length){
             console.log("question end, index: ", index);
-            var question_answer = {};
-            question_answer[product_config["name"]] = questions["answers"];
-            question_answers.push(question_answer);
+            question_answers[product_config["name"]] = questions["answers"];
             config["change"] = 1;
             return;
         }
@@ -1879,7 +1947,7 @@
         "current":0,
         "answers":[]
     }
-    var test_answers = [];
+    var test_answers = {};
     function show_current_test() {
 
         while(tests["current"] >= product_test["tests"][tests["group"]].length){
@@ -1887,9 +1955,13 @@
             tests["current"] = 0;
             if(tests["group"] >= product_test["tests"].length){
                 console.log("test end, index: ", tests["group"]);
-                var test_answer = {};
-                test_answer[product_config["name"]] = tests["answers"];
-                test_answers.push(test_answer);
+                // tests["answers"] 排序
+                tests["answers"].sort(function (answer1, answer2) {
+                    if(answer1["id"] < answer2["id"]) return -1;
+                    else if(answer1["id"] > answer2["id"]) return 1;
+                    else return 0;
+                });
+                test_answers[product_config["name"]] = tests["answers"];
                 config["change"] = 1;
                 return;
             }
@@ -2047,7 +2119,13 @@
             }
 
             if(_grade != null && _grade != "" ){
-                grade = _grade;
+                var gradeinfo = _grade.split("|")
+                if(gradeinfo.length>=1){
+                    grade = gradeinfo[0]
+                }
+                if(gradeinfo.length>=2){
+                    grade_id = gradeinfo[1];
+                }
             }
 
             if(_phone != null && _phone != "" ){
@@ -2080,10 +2158,60 @@
             "order_number": order_number,
             "order_sign": order_sign,
             "purpose": purpose,
-            "choice": choice_strings.sort(),
+            "choice": choice_infos,
             "questions": question_answers,
             "tests": test_answers,
+            "output": "",
         };
+
+        var arr = [];
+        arr.push("1");                                          // ID
+        for(var i=0; i<output_order.length; ++i){
+            var name = output_order[i];
+            var choose_info = choice_infos[name];
+            arr.push(choose_info["start"]);                     // startTime
+        }
+        arr.push(username);                                     // user
+        arr.push(gender);                                       // gender
+        arr.push(age);                                          // age
+        arr.push(grade);                                        // grade_sign
+        arr.push(grade_id);                                     // grade
+        arr.push(major);                                        // major
+        arr.push(assortment);                                   // assortment
+        arr.push(name_type);                                    // name_type
+        arr.push(order_sign);                                   // order_sign
+        arr.push(order_number);                                 // order_number
+        for(var i=0; i<output_order.length; ++i){
+            var name = output_order[i];
+
+            var choose_info = choice_infos[name];
+            arr.push(choose_info["spend"]);                     // chooseTime
+            for(var j=0; j<choose_info["product"].length; ++j){
+                arr.push(choose_info["product"][j]["rate"]);    // checkRate
+            }
+            arr.push(choose_info["choose"]);                    // choose_sign
+            arr.push(choose_info["choose_id"]);                 // choose
+
+            var question_answer = question_answers[name];
+            for(var j=0; j<question_answer.length; ++j){
+                arr.push(question_answer[j]["answer"]);         // question_answers
+            }
+
+            var test_answer = test_answers[name];
+            var correct = 0;
+            for(var j=0; j<test_answer.length; ++j){
+                arr.push(test_answer[j]["answer"]);             // test_answers
+                correct += test_answer[j]["answer"];
+            }
+            arr.push(correct/test_answer.length);               // test_rate
+            for(var j=0; j<test_answer.length; ++j){
+                arr.push(test_answer[j]["RT"]);                 // test_RTs
+            }
+        }
+        arr.push(phone);                                        // phone
+        arr.push(purpose);                                      // purpose
+        stringObj["output"] = arr.join("|");
+
         var string = JSON.stringify(stringObj,null,"\t")
         console.log("final save:", string)
         saveFile(filename, string);
@@ -2102,36 +2230,6 @@
             "product2_click":0,
             "product3_click":0,
             "product4_click":0,
-            "tostring": function () {
-                var str = this["start_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
-                    + this["end_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
-                    + Math.round(this["spend_time"] / 1000) + " "
-                for(var i=0; i < this["product1"].length; i++) {
-                    var pathname = this["product1"][i][1];
-                    var index1 = pathname.lastIndexOf("/");
-                    var index2 = pathname.lastIndexOf(".");
-                    str = str + pathname.substring(index1+1,index2) + " " + this["product1"][i][0] + " ";
-                }
-                for(var i=0; i < this["product2"].length; i++) {
-                    var pathname = this["product2"][i][1];
-                    var index1 = pathname.lastIndexOf("/");
-                    var index2 = pathname.lastIndexOf(".");
-                    str = str + pathname.substring(index1+1,index2) + " " + this["product2"][i][0] + " ";
-                }
-                for(var i=0; i < this["product3"].length; i++) {
-                    var pathname = this["product3"][i][1];
-                    var index1 = pathname.lastIndexOf("/");
-                    var index2 = pathname.lastIndexOf(".");
-                    str = str + pathname.substring(index1+1,index2) + " " + this["product3"][i][0] + " ";
-                }
-                for(var i=0; i < this["product4"].length; i++) {
-                    var pathname = this["product4"][i][1];
-                    var index1 = pathname.lastIndexOf("/");
-                    var index2 = pathname.lastIndexOf(".");
-                    str = str + pathname.substring(index1+1,index2) + " " + this["product4"][i][0] + " ";
-                }
-                return str;
-            }
         };
 
         questions = {
@@ -2162,7 +2260,7 @@
         }else{
             console.log("using order number:", number);
         }
-        reset_config(number);
+        reset_config_2(number);
 
         print_config(config);
         register_key_event(config);
