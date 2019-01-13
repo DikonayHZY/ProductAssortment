@@ -29,7 +29,7 @@
         var condition = "attribute";            // "attribute"
         var name_type = 1;
         var order_number = 1;                   // 默认配置后面会改: 如果配置>0则强制指定, 否则根据url最后的数字指定, 如 xxx_2.html => order_number = 2
-        var order_sign = "tea_shampoo_brush";   // 跟随 order_number 修改
+        var order_sign = "shampoo_brush";       // 跟随 order_number 修改
 
         console.log("order:", order_number);
         console.log("condition:", condition);
@@ -119,20 +119,20 @@
 	    var question_tea = {
             "questions":[
                 {"id":"tea2", "template": template_9, "content":"李明正在考虑周末去拜访一个朋友。他去拜访的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea3", "template": template_9, "content":"小红正在考虑给自己买一双新鞋。她买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea4", "template": template_9, "content":"小张正在查看他的邮件。他收到垃圾邮件的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea5", "template": template_9, "content":"小郭正在考虑是否要养一只宠物。他养宠物可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea6", "template": template_9, "content":"小杨正在参加公司年会的抽奖活动。他抽中大奖可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea7", "template": template_7, "content":"总的来说，你认为御茗阁茶叶目录中的茶叶之间有多相似？", "left": "完全不相似", "right": "非常相似"},
-               {"id":"tea8", "template": template_9_dyh, "content":"御茗阁为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea9", "template": template_9_dyh, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款茶叶", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea11", "template": template_4, "content":"我感觉完成茶叶选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea12", "template": template_4, "content":"我感觉完成茶叶选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea13", "template": template_4, "content":"我感觉完成茶叶选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea14", "template": template_4, "content":"我感觉完成茶叶选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea15", "template": template_4, "content":"我了解御茗阁这个品牌", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea16", "template": template_4, "content":"我了解茶叶知识", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea3", "template": template_9, "content":"小红正在考虑给自己买一双新鞋。她买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea4", "template": template_9, "content":"小张正在查看他的邮件。他收到垃圾邮件的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea5", "template": template_9, "content":"小郭正在考虑是否要养一只宠物。他养宠物可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea6", "template": template_9, "content":"小杨正在参加公司年会的抽奖活动。他抽中大奖可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea7", "template": template_7, "content":"总的来说，你认为御茗阁茶叶目录中的茶叶之间有多相似？", "left": "完全不相似", "right": "非常相似"},
+                {"id":"tea8", "template": template_9_dyh, "content":"御茗阁为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea9", "template": template_9_dyh, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款茶叶", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea11", "template": template_4, "content":"我感觉完成茶叶选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea12", "template": template_4, "content":"我感觉完成茶叶选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea13", "template": template_4, "content":"我感觉完成茶叶选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea14", "template": template_4, "content":"我感觉完成茶叶选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea15", "template": template_4, "content":"我了解御茗阁这个品牌", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea16", "template": template_4, "content":"我了解茶叶知识", "left": "非常不赞同", "right": "非常赞同"},
             ],
         };
 
@@ -284,20 +284,20 @@
         var question_shampoo = {
             "questions":[
                 {"id":"shampoo2", "template": template_9, "content":"小王正在考虑是否参加一个美食烹饪培训课。他报名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"shampoo3", "template": template_9, "content":"小李正在考虑买一台新笔记本电脑。他买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"shampoo4", "template": template_9, "content":"小陈正在等高铁。这趟高铁晚点的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"shampoo5", "template": template_9, "content":"小张打算去超市买洗衣液。这件商品降价的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"shampoo6", "template": template_9, "content":"小刘每天开车去上班。她的车被撞凹的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"shampoo7", "template": template_7, "content":"总的来说，你认为ALTERNA提供的这些洗发水产品之间有多相似？", "left": "完全不相似", "right": "非常相似"},
-               {"id":"shampoo8", "template": template_9, "content":"ALTERNA为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo9", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款洗发水", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo11", "template": template_4, "content":"我感觉完成洗发水选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo12", "template": template_4, "content":"我感觉完成洗发水选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo13", "template": template_4, "content":"我感觉完成洗发水选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo14", "template": template_4, "content":"我感觉完成洗发水选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo15", "template": template_4, "content":"我了解ALTERNA这个品牌", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo16", "template": template_4, "content":"我了解洗发水知识", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo3", "template": template_9, "content":"小李正在考虑买一台新笔记本电脑。他买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"shampoo4", "template": template_9, "content":"小陈正在等高铁。这趟高铁晚点的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"shampoo5", "template": template_9, "content":"小张打算去超市买洗衣液。这件商品降价的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"shampoo6", "template": template_9, "content":"小刘每天开车去上班。她的车被撞凹的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"shampoo7", "template": template_7, "content":"总的来说，你认为ALTERNA提供的这些洗发水产品之间有多相似？", "left": "完全不相似", "right": "非常相似"},
+                {"id":"shampoo8", "template": template_9, "content":"ALTERNA为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo9", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款洗发水", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo11", "template": template_4, "content":"我感觉完成洗发水选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo12", "template": template_4, "content":"我感觉完成洗发水选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo13", "template": template_4, "content":"我感觉完成洗发水选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo14", "template": template_4, "content":"我感觉完成洗发水选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo15", "template": template_4, "content":"我了解ALTERNA这个品牌", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"shampoo16", "template": template_4, "content":"我了解洗发水知识", "left": "非常不赞同", "right": "非常赞同"},
             ],
         };
 
@@ -437,9 +437,9 @@
             "current": 0,
             "names": [
                 "GOVINO-αD",
-               "GOVINO-βG",
-               "GOVINO-γH",
-               "GOVINO-δJ",
+                "GOVINO-βG",
+                "GOVINO-γH",
+                "GOVINO-δJ",
             ]
         };
 
@@ -1218,7 +1218,43 @@
         60: {"next":60, "html":page_phrase_transition, "wait":10000, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
     };
 
-    function generate_pages(first, second, third){
+    function generate_pages_2(first, second){
+        var pages = {
+            1: {"next":3, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
+            3: {"next":10, "html":page_teach_preview, "wait":10, "auto":0, "before_init":null, "after_init":page_preview_after_init},
+            10: {"next":10, "html":page_teach_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_menu_after_init},
+            11: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product1_after_init},
+            12: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product2_after_init},
+            13: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product3_after_init},
+            40: {"next":40, "html":page_teach_transition, "wait":1, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+        };
+        var max_index = 0;
+        var base = 1000;
+        for(var item in first){
+            item = parseInt(item)
+            pages[item + base] = first[item];
+            pages[item + base]["next"] += base;
+            max_index = Math.max(max_index, item + base);
+        }
+        console.log(pages)
+        base = 2000;
+        for(var item in second){
+            item = parseInt(item)
+            pages[item + base] = second[item];
+            pages[item + base]["next"] += base;
+            max_index = Math.max(max_index, item + base);
+        }
+        console.log(pages)
+        // 找到最后一项, 最大一项
+
+        pages[max_index]["html"] = page_final_submit;
+        pages[max_index]["after_init"] = page_final_submit_after_init;
+        console.log("max index:", max_index);
+        console.log(pages)
+        return pages;
+    }
+
+    function generate_pages_3(first, second, third){
         var pages = {
             1: {"next":3, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
             3: {"next":10, "html":page_teach_preview, "wait":10, "auto":0, "before_init":null, "after_init":page_preview_after_init},
@@ -1301,47 +1337,65 @@
         }
     };
 
-
-    function reset_config(number) {
+    function reset_config_2(number) {
         console.log("number:", number)
         if(number == 1){
-            config["pages"] = generate_pages(page_tea_item, page_shampoo_item, page_brush_item);
+            config["pages"] = generate_pages_2(page_shampoo_item, page_brush_item);
+            order_number = 1;
+            order_sign = "shampoo_brush";
+            console.log("page_shampoo_item, page_brush_item", order_number, order_sign)
+        }else if (number == 2){
+            config["pages"] = generate_pages_2(page_brush_item, page_shampoo_item);
+            order_number = 2;
+            order_sign = "brush_shampoo";
+            console.log("page_brush_item, page_shampoo_item", order_number, order_sign)
+        }else{
+            config["pages"] = generate_pages_2(page_shampoo_item, page_brush_item);
+            order_number = 1;
+            order_sign = "shampoo_brush";
+            console.log("page_shampoo_item, page_brush_item", order_number, order_sign)
+        }
+    }
+
+    function reset_config_3(number) {
+        console.log("number:", number)
+        if(number == 1){
+            config["pages"] = generate_pages_3(page_tea_item, page_shampoo_item, page_brush_item);
             order_number = 1;
             order_sign = "tea_shampoo_brush";
             console.log("page_tea_item, page_shampoo_item, page_brush_item", order_number, order_sign)
         }else if (number == 2){
-            config["pages"] = generate_pages(page_tea_item, page_brush_item, page_shampoo_item);
+            config["pages"] = generate_pages_3(page_tea_item, page_brush_item, page_shampoo_item);
             order_number = 2;
             order_sign = "tea_brush_shampoo";
             console.log("page_tea_item, page_brush_item, page_shampoo_item", order_number, order_sign)
         }else if (number == 3){
-            config["pages"] = generate_pages(page_shampoo_item, page_tea_item, page_brush_item);
+            config["pages"] = generate_pages_3(page_shampoo_item, page_tea_item, page_brush_item);
             order_number = 3;
             order_sign = "shampoo_tea_brush";
             console.log("page_shampoo_item, page_tea_item, page_brush_item", order_number, order_sign)
         }else if (number == 4){
-            config["pages"] = generate_pages(page_shampoo_item, page_brush_item, page_tea_item);
+            config["pages"] = generate_pages_3(page_shampoo_item, page_brush_item, page_tea_item);
             order_number = 4;
             order_sign = "shampoo_brush_tea";
             console.log("page_shampoo_item, page_brush_item, page_tea_item", order_number, order_sign)
         }else if (number == 5){
-            config["pages"] = generate_pages(page_brush_item, page_tea_item, page_shampoo_item);
+            config["pages"] = generate_pages_3(page_brush_item, page_tea_item, page_shampoo_item);
             order_number = 5;
             order_sign = "brush_tea_shampoo";
             console.log("page_brush_item, page_tea_item, page_shampoo_item", order_number, order_sign)
         }else if (number == 6){
-            config["pages"] = generate_pages(page_brush_item, page_shampoo_item, page_tea_item);
+            config["pages"] = generate_pages_3(page_brush_item, page_shampoo_item, page_tea_item);
             order_number = 6;
             order_sign = "brush_shampoo_tea";
             console.log("page_brush_item, page_shampoo_item, page_tea_item", order_number, order_sign)
         }else{
-            config["pages"] = generate_pages(page_tea_item, page_shampoo_item, page_brush_item);
+            config["pages"] = generate_pages_3(page_tea_item, page_shampoo_item, page_brush_item);
             order_number = 1;
             order_sign = "tea_shampoo_brush";
             console.log("page_tea_item, page_shampoo_item, page_brush_item", order_number, order_sign)
         }
     }
-
 
     // 对Date的扩展，将 Date 转化为指定格式的String
     // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
@@ -2144,7 +2198,7 @@
         }else{
             console.log("using order number:", number);
         }
-        reset_config(number);
+        reset_config_2(number);
 
         print_config(config);
         register_key_event(config);
