@@ -2124,7 +2124,7 @@
             }
 
             if(_grade != null && _grade != "" ){
-                var gradeinfo = _grade.split("|")
+                var gradeinfo = _grade.split("|");
                 if(gradeinfo.length>=1){
                     grade = gradeinfo[0]
                 }
@@ -2150,7 +2150,7 @@
         var filename = condition + "_"
                     + order_number + "_"
                     + choice["end_time"].format("yyyy_MM_dd_hh_mm") + "_"
-                    + username + ".txt";
+                    + username + ".json";
 
         var stringObj = {
             "username": username,
