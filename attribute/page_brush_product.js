@@ -67,8 +67,8 @@ page_brush_product =`
 						</div>
 						<div style="height: 100%; width: 55%; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; font-size: 22px; line-height: 2.0;">
 
-							<p><strong>电机类型：</strong><span id="tea_assortment">白松露</span></p>							
-							<p><strong>产品功能：</strong><span id="tea_benefit">祛屑止痒</span></p>
+							<p><strong>类型：</strong><span id="tea_assortment">白松露</span></p>							
+							<p><strong>功能：</strong><span id="tea_benefit">祛屑止痒</span></p>
 
 							<p id="other_discription">不含防腐剂，无硅油，不含硫酸盐</p>							
 

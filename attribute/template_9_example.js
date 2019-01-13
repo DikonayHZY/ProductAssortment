@@ -86,7 +86,7 @@ template_9_example =`
 			</div>
 		</div>
 		<div style="width: 100%; height: 20%; display: flex; align-items: center; justify-content: center;">
-			<a id="next_page" href="#" style="width: 380px; height: 40px; text-align: center; font-size: 26px;/*visibility: hidden*/;">按“空格”进入正式答题</a>
+			<a id="next_page" href="#" style="width: 380px; height: 40px; text-align: center; font-size: 26px;/*visibility: hidden*/;">按"空格"开始正式作答</a>
 		</div>		
 	</div>
 `;

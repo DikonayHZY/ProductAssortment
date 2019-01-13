@@ -1,4 +1,4 @@
-template_shampoo_TF1_example =`
+template_brush_TF1_example =`
 	<div style="width: 100%; height: 100%; position: fixed;">
 		<div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
 			<div style="width: 100%; height: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center;"><!-- 题目部分 -->
@@ -10,8 +10,8 @@ template_shampoo_TF1_example =`
 							<p style=" font-size: 20px; line-height: 1.8;"><strong><span id="TF_name1">ALTERNA-elegant.png</span></strong></p>							
 						</div>
 						<div style="width: 100%; height: 23%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 20px; line-height: 1.8;">
-							<p><strong>香氛：</strong><span id="TF_attribute1">薰衣草</span></p>							
-							<p><strong>功效：</strong><span id="TF_benefit1">滋养发根</span></p>							
+							<p><strong>类型：</strong><span id="TF_attribute1">薰衣草</span></p>							
+							<p><strong>功能：</strong><span id="TF_benefit1">滋养发根</span></p>							
 						</div>
 					</div>										
 				</div>
@@ -33,7 +33,7 @@ template_shampoo_TF1_example =`
 				</div>
 			</div>
 			<div style="width: 100%; height: 30%; display: flex; flex-direction: column; align-items: center; justify-content: space-around;">
-				<p style="line-height: 1.5; font-size: 18px;">例题所示的洗发水并没有在之前商品页面中出现过（没有出现过薰衣草味或者滋养发根的洗发水），因此请选择“否”。<br>
+				<p style="line-height: 1.5; font-size: 18px;">例题所示电动牙刷并没有在之前商品页面中出现过（没有出现过牙龈按摩或者智能变频的电动牙刷），因此请选择“否”。<br>
 				但所有的题目中提供的<strong>商品信息都是正确的</strong>，您只需要判断该商品是否出现过</p>
 				<a id="next_page" href="#" style="width: 380px; height: 40px; text-align: center; font-size: 26px;">按"空格"开始正式作答</a>
 			</div>			
