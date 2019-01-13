@@ -6,12 +6,12 @@ template_shampoo_TF1_example =`
 				<div style="width: 50%; height: 65%; display: flex; align-items: center; justify-content: space-around;">
 					<div style="width: 300px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-between; border: 1px solid black;">
 						<div style="width: 100%; height: 77%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-							<img id="TF_pic1" src="../resource/shampoo/ALTERNA-PB.png" style="height: 85%;">
-							<p style=" font-size: 20px; line-height: 1.8;"><strong><span id="TF_name1">ALTERNA-PB</span></strong></p>							
+							<img id="TF_pic1" src="../resource/shampoo/ALTERNA-elegant.png" style="height: 85%;">
+							<p style=" font-size: 20px; line-height: 1.8;"><strong><span>ALTERNA-elegant.png</span></strong></p>							
 						</div>
 						<div style="width: 100%; height: 23%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 20px; line-height: 1.8;">
-							<p><strong>香氛：</strong><span id="TF_attribute1">绿茶</span></p>							
-							<p><strong>功效：</strong><span id="TF_benefit1">减肥瘦身</span></p>							
+							<p><strong>香氛：</strong><span id="TF_attribute1">薰衣草</span></p>							
+							<p><strong>功效：</strong><span id="TF_benefit1">滋养发根</span></p>							
 						</div>
 					</div>										
 				</div>
