@@ -1,26 +1,25 @@
-page_shampoo_choose_product = `
+page_brush_choose_product =`
 	<div style="width: 100%; height: 100%; position: fixed;">
 		<div style="width: 100%; height: 20%;"><!-- 顶部 -->
-			<div style="width: 100%; height: 50%; min-height: 40px; background-color: black; display: flex; align-items: center; justify-content: center;">
-				<img src="../resource/shampoo_logo2.png">
+			<div style="width: 100%; height: 50%; min-height: 40px; background-color: #89827b; display: flex; align-items: center; justify-content: center;">
+				<img style="height: 100%;" src="../resource/brush_logo2.png">
 			</div>
-			<div style="width: 100%; height: 50%; background-color: #262626; display: flex; align-items: center; justify-content: center; font-size: 26px; color: white;" id="assortment_title">白松露</div>
+			<div style="width: 100%; height: 50%; background-color: #ebebeb; display: flex; align-items: center; justify-content: center; font-size: 26px; color: black;" id="assortment_title">健康清洁系列</div>
 		</div>
 
 		<div style="width: 100%; height: 80%; display: flex;"> <!-- 下半部分 -->
 			<div style="width: 15%; height: 100%; min-width: 150px; /*background-color: green; */display: flex; align-items: center; justify-content: center;"> <!-- 左侧导航栏 -->
-				<div class="shampoo_left_menu" style="width: 100%; height: 70%; display: flex; flex-direction: column; align-items: center; justify-content: space-around;">
-					<a href="#"><div id="left_green_tea" style="width: 130px; height: 50px; border: 2px solid black; display: flex; align-items: center; justify-content: center;">海洋味</div></a>
-					<a href="#"><div id="left_red_tea" style="width: 130px; height: 50px; border: 2px solid black; display: flex; align-items: center; justify-content: center;">柠檬香</div></a>
-					<a href="#"><div id="left_qing_tea" style="width: 130px; height: 50px; border: 2px solid black; display: flex; align-items: center; justify-content: center;">迷迭香</div></a>
-					<a href="#"><div id="left_hua_tea" style="width: 130px; height: 50px; border: 2px solid black; display: flex; align-items: center; justify-content: center;">松木香</div></a>
-
+				<div class="brush_left_menu" style="width: 100%; height: 70%; display: flex; flex-direction: column; align-items: center; justify-content: space-around;">
+					<a href="#"><div id="left_green_tea" style="width: 160px; height: 50px; border: 2px solid black; display: flex; align-items: center; justify-content: center;">健康清洁</div></a>
+					<a href="#"><div id="left_red_tea" style="width: 160px; height: 50px; border: 2px solid black; display: flex; align-items: center; justify-content: center;">抗敏护龈</div></a>
+					<a href="#"><div id="left_qing_tea" style="width: 160px; height: 50px; border: 2px solid black; display: flex; align-items: center; justify-content: center;">杀菌祛斑</div></a>
+					<a href="#"><div id="left_hua_tea" style="width: 160px; height: 50px; border: 2px solid black; display: flex; align-items: center; justify-content: center;">深层美白</div></a>
 				</div>
 			</div>
 
 			<div style="width: 85%; height: 100%;"> <!-- 正文部分 -->
-				<div style="width: 100%; height: 45%; display: flex; justify-content: center;"> <!-- 商品陈列区 -->
-					<div class="shampoo_chenlie" style="width: 80%; height: 100%; display: flex; justify-content: space-around;">					
+				<div style="width: 100%; height: 45%; /*background-color: green;*/ display: flex; justify-content: center;"> <!-- 商品陈列区 -->
+					<div class="brush_chenlie" style="width: 80%; height: 100%; display: flex; justify-content: space-around;">					
 						<a href="#" style="width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" id="choice_1">
 							<img id="pic_1" src="" style="height: 80%;">
 							<p id="text_1">洗发水</p>
@@ -51,7 +50,7 @@ page_shampoo_choose_product = `
 							<div style="width: 100%; height: 50%;"></div>
 						</div>
 						<div  id="tea_name" style="width: 20%; min-width: 200px; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
-							选中的洗发水
+							选中的牙刷
 						</div>
 						<div style="width: 40%; height: 100%; display: flex; flex-direction: column;">
 							<div style="width: 100%; height: 50%; border-bottom: 1px solid #262626;"></div>
@@ -64,9 +63,9 @@ page_shampoo_choose_product = `
 							<img  style="height: 90%;" src="" id="select_pic">
 						</div>
 						<div style="height: 100%; width: 55%; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; font-size: 22px; line-height: 2.0;">
-
-							<p><strong>香氛：</strong><span id="tea_assortment">白松露</span></p>							
-							<p><strong>功效：</strong><span id="tea_benefit">祛屑止痒</span></p>
+							<p><strong>功能：</strong><span id="tea_benefit">祛屑止痒</span></p>
+							<p><strong>类型：</strong><span id="tea_assortment">白松露</span></p>							
+							
 
 							<p id="other_discription">不含防腐剂，无硅油，不含硫酸盐</p>							
 
@@ -84,12 +83,18 @@ page_shampoo_choose_product = `
 				<div id="product_tips" style="width: 100%; height: 55%; display: block;">
 					<div style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 26px; line-height: 2;">
 						<p>
-							请找到商品“<span id="answer">ALTERNA-PH</span>”，然后点击“确定”按钮<br>
+							请找到商品“<span id="answer">P8880_68</span>”，然后点击“确定”按钮<br>
 							点击商品查看详情！
 						</p>
 					</div>
 				</div>
+
+
+
 			</div>
+
 		</div>
+
+
 	</div>	
 `;
