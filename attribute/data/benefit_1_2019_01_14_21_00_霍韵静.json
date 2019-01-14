@@ -1,0 +1,396 @@
+﻿{
+	"username": "霍韵静",
+	"gender": "0",
+	"age": "22",
+	"major": "生物技术及应用",
+	"grade": "大四",
+	"phone": "17718868269",
+	"condition": "benefit",
+	"order_number": 1,
+	"order_sign": "shampoo_brush",
+	"purpose": "判断消费者对新产品的购买欲望有多强烈",
+	"choice": {
+		"shampoo": {
+			"start": "2019-01-14_20:53:11",
+			"end": "2019-01-14_20:54:20",
+			"spend": 69,
+			"product": [
+				{
+					"rate": 1,
+					"ALTERNA-βD": 1,
+					"ALTERNA-δD": 1,
+					"ALTERNA-αD": 1,
+					"ALTERNA-γD": 1,
+					"ALTERNA-ωF": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-δG": 1,
+					"ALTERNA-γG": 1,
+					"ALTERNA-βG": 1,
+					"ALTERNA-ωK": 1,
+					"ALTERNA-αG": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-βH": 1,
+					"ALTERNA-γH": 1,
+					"ALTERNA-δH": 1,
+					"ALTERNA-αH": 1,
+					"ALTERNA-ωN": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-αJ": 1,
+					"ALTERNA-βJ": 1,
+					"ALTERNA-γJ": 1,
+					"ALTERNA-δJ": 1,
+					"ALTERNA-ωS": 1
+				}
+			],
+			"choose": "ALTERNA-αJ",
+			"choose_id": "4"
+		},
+		"brush": {
+			"start": "2019-01-14_20:59:17",
+			"end": "2019-01-14_21:00:34",
+			"spend": 76,
+			"product": [
+				{
+					"rate": 1,
+					"GOVINO-ωF": 1,
+					"GOVINO-γD": 1,
+					"GOVINO-αD": 1,
+					"GOVINO-βD": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-γG": 1,
+					"GOVINO-ωK": 1,
+					"GOVINO-αG": 1,
+					"GOVINO-δG": 1,
+					"GOVINO-βG": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-βH": 1,
+					"GOVINO-δH": 1,
+					"GOVINO-αH": 1,
+					"GOVINO-γH": 1,
+					"GOVINO-ωN": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-ωS": 1,
+					"GOVINO-δJ": 1,
+					"GOVINO-βJ": 1,
+					"GOVINO-γJ": 1,
+					"GOVINO-αJ": 1
+				}
+			],
+			"choose": "GOVINO-ωF",
+			"choose_id": "5"
+		}
+	},
+	"questions": {
+		"shampoo": [
+			{
+				"id": "construal_1",
+				"answer": 8
+			},
+			{
+				"id": "construal_2",
+				"answer": 8
+			},
+			{
+				"id": "construal_3",
+				"answer": 3
+			},
+			{
+				"id": "construal_4",
+				"answer": 5
+			},
+			{
+				"id": "construal_5",
+				"answer": 8
+			},
+			{
+				"id": "construal_6",
+				"answer": 7
+			},
+			{
+				"id": "shampoo7",
+				"answer": 6
+			},
+			{
+				"id": "shampoo8",
+				"answer": 4
+			},
+			{
+				"id": "shampoo9",
+				"answer": 3
+			},
+			{
+				"id": "shampoo10",
+				"answer": 3
+			},
+			{
+				"id": "shampoo11",
+				"answer": 3
+			},
+			{
+				"id": "shampoo12",
+				"answer": 3
+			},
+			{
+				"id": "shampoo13",
+				"answer": 3
+			},
+			{
+				"id": "shampoo14",
+				"answer": 3
+			},
+			{
+				"id": "shampoo15",
+				"answer": 1
+			},
+			{
+				"id": "shampoo16",
+				"answer": 1
+			}
+		],
+		"brush": [
+			{
+				"id": "construal_1",
+				"answer": 7
+			},
+			{
+				"id": "construal_2",
+				"answer": 7
+			},
+			{
+				"id": "construal_3",
+				"answer": 8
+			},
+			{
+				"id": "construal_4",
+				"answer": 4
+			},
+			{
+				"id": "construal_5",
+				"answer": 5
+			},
+			{
+				"id": "construal_6",
+				"answer": 2
+			},
+			{
+				"id": "similarity",
+				"answer": 5
+			},
+			{
+				"id": "variety_1",
+				"answer": 5
+			},
+			{
+				"id": "variety_2",
+				"answer": 5
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 3
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 1
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 1
+			}
+		]
+	},
+	"tests": {
+		"shampoo": [
+			{
+				"id": "shampoo_01",
+				"answer": 1,
+				"RT": 9257
+			},
+			{
+				"id": "shampoo_02",
+				"answer": 1,
+				"RT": 1482
+			},
+			{
+				"id": "shampoo_03",
+				"answer": 1,
+				"RT": 2485
+			},
+			{
+				"id": "shampoo_04",
+				"answer": 1,
+				"RT": 1641
+			},
+			{
+				"id": "shampoo_05",
+				"answer": 1,
+				"RT": 4285
+			},
+			{
+				"id": "shampoo_06",
+				"answer": 1,
+				"RT": 1664
+			},
+			{
+				"id": "shampoo_07",
+				"answer": 1,
+				"RT": 3745
+			},
+			{
+				"id": "shampoo_08",
+				"answer": 1,
+				"RT": 2372
+			},
+			{
+				"id": "shampoo_09",
+				"answer": 1,
+				"RT": 4858
+			},
+			{
+				"id": "shampoo_10",
+				"answer": 1,
+				"RT": 2644
+			},
+			{
+				"id": "shampoo_11",
+				"answer": 1,
+				"RT": 3182
+			},
+			{
+				"id": "shampoo_12",
+				"answer": 1,
+				"RT": 3497
+			},
+			{
+				"id": "shampoo_13",
+				"answer": 1,
+				"RT": 5838
+			},
+			{
+				"id": "shampoo_14",
+				"answer": 1,
+				"RT": 1586
+			},
+			{
+				"id": "shampoo_15",
+				"answer": 1,
+				"RT": 2226
+			},
+			{
+				"id": "shampoo_16",
+				"answer": 1,
+				"RT": 3328
+			}
+		],
+		"brush": [
+			{
+				"id": "brush_01",
+				"answer": 1,
+				"RT": 2992
+			},
+			{
+				"id": "brush_02",
+				"answer": 1,
+				"RT": 1619
+			},
+			{
+				"id": "brush_03",
+				"answer": 1,
+				"RT": 2632
+			},
+			{
+				"id": "brush_04",
+				"answer": 1,
+				"RT": 1856
+			},
+			{
+				"id": "brush_05",
+				"answer": 1,
+				"RT": 6816
+			},
+			{
+				"id": "brush_06",
+				"answer": 1,
+				"RT": 2665
+			},
+			{
+				"id": "brush_07",
+				"answer": 1,
+				"RT": 1911
+			},
+			{
+				"id": "brush_08",
+				"answer": 1,
+				"RT": 2508
+			},
+			{
+				"id": "brush_09",
+				"answer": 1,
+				"RT": 3835
+			},
+			{
+				"id": "brush_10",
+				"answer": 1,
+				"RT": 4241
+			},
+			{
+				"id": "brush_11",
+				"answer": 1,
+				"RT": 2338
+			},
+			{
+				"id": "brush_12",
+				"answer": 1,
+				"RT": 2035
+			},
+			{
+				"id": "brush_13",
+				"answer": 0,
+				"RT": 3801
+			},
+			{
+				"id": "brush_14",
+				"answer": 1,
+				"RT": 5623
+			},
+			{
+				"id": "brush_15",
+				"answer": 0,
+				"RT": 7458
+			},
+			{
+				"id": "brush_16",
+				"answer": 1,
+				"RT": 1404
+			}
+		]
+	},
+	"output": "1|2019-01-14_20:53:11|2019-01-14_20:59:17|霍韵静|0|22|大四|5|生物技术及应用|2|1|shampoo_brush|1|69|1|1|1|1|ALTERNA-αJ|4|8|8|3|5|8|7|6|4|3|3|3|3|3|3|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|9257|1482|2485|1641|4285|1664|3745|2372|4858|2644|3182|3497|5838|1586|2226|3328|76|1|1|1|1|GOVINO-ωF|5|7|7|8|4|5|2|5|5|5|3|3|3|3|3|1|1|1|1|1|1|1|1|1|1|1|1|1|1|0|1|0|1|0.875|2992|1619|2632|1856|6816|2665|1911|2508|3835|4241|2338|2035|3801|5623|7458|1404|17718868269|判断消费者对新产品的购买欲望有多强烈"
+}
