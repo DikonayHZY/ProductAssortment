@@ -1,0 +1,397 @@
+﻿{
+	"username": "黄玮瑶",
+	"gender": "0",
+	"age": "18",
+	"major": "临床医学",
+	"grade": "大一",
+	"phone": "15015719275",
+	"condition": "attribute",
+	"order_number": 1,
+	"order_sign": "shampoo_brush",
+	"purpose": "调查消费者对商品的喜好",
+	"choice": {
+		"shampoo": {
+			"start": "2019-01-14_18:07:50",
+			"end": "2019-01-14_18:08:49",
+			"spend": 59,
+			"product": [
+				{
+					"rate": 1,
+					"ALTERNA-αH": 1,
+					"ALTERNA-αD": 1,
+					"ALTERNA-αG": 1,
+					"ALTERNA-ωF": 1,
+					"ALTERNA-αJ": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-βD": 1,
+					"ALTERNA-ωK": 1,
+					"ALTERNA-βH": 1,
+					"ALTERNA-βJ": 1,
+					"ALTERNA-βG": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-γH": 1,
+					"ALTERNA-γG": 1,
+					"ALTERNA-ωN": 1,
+					"ALTERNA-γJ": 1,
+					"ALTERNA-γD": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-δG": 1,
+					"ALTERNA-δD": 1,
+					"ALTERNA-δJ": 1,
+					"ALTERNA-δH": 1,
+					"ALTERNA-ωS": 1
+				}
+			],
+			"choose": "ALTERNA-αD",
+			"choose_id": "1"
+		},
+		"brush": {
+			"start": "2019-01-14_18:11:40",
+			"end": "2019-01-14_18:12:20",
+			"spend": 40,
+			"product": [
+				{
+					"rate": 1,
+					"GOVINO-αH": 1,
+					"GOVINO-ωF": 1,
+					"GOVINO-αG": 1,
+					"GOVINO-αD": 1,
+					"GOVINO-αJ": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-βD": 1,
+					"GOVINO-ωK": 1,
+					"GOVINO-βG": 1,
+					"GOVINO-βJ": 1,
+					"GOVINO-βH": 1
+				},
+				{
+					"rate": 0.4,
+					"GOVINO-ωN": 1,
+					"GOVINO-γG": 1,
+					"GOVINO-γJ": 0,
+					"GOVINO-γH": 0,
+					"GOVINO-γD": 0
+				},
+				{
+					"rate": 0.4,
+					"GOVINO-δG": 1,
+					"GOVINO-ωS": 1,
+					"GOVINO-δH": 0,
+					"GOVINO-δJ": 0,
+					"GOVINO-δD": 0
+				}
+			],
+			"choose": "GOVINO-βH",
+			"choose_id": "8"
+		}
+	},
+	"questions": {
+		"shampoo": [
+			{
+				"id": "construal_1",
+				"answer": 6
+			},
+			{
+				"id": "construal_2",
+				"answer": 5
+			},
+			{
+				"id": "construal_3",
+				"answer": 5
+			},
+			{
+				"id": "construal_4",
+				"answer": 7
+			},
+			{
+				"id": "construal_5",
+				"answer": 5
+			},
+			{
+				"id": "construal_6",
+				"answer": 9
+			},
+			{
+				"id": "shampoo7",
+				"answer": 6
+			},
+			{
+				"id": "shampoo8",
+				"answer": 9
+			},
+			{
+				"id": "shampoo9",
+				"answer": 9
+			},
+			{
+				"id": "shampoo10",
+				"answer": 2
+			},
+			{
+				"id": "shampoo11",
+				"answer": 1
+			},
+			{
+				"id": "shampoo12",
+				"answer": 3
+			},
+			{
+				"id": "shampoo13",
+				"answer": 4
+			},
+			{
+				"id": "shampoo14",
+				"answer": 4
+			},
+			{
+				"id": "shampoo15",
+				"answer": 1
+			},
+			{
+				"id": "shampoo16",
+				"answer": 2
+			}
+		],
+		"brush": [
+			{
+				"id": "construal_1",
+				"answer": 5
+			},
+			{
+				"id": "construal_2",
+				"answer": 6
+			},
+			{
+				"id": "construal_3",
+				"answer": 8
+			},
+			{
+				"id": "construal_4",
+				"answer": 4
+			},
+			{
+				"id": "construal_5",
+				"answer": 4
+			},
+			{
+				"id": "construal_6",
+				"answer": 4
+			},
+			{
+				"id": "similarity",
+				"answer": 5
+			},
+			{
+				"id": "variety_1",
+				"answer": 9
+			},
+			{
+				"id": "variety_2",
+				"answer": 9
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 1
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 3
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 1
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 1
+			}
+		]
+	},
+	"tests": {
+		"shampoo": [
+			{
+				"id": "shampoo_01",
+				"answer": 1,
+				"RT": 988
+			},
+			{
+				"id": "shampoo_02",
+				"answer": 1,
+				"RT": 2542
+			},
+			{
+				"id": "shampoo_03",
+				"answer": 1,
+				"RT": 1327
+			},
+			{
+				"id": "shampoo_04",
+				"answer": 1,
+				"RT": 1338
+			},
+			{
+				"id": "shampoo_05",
+				"answer": 1,
+				"RT": 2338
+			},
+			{
+				"id": "shampoo_06",
+				"answer": 1,
+				"RT": 1854
+			},
+			{
+				"id": "shampoo_07",
+				"answer": 1,
+				"RT": 1417
+			},
+			{
+				"id": "shampoo_08",
+				"answer": 1,
+				"RT": 1146
+			},
+			{
+				"id": "shampoo_09",
+				"answer": 1,
+				"RT": 1844
+			},
+			{
+				"id": "shampoo_10",
+				"answer": 1,
+				"RT": 1495
+			},
+			{
+				"id": "shampoo_11",
+				"answer": 1,
+				"RT": 1563
+			},
+			{
+				"id": "shampoo_12",
+				"answer": 0,
+				"RT": 876
+			},
+			{
+				"id": "shampoo_13",
+				"answer": 1,
+				"RT": 799
+			},
+			{
+				"id": "shampoo_14",
+				"answer": 0,
+				"RT": 3992
+			},
+			{
+				"id": "shampoo_15",
+				"answer": 1,
+				"RT": 899
+			},
+			{
+				"id": "shampoo_16",
+				"answer": 1,
+				"RT": 3250
+			}
+		],
+		"brush": [
+			{
+				"id": "brush_01",
+				"answer": 1,
+				"RT": 1800
+			},
+			{
+				"id": "brush_02",
+				"answer": 1,
+				"RT": 696
+			},
+			{
+				"id": "brush_03",
+				"answer": 0,
+				"RT": 4565
+			},
+			{
+				"id": "brush_04",
+				"answer": 1,
+				"RT": 3373
+			},
+			{
+				"id": "brush_05",
+				"answer": 1,
+				"RT": 1450
+			},
+			{
+				"id": "brush_06",
+				"answer": 1,
+				"RT": 1697
+			},
+			{
+				"id": "brush_07",
+				"answer": 1,
+				"RT": 2518
+			},
+			{
+				"id": "brush_08",
+				"answer": 1,
+				"RT": 1462
+			},
+			{
+				"id": "brush_09",
+				"answer": 1,
+				"RT": 2035
+			},
+			{
+				"id": "brush_10",
+				"answer": 1,
+				"RT": 1990
+			},
+			{
+				"id": "brush_11",
+				"answer": 1,
+				"RT": 1810
+			},
+			{
+				"id": "brush_12",
+				"answer": 1,
+				"RT": 1664
+			},
+			{
+				"id": "brush_13",
+				"answer": 1,
+				"RT": 5354
+			},
+			{
+				"id": "brush_14",
+				"answer": 0,
+				"RT": 1372
+			},
+			{
+				"id": "brush_15",
+				"answer": 1,
+				"RT": 877
+			},
+			{
+				"id": "brush_16",
+				"answer": 0,
+				"RT": 1720
+			}
+		]
+	},
+	"output": "1|2019-01-14_18:07:50|2019-01-14_18:11:40|黄玮瑶|0|18|大一|2|临床医学|1|1|shampoo_brush|1|59|1|1|1|1|ALTERNA-αD|1|6|5|5|7|5|9|6|9|9|2|1|3|4|4|1|2|1|1|1|1|1|1|1|1|1|1|1|0|1|0|1|1|0.875|988|2542|1327|1338|2338|1854|1417|1146|1844|1495|1563|876|799|3992|899|3250|40|1|1|0.4|0.4|GOVINO-βH|8|5|6|8|4|4|4|5|9|9|2|1|3|3|3|1|1|1|1|0|1|1|1|1|1|1|1|1|1|1|0|1|0|0.8125|1800|696|4565|3373|1450|1697|2518|1462|2035|1990|1810|1664|5354|1372|877|1720|15015719275|调查消费者对商品的喜好"
+}

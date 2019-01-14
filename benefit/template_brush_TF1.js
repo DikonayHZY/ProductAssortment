@@ -10,8 +10,8 @@ template_brush_TF1 =`
 							<p style=" font-size: 20px; line-height: 1.8;"><strong><span id="TF_name1">ALTERNA-PB</span></strong></p>							
 						</div>
 						<div style="width: 100%; height: 23%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 20px; line-height: 1.8;">
-							<p><strong>产品功能：</strong><span id="TF_benefit1">减肥瘦身</span></p>							
-							<p><strong>电机类型：</strong><span id="TF_attribute1">绿茶</span></p>
+							<p><strong>功能：</strong><span id="TF_benefit1">绿茶</span></p>							
+							<p><strong>类型：</strong><span id="TF_attribute1">减肥瘦身</span></p>							
 						</div>
 					</div>										
 				</div>

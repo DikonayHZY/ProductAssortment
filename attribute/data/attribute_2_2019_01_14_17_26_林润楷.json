@@ -1,0 +1,397 @@
+﻿{
+	"username": "林润楷",
+	"gender": "1",
+	"age": "21",
+	"major": "行政管理",
+	"grade": "大二",
+	"phone": "17827063228",
+	"condition": "attribute",
+	"order_number": 2,
+	"order_sign": "brush_shampoo",
+	"purpose": "空",
+	"choice": {
+		"brush": {
+			"start": "2019-01-14_17:19:41",
+			"end": "2019-01-14_17:20:49",
+			"spend": 68,
+			"product": [
+				{
+					"rate": 1,
+					"GOVINO-αH": 1,
+					"GOVINO-αJ": 1,
+					"GOVINO-ωF": 1,
+					"GOVINO-αD": 1,
+					"GOVINO-αG": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-βJ": 1,
+					"GOVINO-βH": 1,
+					"GOVINO-βG": 1,
+					"GOVINO-ωK": 1,
+					"GOVINO-βD": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-γG": 1,
+					"GOVINO-γJ": 1,
+					"GOVINO-γH": 1,
+					"GOVINO-ωN": 1,
+					"GOVINO-γD": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-δD": 1,
+					"GOVINO-ωS": 1,
+					"GOVINO-δH": 1,
+					"GOVINO-δJ": 1,
+					"GOVINO-δG": 1
+				}
+			],
+			"choose": "GOVINO-δH",
+			"choose_id": "18"
+		},
+		"shampoo": {
+			"start": "2019-01-14_17:24:48",
+			"end": "2019-01-14_17:26:37",
+			"spend": 109,
+			"product": [
+				{
+					"rate": 1,
+					"ALTERNA-αD": 1,
+					"ALTERNA-αG": 1,
+					"ALTERNA-ωF": 1,
+					"ALTERNA-αJ": 1,
+					"ALTERNA-αH": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-βD": 1,
+					"ALTERNA-ωK": 1,
+					"ALTERNA-βH": 1,
+					"ALTERNA-βG": 1,
+					"ALTERNA-βJ": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-γH": 1,
+					"ALTERNA-γG": 1,
+					"ALTERNA-γD": 1,
+					"ALTERNA-ωN": 1,
+					"ALTERNA-γJ": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-δD": 1,
+					"ALTERNA-δG": 1,
+					"ALTERNA-δJ": 1,
+					"ALTERNA-ωS": 1,
+					"ALTERNA-δH": 1
+				}
+			],
+			"choose": "ALTERNA-ωS",
+			"choose_id": "20"
+		}
+	},
+	"questions": {
+		"brush": [
+			{
+				"id": "construal_1",
+				"answer": 6
+			},
+			{
+				"id": "construal_2",
+				"answer": 6
+			},
+			{
+				"id": "construal_3",
+				"answer": 6
+			},
+			{
+				"id": "construal_4",
+				"answer": 6
+			},
+			{
+				"id": "construal_5",
+				"answer": 6
+			},
+			{
+				"id": "construal_6",
+				"answer": 4
+			},
+			{
+				"id": "similarity",
+				"answer": 5
+			},
+			{
+				"id": "variety_1",
+				"answer": 6
+			},
+			{
+				"id": "variety_2",
+				"answer": 6
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 2
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 2
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 2
+			}
+		],
+		"shampoo": [
+			{
+				"id": "construal_1",
+				"answer": 6
+			},
+			{
+				"id": "construal_2",
+				"answer": 6
+			},
+			{
+				"id": "construal_3",
+				"answer": 5
+			},
+			{
+				"id": "construal_4",
+				"answer": 6
+			},
+			{
+				"id": "construal_5",
+				"answer": 6
+			},
+			{
+				"id": "construal_6",
+				"answer": 6
+			},
+			{
+				"id": "shampoo7",
+				"answer": 5
+			},
+			{
+				"id": "shampoo8",
+				"answer": 7
+			},
+			{
+				"id": "shampoo9",
+				"answer": 7
+			},
+			{
+				"id": "shampoo10",
+				"answer": 2
+			},
+			{
+				"id": "shampoo11",
+				"answer": 2
+			},
+			{
+				"id": "shampoo12",
+				"answer": 3
+			},
+			{
+				"id": "shampoo13",
+				"answer": 3
+			},
+			{
+				"id": "shampoo14",
+				"answer": 3
+			},
+			{
+				"id": "shampoo15",
+				"answer": 2
+			},
+			{
+				"id": "shampoo16",
+				"answer": 2
+			}
+		]
+	},
+	"tests": {
+		"brush": [
+			{
+				"id": "brush_01",
+				"answer": 1,
+				"RT": 4566
+			},
+			{
+				"id": "brush_02",
+				"answer": 1,
+				"RT": 1765
+			},
+			{
+				"id": "brush_03",
+				"answer": 0,
+				"RT": 1326
+			},
+			{
+				"id": "brush_04",
+				"answer": 1,
+				"RT": 1067
+			},
+			{
+				"id": "brush_05",
+				"answer": 1,
+				"RT": 1799
+			},
+			{
+				"id": "brush_06",
+				"answer": 1,
+				"RT": 1573
+			},
+			{
+				"id": "brush_07",
+				"answer": 1,
+				"RT": 2778
+			},
+			{
+				"id": "brush_08",
+				"answer": 1,
+				"RT": 1528
+			},
+			{
+				"id": "brush_09",
+				"answer": 1,
+				"RT": 989
+			},
+			{
+				"id": "brush_10",
+				"answer": 0,
+				"RT": 3534
+			},
+			{
+				"id": "brush_11",
+				"answer": 1,
+				"RT": 5004
+			},
+			{
+				"id": "brush_12",
+				"answer": 0,
+				"RT": 6500
+			},
+			{
+				"id": "brush_13",
+				"answer": 1,
+				"RT": 2721
+			},
+			{
+				"id": "brush_14",
+				"answer": 0,
+				"RT": 3696
+			},
+			{
+				"id": "brush_15",
+				"answer": 1,
+				"RT": 1777
+			},
+			{
+				"id": "brush_16",
+				"answer": 0,
+				"RT": 1753
+			}
+		],
+		"shampoo": [
+			{
+				"id": "shampoo_01",
+				"answer": 1,
+				"RT": 808
+			},
+			{
+				"id": "shampoo_02",
+				"answer": 1,
+				"RT": 2294
+			},
+			{
+				"id": "shampoo_03",
+				"answer": 1,
+				"RT": 1586
+			},
+			{
+				"id": "shampoo_04",
+				"answer": 1,
+				"RT": 3843
+			},
+			{
+				"id": "shampoo_05",
+				"answer": 1,
+				"RT": 2610
+			},
+			{
+				"id": "shampoo_06",
+				"answer": 1,
+				"RT": 1100
+			},
+			{
+				"id": "shampoo_07",
+				"answer": 1,
+				"RT": 4228
+			},
+			{
+				"id": "shampoo_08",
+				"answer": 1,
+				"RT": 1798
+			},
+			{
+				"id": "shampoo_09",
+				"answer": 1,
+				"RT": 775
+			},
+			{
+				"id": "shampoo_10",
+				"answer": 1,
+				"RT": 1372
+			},
+			{
+				"id": "shampoo_11",
+				"answer": 1,
+				"RT": 1337
+			},
+			{
+				"id": "shampoo_12",
+				"answer": 0,
+				"RT": 3511
+			},
+			{
+				"id": "shampoo_13",
+				"answer": 1,
+				"RT": 898
+			},
+			{
+				"id": "shampoo_14",
+				"answer": 0,
+				"RT": 1507
+			},
+			{
+				"id": "shampoo_15",
+				"answer": 1,
+				"RT": 1888
+			},
+			{
+				"id": "shampoo_16",
+				"answer": 1,
+				"RT": 1607
+			}
+		]
+	},
+	"output": "1|2019-01-14_17:24:48|2019-01-14_17:19:41|林润楷|1|21|大二|3|行政管理|1|1|brush_shampoo|2|109|1|1|1|1|ALTERNA-ωS|20|6|6|5|6|6|6|5|7|7|2|2|3|3|3|2|2|1|1|1|1|1|1|1|1|1|1|1|0|1|0|1|1|0.875|808|2294|1586|3843|2610|1100|4228|1798|775|1372|1337|3511|898|1507|1888|1607|68|1|1|1|1|GOVINO-δH|18|6|6|6|6|6|4|5|6|6|2|2|3|3|2|2|2|1|1|0|1|1|1|1|1|1|0|1|0|1|0|1|0|0.6875|4566|1765|1326|1067|1799|1573|2778|1528|989|3534|5004|6500|2721|3696|1777|1753|17827063228|空"
+}
