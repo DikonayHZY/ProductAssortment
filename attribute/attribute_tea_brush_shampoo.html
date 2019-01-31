@@ -42,7 +42,7 @@
         var order_pages = ["shampoo","brush"];          // 关键配置, 后续页面跟随这个, 支持 tea, shampoo, brush
         var order_number = 1;                           // 无需设置, 跟随order_page设定自动修改
         var order_sign = "shampoo_brush";               // 无需设置, 跟随order_page设定自动修改
-        
+
         console.log("order:", order_number);
         console.log("condition:", condition);
 
@@ -51,6 +51,10 @@
             "红茶": "#CA6931",
             "青茶": "#B27511",
             "花茶": "#CE6E60",
+            "减肥瘦身": "#CE6E60",
+            "舒缓压力": "#CE6E60",
+            "保健养生": "#CE6E60",
+            "美容养颜": "#CE6E60",
         }
 
 	    var config_tea = {
@@ -122,9 +126,9 @@
             "current": 0,
             "names": [
                 "雪水云绿",
-               "正山小种",
-               "东方美人",
-               "茉莉花茶",
+                "正山小种",
+                "东方美人",
+                "茉莉花茶",
             ]
         };
 
@@ -1785,10 +1789,15 @@
 
     function set_page_detail(choice) {
         // 设置标题
-        var attribute = get_product_attribute(choice[0]);
-        $("#assortment_title").html(attribute);
-        if(title_color_map[attribute] != null){
-            $("#assortment_title").css("background-color", title_color_map[attribute]);
+        var assortment_title = "";
+        if(condition=="attribute"){
+            assortment_title = get_product_attribute(choice[0]);
+        }else if(condition=="benefit"){
+            assortment_title = get_product_benefit(choice[0]);
+        }
+        $("#assortment_title").html(assortment_title);
+        if(title_color_map[assortment_title] != null){
+            $("#assortment_title").css("background-color", title_color_map[assortment_title]);
         }
 
         // 设置名称
