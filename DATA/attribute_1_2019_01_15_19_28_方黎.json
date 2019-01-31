@@ -1,0 +1,397 @@
+﻿{
+	"username": "方黎",
+	"gender": "0",
+	"age": "23",
+	"major": "传播学",
+	"grade": "硕士研究生",
+	"phone": "15627865996",
+	"condition": "attribute",
+	"order_number": 1,
+	"order_sign": "shampoo_brush",
+	"purpose": "商品有更多选择是否会加剧消费者购物的难度，更多的非质化差别是否会带来正向的购买欲，亦或是降低消费者的购买欲，尤其是对于没有背景知识的消费者，是否会形成购买决策门槛。",
+	"choice": {
+		"shampoo": {
+			"start": "2019-01-15_19:19:25",
+			"end": "2019-01-15_19:22:33",
+			"spend": 187,
+			"product": [
+				{
+					"rate": 1,
+					"ALTERNA-βJ": 1,
+					"ALTERNA-βH": 1,
+					"ALTERNA-βD": 1,
+					"ALTERNA-βG": 1,
+					"ALTERNA-ωK": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-αH": 1,
+					"ALTERNA-αJ": 1,
+					"ALTERNA-ωF": 1,
+					"ALTERNA-αD": 1,
+					"ALTERNA-αG": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-γG": 1,
+					"ALTERNA-ωN": 1,
+					"ALTERNA-γD": 1,
+					"ALTERNA-γJ": 1,
+					"ALTERNA-γH": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-ωS": 1,
+					"ALTERNA-δG": 1,
+					"ALTERNA-δJ": 1,
+					"ALTERNA-δD": 1,
+					"ALTERNA-δH": 1
+				}
+			],
+			"choose": "ALTERNA-ωF",
+			"choose_id": "5"
+		},
+		"brush": {
+			"start": "2019-01-15_19:26:38",
+			"end": "2019-01-15_19:28:11",
+			"spend": 93,
+			"product": [
+				{
+					"rate": 1,
+					"GOVINO-ωF": 1,
+					"GOVINO-αJ": 1,
+					"GOVINO-αD": 1,
+					"GOVINO-αH": 1,
+					"GOVINO-αG": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-βJ": 1,
+					"GOVINO-ωK": 1,
+					"GOVINO-βG": 1,
+					"GOVINO-βD": 1,
+					"GOVINO-βH": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-ωN": 1,
+					"GOVINO-γJ": 1,
+					"GOVINO-γH": 1,
+					"GOVINO-γG": 1,
+					"GOVINO-γD": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-δJ": 1,
+					"GOVINO-δG": 1,
+					"GOVINO-δH": 1,
+					"GOVINO-δD": 1,
+					"GOVINO-ωS": 1
+				}
+			],
+			"choose": "GOVINO-δG",
+			"choose_id": "17"
+		}
+	},
+	"questions": {
+		"shampoo": [
+			{
+				"id": "construal_1",
+				"answer": 5
+			},
+			{
+				"id": "construal_2",
+				"answer": 6
+			},
+			{
+				"id": "construal_3",
+				"answer": 5
+			},
+			{
+				"id": "construal_4",
+				"answer": 9
+			},
+			{
+				"id": "construal_5",
+				"answer": 8
+			},
+			{
+				"id": "construal_6",
+				"answer": 5
+			},
+			{
+				"id": "shampoo7",
+				"answer": 7
+			},
+			{
+				"id": "shampoo8",
+				"answer": 2
+			},
+			{
+				"id": "shampoo9",
+				"answer": 4
+			},
+			{
+				"id": "shampoo10",
+				"answer": 3
+			},
+			{
+				"id": "shampoo11",
+				"answer": 3
+			},
+			{
+				"id": "shampoo12",
+				"answer": 3
+			},
+			{
+				"id": "shampoo13",
+				"answer": 3
+			},
+			{
+				"id": "shampoo14",
+				"answer": 3
+			},
+			{
+				"id": "shampoo15",
+				"answer": 1
+			},
+			{
+				"id": "shampoo16",
+				"answer": 3
+			}
+		],
+		"brush": [
+			{
+				"id": "construal_1",
+				"answer": 2
+			},
+			{
+				"id": "construal_2",
+				"answer": 6
+			},
+			{
+				"id": "construal_3",
+				"answer": 5
+			},
+			{
+				"id": "construal_4",
+				"answer": 5
+			},
+			{
+				"id": "construal_5",
+				"answer": 5
+			},
+			{
+				"id": "construal_6",
+				"answer": 5
+			},
+			{
+				"id": "similarity",
+				"answer": 6
+			},
+			{
+				"id": "variety_1",
+				"answer": 1
+			},
+			{
+				"id": "variety_2",
+				"answer": 1
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 4
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 4
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 4
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 4
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 4
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 1
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 1
+			}
+		]
+	},
+	"tests": {
+		"shampoo": [
+			{
+				"id": "shampoo_01",
+				"answer": 1,
+				"RT": 1876
+			},
+			{
+				"id": "shampoo_02",
+				"answer": 1,
+				"RT": 1731
+			},
+			{
+				"id": "shampoo_03",
+				"answer": 1,
+				"RT": 775
+			},
+			{
+				"id": "shampoo_04",
+				"answer": 0,
+				"RT": 685
+			},
+			{
+				"id": "shampoo_05",
+				"answer": 1,
+				"RT": 1292
+			},
+			{
+				"id": "shampoo_06",
+				"answer": 1,
+				"RT": 1237
+			},
+			{
+				"id": "shampoo_07",
+				"answer": 1,
+				"RT": 1551
+			},
+			{
+				"id": "shampoo_08",
+				"answer": 0,
+				"RT": 1202
+			},
+			{
+				"id": "shampoo_09",
+				"answer": 1,
+				"RT": 617
+			},
+			{
+				"id": "shampoo_10",
+				"answer": 0,
+				"RT": 1259
+			},
+			{
+				"id": "shampoo_11",
+				"answer": 1,
+				"RT": 944
+			},
+			{
+				"id": "shampoo_12",
+				"answer": 0,
+				"RT": 1517
+			},
+			{
+				"id": "shampoo_13",
+				"answer": 1,
+				"RT": 652
+			},
+			{
+				"id": "shampoo_14",
+				"answer": 1,
+				"RT": 5443
+			},
+			{
+				"id": "shampoo_15",
+				"answer": 1,
+				"RT": 1226
+			},
+			{
+				"id": "shampoo_16",
+				"answer": 1,
+				"RT": 797
+			}
+		],
+		"brush": [
+			{
+				"id": "brush_01",
+				"answer": 1,
+				"RT": 2130
+			},
+			{
+				"id": "brush_02",
+				"answer": 0,
+				"RT": 1431
+			},
+			{
+				"id": "brush_03",
+				"answer": 1,
+				"RT": 8858
+			},
+			{
+				"id": "brush_04",
+				"answer": 1,
+				"RT": 2617
+			},
+			{
+				"id": "brush_05",
+				"answer": 1,
+				"RT": 2959
+			},
+			{
+				"id": "brush_06",
+				"answer": 1,
+				"RT": 1251
+			},
+			{
+				"id": "brush_07",
+				"answer": 1,
+				"RT": 2188
+			},
+			{
+				"id": "brush_08",
+				"answer": 1,
+				"RT": 4119
+			},
+			{
+				"id": "brush_09",
+				"answer": 1,
+				"RT": 2498
+			},
+			{
+				"id": "brush_10",
+				"answer": 1,
+				"RT": 4961
+			},
+			{
+				"id": "brush_11",
+				"answer": 1,
+				"RT": 1948
+			},
+			{
+				"id": "brush_12",
+				"answer": 1,
+				"RT": 2347
+			},
+			{
+				"id": "brush_13",
+				"answer": 1,
+				"RT": 1382
+			},
+			{
+				"id": "brush_14",
+				"answer": 1,
+				"RT": 6050
+			},
+			{
+				"id": "brush_15",
+				"answer": 1,
+				"RT": 7862
+			},
+			{
+				"id": "brush_16",
+				"answer": 1,
+				"RT": 2810
+			}
+		]
+	},
+	"output": "1|2019-01-15_19:19:25|2019-01-15_19:26:38|方黎|0|23|硕士研究生|6|传播学|1|1|shampoo_brush|1|187|1|1|1|1|ALTERNA-ωF|5|5|6|5|9|8|5|7|2|4|3|3|3|3|3|1|3|1|1|1|0|1|1|1|0|1|0|1|0|1|1|1|1|0.75|1876|1731|775|685|1292|1237|1551|1202|617|1259|944|1517|652|5443|1226|797|93|1|1|1|1|GOVINO-δG|17|2|6|5|5|5|5|6|1|1|4|4|4|4|4|1|1|1|0|1|1|1|1|1|1|1|1|1|1|1|1|1|1|0.9375|2130|1431|8858|2617|2959|1251|2188|4119|2498|4961|1948|2347|1382|6050|7862|2810|15627865996|商品有更多选择是否会加剧消费者购物的难度，更多的非质化差别是否会带来正向的购买欲，亦或是降低消费者的购买欲，尤其是对于没有背景知识的消费者，是否会形成购买决策门槛。"
+}

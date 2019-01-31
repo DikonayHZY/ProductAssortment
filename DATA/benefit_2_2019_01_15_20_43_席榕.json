@@ -1,0 +1,397 @@
+﻿{
+	"username": "席榕",
+	"gender": "0",
+	"age": "24",
+	"major": "应用心理学",
+	"grade": "硕士研究生",
+	"phone": "18984585113",
+	"condition": "benefit",
+	"order_number": 2,
+	"order_sign": "brush_shampoo",
+	"purpose": "商品熟悉程度对可能性事件判断的影响？",
+	"choice": {
+		"brush": {
+			"start": "2019-01-15_20:36:52",
+			"end": "2019-01-15_20:38:40",
+			"spend": 109,
+			"product": [
+				{
+					"rate": 1,
+					"GOVINO-αD": 1,
+					"GOVINO-αH": 1,
+					"GOVINO-αJ": 1,
+					"GOVINO-ωF": 1,
+					"GOVINO-αG": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-βD": 1,
+					"GOVINO-ωK": 1,
+					"GOVINO-βH": 1,
+					"GOVINO-βG": 1,
+					"GOVINO-βJ": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-γG": 1,
+					"GOVINO-ωN": 1,
+					"GOVINO-γJ": 1,
+					"GOVINO-γD": 1,
+					"GOVINO-γH": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-ωS": 1,
+					"GOVINO-δD": 1,
+					"GOVINO-δJ": 1,
+					"GOVINO-δH": 1,
+					"GOVINO-δG": 1
+				}
+			],
+			"choose": "GOVINO-ωK",
+			"choose_id": "10"
+		},
+		"shampoo": {
+			"start": "2019-01-15_20:42:33",
+			"end": "2019-01-15_20:43:46",
+			"spend": 73,
+			"product": [
+				{
+					"rate": 1,
+					"ALTERNA-ωK": 1,
+					"ALTERNA-βG": 1,
+					"ALTERNA-βJ": 1,
+					"ALTERNA-βD": 1,
+					"ALTERNA-βH": 1
+				},
+				{
+					"rate": 0.8,
+					"ALTERNA-ωF": 1,
+					"ALTERNA-αD": 1,
+					"ALTERNA-αG": 1,
+					"ALTERNA-αJ": 0,
+					"ALTERNA-αH": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-γJ": 1,
+					"ALTERNA-ωN": 1,
+					"ALTERNA-γD": 1,
+					"ALTERNA-γH": 1,
+					"ALTERNA-γG": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-δJ": 1,
+					"ALTERNA-δG": 1,
+					"ALTERNA-δH": 1,
+					"ALTERNA-ωS": 1,
+					"ALTERNA-δD": 1
+				}
+			],
+			"choose": "ALTERNA-βG",
+			"choose_id": "6"
+		}
+	},
+	"questions": {
+		"brush": [
+			{
+				"id": "construal_1",
+				"answer": 5
+			},
+			{
+				"id": "construal_2",
+				"answer": 5
+			},
+			{
+				"id": "construal_3",
+				"answer": 8
+			},
+			{
+				"id": "construal_4",
+				"answer": 6
+			},
+			{
+				"id": "construal_5",
+				"answer": 3
+			},
+			{
+				"id": "construal_6",
+				"answer": 1
+			},
+			{
+				"id": "similarity",
+				"answer": 6
+			},
+			{
+				"id": "variety_1",
+				"answer": 5
+			},
+			{
+				"id": "variety_2",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 1
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 2
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 1
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 2
+			}
+		],
+		"shampoo": [
+			{
+				"id": "construal_1",
+				"answer": 4
+			},
+			{
+				"id": "construal_2",
+				"answer": 5
+			},
+			{
+				"id": "construal_3",
+				"answer": 5
+			},
+			{
+				"id": "construal_4",
+				"answer": 5
+			},
+			{
+				"id": "construal_5",
+				"answer": 7
+			},
+			{
+				"id": "construal_6",
+				"answer": 7
+			},
+			{
+				"id": "shampoo7",
+				"answer": 4
+			},
+			{
+				"id": "shampoo8",
+				"answer": 4
+			},
+			{
+				"id": "shampoo9",
+				"answer": 4
+			},
+			{
+				"id": "shampoo10",
+				"answer": 4
+			},
+			{
+				"id": "shampoo11",
+				"answer": 4
+			},
+			{
+				"id": "shampoo12",
+				"answer": 2
+			},
+			{
+				"id": "shampoo13",
+				"answer": 1
+			},
+			{
+				"id": "shampoo14",
+				"answer": 1
+			},
+			{
+				"id": "shampoo15",
+				"answer": 1
+			},
+			{
+				"id": "shampoo16",
+				"answer": 1
+			}
+		]
+	},
+	"tests": {
+		"brush": [
+			{
+				"id": "brush_01",
+				"answer": 1,
+				"RT": 1720
+			},
+			{
+				"id": "brush_02",
+				"answer": 1,
+				"RT": 4837
+			},
+			{
+				"id": "brush_03",
+				"answer": 0,
+				"RT": 3891
+			},
+			{
+				"id": "brush_04",
+				"answer": 1,
+				"RT": 2597
+			},
+			{
+				"id": "brush_05",
+				"answer": 1,
+				"RT": 2249
+			},
+			{
+				"id": "brush_06",
+				"answer": 0,
+				"RT": 2868
+			},
+			{
+				"id": "brush_07",
+				"answer": 1,
+				"RT": 1968
+			},
+			{
+				"id": "brush_08",
+				"answer": 1,
+				"RT": 4151
+			},
+			{
+				"id": "brush_09",
+				"answer": 1,
+				"RT": 1190
+			},
+			{
+				"id": "brush_10",
+				"answer": 1,
+				"RT": 3070
+			},
+			{
+				"id": "brush_11",
+				"answer": 1,
+				"RT": 2126
+			},
+			{
+				"id": "brush_12",
+				"answer": 1,
+				"RT": 4521
+			},
+			{
+				"id": "brush_13",
+				"answer": 1,
+				"RT": 1507
+			},
+			{
+				"id": "brush_14",
+				"answer": 1,
+				"RT": 2866
+			},
+			{
+				"id": "brush_15",
+				"answer": 0,
+				"RT": 2936
+			},
+			{
+				"id": "brush_16",
+				"answer": 0,
+				"RT": 5005
+			}
+		],
+		"shampoo": [
+			{
+				"id": "shampoo_01",
+				"answer": 0,
+				"RT": 3003
+			},
+			{
+				"id": "shampoo_02",
+				"answer": 1,
+				"RT": 2823
+			},
+			{
+				"id": "shampoo_03",
+				"answer": 1,
+				"RT": 3779
+			},
+			{
+				"id": "shampoo_04",
+				"answer": 1,
+				"RT": 3409
+			},
+			{
+				"id": "shampoo_05",
+				"answer": 1,
+				"RT": 810
+			},
+			{
+				"id": "shampoo_06",
+				"answer": 0,
+				"RT": 1697
+			},
+			{
+				"id": "shampoo_07",
+				"answer": 1,
+				"RT": 1327
+			},
+			{
+				"id": "shampoo_08",
+				"answer": 1,
+				"RT": 2631
+			},
+			{
+				"id": "shampoo_09",
+				"answer": 1,
+				"RT": 1021
+			},
+			{
+				"id": "shampoo_10",
+				"answer": 0,
+				"RT": 2597
+			},
+			{
+				"id": "shampoo_11",
+				"answer": 1,
+				"RT": 1416
+			},
+			{
+				"id": "shampoo_12",
+				"answer": 0,
+				"RT": 2396
+			},
+			{
+				"id": "shampoo_13",
+				"answer": 1,
+				"RT": 1415
+			},
+			{
+				"id": "shampoo_14",
+				"answer": 0,
+				"RT": 1472
+			},
+			{
+				"id": "shampoo_15",
+				"answer": 1,
+				"RT": 2541
+			},
+			{
+				"id": "shampoo_16",
+				"answer": 1,
+				"RT": 1696
+			}
+		]
+	},
+	"output": "1|2019-01-15_20:42:33|2019-01-15_20:36:52|席榕|0|24|硕士研究生|6|应用心理学|2|1|brush_shampoo|2|73|1|0.8|1|1|ALTERNA-βG|6|4|5|5|5|7|7|4|4|4|4|4|2|1|1|1|1|0|1|1|1|1|0|1|1|1|0|1|0|1|0|1|1|0.6875|3003|2823|3779|3409|810|1697|1327|2631|1021|2597|1416|2396|1415|1472|2541|1696|109|1|1|1|1|GOVINO-ωK|10|5|5|8|6|3|1|6|5|3|2|2|1|2|2|1|2|1|1|0|1|1|0|1|1|1|1|1|1|1|1|0|0|0.75|1720|4837|3891|2597|2249|2868|1968|4151|1190|3070|2126|4521|1507|2866|2936|5005|18984585113|商品熟悉程度对可能性事件判断的影响？"
+}
