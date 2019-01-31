@@ -9,14 +9,12 @@ page_shampoo_product =`
 
 		<div style="width: 100%; height: 80%; display: flex;"> <!-- 下半部分 -->
 			<div style="width: 15%; height: 100%; min-width: 150px; /*background-color: green; */display: flex; align-items: center; justify-content: center;"> <!-- 左侧导航栏 -->
-				<div class="shampoo_left_menu" style="width: 100%; height: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center; border: black 1px solid; ">
-					<a href="#" id="left_green_tea">丝滑水润</a><br>
-					&emsp;<br>
-					<a href="#" id="left_red_tea">防晒锁色</a><br>
-					&emsp;<br>
-					<a href="#" id="left_qing_tea">清爽控油</a><br>
-					&emsp;<br>
-					<a href="#" id="left_hua_tea">强效修护</a>
+				<div class="shampoo_left_menu" style="width: 100%; height: 70%; display: flex; flex-direction: column; align-items: center; justify-content: space-around;">
+					<a href="#"><div id="left_green_tea" style="width: 130px; height: 50px; border: 2px solid black; display: flex; align-items: center; justify-content: center;">丝滑水润</div></a>
+					<a href="#"><div id="left_red_tea" style="width: 130px; height: 50px; border: 2px solid black; display: flex; align-items: center; justify-content: center;">防晒锁色</div></a>
+					<a href="#"><div id="left_qing_tea" style="width: 130px; height: 50px; border: 2px solid black; display: flex; align-items: center; justify-content: center;">清爽控油</div></a>
+					<a href="#"><div id="left_hua_tea" style="width: 130px; height: 50px; border: 2px solid black; display: flex; align-items: center; justify-content: center;">强效修护</div></a>
+
 				</div>
 			</div>
 
@@ -66,9 +64,9 @@ page_shampoo_product =`
 							<img  style="height: 90%;" src="" id="select_pic">
 						</div>
 						<div style="height: 100%; width: 55%; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; font-size: 22px; line-height: 2.0;">
-
-							<p><strong>香氛：</strong><span id="tea_assortment">白松露</span></p>							
 							<p><strong>功效：</strong><span id="tea_benefit">祛屑止痒</span></p>
+							<p><strong>香氛：</strong><span id="tea_assortment">白松露</span></p>							
+
 
 							<p id="other_discription">不含防腐剂，无硅油，不含硫酸盐</p>							
 

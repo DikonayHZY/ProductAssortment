@@ -1,0 +1,397 @@
+﻿{
+	"username": "郑桐",
+	"gender": "0",
+	"age": "18",
+	"major": "档案学",
+	"grade": "大二",
+	"phone": "19902552921",
+	"condition": "benefit",
+	"order_number": 2,
+	"order_sign": "brush_shampoo",
+	"purpose": "调查消费者对于电动牙刷和洗发水的偏好度",
+	"choice": {
+		"brush": {
+			"start": "2019-01-15_10:30:43",
+			"end": "2019-01-15_10:31:17",
+			"spend": 35,
+			"product": [
+				{
+					"rate": 0.6,
+					"GOVINO-αG": 1,
+					"GOVINO-αJ": 1,
+					"GOVINO-αH": 1,
+					"GOVINO-αD": 0,
+					"GOVINO-ωF": 0
+				},
+				{
+					"rate": 1,
+					"GOVINO-βG": 1,
+					"GOVINO-βH": 1,
+					"GOVINO-βD": 1,
+					"GOVINO-ωK": 1,
+					"GOVINO-βJ": 1
+				},
+				{
+					"rate": 0,
+					"GOVINO-γJ": 0,
+					"GOVINO-γD": 0,
+					"GOVINO-ωN": 0,
+					"GOVINO-γG": 0,
+					"GOVINO-γH": 0
+				},
+				{
+					"rate": 0,
+					"GOVINO-δG": 0,
+					"GOVINO-δH": 0,
+					"GOVINO-δJ": 0,
+					"GOVINO-ωS": 0,
+					"GOVINO-δD": 0
+				}
+			],
+			"choose": "GOVINO-βH",
+			"choose_id": "12"
+		},
+		"shampoo": {
+			"start": "2019-01-15_10:34:04",
+			"end": "2019-01-15_10:34:22",
+			"spend": 18,
+			"product": [
+				{
+					"rate": 0,
+					"ALTERNA-ωK": 0,
+					"ALTERNA-βH": 0,
+					"ALTERNA-βD": 0,
+					"ALTERNA-βG": 0,
+					"ALTERNA-βJ": 0
+				},
+				{
+					"rate": 0,
+					"ALTERNA-αH": 0,
+					"ALTERNA-αD": 0,
+					"ALTERNA-αG": 0,
+					"ALTERNA-ωF": 0,
+					"ALTERNA-αJ": 0
+				},
+				{
+					"rate": 1,
+					"ALTERNA-γJ": 1,
+					"ALTERNA-γH": 1,
+					"ALTERNA-γG": 1,
+					"ALTERNA-γD": 1,
+					"ALTERNA-ωN": 1
+				},
+				{
+					"rate": 0,
+					"ALTERNA-δD": 0,
+					"ALTERNA-δJ": 0,
+					"ALTERNA-δG": 0,
+					"ALTERNA-δH": 0,
+					"ALTERNA-ωS": 0
+				}
+			],
+			"choose": "ALTERNA-γJ",
+			"choose_id": "18"
+		}
+	},
+	"questions": {
+		"brush": [
+			{
+				"id": "construal_1",
+				"answer": 5
+			},
+			{
+				"id": "construal_2",
+				"answer": 8
+			},
+			{
+				"id": "construal_3",
+				"answer": 3
+			},
+			{
+				"id": "construal_4",
+				"answer": 5
+			},
+			{
+				"id": "construal_5",
+				"answer": 7
+			},
+			{
+				"id": "construal_6",
+				"answer": 1
+			},
+			{
+				"id": "similarity",
+				"answer": 6
+			},
+			{
+				"id": "variety_1",
+				"answer": 7
+			},
+			{
+				"id": "variety_2",
+				"answer": 7
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 1
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 1
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 2
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 1
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 3
+			}
+		],
+		"shampoo": [
+			{
+				"id": "construal_1",
+				"answer": 9
+			},
+			{
+				"id": "construal_2",
+				"answer": 7
+			},
+			{
+				"id": "construal_3",
+				"answer": 4
+			},
+			{
+				"id": "construal_4",
+				"answer": 3
+			},
+			{
+				"id": "construal_5",
+				"answer": 5
+			},
+			{
+				"id": "construal_6",
+				"answer": 8
+			},
+			{
+				"id": "shampoo7",
+				"answer": 6
+			},
+			{
+				"id": "shampoo8",
+				"answer": 7
+			},
+			{
+				"id": "shampoo9",
+				"answer": 7
+			},
+			{
+				"id": "shampoo10",
+				"answer": 1
+			},
+			{
+				"id": "shampoo11",
+				"answer": 1
+			},
+			{
+				"id": "shampoo12",
+				"answer": 1
+			},
+			{
+				"id": "shampoo13",
+				"answer": 4
+			},
+			{
+				"id": "shampoo14",
+				"answer": 1
+			},
+			{
+				"id": "shampoo15",
+				"answer": 2
+			},
+			{
+				"id": "shampoo16",
+				"answer": 4
+			}
+		]
+	},
+	"tests": {
+		"brush": [
+			{
+				"id": "brush_01",
+				"answer": 1,
+				"RT": 989
+			},
+			{
+				"id": "brush_02",
+				"answer": 0,
+				"RT": 1067
+			},
+			{
+				"id": "brush_03",
+				"answer": 1,
+				"RT": 640
+			},
+			{
+				"id": "brush_04",
+				"answer": 0,
+				"RT": 685
+			},
+			{
+				"id": "brush_05",
+				"answer": 1,
+				"RT": 1822
+			},
+			{
+				"id": "brush_06",
+				"answer": 0,
+				"RT": 1326
+			},
+			{
+				"id": "brush_07",
+				"answer": 1,
+				"RT": 3375
+			},
+			{
+				"id": "brush_08",
+				"answer": 0,
+				"RT": 798
+			},
+			{
+				"id": "brush_09",
+				"answer": 1,
+				"RT": 954
+			},
+			{
+				"id": "brush_10",
+				"answer": 0,
+				"RT": 1495
+			},
+			{
+				"id": "brush_11",
+				"answer": 1,
+				"RT": 865
+			},
+			{
+				"id": "brush_12",
+				"answer": 1,
+				"RT": 2057
+			},
+			{
+				"id": "brush_13",
+				"answer": 1,
+				"RT": 594
+			},
+			{
+				"id": "brush_14",
+				"answer": 0,
+				"RT": 2721
+			},
+			{
+				"id": "brush_15",
+				"answer": 1,
+				"RT": 2293
+			},
+			{
+				"id": "brush_16",
+				"answer": 1,
+				"RT": 3700
+			}
+		],
+		"shampoo": [
+			{
+				"id": "shampoo_01",
+				"answer": 1,
+				"RT": 876
+			},
+			{
+				"id": "shampoo_02",
+				"answer": 0,
+				"RT": 910
+			},
+			{
+				"id": "shampoo_03",
+				"answer": 1,
+				"RT": 1866
+			},
+			{
+				"id": "shampoo_04",
+				"answer": 0,
+				"RT": 753
+			},
+			{
+				"id": "shampoo_05",
+				"answer": 1,
+				"RT": 1136
+			},
+			{
+				"id": "shampoo_06",
+				"answer": 0,
+				"RT": 887
+			},
+			{
+				"id": "shampoo_07",
+				"answer": 0,
+				"RT": 1787
+			},
+			{
+				"id": "shampoo_08",
+				"answer": 0,
+				"RT": 1326
+			},
+			{
+				"id": "shampoo_09",
+				"answer": 1,
+				"RT": 697
+			},
+			{
+				"id": "shampoo_10",
+				"answer": 1,
+				"RT": 3554
+			},
+			{
+				"id": "shampoo_11",
+				"answer": 1,
+				"RT": 1495
+			},
+			{
+				"id": "shampoo_12",
+				"answer": 1,
+				"RT": 1044
+			},
+			{
+				"id": "shampoo_13",
+				"answer": 0,
+				"RT": 1619
+			},
+			{
+				"id": "shampoo_14",
+				"answer": 1,
+				"RT": 2294
+			},
+			{
+				"id": "shampoo_15",
+				"answer": 1,
+				"RT": 3148
+			},
+			{
+				"id": "shampoo_16",
+				"answer": 0,
+				"RT": 1652
+			}
+		]
+	},
+	"output": "1|2019-01-15_10:34:04|2019-01-15_10:30:43|郑桐|0|18|大二|3|档案学|2|1|brush_shampoo|2|18|0|0|1|0|ALTERNA-γJ|18|9|7|4|3|5|8|6|7|7|1|1|1|4|1|2|4|1|0|1|0|1|0|0|0|1|1|1|1|0|1|1|0|0.5625|876|910|1866|753|1136|887|1787|1326|697|3554|1495|1044|1619|2294|3148|1652|35|0.6|1|0|0|GOVINO-βH|12|5|8|3|5|7|1|6|7|7|1|1|2|3|2|1|3|1|0|1|0|1|0|1|0|1|0|1|1|1|0|1|1|0.625|989|1067|640|685|1822|1326|3375|798|954|1495|865|2057|594|2721|2293|3700|19902552921|调查消费者对于电动牙刷和洗发水的偏好度"
+}

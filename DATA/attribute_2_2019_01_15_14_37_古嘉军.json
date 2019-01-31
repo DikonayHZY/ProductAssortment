@@ -1,0 +1,397 @@
+﻿{
+	"username": "古嘉军",
+	"gender": "0",
+	"age": "22",
+	"major": "财务管理",
+	"grade": "大四",
+	"phone": "13719226679",
+	"condition": "attribute",
+	"order_number": 2,
+	"order_sign": "brush_shampoo",
+	"purpose": "记录被试购买行为",
+	"choice": {
+		"brush": {
+			"start": "2019-01-15_14:29:25",
+			"end": "2019-01-15_14:30:50",
+			"spend": 86,
+			"product": [
+				{
+					"rate": 1,
+					"GOVINO-ωF": 1,
+					"GOVINO-αJ": 1,
+					"GOVINO-αH": 1,
+					"GOVINO-αD": 1,
+					"GOVINO-αG": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-βH": 1,
+					"GOVINO-ωK": 1,
+					"GOVINO-βD": 1,
+					"GOVINO-βJ": 1,
+					"GOVINO-βG": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-γH": 1,
+					"GOVINO-γG": 1,
+					"GOVINO-ωN": 1,
+					"GOVINO-γD": 1,
+					"GOVINO-γJ": 1
+				},
+				{
+					"rate": 1,
+					"GOVINO-δD": 1,
+					"GOVINO-δH": 1,
+					"GOVINO-δJ": 1,
+					"GOVINO-δG": 1,
+					"GOVINO-ωS": 1
+				}
+			],
+			"choose": "GOVINO-ωS",
+			"choose_id": "20"
+		},
+		"shampoo": {
+			"start": "2019-01-15_14:36:22",
+			"end": "2019-01-15_14:37:23",
+			"spend": 61,
+			"product": [
+				{
+					"rate": 1,
+					"ALTERNA-βG": 1,
+					"ALTERNA-βH": 1,
+					"ALTERNA-βJ": 1,
+					"ALTERNA-ωK": 1,
+					"ALTERNA-βD": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-αG": 1,
+					"ALTERNA-αJ": 1,
+					"ALTERNA-αD": 1,
+					"ALTERNA-αH": 1,
+					"ALTERNA-ωF": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-γG": 1,
+					"ALTERNA-γH": 1,
+					"ALTERNA-γJ": 1,
+					"ALTERNA-ωN": 1,
+					"ALTERNA-γD": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-δH": 1,
+					"ALTERNA-δG": 1,
+					"ALTERNA-δD": 1,
+					"ALTERNA-ωS": 1,
+					"ALTERNA-δJ": 1
+				}
+			],
+			"choose": "ALTERNA-δD",
+			"choose_id": "16"
+		}
+	},
+	"questions": {
+		"brush": [
+			{
+				"id": "construal_1",
+				"answer": 6
+			},
+			{
+				"id": "construal_2",
+				"answer": 8
+			},
+			{
+				"id": "construal_3",
+				"answer": 8
+			},
+			{
+				"id": "construal_4",
+				"answer": 2
+			},
+			{
+				"id": "construal_5",
+				"answer": 5
+			},
+			{
+				"id": "construal_6",
+				"answer": 1
+			},
+			{
+				"id": "similarity",
+				"answer": 6
+			},
+			{
+				"id": "variety_1",
+				"answer": 9
+			},
+			{
+				"id": "variety_2",
+				"answer": 9
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 1
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 2
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 1
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 3
+			}
+		],
+		"shampoo": [
+			{
+				"id": "construal_1",
+				"answer": 8
+			},
+			{
+				"id": "construal_2",
+				"answer": 9
+			},
+			{
+				"id": "construal_3",
+				"answer": 5
+			},
+			{
+				"id": "construal_4",
+				"answer": 7
+			},
+			{
+				"id": "construal_5",
+				"answer": 7
+			},
+			{
+				"id": "construal_6",
+				"answer": 9
+			},
+			{
+				"id": "shampoo7",
+				"answer": 6
+			},
+			{
+				"id": "shampoo8",
+				"answer": 9
+			},
+			{
+				"id": "shampoo9",
+				"answer": 9
+			},
+			{
+				"id": "shampoo10",
+				"answer": 1
+			},
+			{
+				"id": "shampoo11",
+				"answer": 1
+			},
+			{
+				"id": "shampoo12",
+				"answer": 3
+			},
+			{
+				"id": "shampoo13",
+				"answer": 3
+			},
+			{
+				"id": "shampoo14",
+				"answer": 2
+			},
+			{
+				"id": "shampoo15",
+				"answer": 1
+			},
+			{
+				"id": "shampoo16",
+				"answer": 2
+			}
+		]
+	},
+	"tests": {
+		"brush": [
+			{
+				"id": "brush_01",
+				"answer": 1,
+				"RT": 1854
+			},
+			{
+				"id": "brush_02",
+				"answer": 1,
+				"RT": 5209
+			},
+			{
+				"id": "brush_03",
+				"answer": 1,
+				"RT": 1045
+			},
+			{
+				"id": "brush_04",
+				"answer": 1,
+				"RT": 2148
+			},
+			{
+				"id": "brush_05",
+				"answer": 1,
+				"RT": 4060
+			},
+			{
+				"id": "brush_06",
+				"answer": 1,
+				"RT": 2159
+			},
+			{
+				"id": "brush_07",
+				"answer": 1,
+				"RT": 1854
+			},
+			{
+				"id": "brush_08",
+				"answer": 1,
+				"RT": 4724
+			},
+			{
+				"id": "brush_09",
+				"answer": 1,
+				"RT": 3351
+			},
+			{
+				"id": "brush_10",
+				"answer": 0,
+				"RT": 14318
+			},
+			{
+				"id": "brush_11",
+				"answer": 1,
+				"RT": 4735
+			},
+			{
+				"id": "brush_12",
+				"answer": 0,
+				"RT": 4284
+			},
+			{
+				"id": "brush_13",
+				"answer": 1,
+				"RT": 1934
+			},
+			{
+				"id": "brush_14",
+				"answer": 0,
+				"RT": 1955
+			},
+			{
+				"id": "brush_15",
+				"answer": 1,
+				"RT": 2216
+			},
+			{
+				"id": "brush_16",
+				"answer": 0,
+				"RT": 2453
+			}
+		],
+		"shampoo": [
+			{
+				"id": "shampoo_01",
+				"answer": 1,
+				"RT": 2981
+			},
+			{
+				"id": "shampoo_02",
+				"answer": 1,
+				"RT": 8683
+			},
+			{
+				"id": "shampoo_03",
+				"answer": 1,
+				"RT": 1237
+			},
+			{
+				"id": "shampoo_04",
+				"answer": 1,
+				"RT": 1664
+			},
+			{
+				"id": "shampoo_05",
+				"answer": 1,
+				"RT": 842
+			},
+			{
+				"id": "shampoo_06",
+				"answer": 1,
+				"RT": 1371
+			},
+			{
+				"id": "shampoo_07",
+				"answer": 1,
+				"RT": 887
+			},
+			{
+				"id": "shampoo_08",
+				"answer": 1,
+				"RT": 3512
+			},
+			{
+				"id": "shampoo_09",
+				"answer": 1,
+				"RT": 1585
+			},
+			{
+				"id": "shampoo_10",
+				"answer": 0,
+				"RT": 594
+			},
+			{
+				"id": "shampoo_11",
+				"answer": 1,
+				"RT": 1348
+			},
+			{
+				"id": "shampoo_12",
+				"answer": 0,
+				"RT": 1000
+			},
+			{
+				"id": "shampoo_13",
+				"answer": 1,
+				"RT": 662
+			},
+			{
+				"id": "shampoo_14",
+				"answer": 0,
+				"RT": 809
+			},
+			{
+				"id": "shampoo_15",
+				"answer": 1,
+				"RT": 1349
+			},
+			{
+				"id": "shampoo_16",
+				"answer": 0,
+				"RT": 1066
+			}
+		]
+	},
+	"output": "1|2019-01-15_14:36:22|2019-01-15_14:29:25|古嘉军|0|22|大四|5|财务管理|1|1|brush_shampoo|2|61|1|1|1|1|ALTERNA-δD|16|8|9|5|7|7|9|6|9|9|1|1|3|3|2|1|2|1|1|1|1|1|1|1|1|1|0|1|0|1|0|1|0|0.75|2981|8683|1237|1664|842|1371|887|3512|1585|594|1348|1000|662|809|1349|1066|86|1|1|1|1|GOVINO-ωS|20|6|8|8|2|5|1|6|9|9|2|1|3|3|2|1|3|1|1|1|1|1|1|1|1|1|0|1|0|1|0|1|0|0.75|1854|5209|1045|2148|4060|2159|1854|4724|3351|14318|4735|4284|1934|1955|2216|2453|13719226679|记录被试购买行为"
+}

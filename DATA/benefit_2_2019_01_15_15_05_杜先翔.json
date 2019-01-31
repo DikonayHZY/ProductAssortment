@@ -1,0 +1,397 @@
+﻿{
+	"username": "杜先翔",
+	"gender": "1",
+	"age": "18",
+	"major": "智能科学与技术",
+	"grade": "大一",
+	"phone": "15756832567",
+	"condition": "benefit",
+	"order_number": 2,
+	"order_sign": "brush_shampoo",
+	"purpose": "探究一个人有无选择困难？",
+	"choice": {
+		"brush": {
+			"start": "2019-01-15_14:59:48",
+			"end": "2019-01-15_15:00:35",
+			"spend": 47,
+			"product": [
+				{
+					"rate": 0,
+					"GOVINO-αJ": 0,
+					"GOVINO-αH": 0,
+					"GOVINO-αG": 0,
+					"GOVINO-αD": 0,
+					"GOVINO-ωF": 0
+				},
+				{
+					"rate": 0,
+					"GOVINO-βD": 0,
+					"GOVINO-βH": 0,
+					"GOVINO-βJ": 0,
+					"GOVINO-βG": 0,
+					"GOVINO-ωK": 0
+				},
+				{
+					"rate": 1,
+					"GOVINO-γH": 1,
+					"GOVINO-ωN": 1,
+					"GOVINO-γJ": 1,
+					"GOVINO-γG": 1,
+					"GOVINO-γD": 1
+				},
+				{
+					"rate": 0,
+					"GOVINO-δD": 0,
+					"GOVINO-δH": 0,
+					"GOVINO-δG": 0,
+					"GOVINO-ωS": 0,
+					"GOVINO-δJ": 0
+				}
+			],
+			"choose": "GOVINO-γJ",
+			"choose_id": "18"
+		},
+		"shampoo": {
+			"start": "2019-01-15_15:05:07",
+			"end": "2019-01-15_15:05:30",
+			"spend": 23,
+			"product": [
+				{
+					"rate": 0,
+					"ALTERNA-βG": 0,
+					"ALTERNA-ωK": 0,
+					"ALTERNA-βJ": 0,
+					"ALTERNA-βH": 0,
+					"ALTERNA-βD": 0
+				},
+				{
+					"rate": 0,
+					"ALTERNA-αJ": 0,
+					"ALTERNA-αG": 0,
+					"ALTERNA-αH": 0,
+					"ALTERNA-ωF": 0,
+					"ALTERNA-αD": 0
+				},
+				{
+					"rate": 1,
+					"ALTERNA-γH": 1,
+					"ALTERNA-γD": 1,
+					"ALTERNA-γG": 1,
+					"ALTERNA-ωN": 1,
+					"ALTERNA-γJ": 1
+				},
+				{
+					"rate": 0.4,
+					"ALTERNA-δD": 0,
+					"ALTERNA-ωS": 0,
+					"ALTERNA-δG": 1,
+					"ALTERNA-δJ": 1,
+					"ALTERNA-δH": 0
+				}
+			],
+			"choose": "ALTERNA-δG",
+			"choose_id": "9"
+		}
+	},
+	"questions": {
+		"brush": [
+			{
+				"id": "construal_1",
+				"answer": 7
+			},
+			{
+				"id": "construal_2",
+				"answer": 7
+			},
+			{
+				"id": "construal_3",
+				"answer": 4
+			},
+			{
+				"id": "construal_4",
+				"answer": 2
+			},
+			{
+				"id": "construal_5",
+				"answer": 2
+			},
+			{
+				"id": "construal_6",
+				"answer": 1
+			},
+			{
+				"id": "similarity",
+				"answer": 6
+			},
+			{
+				"id": "variety_1",
+				"answer": 7
+			},
+			{
+				"id": "variety_2",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 2
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 1
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 1
+			}
+		],
+		"shampoo": [
+			{
+				"id": "construal_1",
+				"answer": 9
+			},
+			{
+				"id": "construal_2",
+				"answer": 7
+			},
+			{
+				"id": "construal_3",
+				"answer": 4
+			},
+			{
+				"id": "construal_4",
+				"answer": 4
+			},
+			{
+				"id": "construal_5",
+				"answer": 7
+			},
+			{
+				"id": "construal_6",
+				"answer": 4
+			},
+			{
+				"id": "shampoo7",
+				"answer": 5
+			},
+			{
+				"id": "shampoo8",
+				"answer": 7
+			},
+			{
+				"id": "shampoo9",
+				"answer": 6
+			},
+			{
+				"id": "shampoo10",
+				"answer": 2
+			},
+			{
+				"id": "shampoo11",
+				"answer": 2
+			},
+			{
+				"id": "shampoo12",
+				"answer": 2
+			},
+			{
+				"id": "shampoo13",
+				"answer": 2
+			},
+			{
+				"id": "shampoo14",
+				"answer": 2
+			},
+			{
+				"id": "shampoo15",
+				"answer": 1
+			},
+			{
+				"id": "shampoo16",
+				"answer": 3
+			}
+		]
+	},
+	"tests": {
+		"brush": [
+			{
+				"id": "brush_01",
+				"answer": 1,
+				"RT": 3014
+			},
+			{
+				"id": "brush_02",
+				"answer": 0,
+				"RT": 4072
+			},
+			{
+				"id": "brush_03",
+				"answer": 1,
+				"RT": 3577
+			},
+			{
+				"id": "brush_04",
+				"answer": 0,
+				"RT": 2215
+			},
+			{
+				"id": "brush_05",
+				"answer": 1,
+				"RT": 2733
+			},
+			{
+				"id": "brush_06",
+				"answer": 0,
+				"RT": 3283
+			},
+			{
+				"id": "brush_07",
+				"answer": 1,
+				"RT": 3407
+			},
+			{
+				"id": "brush_08",
+				"answer": 0,
+				"RT": 2542
+			},
+			{
+				"id": "brush_09",
+				"answer": 1,
+				"RT": 2743
+			},
+			{
+				"id": "brush_10",
+				"answer": 1,
+				"RT": 2227
+			},
+			{
+				"id": "brush_11",
+				"answer": 1,
+				"RT": 2125
+			},
+			{
+				"id": "brush_12",
+				"answer": 1,
+				"RT": 6614
+			},
+			{
+				"id": "brush_13",
+				"answer": 1,
+				"RT": 2553
+			},
+			{
+				"id": "brush_14",
+				"answer": 1,
+				"RT": 2846
+			},
+			{
+				"id": "brush_15",
+				"answer": 1,
+				"RT": 2181
+			},
+			{
+				"id": "brush_16",
+				"answer": 1,
+				"RT": 4072
+			}
+		],
+		"shampoo": [
+			{
+				"id": "shampoo_01",
+				"answer": 1,
+				"RT": 3464
+			},
+			{
+				"id": "shampoo_02",
+				"answer": 1,
+				"RT": 2519
+			},
+			{
+				"id": "shampoo_03",
+				"answer": 1,
+				"RT": 2193
+			},
+			{
+				"id": "shampoo_04",
+				"answer": 0,
+				"RT": 1991
+			},
+			{
+				"id": "shampoo_05",
+				"answer": 1,
+				"RT": 2124
+			},
+			{
+				"id": "shampoo_06",
+				"answer": 0,
+				"RT": 1709
+			},
+			{
+				"id": "shampoo_07",
+				"answer": 1,
+				"RT": 1315
+			},
+			{
+				"id": "shampoo_08",
+				"answer": 1,
+				"RT": 1855
+			},
+			{
+				"id": "shampoo_09",
+				"answer": 1,
+				"RT": 1709
+			},
+			{
+				"id": "shampoo_10",
+				"answer": 1,
+				"RT": 2147
+			},
+			{
+				"id": "shampoo_11",
+				"answer": 1,
+				"RT": 2981
+			},
+			{
+				"id": "shampoo_12",
+				"answer": 1,
+				"RT": 1585
+			},
+			{
+				"id": "shampoo_13",
+				"answer": 1,
+				"RT": 3170
+			},
+			{
+				"id": "shampoo_14",
+				"answer": 1,
+				"RT": 1484
+			},
+			{
+				"id": "shampoo_15",
+				"answer": 1,
+				"RT": 3137
+			},
+			{
+				"id": "shampoo_16",
+				"answer": 1,
+				"RT": 3711
+			}
+		]
+	},
+	"output": "1|2019-01-15_15:05:07|2019-01-15_14:59:48|杜先翔|1|18|大一|2|智能科学与技术|2|1|brush_shampoo|2|23|0|0|1|0.4|ALTERNA-δG|9|9|7|4|4|7|4|5|7|6|2|2|2|2|2|1|3|1|1|1|0|1|0|1|1|1|1|1|1|1|1|1|1|0.875|3464|2519|2193|1991|2124|1709|1315|1855|1709|2147|2981|1585|3170|1484|3137|3711|47|0|0|1|0|GOVINO-γJ|18|7|7|4|2|2|1|6|7|3|2|2|2|2|2|1|1|1|0|1|0|1|0|1|0|1|1|1|1|1|1|1|1|0.75|3014|4072|3577|2215|2733|3283|3407|2542|2743|2227|2125|6614|2553|2846|2181|4072|15756832567|探究一个人有无选择困难？"
+}

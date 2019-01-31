@@ -34,7 +34,7 @@ template_shampoo_TF1_example =`
 			</div>
 			<div style="width: 100%; height: 30%; display: flex; flex-direction: column; align-items: center; justify-content: space-around;">
 				<p style="line-height: 1.5; font-size: 18px;">例题所示的洗发水并没有在之前商品页面中出现过（没有出现过薰衣草味或者滋养发根的洗发水），因此请选择“否”。<br>
-				但所有的题目中提供的<strong>商品信息都是正确的</strong>，您只需要判断该商品是否出现过</p>
+				<span style="color: red;">但所有的题目中提供的<strong>商品信息都是正确的，没有误导信息</strong>，您只需要判断你是否见过该商品</span></p>
 				<a id="next_page" href="#" style="width: 380px; height: 40px; text-align: center; font-size: 26px;">按"空格"开始正式作答</a>
 			</div>			
 		</div>	
