@@ -7,15 +7,18 @@
     <script type="text/javascript" src="template_4.js"></script>
     <script type="text/javascript" src="template_5.js"></script>
     <script type="text/javascript" src="template_7.js"></script>
-    <script type="text/javascript" src="template_9.js"></script>    
+    <script type="text/javascript" src="template_9.js"></script>
+    <script type="text/javascript" src="template_9_example.js"></script>    
     <script type="text/javascript" src="template_9_dyh.js"></script>
     <script type="text/javascript" src="template_10.js"></script>
     <script type="text/javascript" src="page_test.js"></script>
     <script type="text/javascript" src="template_tea_TF1.js"></script>
     <script type="text/javascript" src="template_tea_TF2.js"></script>
+    <script type="text/javascript" src="template_shampoo_TF1_example.js"></script>
     <script type="text/javascript" src="template_shampoo_TF1.js"></script>
     <script type="text/javascript" src="template_shampoo_TF2.js"></script>
     <script type="text/javascript" src="template_brush_TF1.js"></script>
+    <script type="text/javascript" src="template_brush_TF1_example.js"></script>    
     <script type="text/javascript" src="template_brush_TF2.js"></script>    
     <script type="text/javascript">
         
@@ -24,12 +27,21 @@
         var age = "18";
         var major = "应用化学";
         var grade = "大一";
+        var grade_id = "2";
         var phone = "空";
         var purpose = "空";
         var condition = "benefit";            // "attribute"
+        var assortment = 0;
+        if(condition == "attribute"){
+            assortment = 1;
+        }else if(condition == "benefit"){
+            assortment = 2;
+        }
         var name_type = 1;
-        var order_number = 1;                   // 默认配置后面会改: 如果配置>0则强制指定, 否则根据url最后的数字指定, 如 xxx_2.html => order_number = 2
-        var order_sign = "tea_shampoo_brush";   // 跟随 order_number 修改
+        var output_order = ["tea","shampoo","brush"];   // 关键配置, 最后的输出顺序
+        var order_pages = ["shampoo","brush"];          // 关键配置, 后续页面跟随这个, 支持 tea, shampoo, brush
+        var order_number = 1;                           // 无需设置, 跟随order_page设定自动修改
+        var order_sign = "shampoo_brush";               // 无需设置, 跟随order_page设定自动修改
 
         console.log("order:", order_number);
         console.log("condition:", condition);
@@ -39,6 +51,10 @@
             "红茶": "#CA6931",
             "青茶": "#B27511",
             "花茶": "#CE6E60",
+            "减肥瘦身": "#CE6E60",
+            "舒缓压力": "#CE6E60",
+            "保健养生": "#CE6E60",
+            "美容养颜": "#CE6E60",
         }
 
 	    var config_tea = {
@@ -110,30 +126,30 @@
         var choose_tea =  {
             "current": 0,
             "names": [
-               "雪水云绿",
-               "正山小种",
-               "东方美人",
-               "茉莉花茶",
+                "雪水云绿",
+                "正山小种",
+                "东方美人",
+                "茉莉花茶",
             ]
         };
 
 	    var question_tea = {
             "questions":[
-               {"id":"tea2", "template": template_9, "content":"李明正在考虑周末去拜访一个朋友。他去拜访的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea3", "template": template_9, "content":"小红正在考虑给自己买一双新鞋。她买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea4", "template": template_9, "content":"小张正在查看他的邮件。他收到垃圾邮件的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea5", "template": template_9, "content":"小郭正在考虑是否要养一只宠物。他养宠物可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea6", "template": template_9, "content":"小杨正在参加公司年会的抽奖活动。他抽中大奖可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"tea7", "template": template_7, "content":"总的来说，你认为御茗阁茶叶目录中的茶叶之间有多相似？", "left": "完全不相似", "right": "非常相似"},
-               {"id":"tea8", "template": template_9_dyh, "content":"御茗阁为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea9", "template": template_9_dyh, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款茶叶", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea11", "template": template_4, "content":"我感觉完成茶叶选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea12", "template": template_4, "content":"我感觉完成茶叶选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea13", "template": template_4, "content":"我感觉完成茶叶选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea14", "template": template_4, "content":"我感觉完成茶叶选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea15", "template": template_4, "content":"我了解御茗阁这个品牌", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"tea16", "template": template_4, "content":"我了解茶叶知识", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"tea2", "example": 1, "template": template_9_example, "content":"例题：李明正在考虑周末去拜访一个朋友。他去拜访的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea3", "example": 0, "template": template_9, "content":"小红正在考虑给自己买一双新鞋。她买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea4", "example": 0, "template": template_9, "content":"小张正在查看他的邮件。他收到垃圾邮件的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea5", "example": 0, "template": template_9, "content":"小郭正在考虑是否要养一只宠物。他养宠物可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea6", "example": 0, "template": template_9, "content":"小杨正在参加公司年会的抽奖活动。他抽中大奖可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"tea7", "example": 0, "template": template_7, "content":"总的来说，你认为御茗阁茶叶目录中的茶叶之间有多相似？", "left": "完全不相似", "right": "非常相似"},
+                {"id":"tea8", "example": 0, "template": template_9_dyh, "content":"御茗阁为我提供了多样化的选择", "left": "非常不符合", "right": "非常符合"},
+                {"id":"tea9", "example": 0, "template": template_9_dyh, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不符合", "right": "非常符合"},
+                {"id":"tea10", "example": 0, "template": template_4, "content":"我感觉难以挑选出自己偏好的一款茶叶", "left": "非常不符合", "right": "非常符合"},
+                {"id":"tea11", "example": 0, "template": template_4, "content":"我感觉完成茶叶选择的任务是困难的", "left": "非常不符合", "right": "非常符合"},
+                {"id":"tea12", "example": 0, "template": template_4, "content":"我感觉完成茶叶选择的任务需要耗费精力", "left": "非常不符合", "right": "非常符合"},
+                {"id":"tea13", "example": 0, "template": template_4, "content":"我感觉完成茶叶选择的任务需要进行较多的思考", "left": "非常不符合", "right": "非常符合"},
+                {"id":"tea14", "example": 0, "template": template_4, "content":"我感觉完成茶叶选择的任务需要花费了较长的时间", "left": "非常不符合", "right": "非常符合"},
+                {"id":"tea15", "example": 0, "template": template_4, "content":"我了解御茗阁这个品牌", "left": "非常不符合", "right": "非常符合"},
+                {"id":"tea16", "example": 0, "template": template_4, "content":"我了解茶叶知识", "left": "非常不符合", "right": "非常符合"},
             ],
         };
 
@@ -141,93 +157,96 @@
             // 问卷的第一张控件, 图片: TF_pic1, 名称 TF_name1, TF_benefit1, TF_attribute1,
             "tests":[
                 [
-                    {"id":"tea_1", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                    {"id":"tea_00", "example": 1, "template": template_tea_TF1, "content":"例题：下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
                             {"src":"../resource/tea/千岛玉叶.JPG", "name":"千岛玉叶", "benefit":"美容养颜", "attribute":"绿茶"},
                         ],
                     },
-                    {"id":"tea_2", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
+                ],
+                [
+                    {"id":"tea_01", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/千岛玉叶.JPG", "name":"千岛玉叶", "benefit":"美容养颜", "attribute":"绿茶"},
+                        ],
+                    },
+                    {"id":"tea_02", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
                             {"src":"../resource/tea/莲心绿茶.JPG", "name":"莲心绿茶", "benefit":"保健养生", "attribute":"绿茶"},
                         ],
                     },
-                    {"id":"tea_3", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                    {"id":"tea_03", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
                             {"src":"../resource/tea/正山小种.JPG", "name":"正山小种", "benefit":"保健养生", "attribute":"红茶"},
                         ],
                     },
-                    {"id":"tea_4", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
+                    {"id":"tea_04", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
                             {"src":"../resource/tea/银骏眉.JPG", "name":"银骏眉", "benefit":"舒缓压力", "attribute":"红茶"},
                         ],
                     },
-                    {"id":"tea_5", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                    {"id":"tea_05", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
                             {"src":"../resource/tea/永春佛手.JPG", "name":"永春佛手", "benefit":"舒缓压力", "attribute":"青茶"},
                         ],
                     },
-                    {"id":"tea_6", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
+                    {"id":"tea_06", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
                             {"src":"../resource/tea/武夷大红袍.JPG", "name":"武夷大红袍", "benefit":"美容养颜", "attribute":"青茶"},
                         ],
                     },
-                    {"id":"tea_7", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                    {"id":"tea_07", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
                             {"src":"../resource/tea/苦丁茶.JPG", "name":"苦丁茶", "benefit":"减肥瘦身", "attribute":"花茶"},
                         ],
                     },
-                    {"id":"tea_8", "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
+                    {"id":"tea_08", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
                             {"src":"../resource/tea/白芽奇兰.JPG", "name":"白芽奇兰", "benefit":"舒缓压力", "attribute":"花茶"},
                         ],
                     },
-                ],
-
-
-                [
-                    {"id":"tea_9", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                    {"id":"tea_09", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
                         "pictures":[
                             {"src":"../resource/tea/六安瓜片.JPG", "name":"六安瓜片", "benefit":"减肥瘦身", "attribute":"绿茶"},
                             {"src":"../resource/tea/碧螺春.JPG", "name":"碧螺春", "benefit":"保健养生", "attribute":"绿茶"},
                         ],
                     },
-                    {"id":"tea_10", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                    {"id":"tea_10", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
                         "pictures":[
                             {"src":"../resource/tea/信阳毛尖.JPG", "name":"信阳毛尖", "benefit":"减肥瘦身", "attribute":"绿茶"},
                             {"src":"../resource/tea/狗牯脑茶.JPG", "name":"狗牯脑茶", "benefit":"保健养生", "attribute":"绿茶"},
                         ],
                     },
-                    {"id":"tea_11", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                    {"id":"tea_11", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
                         "pictures":[
                             {"src":"../resource/tea/信阳红.JPG", "name":"信阳红", "benefit":"保健养生", "attribute":"红茶"},
                             {"src":"../resource/tea/荔枝红.JPG", "name":"荔枝红", "benefit":"舒缓压力", "attribute":"红茶"},
                         ],
                     },
-                    {"id":"tea_12", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                    {"id":"tea_12", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
                         "pictures":[
                             {"src":"../resource/tea/九曲红梅.JPG", "name":"九曲红梅", "benefit":"舒缓压力", "attribute":"红茶"},
                             {"src":"../resource/tea/政和工夫.JPG", "name":"政和工夫", "benefit":"舒缓压力", "attribute":"红茶"},
                         ],
                     },
-                    {"id":"tea_13", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                    {"id":"tea_13", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
                         "pictures":[
                             {"src":"../resource/tea/水金龟.JPG", "name":"水金龟", "benefit":"舒缓压力", "attribute":"青茶"},
                             {"src":"../resource/tea/白鸡冠.JPG", "name":"白鸡冠", "benefit":"舒缓压力", "attribute":"青茶"},
                         ],
                     },
-                    {"id":"tea_14", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                    {"id":"tea_14", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
                         "pictures":[
                             {"src":"../resource/tea/凤凰水仙.JPG", "name":"凤凰水仙", "benefit":"舒缓压力", "attribute":"青茶"},
                             {"src":"../resource/tea/凤凰单枞.JPG", "name":"凤凰单枞", "benefit":"美容养颜", "attribute":"青茶"},
                         ],
                     },
-                    {"id":"tea_15", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                    {"id":"tea_15", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
                         "pictures":[
                             {"src":"../resource/tea/黄山贡菊.JPG", "name":"黄山贡菊", "benefit":"美容养颜", "attribute":"花茶"},
                             {"src":"../resource/tea/武夷肉桂.JPG", "name":"武夷肉桂", "benefit":"美容养颜", "attribute":"花茶"},
                         ],
                     },
-                    {"id":"tea_16", "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                    {"id":"tea_16", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
                         "pictures":[
                             {"src":"../resource/tea/径山茶.JPG", "name":"径山茶", "benefit":"美容养颜", "attribute":"花茶"},
                             {"src":"../resource/tea/杭白菊.JPG", "name":"杭白菊", "benefit":"保健养生", "attribute":"花茶"},
@@ -284,21 +303,23 @@
 
         var question_shampoo = {
             "questions":[
-               {"id":"shampoo2", "template": template_9, "content":"小王正在考虑是否参加一个美食烹饪培训课。他报名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"shampoo3", "template": template_9, "content":"小李正在考虑买一台新笔记本电脑。他买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"shampoo4", "template": template_9, "content":"小陈正在等高铁。这趟高铁晚点的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"shampoo5", "template": template_9, "content":"小张打算去超市买洗衣液。这件商品降价的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"shampoo6", "template": template_9, "content":"小刘每天开车去上班。她的车被撞凹的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"shampoo7", "template": template_7, "content":"总的来说，你认为ALTERNA提供的这些洗发水产品之间有多相似？", "left": "完全不相似", "right": "非常相似"},
-               {"id":"shampoo8", "template": template_9, "content":"ALTERNA为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo9", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo10", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款洗发水", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo11", "template": template_4, "content":"我感觉完成洗发水选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo12", "template": template_4, "content":"我感觉完成洗发水选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo13", "template": template_4, "content":"我感觉完成洗发水选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo14", "template": template_4, "content":"我感觉完成洗发水选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo15", "template": template_4, "content":"我了解ALTERNA这个品牌", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"shampoo16", "template": template_4, "content":"我了解洗发水知识", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"construal_0", "example": 1, "template": template_9_example, "content":"例题：小明买了一张彩票，他中奖的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_1", "example": 0, "template": template_9, "content":"Jeff正在考虑周末去拜访一个朋友。他去拜访的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_2", "example": 0, "template": template_9, "content":"Mary正在考虑给自己买一双新鞋。她买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_3", "example": 0, "template": template_9, "content":"Diko正在查看某一天的天气预报。那天下雨的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_4", "example": 0, "template": template_9, "content":"Akemy打算去超市买洗发水。该商品降价的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_5", "example": 0, "template": template_9, "content":"Andy正在决定要不要举办一个新居乔迁宴会。她举办的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_6", "example": 0, "template": template_9, "content":"Rob主修哲学，正在考虑上法律学院。她向法律学院发出申请的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"shampoo7", "example": 0, "template": template_7, "content":"总的来说，你认为ALTERNA提供的这些洗发水产品之间有多相似？", "left": "完全不相似", "right": "非常相似"},
+                {"id":"shampoo8", "example": 0, "template": template_9_dyh, "content":"ALTERNA为我提供了多样化的选择", "left": "非常不符合", "right": "非常符合"},
+                {"id":"shampoo9", "example": 0, "template": template_9_dyh, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不符合", "right": "非常符合"},
+                {"id":"shampoo10", "example": 0, "template": template_4, "content":"我感觉难以挑选出自己偏好的一款洗发水", "left": "非常不符合", "right": "非常符合"},
+                {"id":"shampoo11", "example": 0, "template": template_4, "content":"我感觉完成洗发水选择的任务是困难的", "left": "非常不符合", "right": "非常符合"},
+                {"id":"shampoo12", "example": 0, "template": template_4, "content":"我感觉完成洗发水选择的任务需要耗费精力", "left": "非常不符合", "right": "非常符合"},
+                {"id":"shampoo13", "example": 0, "template": template_4, "content":"我感觉完成洗发水选择的任务需要进行较多的思考", "left": "非常不符合", "right": "非常符合"},
+                {"id":"shampoo14", "example": 0, "template": template_4, "content":"我感觉完成洗发水选择的任务需要花费了较长的时间", "left": "非常不符合", "right": "非常符合"},
+                {"id":"shampoo15", "example": 0, "template": template_4, "content":"我了解ALTERNA这个品牌", "left": "非常不符合", "right": "非常符合"},
+                {"id":"shampoo16", "example": 0, "template": template_4, "content":"我了解洗发水知识", "left": "非常不符合", "right": "非常符合"},
             ],
         };
 
@@ -306,97 +327,93 @@
             // 问卷的第一张控件, 图片: TF_pic1, 名称 TF_name1, TF_benefit1, TF_attribute1,
             "tests":[
                 [
-                    {"id":"shampoo_1", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
+                    {"id":"shampoo_00", "example": 1, "template": template_shampoo_TF1_example, "content":"例题：下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-elegant.png", "name":"ALTERNA-elegant", "benefit":"滋养发根", "attribute":"薰衣草"},
+                        ],
+                    },
+                ],
+                [
+                    {"id":"shampoo_01", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
                             {"src":"../resource/shampoo/ALTERNA-αD.png", "name":"ALTERNA-αD", "benefit":"丝滑水润", "attribute":"海洋味"},
                         ],
-                    },                                         
-                    {"id":"shampoo_2", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
+                    },
+                    {"id":"shampoo_02", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss2/ALTERNA-μD.png", "name":"ALTERNA-μD", "benefit":"丰盈蓬松", "attribute":"柠檬香"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-αB.png", "name":"ALTERNA-αB", "benefit":"防晒锁色", "attribute":"阳光味"},
                         ],
                     },
-                    {"id":"shampoo_3", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
+                    {"id":"shampoo_03", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
                             {"src":"../resource/shampoo/ALTERNA-βG.png", "name":"ALTERNA-βG", "benefit":"防晒锁色", "attribute":"柠檬香"},
                         ],
                     },
-                    {"id":"shampoo_4", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
+                    {"id":"shampoo_04", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss2/ALTERNA-μG.png", "name":"ALTERNA-μG", "benefit":"改善毛躁", "attribute":"迷迭香"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-βB.png", "name":"ALTERNA-βB", "benefit":"清爽控油", "attribute":"甜橙香"},
                         ],
                     }, 
-                    {"id":"shampoo_5", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
+                    {"id":"shampoo_05", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
                             {"src":"../resource/shampoo/ALTERNA-γH.png", "name":"ALTERNA-γH", "benefit":"清爽控油", "attribute":"迷迭香"},
                         ],
                     },
-                    {"id":"shampoo_6", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
+                    {"id":"shampoo_06", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss2/ALTERNA-μH.png", "name":"ALTERNA-μH", "benefit":"祛屑止痒", "attribute":"松木香"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-γB.png", "name":"ALTERNA-γB", "benefit":"强效修护", "attribute":"百里香"},
                         ],
                     }, 
-                    {"id":"shampoo_7", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
+                    {"id":"shampoo_07", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
                             {"src":"../resource/shampoo/ALTERNA-δJ.png", "name":"ALTERNA-δJ", "benefit":"强效修护", "attribute":"松木香"},
                         ],
                     },
-                    {"id":"shampoo_8", "template": template_shampoo_TF1, "content":"下图所示的洗发水是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
+                    {"id":"shampoo_08", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss2/ALTERNA-μJ.png", "name":"ALTERNA-μJ", "benefit":"滋养头皮", "attribute":"海洋味"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-δB.png", "name":"ALTERNA-δB", "benefit":"丝滑水润", "attribute":"樟树香"},
                         ],
                     },
-                ],
-
-                [
-                    {"id":"shampoo_9", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                    {"id":"shampoo_09", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/shampoo/ALTERNA-βD.png", "name":"ALTERNA-βD", "benefit":"丝滑水润", "attribute":"柠檬香"},
-                            {"src":"../resource/shampoo/miss2/ALTERNA-θD.png", "name":"ALTERNA-θD", "benefit":"防脱固发", "attribute":"松木香"},
+                            {"src":"../resource/shampoo/ALTERNA-αG.png", "name":"ALTERNA-αG", "benefit":"防晒锁色", "attribute":"海洋味"},
                         ],
                     },
-                    {"id":"shampoo_10", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                    {"id":"shampoo_10", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss2/ALTERNA-εD.png", "name":"ALTERNA-εD", "benefit":"烫染护理", "attribute":"海洋味"},
-                            {"src":"../resource/shampoo/ALTERNA-γD.png", "name":"ALTERNA-γD", "benefit":"丝滑水润", "attribute":"迷迭香"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-αP.png", "name":"ALTERNA-αP", "benefit":"丰盈蓬松", "attribute":"海洋味"},
                         ],
                     },
-                    {"id":"shampoo_11", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                    {"id":"shampoo_11", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/shampoo/ALTERNA-γG.png", "name":"ALTERNA-γG", "benefit":"防晒锁色", "attribute":"迷迭香"},
-                            {"src":"../resource/shampoo/miss2/ALTERNA-θG.png", "name":"ALTERNA-θG", "benefit":"强根健发", "attribute":"海洋味"},
+                            {"src":"../resource/shampoo/ALTERNA-βH.png", "name":"ALTERNA-βH", "benefit":"清爽控油", "attribute":"柠檬香"},
                         ],
                     },
-                    {"id":"shampoo_12", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                    {"id":"shampoo_12", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss2/ALTERNA-εG.png", "name":"ALTERNA-εG", "benefit":"柔顺亮泽", "attribute":"柠檬香"},
-                            {"src":"../resource/shampoo/ALTERNA-δG.png", "name":"ALTERNA-δG", "benefit":"防晒锁色", "attribute":"松木香"},
-                        ],
-                    },     
-                    {"id":"shampoo_13", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
-                        "pictures":[
-                            {"src":"../resource/shampoo/ALTERNA-δH.png", "name":"ALTERNA-δH", "benefit":"清爽控油", "attribute":"松木香"},
-                            {"src":"../resource/shampoo/miss2/ALTERNA-θH.png", "name":"ALTERNA-θH", "benefit":"头皮舒缓", "attribute":"柠檬香"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-βY.png", "name":"ALTERNA-βY", "benefit":"改善毛躁", "attribute":"柠檬香"},
                         ],
                     },
-                    {"id":"shampoo_14", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                    {"id":"shampoo_13", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss2/ALTERNA-εH.png", "name":"ALTERNA-εH", "benefit":"烫染修护", "attribute":"迷迭香"},
-                            {"src":"../resource/shampoo/ALTERNA-αH.png", "name":"ALTERNA-αH", "benefit":"清爽控油", "attribute":"海洋味"},
+                            {"src":"../resource/shampoo/ALTERNA-γJ.png", "name":"ALTERNA-γJ", "benefit":"强效修护", "attribute":"迷迭香"},
                         ],
                     },
-                    {"id":"shampoo_15", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                    {"id":"shampoo_14", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/ALTERNA-αJ.png", "name":"ALTERNA-αJ", "benefit":"强效修护", "attribute":"海洋味"},
-                            {"src":"../resource/shampoo/miss2/ALTERNA-θJ.png", "name":"ALTERNA-θJ", "benefit":"改善毛躁", "attribute":"迷迭香"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-γP.png", "name":"ALTERNA-γP", "benefit":"防脱固发", "attribute":"迷迭香"},
+                        ],
+                    },                    
+                    {"id":"shampoo_15", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/shampoo/ALTERNA-δD.png", "name":"ALTERNA-δD", "benefit":"丝滑水润", "attribute":"松木香"},
                         ],
                     },
-                    {"id":"shampoo_16", "template": template_shampoo_TF2, "content":"下图所示的2种洗发水中，<strong>哪一种洗发水</strong>在洗发水目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                    {"id":"shampoo_16", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss2/ALTERNA-εJ.png", "name":"ALTERNA-εJ", "benefit":"温和清洁", "attribute":"松木香"},
-                            {"src":"../resource/shampoo/ALTERNA-βJ.png", "name":"ALTERNA-βJ", "benefit":"强效修护", "attribute":"柠檬香"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-δP.png", "name":"ALTERNA-δP", "benefit":"柔顺亮泽", "attribute":"松木香"},
                         ],
-                    },
+                    },  
                 ],
             ],
         };
@@ -437,31 +454,33 @@
         var choose_brush =  {
             "current": 0,
             "names": [
-               "GOVINO-αD",
-               "GOVINO-βG",
-               "GOVINO-γH",
-               "GOVINO-δJ",
+                "GOVINO-αD",
+                "GOVINO-βG",
+                "GOVINO-γH",
+                "GOVINO-δJ",
             ]
         };
 
 
         var question_brush = {
             "questions":[
-                {"id":"brush1", "template": template_9, "content":"小兰主修哲学，正在考虑上法律学院。她申请的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"brush2", "template": template_9, "content":"小凡正在决定要不要举办一个新居乔迁宴会。她举办的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"brush3", "template": template_9, "content":"小王打算进行一次全国公路越野旅行。他途中遇到老乡的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"brush4", "template": template_9, "content":"小陈下周六有一门辅修课，该次上课老师点名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"brush5", "template": template_9, "content":"小杨走进一家服装店。他购买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-               {"id":"brush6", "template": template_7, "content":"总的来说，你认为GOVINO提供的这些电动牙刷之间有多相似？", "left": "完全不相似", "right": "非常相似"},
-               {"id":"brush7", "template": template_9, "content":"GOVINO为我提供了多样化的选择", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"brush8", "template": template_9, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"brush9", "template": template_4, "content":"我感觉难以挑选出自己偏好的一款电动牙刷", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"brush10", "template": template_4, "content":"我感觉完成电动牙刷选择的任务是困难的", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"brush11", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要耗费精力", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"brush12", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要进行较多的思考", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"brush13", "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要花费了较长的时间", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"brush14", "template": template_4, "content":"我了解GOVINO这个品牌", "left": "非常不赞同", "right": "非常赞同"},
-               {"id":"brush15", "template": template_4, "content":"我了解GOVINO知识", "left": "非常不赞同", "right": "非常赞同"},
+                {"id":"construal_0", "example": 1, "template": template_9_example, "content":"例题：小明买了一张彩票，他中奖的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_1", "example": 0, "template": template_9, "content":"Lee正在考虑是否参加一个美食烹饪培训课。他报名的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_2", "example": 0, "template": template_9, "content":"Charley正在考虑给自己买一件外套。他买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_3", "example": 0, "template": template_9, "content":"Nube刚刚收到一条短信。她收到垃圾短信的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_4", "example": 0, "template": template_9, "content":"Alex打算进行一次全国公路越野旅行。他途中遇到老乡的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_5", "example": 0, "template": template_9, "content":"Gataka正在候机。这趟飞机晚点的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_6", "example": 0, "template": template_9, "content":"Kaila每天自己开车上下班。她的车发生碰撞的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"similarity", "example": 0, "template": template_7, "content":"总的来说，你认为GOVINO提供的这些电动牙刷之间有多相似？", "left": "完全不相似", "right": "非常相似"},
+                {"id":"variety_1", "example": 0, "template": template_9_dyh, "content":"GOVINO为我提供了多样化的选择", "left": "非常不符合", "right": "非常符合"},
+                {"id":"variety_2", "example": 0, "template": template_9_dyh, "content":"在完成选择任务之时, 我感觉有较多的可选产品", "left": "非常不符合", "right": "非常符合"},
+                {"id":"difficulty_1", "example": 0, "template": template_4, "content":"我感觉难以挑选出自己偏好的一款电动牙刷", "left": "非常不符合", "right": "非常符合"},
+                {"id":"difficulty_2", "example": 0, "template": template_4, "content":"我感觉完成电动牙刷选择的任务是困难的", "left": "非常不符合", "right": "非常符合"},
+                {"id":"difficulty_3", "example": 0, "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要耗费精力", "left": "非常不符合", "right": "非常符合"},
+                {"id":"difficulty_4", "example": 0, "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要进行较多的思考", "left": "非常不符合", "right": "非常符合"},
+                {"id":"difficulty_5", "example": 0, "template": template_4, "content":"我感觉完成电动牙刷选择的任务需要花费了较长的时间", "left": "非常不符合", "right": "非常符合"},
+                {"id":"brandFamiliarity", "example": 0, "template": template_4, "content":"我了解GOVINO这个品牌", "left": "非常不符合", "right": "非常符合"},
+                {"id":"productFamiliarity", "example": 0, "template": template_4, "content":"我了解关于电动牙刷的知识", "left": "非常不符合", "right": "非常符合"},
             ],
 
         };
@@ -470,97 +489,93 @@
             // 问卷的第一张控件, 图片: TF_pic1, 名称 TF_name1, TF_benefit1, TF_attribute1,
             "tests":[
                 [
-                    {"id":"brush_1", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
+                    {"id":"brush_00", "example": 1, "template": template_brush_TF1_example, "content":"例题：下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/brush/GOVINO-αJ.png", "name":"GOVINO-αJ", "benefit":"杀菌祛斑", "attribute":"电动喷雾型"},
-                        ],
-                    },                                         
-                    {"id":"brush_2", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
-                        "pictures":[
-                            {"src":"../resource/brush/GOVINO-αB.png", "name":"GOVINO-αB", "benefit":"抗敏护龈", "attribute":"电动喷雾型"},
-                        ],
-                    },
-                    {"id":"brush_3", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
-                        "pictures":[
-                            {"src":"../resource/brush/GOVINO-βS.png", "name":"GOVINO-βS", "benefit":"健康清洁", "attribute":"声波振动型"},
-                        ],
-                    },
-                    {"id":"brush_4", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
-                        "pictures":[
-                            {"src":"../resource/brush/GOVINO-βB.png", "name":"GOVINO-βB", "benefit":"深层美白", "attribute":"声波振动型"},
-                        ],
-                    }, 
-                    {"id":"brush_5", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
-                        "pictures":[
-                            {"src":"../resource/brush/GOVINO-γD.png", "name":"GOVINO-γD", "benefit":"抗敏护龈", "attribute":"机械转动型"},
-                        ],
-                    },
-                    {"id":"brush_6", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
-                        "pictures":[
-                            {"src":"../resource/brush/GOVINO-γY.png", "name":"GOVINO-γY", "benefit":"杀菌祛斑", "attribute":"机械转动型"},
-                        ],
-                    }, 
-                    {"id":"brush_7", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
-                        "pictures":[
-                            {"src":"../resource/brush/GOVINO-δH.png", "name":"GOVINO-δH", "benefit":"深层美白", "attribute":"超声波型"},
-                        ],
-                    },
-                    {"id":"brush_8", "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
-                        "pictures":[
-                            {"src":"../resource/brush/GOVINO-δW.png", "name":"GOVINO-δW", "benefit":"健康清洁", "attribute":"超声波型"},
+                            {"src":"../resource/brush/GOVINO-αJ.png", "name":"GOVINO-αJ", "benefit":"牙龈按摩", "attribute":"智能变频型"},
                         ],
                     },
                 ],
-
                 [
-                    {"id":"brush_9", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                    {"id":"brush_01", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/brush/GOVINO-αD.png", "name":"GOVINO-αD", "benefit":"抗敏护龈", "attribute":"电动喷雾型"},
-                            {"src":"../resource/brush/GOVINO-αA.png", "name":"GOVINO-αA", "benefit":"健康清洁", "attribute":"电动喷雾型"},
+                            {"src":"../resource/brush/GOVINO-αD.png", "name":"GOVINO-αD", "benefit":"健康清洁", "attribute":"电动喷雾型"},
                         ],
                     },
-                    {"id":"brush_10", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                    {"id":"brush_02", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/brush/GOVINO-αW.png", "name":"GOVINO-αW", "benefit":"杀菌祛斑", "attribute":"电动喷雾型"},
-                            {"src":"../resource/brush/GOVINO-αS.png", "name":"GOVINO-αS", "benefit":"健康清洁", "attribute":"电动喷雾型"},
+                            {"src":"../resource/brush/miss1/GOVINO-αB.png", "name":"GOVINO-αB", "benefit":"抗敏护龈", "attribute":"蓝牙充电型"},
                         ],
                     },
-                    {"id":"brush_11", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                    {"id":"brush_03", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/brush/GOVINO-βJ.png", "name":"GOVINO-βJ", "benefit":"杀菌祛斑", "attribute":"声波振动型"},
-                            {"src":"../resource/brush/GOVINO-βY.png", "name":"GOVINO-βY", "benefit":"抗敏护龈", "attribute":"声波振动型"},
+                            {"src":"../resource/brush/GOVINO-βG.png", "name":"GOVINO-βG", "benefit":"抗敏护龈", "attribute":"声波振动型"},
                         ],
                     },
-                    {"id":"brush_12", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                    {"id":"brush_04", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/brush/GOVINO-βW.png", "name":"GOVINO-βW", "benefit":"深层美白", "attribute":"声波振动型"},
-                            {"src":"../resource/brush/GOVINO-βG.png", "name":"GOVINO-βG", "benefit":"深层美白", "attribute":"声波振动型"},
+                            {"src":"../resource/brush/miss1/GOVINO-βB.png", "name":"GOVINO-βB", "benefit":"杀菌祛斑", "attribute":"无级变频型"},
                         ],
-                    },     
-                    {"id":"brush_13", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                    }, 
+                    {"id":"brush_05", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/brush/GOVINO-γJ.png", "name":"GOVINO-γJ", "benefit":"杀菌祛斑", "attribute":"机械转动型"},
-                            {"src":"../resource/brush/GOVINO-γA.png", "name":"GOVINO-γA", "benefit":"健康清洁", "attribute":"机械转动型"},
+                            {"src":"../resource/brush/GOVINO-γH.png", "name":"GOVINO-γH", "benefit":"杀菌祛斑", "attribute":"机械转动型"},
                         ],
                     },
-                    {"id":"brush_14", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                    {"id":"brush_06", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/brush/GOVINO-γB.png", "name":"GOVINO-γB", "benefit":"抗敏护龈", "attribute":"机械转动型"},
-                            {"src":"../resource/brush/GOVINO-γS.png", "name":"GOVINO-γS", "benefit":"健康清洁", "attribute":"机械转动型"},
+                            {"src":"../resource/brush/miss1/GOVINO-γB.png", "name":"GOVINO-γB", "benefit":"深层美白", "attribute":"2D声波型"},
+                        ],
+                    }, 
+                    {"id":"brush_07", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-δJ.png", "name":"GOVINO-δJ", "benefit":"深层美白", "attribute":"超声波型"},
                         ],
                     },
-                    {"id":"brush_15", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
+                    {"id":"brush_08", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/brush/GOVINO-δG.png", "name":"GOVINO-δG", "benefit":"深层美白", "attribute":"超声波型"},
-                            {"src":"../resource/brush/GOVINO-δY.png", "name":"GOVINO-δY", "benefit":"杀菌祛斑", "attribute":"超声波型"},
+                            {"src":"../resource/brush/miss1/GOVINO-δB.png", "name":"GOVINO-δB", "benefit":"健康清洁", "attribute":"3D声波型"},
                         ],
                     },
-                    {"id":"brush_16", "template": template_brush_TF2, "content":"下图所示的2种牙刷中，<strong>哪一种牙刷</strong>在牙刷目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
+                    {"id":"brush_09", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/brush/GOVINO-δA.png", "name":"GOVINO-δA", "benefit":"深层美白", "attribute":"超声波型"},
-                            {"src":"../resource/brush/GOVINO-δJ.png", "name":"GOVINO-δJ", "benefit":"杀菌祛斑", "attribute":"超声波型"},
+                            {"src":"../resource/brush/GOVINO-αG.png", "name":"GOVINO-αG", "benefit":"抗敏护龈", "attribute":"电动喷雾型"},
                         ],
                     },
+                    {"id":"brush_10", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/brush/miss1/GOVINO-αP.png", "name":"GOVINO-αP", "benefit":"柔软护龈", "attribute":"电动喷雾型"},
+                        ],
+                    },
+                    {"id":"brush_11", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-βH.png", "name":"GOVINO-βH", "benefit":"杀菌祛斑", "attribute":"声波振动型"},
+                        ],
+                    },
+                    {"id":"brush_12", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/brush/miss1/GOVINO-βY.png", "name":"GOVINO-βY", "benefit":"精准去渍", "attribute":"声波振动型"},
+                        ],
+                    },
+                    {"id":"brush_13", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-γJ.png", "name":"GOVINO-γJ", "benefit":"深层美白", "attribute":"机械转动型"},
+                        ],
+                    },
+                    {"id":"brush_14", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/brush/miss1/GOVINO-γP.png", "name":"GOVINO-γP", "benefit":"强力清洁", "attribute":"机械转动型"},
+                        ],
+                    },                    
+                    {"id":"brush_15", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/brush/GOVINO-δD.png", "name":"GOVINO-δD", "benefit":"健康清洁", "attribute":"超声波型"},
+                        ],
+                    },
+                    {"id":"brush_16", "example": 0, "template": template_brush_TF1, "content":"下图所示的牙刷是否在牙刷目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/brush/miss1/GOVINO-δP.png", "name":"GOVINO-δP", "benefit":"防水静音", "attribute":"超声波型"},
+                        ],
+                    },  
                 ],
             ],
         };
@@ -1218,7 +1233,43 @@
         60: {"next":60, "html":page_phrase_transition, "wait":10000, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
     };
 
-    function generate_pages(first, second, third){
+    function generate_pages_2(first, second){
+        var pages = {
+            1: {"next":3, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
+            3: {"next":10, "html":page_teach_preview, "wait":10, "auto":0, "before_init":null, "after_init":page_preview_after_init},
+            10: {"next":10, "html":page_teach_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_menu_after_init},
+            11: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product1_after_init},
+            12: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product2_after_init},
+            13: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product3_after_init},
+            40: {"next":40, "html":page_teach_transition, "wait":1, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+        };
+        var max_index = 0;
+        var base = 1000;
+        for(var item in first){
+            item = parseInt(item)
+            pages[item + base] = first[item];
+            pages[item + base]["next"] += base;
+            max_index = Math.max(max_index, item + base);
+        }
+        console.log(pages)
+        base = 2000;
+        for(var item in second){
+            item = parseInt(item)
+            pages[item + base] = second[item];
+            pages[item + base]["next"] += base;
+            max_index = Math.max(max_index, item + base);
+        }
+        console.log(pages)
+        // 找到最后一项, 最大一项
+
+        pages[max_index]["html"] = page_final_submit;
+        pages[max_index]["after_init"] = page_final_submit_after_init;
+        console.log("max index:", max_index);
+        console.log(pages)
+        return pages;
+    }
+
+    function generate_pages_3(first, second, third){
         var pages = {
             1: {"next":3, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
             3: {"next":10, "html":page_teach_preview, "wait":10, "auto":0, "before_init":null, "after_init":page_preview_after_init},
@@ -1302,46 +1353,68 @@
     };
 
 
-    function reset_config(number) {
-        console.log("number:", number)
-        if(number == 1){
-            config["pages"] = generate_pages(page_tea_item, page_shampoo_item, page_brush_item);
-            order_number = 1;
-            order_sign = "tea_shampoo_brush";
-            console.log("page_tea_item, page_shampoo_item, page_brush_item", order_number, order_sign)
-        }else if (number == 2){
-            config["pages"] = generate_pages(page_tea_item, page_brush_item, page_shampoo_item);
-            order_number = 2;
-            order_sign = "tea_brush_shampoo";
-            console.log("page_tea_item, page_brush_item, page_shampoo_item", order_number, order_sign)
-        }else if (number == 3){
-            config["pages"] = generate_pages(page_shampoo_item, page_tea_item, page_brush_item);
-            order_number = 3;
-            order_sign = "shampoo_tea_brush";
-            console.log("page_shampoo_item, page_tea_item, page_brush_item", order_number, order_sign)
-        }else if (number == 4){
-            config["pages"] = generate_pages(page_shampoo_item, page_brush_item, page_tea_item);
-            order_number = 4;
-            order_sign = "shampoo_brush_tea";
-            console.log("page_shampoo_item, page_brush_item, page_tea_item", order_number, order_sign)
-        }else if (number == 5){
-            config["pages"] = generate_pages(page_brush_item, page_tea_item, page_shampoo_item);
-            order_number = 5;
-            order_sign = "brush_tea_shampoo";
-            console.log("page_brush_item, page_tea_item, page_shampoo_item", order_number, order_sign)
-        }else if (number == 6){
-            config["pages"] = generate_pages(page_brush_item, page_shampoo_item, page_tea_item);
-            order_number = 6;
-            order_sign = "brush_shampoo_tea";
-            console.log("page_brush_item, page_shampoo_item, page_tea_item", order_number, order_sign)
-        }else{
-            config["pages"] = generate_pages(page_tea_item, page_shampoo_item, page_brush_item);
-            order_number = 1;
-            order_sign = "tea_shampoo_brush";
-            console.log("page_tea_item, page_shampoo_item, page_brush_item", order_number, order_sign)
+    function get_arrange(items){
+        var arrange_arr = [];
+        var get_arrange_rec = function(result, arrange, index) {
+            if(index==arrange.length-1){
+                result.push(arrange.slice(0));
+                return;
+            }
+            for(var i=index; i<arrange.length; ++i){
+                var tmp = arrange[index];
+                arrange[index] = arrange[i];
+                arrange[i] = tmp;
+                get_arrange_rec(result, arrange, index + 1);
+                arrange[i] = arrange[index];
+                arrange[index] = tmp;
+            }
         }
+        get_arrange_rec(arrange_arr, items, 0);
+        return arrange_arr;
     }
 
+    function get_number_by_items(items){
+        var items_order = [];
+        for(var i = 0; i< output_order.length; ++i){
+            if(items.indexOf(output_order[i])>-1){
+                items_order.push(output_order[i]);
+            }
+        }
+        var arrange_arr = get_arrange(items_order);
+        var signature = items.join("_");
+        var index = 0;
+        for(index=0; index<arrange_arr.length; ++index){
+            if(signature == arrange_arr[index].join("_")){
+                console.log("find item:", index, "sign:", signature);
+                break;
+            }
+        }
+        return index + 1;
+    }
+
+    function get_page_item_by_name(name){
+        var page_item = null;
+        if(name=="tea"){
+            page_item = page_tea_item;
+        }else if(name=="brush"){
+            page_item = page_brush_item;
+        }else if(name=="shampoo"){
+            page_item = page_shampoo_item
+        }
+        return page_item;
+    }
+
+    function reset_config(items) {
+        console.log("items:", items);
+        if(items.length == 2){
+            config["pages"] = generate_pages_2(get_page_item_by_name(items[0]), get_page_item_by_name(items[1]));
+        }else if(items.length == 3){
+            config["pages"] = generate_pages_3(get_page_item_by_name(items[0]), get_page_item_by_name(items[1]), get_page_item_by_name(items[2]));
+        }
+        order_number = get_number_by_items(items);
+        order_sign = items.join("_");
+        console.log("order_number:", order_number, "order_sign:", order_sign);
+    }
 
     // 对Date的扩展，将 Date 转化为指定格式的String
     // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
@@ -1531,39 +1604,9 @@
         "product2_click":0,
         "product3_click":0,
         "product4_click":0,
-        "tostring": function () {
-            var str = this["start_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
-                    + this["end_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
-                    + Math.round(this["spend_time"] / 1000) + " "
-            for(var i=0; i < this["product1"].length; i++) {
-                var pathname = this["product1"][i][1];
-                var index1 = pathname.lastIndexOf("/");
-                var index2 = pathname.lastIndexOf(".");
-                str = str + pathname.substring(index1+1,index2) + " " + this["product1"][i][0] + " ";
-            }
-            for(var i=0; i < this["product2"].length; i++) {
-                var pathname = this["product2"][i][1];
-                var index1 = pathname.lastIndexOf("/");
-                var index2 = pathname.lastIndexOf(".");
-                str = str + pathname.substring(index1+1,index2) + " " + this["product2"][i][0] + " ";
-            }
-            for(var i=0; i < this["product3"].length; i++) {
-                var pathname = this["product3"][i][1];
-                var index1 = pathname.lastIndexOf("/");
-                var index2 = pathname.lastIndexOf(".");
-                str = str + pathname.substring(index1+1,index2) + " " + this["product3"][i][0] + " ";
-            }
-            for(var i=0; i < this["product4"].length; i++) {
-                var pathname = this["product4"][i][1];
-                var index1 = pathname.lastIndexOf("/");
-                var index2 = pathname.lastIndexOf(".");
-                str = str + pathname.substring(index1+1,index2) + " " + this["product4"][i][0] + " ";
-            }
-            return str;
-        }
-    }
+    };
 
-    var choice_strings = [];
+    var choice_infos = {};
 
     function left_init() {
         $("#left_green_tea").unbind();
@@ -1621,7 +1664,7 @@
             $("#buy_button").css("visibility","visible");
             $("#buy_button").unbind();
             $("#buy_button").on("click",function(){
-                save_on_click(current_choice_item[1]);
+                save_on_click(current_choice_item);
             });
         }else{
             $("#buy_button").css("visibility","hidden");
@@ -1716,6 +1759,10 @@
     function set_product_chosen(choice_item) {
         choice_item[0] = 1;
     }
+
+    function get_product_chosen(choice_item) {
+        return choice_item[0];
+    }
     
     function get_product_file_path(choice_item) {
         return choice_item[1];
@@ -1737,12 +1784,21 @@
         return choice_item[5];
     }
 
+    function get_product_id(choice_item) {
+        return choice_item[6];
+    }
+
     function set_page_detail(choice) {
         // 设置标题
-        var attribute = get_product_attribute(choice[0]);
-        $("#assortment_title").html(attribute);
-        if(title_color_map[attribute] != null){
-            $("#assortment_title").css("background-color", title_color_map[attribute]);
+        var assortment_title = "";
+        if(condition=="attribute"){
+            assortment_title = get_product_attribute(choice[0]);
+        }else if(condition=="benefit"){
+            assortment_title = get_product_benefit(choice[0]);
+        }
+        $("#assortment_title").html(assortment_title);
+        if(title_color_map[assortment_title] != null){
+            $("#assortment_title").css("background-color", title_color_map[assortment_title]);
         }
 
         // 设置名称
@@ -1779,23 +1835,71 @@
         }
     }
 
+    function choice_result(choice){
+        var obj = {};
+        obj["start"] = choice["start_time"].format("yyyy-MM-dd_hh:mm:ss");
+        obj["end"] = choice["end_time"].format("yyyy-MM-dd_hh:mm:ss");
+        obj["spend"] = Math.round(choice["spend_time"] / 1000);
+        obj["product"] = [];
+
+        var product1 = {};
+        product1["rate"] = 0;
+        for(var i=0; i < choice["product1"].length; i++) {
+            var pathname = get_product_name(choice["product1"][i]);
+            var chosen = get_product_chosen(choice["product1"][i]);
+            product1[pathname] = chosen;
+            product1["rate"] += chosen;
+        }
+        product1["rate"] /= choice["product1"].length;
+        obj["product"].push(product1);
+
+        var product2 = {};
+        product2["rate"] = 0;
+        for(var i=0; i < choice["product2"].length; i++) {
+            var pathname = get_product_name(choice["product2"][i]);
+            var chosen = get_product_chosen(choice["product2"][i]);
+            product2[pathname] = chosen;
+            product2["rate"] += chosen;
+        }
+        product2["rate"] /= choice["product2"].length;
+        obj["product"].push(product2);
+
+        var product3 = {};
+        product3["rate"] = 0;
+        for(var i=0; i < choice["product3"].length; i++) {
+            var pathname = get_product_name(choice["product3"][i]);
+            var chosen = get_product_chosen(choice["product3"][i]);
+            product3[pathname] = chosen;
+            product3["rate"] += chosen;
+        }
+        product3["rate"] /= choice["product3"].length;
+        obj["product"].push(product3);
+
+        var product4 = {};
+        product4["rate"] = 0;
+        for(var i=0; i < choice["product4"].length; i++) {
+            var pathname = get_product_name(choice["product4"][i]);
+            var chosen = get_product_chosen(choice["product4"][i]);
+            product4[pathname] = chosen;
+            product4["rate"] += chosen;
+        }
+        product4["rate"] /= choice["product4"].length;
+        obj["product"].push(product4);
+
+        return obj;
+    }
+
     function save_on_click(final_choose) {
         console.log("save_in_click", final_choose);
         choice["end_time"] = new Date();
         choice["spend_time"] = choice["end_time"] - choice["start_time"];
-        var string = product_config["name"] + " "
-            + get_filename(final_choose) + " "
-            + choice.tostring();
-        console.log(string);
-        choice_strings.push(string);
-
+        var result = choice_result(choice);
+        result["choose"] = get_product_name(final_choose);
+        result["choose_id"] = get_product_id(final_choose);
+        var name = product_config["name"];
+        choice_infos[name] = result;
+        console.log("choice_infos:", choice_infos);
         config["change"] = 1;
-
-        console.log("choice_strings:")
-        for(var i = 0; i < choice_strings.length; ++i){
-            console.log(i+1, ":", choice_strings[i])
-        }
-
     }
 
     
@@ -1804,14 +1908,12 @@
         "current":0,
         "answers":[]
     }
-    var question_answers = [];
+    var question_answers = {};
     function show_current_question() {
         var index = questions["current"];
         if(index >= product_question["questions"].length){
             console.log("question end, index: ", index);
-            var question_answer = {};
-            question_answer[product_config["name"]] = questions["answers"];
-            question_answers.push(question_answer);
+            question_answers[product_config["name"]] = questions["answers"];
             config["change"] = 1;
             return;
         }
@@ -1835,7 +1937,9 @@
                 return;
             }
             var val_int = parseInt(val);
-            questions["answers"].push({"id": question["id"], "answer": val_int});
+            if(!question.hasOwnProperty("example") || question["example"]==0 || question["example"]=="0" ){
+                questions["answers"].push({"id": question["id"], "answer": val_int});
+            }
             questions["current"] = index + 1;
             show_current_question();
         });
@@ -1861,7 +1965,7 @@
         "current":0,
         "answers":[]
     }
-    var test_answers = [];
+    var test_answers = {};
     function show_current_test() {
 
         while(tests["current"] >= product_test["tests"][tests["group"]].length){
@@ -1869,9 +1973,13 @@
             tests["current"] = 0;
             if(tests["group"] >= product_test["tests"].length){
                 console.log("test end, index: ", tests["group"]);
-                var test_answer = {};
-                test_answer[product_config["name"]] = tests["answers"];
-                test_answers.push(test_answer);
+                // tests["answers"] 排序
+                tests["answers"].sort(function (answer1, answer2) {
+                    if(answer1["id"] < answer2["id"]) return -1;
+                    else if(answer1["id"] > answer2["id"]) return 1;
+                    else return 0;
+                });
+                test_answers[product_config["name"]] = tests["answers"];
                 config["change"] = 1;
                 return;
             }
@@ -1922,7 +2030,9 @@
             }
             var correct = (val == test["true"]) ? 1 : 0;
             var spend = new Date() - tests["start"];
-            tests["answers"].push({"id": test["id"], "answer": correct, "RT":spend});
+            if(!test.hasOwnProperty("example") || test["example"]==0 || test["example"]=="0" ){
+                tests["answers"].push({"id": test["id"], "answer": correct, "RT":spend});
+            }
             tests["current"] = index + 1;
             tests["start"] = new Date();
             show_current_test();
@@ -2029,7 +2139,13 @@
             }
 
             if(_grade != null && _grade != "" ){
-                grade = _grade;
+                var gradeinfo = _grade.split("|");
+                if(gradeinfo.length>=1){
+                    grade = gradeinfo[0]
+                }
+                if(gradeinfo.length>=2){
+                    grade_id = gradeinfo[1];
+                }
             }
 
             if(_phone != null && _phone != "" ){
@@ -2049,7 +2165,7 @@
         var filename = condition + "_"
                     + order_number + "_"
                     + choice["end_time"].format("yyyy_MM_dd_hh_mm") + "_"
-                    + username + ".txt";
+                    + username + ".json";
 
         var stringObj = {
             "username": username,
@@ -2062,10 +2178,67 @@
             "order_number": order_number,
             "order_sign": order_sign,
             "purpose": purpose,
-            "choice": choice_strings.sort(),
+            "choice": choice_infos,
             "questions": question_answers,
             "tests": test_answers,
+            "output": "",
         };
+
+        var arr = [];
+        arr.push("1");                                          // ID
+        for(var i=0; i<output_order.length; ++i){
+            var name = output_order[i];
+            if(!choice_infos.hasOwnProperty(name)){
+                console.log("data doesn't have property:", name);
+                continue;
+            }
+            var choose_info = choice_infos[name];
+            arr.push(choose_info["start"]);                     // startTime
+        }
+        arr.push(username);                                     // user
+        arr.push(gender);                                       // gender
+        arr.push(age);                                          // age
+        arr.push(grade);                                        // grade_sign
+        arr.push(grade_id);                                     // grade
+        arr.push(major);                                        // major
+        arr.push(assortment);                                   // assortment
+        arr.push(name_type);                                    // name_type
+        arr.push(order_sign);                                   // order_sign
+        arr.push(order_number);                                 // order_number
+        for(var i=0; i<output_order.length; ++i){
+            var name = output_order[i];
+            if(!choice_infos.hasOwnProperty(name)){
+                console.log("data doesn't have property:", name);
+                continue;
+            }
+            var choose_info = choice_infos[name];
+            arr.push(choose_info["spend"]);                     // chooseTime
+            for(var j=0; j<choose_info["product"].length; ++j){
+                arr.push(choose_info["product"][j]["rate"]);    // checkRate
+            }
+            arr.push(choose_info["choose"]);                    // choose_sign
+            arr.push(choose_info["choose_id"]);                 // choose
+
+            var question_answer = question_answers[name];
+            for(var j=0; j<question_answer.length; ++j){
+                arr.push(question_answer[j]["answer"]);         // question_answers
+            }
+
+            var test_answer = test_answers[name];
+            var correct = 0;
+            for(var j=0; j<test_answer.length; ++j){
+                arr.push(test_answer[j]["answer"]);             // test_answers
+                correct += test_answer[j]["answer"];
+            }
+            arr.push(correct/test_answer.length);               // test_rate
+            for(var j=0; j<test_answer.length; ++j){
+                arr.push(test_answer[j]["RT"]);                 // test_RTs
+            }
+        }
+        arr.push(phone);                                        // phone
+        arr.push(purpose);                                      // purpose
+        stringObj["output"] = arr.join("|");
+
         var string = JSON.stringify(stringObj,null,"\t")
         console.log("final save:", string)
         saveFile(filename, string);
@@ -2084,36 +2257,6 @@
             "product2_click":0,
             "product3_click":0,
             "product4_click":0,
-            "tostring": function () {
-                var str = this["start_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
-                    + this["end_time"].format("yyyy-MM-dd_hh:mm:ss") + " "
-                    + Math.round(this["spend_time"] / 1000) + " "
-                for(var i=0; i < this["product1"].length; i++) {
-                    var pathname = this["product1"][i][1];
-                    var index1 = pathname.lastIndexOf("/");
-                    var index2 = pathname.lastIndexOf(".");
-                    str = str + pathname.substring(index1+1,index2) + " " + this["product1"][i][0] + " ";
-                }
-                for(var i=0; i < this["product2"].length; i++) {
-                    var pathname = this["product2"][i][1];
-                    var index1 = pathname.lastIndexOf("/");
-                    var index2 = pathname.lastIndexOf(".");
-                    str = str + pathname.substring(index1+1,index2) + " " + this["product2"][i][0] + " ";
-                }
-                for(var i=0; i < this["product3"].length; i++) {
-                    var pathname = this["product3"][i][1];
-                    var index1 = pathname.lastIndexOf("/");
-                    var index2 = pathname.lastIndexOf(".");
-                    str = str + pathname.substring(index1+1,index2) + " " + this["product3"][i][0] + " ";
-                }
-                for(var i=0; i < this["product4"].length; i++) {
-                    var pathname = this["product4"][i][1];
-                    var index1 = pathname.lastIndexOf("/");
-                    var index2 = pathname.lastIndexOf(".");
-                    str = str + pathname.substring(index1+1,index2) + " " + this["product4"][i][0] + " ";
-                }
-                return str;
-            }
         };
 
         questions = {
@@ -2130,22 +2273,16 @@
     }
 
     function main() {
-
-        var number = order_number;
-        if(number == 0){
-            var url = location.href;
-            console.log("url:", url)
-            var number_str = url.substring(url.lastIndexOf("_")+1, url.lastIndexOf("."));
-            var number = parseInt(number_str);
-            if(number == NaN){
-                number = 0;
-                console.log("invalid number, reset to 0");
+        // 去除order_pages中的空元素
+        for(var i=0;i<order_pages.length;){
+            if(order_pages[i]==null || order_pages[i].length == 0){
+                order_pages.splice(i, 1);
+            }else{
+                ++i;
             }
-        }else{
-            console.log("using order number:", number);
         }
-        reset_config(number);
-
+        console.log("input order_pages:", order_pages);
+        reset_config(order_pages);
         print_config(config);
         register_key_event(config);
         change_state(config);
