@@ -1384,7 +1384,6 @@
         else if(items.length == 3){
             config["pages"] = generate_pages_3(get_page_item_by_name(items[0]), get_page_item_by_name(items[1]), get_page_item_by_name(items[2]));
         }
-  
         order_number = get_number_by_items(items);
         order_sign = items.join("_");
         console.log("order_number:", order_number, "order_sign:", order_sign);
