@@ -1,4 +1,4 @@
-template_9_dyh =`
+template_9_quality =`
 	<div style="width: 100%; height: 100%; position: fixed;">
 		<div style="width: 100%; height: 40%; display: flex; align-items: center; justify-content: center;"><!-- 题目说明 -->
 			<div style="width: 80%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-size: 24px; line-height: 2;"> 
@@ -12,7 +12,7 @@ template_9_dyh =`
 			<div style="width: 80%; height: 40%; display: flex; align-items: center; justify-content: center; font-size: 26px; line-height: 1.5;" id="content">小张打开电子邮箱后收到垃圾邮件</div>
 			<div style="width: 100%; height: 50%; display: flex; flex-direction: column; align-items: center; justify-content: space-around;"> 
 				<div style="width: 100%; height: 45%; min-height: 70px; display: flex; align-items: center; justify-content: center;">
-						<div style="width: 70px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+					<div style="width: 70px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
 						<div class="TF_radio_box" style="width: 20px; height: 20px;">
 	 						<input name="one_choice" type="radio" id="choice_1" value="1">
 	 						<label for="choice_1"></label>							
