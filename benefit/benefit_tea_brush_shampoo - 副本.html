@@ -10,6 +10,7 @@
     <script type="text/javascript" src="template_9.js"></script>
     <script type="text/javascript" src="template_9_example.js"></script>    
     <script type="text/javascript" src="template_9_dyh.js"></script>
+    <script type="text/javascript" src="template_9_quality.js"></script>
     <script type="text/javascript" src="template_10.js"></script>
     <script type="text/javascript" src="page_test.js"></script>
     <script type="text/javascript" src="template_tea_TF1.js"></script>
@@ -30,7 +31,7 @@
         var grade_id = "2";
         var phone = "空";
         var purpose = "空";
-        var condition = "attribute";            // "attribute"
+        var condition = "benefit";            // "attribute"
         var assortment = 0;
         if(condition == "attribute"){
             assortment = 1;
@@ -38,9 +39,10 @@
             assortment = 2;
         }
         var name_type = 1;
-        var order_number = 2;                   // 默认配置后面会改: 如果配置>0则强制指定, 否则根据url最后的数字指定, 如 xxx_2.html => order_number = 2
-        var order_sign = "shampoo_brush";       // 跟随 order_number 修改
-        var output_order = ["shampoo","brush"]; // 输出顺序
+        var output_order = ["tea","shampoo","brush"];   // 关键配置, 最后的输出顺序
+        var order_pages = ["shampoo"];          // 关键配置, 后续页面跟随这个, 支持 tea, shampoo, brush
+        var order_number = 1;                           // 无需设置, 跟随order_page设定自动修改
+        var order_sign = "shampoo_brush";               // 无需设置, 跟随order_page设定自动修改
 
         console.log("order:", order_number);
         console.log("condition:", condition);
@@ -50,70 +52,41 @@
             "红茶": "#CA6931",
             "青茶": "#B27511",
             "花茶": "#CE6E60",
+            "减肥瘦身": "#90A71F",
+            "舒缓压力": "#CA6931",
+            "保健养生": "#B27511",
+            "美容养颜": "#CE6E60",
         }
 
 	    var config_tea = {
             "name": "tea",
-	        "product1":[
-	            [0, "../resource/tea/雪水云绿.JPG", "绿茶", "美容养颜", "银剑出鞘，茸毫隐翠，林间香气","延缓衰老，防癌抗癌","1"],
-                [0, "../resource/tea/千岛玉叶.JPG", "绿茶", "美容养颜", "扁平挺直，翠绿嫩黄，兰蕙之清","抗老，防癌，养颜，抗菌","2"],                
-                [0, "../resource/tea/太平猴魁.JPG", "绿茶", "舒缓压力", "两叶抱芽，绿中隐红，兰香高爽","促进血液循环，松弛平滑肌","3"],                
+	        "product1":[//减肥瘦身                      
                 [0, "../resource/tea/六安瓜片.JPG", "绿茶", "减肥瘦身", "瓜子形单叶，叶底嫩黄，熟栗香味","降低血脂，促进消化","4"],
-                [0, "../resource/tea/狗牯脑茶.JPG", "绿茶", "保健养生","紧结微勾，黛绿莹润，清心雅郁","利尿解毒，防治心血管疾病","5"],
-                
-             //    [0, "../resource/tea/休宁松萝.JPG", "绿茶", "舒缓压力", "紧卷匀壮，色泽绿润，橄榄风味","提神醒脑，清心明目"],
-             //    [0, "../resource/tea/西湖龙井.JPG", "绿茶", "保健养生", "扁而平直，绿中透黄，有炒豆香","降低血脂，防癌抗癌，抗菌消炎"],
-	            // [0, "../resource/tea/蒙顶甘露.JPG", "绿茶", "舒缓压力", "紧凑多毫，浅绿油润，香气馥郁","好喝，身心愉悦"],
-	            // [0, "../resource/tea/梅尖银毫.JPG", "绿茶", "美容养颜", "紧细圆直，翠绿显毫，香气浓郁","抗氧化，养颜健身"],
-	            // [0, "../resource/tea/庐山云雾茶.JPG", "绿茶", "减肥瘦身", "条索紧结，青翠多毫，有板栗香","消脂减脂，减肥瘦身"],
-             //    [0, "../resource/tea/信阳毛尖.JPG", "绿茶", "减肥瘦身", "匀整细直，白毫隐翠，有熟果香","消脂减脂，净化肠胃"],
-	            // [0, "../resource/tea/莲心绿茶.JPG", "绿茶", "保健养生", "芽叶成朵，色泽黄绿，绿豆香气","抵御放射性元素，防治坏血病"],
-             //    [0, "../resource/tea/开化龙顶.JPG", "绿茶", "保健养生","紧直挺秀，银绿翠隐，淡青草味","清热解毒，固齿防龋"],
-	            // [0, "../resource/tea/径山茶.JPG", "绿茶", "美容养颜","纤细微曲，色泽绿翠，板栗香味","排毒养颜，抗氧化"],
-	            // [0, "../resource/tea/黄山毛峰.JPG", "绿茶", "保健养生","细扁微卷，银毫显露，香气如兰","利尿消肿，防癌抗癌，固齿防龋"],
-	            // [0, "../resource/tea/碧螺春.JPG", "绿茶", "保健养生","形状如螺，白毫隐翠，清香淡雅","提神解乏，抗菌消炎"],
-	        ],
-	        "product2":[
-                [0, "../resource/tea/金骏眉.JPG", "红茶", "美容养颜", "条索紧细，乌润带金，花果清香", "排毒养颜，抗氧化","6"],
-	            [0, "../resource/tea/政和工夫.JPG", "红茶", "舒缓压力", "条索重实，毫尖金黄，紫罗兰香", "好喝，身心愉悦","7"],
                 [0, "../resource/tea/坦洋工夫.JPG", "红茶", "减肥瘦身", "条索紧细，毫尖金黄，桂圆香气", "减肥瘦身，养胃护胃","8"],
-	            [0, "../resource/tea/正山小种.JPG", "红茶", "保健养生", "条索肥壮，呈红褐色，有松烟香", "利尿排毒，强壮骨骼，护心养胃","9"],
-                [0, "../resource/tea/信阳红.JPG", "红茶", "保健养生", "条索匀整，乌黑披金，有花果香", "消炎杀菌，利尿解毒","10"],
-
-	            // [0, "../resource/tea/英红.JPG", "红茶", "舒缓压力", "外形重实，色泽乌润，香气浓郁", "好喝，身心愉悦"],
-	            // [0, "../resource/tea/宜红.JPG", "红茶", "舒缓压力", "条索紧细，略带金毫，花果清香", "好喝，身心愉悦"],
-	            // [0, "../resource/tea/祁门红茶.JPG", "红茶", "保健养生", "条索紧细，色泽乌润，兰果香气", "防治心血管疾病，清凉消暑"],
-	            // [0, "../resource/tea/宁红.JPG", "红茶", "舒缓压力", "紧结圆直，略显红筋，鲜香持久", "好喝，身心愉悦"],
-	            // [0, "../resource/tea/荔枝红.JPG", "红茶", "舒缓压力", "条索纤秀，乌黑油润，香气清幽", "风味独特，好喝"],
-	            // [0, "../resource/tea/九曲红梅.JPG", "红茶", "舒缓压力", "细若发丝，金色绒毛，似蜜糖香", "好喝，身心愉悦"],
-	            // [0, "../resource/tea/银骏眉.JPG", "红茶", "舒缓压力", "细瘦卷曲，乌中透金，烤红薯香", "好喝，身心愉悦"],
-	            // [0, "../resource/tea/滇红.JPG", "红茶", "舒缓压力", "紧结肥壮，色泽乌润，香气鲜锐", "好喝，身心愉悦"],
-	            // [0, "../resource/tea/川红.JPG", "红茶", "舒缓压力", "紧细圆直，色泽乌润，带枯糖香", "好喝，身心愉悦"],
-	        ],
-	        "product3":[
-                [0, "../resource/tea/凤凰单枞.JPG", "青茶", "美容养颜","条索匀直，黄褐油润，独特花香", "改善皮肤过敏，养颜促代谢","11"],
                 [0, "../resource/tea/东方美人.JPG", "青茶", "减肥瘦身","茶心肥厚，满披茸毛，有熟果香", "消脂减肥，降低血脂","12"],
+                [0, "../resource/tea/玫瑰花茶.JPG", "花茶", "减肥瘦身","朵大饱满，色泽均匀，香味清淡", "消脂减肥，促进消化","18"],
+	            [0, "../resource/tea/苦丁茶.JPG", "花茶", "减肥瘦身","条索紧结，灰绿相间，清香带苦", "降压降脂，清热消暑","19"],                
+	        ],
+	        "product2":[//舒缓压力
+                [0, "../resource/tea/太平猴魁.JPG", "绿茶", "舒缓压力", "两叶抱芽，绿中隐红，兰香高爽","促进血液循环，松弛平滑肌","3"],
+	            [0, "../resource/tea/政和工夫.JPG", "红茶", "舒缓压力", "条索重实，毫尖金黄，紫罗兰香", "好喝，身心愉悦","7"],
                 [0, "../resource/tea/水金龟.JPG", "青茶", "舒缓压力","条索紧结，色泽青褐，清雅高长", "好喝，身心愉悦","13"],                
 	            [0, "../resource/tea/永春佛手.JPG", "青茶", "舒缓压力","紧结肥壮，砂率乌润，香气悠长", "回甘，身心愉悦","14"],
-                [0, "../resource/tea/冻顶乌龙.JPG", "青茶", "保健养生","呈半球形，色泽墨绿，有桂花香", "抗氧化，防治龋齿","15"],
-
-	            // [0, "../resource/tea/武夷水仙.JPG", "青茶", "舒缓压力","叶端扭曲，油润暗绿，兰花香郁", "好喝，身心愉悦"],
-	            // [0, "../resource/tea/武夷肉桂.JPG", "青茶", "美容养颜","匀整卷曲，褐绿油润，桂皮香味", "改善皮肤敏感溃烂，延缓衰老"],
-	            // [0, "../resource/tea/武夷大红袍.JPG", "青茶", "美容养颜","条索紧结，绿褐鲜润，有兰花香", "美白抗氧化，醒酒敌烟"],
-	            // [0, "../resource/tea/铁罗汉.JPG", "青茶", "舒缓压力","条索匀整，褐绿鲜润， 兰香馥郁", "耐泡，好喝"],
-	            // [0, "../resource/tea/高山乌龙.JPG", "青茶", "舒缓压力","半球形状，色泽深绿，花香突出", "好喝，身心愉悦"],
-	            // [0, "../resource/tea/凤凰水仙.JPG", "青茶", "舒缓压力","挺直肥大，鳝鱼皮色，天然花香", "清热解暑，生津止渴"],
-             //    [0, "../resource/tea/白芽奇兰.JPG", "青茶", "舒缓压力","紧结匀整，翠绿油润，兰花香味", "好喝，身心愉悦"],
-	            // [0, "../resource/tea/白鸡冠.JPG", "青茶", "舒缓压力","条索紧结，色泽灰暗，香气悠长", "清心明目，提神解乏"],
-	            // [0, "../resource/tea/安溪铁观音.JPG", "青茶", "美容养颜","卷曲圆结，色泽砂绿，有兰花香", "抗氧化，防治龋齿"],
-	            // [0, "../resource/tea/阿里山乌龙.JPG", "青茶", "舒缓压力","呈半球形，色泽砂绿，清新典雅", "好喝，身心愉悦"],
+                [0, "../resource/tea/茉莉花茶.JPG", "花茶", "舒缓压力","紧细圆整，黄中带褐，灵香持久", "好喝，身心愉悦","17"],
 	        ],
-	        "product4":[
+	        "product3":[//保健养生
+                [0, "../resource/tea/狗牯脑茶.JPG", "绿茶", "保健养生","紧结微勾，黛绿莹润，清心雅郁","利尿解毒，防治心血管疾病","5"],
+                [0, "../resource/tea/正山小种.JPG", "红茶", "保健养生", "条索肥壮，呈红褐色，有松烟香", "利尿排毒，强壮骨骼，护心养胃","9"],
+                [0, "../resource/tea/信阳红.JPG", "红茶", "保健养生", "条索匀整，乌黑披金，有花果香", "消炎杀菌，利尿解毒","10"],
+                [0, "../resource/tea/冻顶乌龙.JPG", "青茶", "保健养生","呈半球形，色泽墨绿，有桂花香", "抗氧化，防治龋齿","15"],
+                [0, "../resource/tea/杭白菊.JPG", "花茶", "保健养生","花形完整，嫩黄鲜亮，香气清冽", "清热解毒，消食醒酒","20"],                             
+	        ],
+	        "product4":[//美容养颜 
+                [0, "../resource/tea/雪水云绿.JPG", "绿茶", "美容养颜", "银剑出鞘，茸毫隐翠，林间香气","延缓衰老，防癌抗癌","1"],
+                [0, "../resource/tea/千岛玉叶.JPG", "绿茶", "美容养颜", "扁平挺直，翠绿嫩黄，兰蕙之清","抗老，防癌，养颜，抗菌","2"],
+                [0, "../resource/tea/金骏眉.JPG", "红茶", "美容养颜", "条索紧细，乌润带金，花果清香", "排毒养颜，抗氧化","6"],
+                [0, "../resource/tea/凤凰单枞.JPG", "青茶", "美容养颜","条索匀直，黄褐油润，独特花香", "改善皮肤过敏，养颜促代谢","11"],
                 [0, "../resource/tea/黄山贡菊.JPG", "花茶", "美容养颜","朵大均匀，色白蒂绿，菊花香味", "护肤美容，排毒护肝","16"],
-	            [0, "../resource/tea/茉莉花茶.JPG", "花茶", "舒缓压力","紧细圆整，黄中带褐，灵香持久", "好喝，身心愉悦","17"],
-	            [0, "../resource/tea/玫瑰花茶.JPG", "花茶", "减肥瘦身","朵大饱满，色泽均匀，香味清淡", "消脂减肥，促进消化","18"],
-	            [0, "../resource/tea/苦丁茶.JPG", "花茶", "减肥瘦身","条索紧结，灰绿相间，清香带苦", "降压降脂，清热消暑","19"],
-	            [0, "../resource/tea/杭白菊.JPG", "花茶", "保健养生","花形完整，嫩黄鲜亮，香气清冽", "清热解毒，消食醒酒","20"],
 	        ],
 	    };
 
@@ -121,9 +94,9 @@
             "current": 0,
             "names": [
                 "雪水云绿",
-               "正山小种",
-               "东方美人",
-               "茉莉花茶",
+                "正山小种",
+                "东方美人",
+                "茉莉花茶",
             ]
         };
 
@@ -198,54 +171,6 @@
                             {"src":"../resource/tea/白芽奇兰.JPG", "name":"白芽奇兰", "benefit":"舒缓压力", "attribute":"花茶"},
                         ],
                     },
-                    {"id":"tea_09", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
-                        "pictures":[
-                            {"src":"../resource/tea/六安瓜片.JPG", "name":"六安瓜片", "benefit":"减肥瘦身", "attribute":"绿茶"},
-                            {"src":"../resource/tea/碧螺春.JPG", "name":"碧螺春", "benefit":"保健养生", "attribute":"绿茶"},
-                        ],
-                    },
-                    {"id":"tea_10", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
-                        "pictures":[
-                            {"src":"../resource/tea/信阳毛尖.JPG", "name":"信阳毛尖", "benefit":"减肥瘦身", "attribute":"绿茶"},
-                            {"src":"../resource/tea/狗牯脑茶.JPG", "name":"狗牯脑茶", "benefit":"保健养生", "attribute":"绿茶"},
-                        ],
-                    },
-                    {"id":"tea_11", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
-                        "pictures":[
-                            {"src":"../resource/tea/信阳红.JPG", "name":"信阳红", "benefit":"保健养生", "attribute":"红茶"},
-                            {"src":"../resource/tea/荔枝红.JPG", "name":"荔枝红", "benefit":"舒缓压力", "attribute":"红茶"},
-                        ],
-                    },
-                    {"id":"tea_12", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
-                        "pictures":[
-                            {"src":"../resource/tea/九曲红梅.JPG", "name":"九曲红梅", "benefit":"舒缓压力", "attribute":"红茶"},
-                            {"src":"../resource/tea/政和工夫.JPG", "name":"政和工夫", "benefit":"舒缓压力", "attribute":"红茶"},
-                        ],
-                    },
-                    {"id":"tea_13", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
-                        "pictures":[
-                            {"src":"../resource/tea/水金龟.JPG", "name":"水金龟", "benefit":"舒缓压力", "attribute":"青茶"},
-                            {"src":"../resource/tea/白鸡冠.JPG", "name":"白鸡冠", "benefit":"舒缓压力", "attribute":"青茶"},
-                        ],
-                    },
-                    {"id":"tea_14", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
-                        "pictures":[
-                            {"src":"../resource/tea/凤凰水仙.JPG", "name":"凤凰水仙", "benefit":"舒缓压力", "attribute":"青茶"},
-                            {"src":"../resource/tea/凤凰单枞.JPG", "name":"凤凰单枞", "benefit":"美容养颜", "attribute":"青茶"},
-                        ],
-                    },
-                    {"id":"tea_15", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"1",
-                        "pictures":[
-                            {"src":"../resource/tea/黄山贡菊.JPG", "name":"黄山贡菊", "benefit":"美容养颜", "attribute":"花茶"},
-                            {"src":"../resource/tea/武夷肉桂.JPG", "name":"武夷肉桂", "benefit":"美容养颜", "attribute":"花茶"},
-                        ],
-                    },
-                    {"id":"tea_16", "example": 0, "template": template_tea_TF2, "content":"下图所示的2个茶叶中，<strong>哪一种茶叶</strong>在茶叶目录中出现过？(只有一个出现过)", "left": "左边这个", "right": "右边这个", "true":"2",
-                        "pictures":[
-                            {"src":"../resource/tea/径山茶.JPG", "name":"径山茶", "benefit":"美容养颜", "attribute":"花茶"},
-                            {"src":"../resource/tea/杭白菊.JPG", "name":"杭白菊", "benefit":"保健养生", "attribute":"花茶"},
-                        ],
-                    },
                 ],
             ],
         };
@@ -254,32 +179,33 @@
         var config_shampoo = {
             "name": "shampoo",
             "product1":[
+                [0, "../resource/shampoo/ALTERNA-αD.png", "栀子香", "丝滑水润", "不含硅油，无防腐剂添加，不含硫酸盐","提神醒脑，清心明目","1"],
                 [0, "../resource/shampoo/ALTERNA-βD.png", "柠檬香", "丝滑水润","不含硅油，无防腐剂添加，不含硫酸盐", "消脂减肥，促进消化","6"],
-                [0, "../resource/shampoo/ALTERNA-βG.png", "柠檬香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "降压降脂，清热消暑","7"],
-                [0, "../resource/shampoo/ALTERNA-βH.png", "柠檬香", "清爽控油","不含硅油，无防腐剂添加，不含硫酸盐", "护肤美容，排毒护肝","8"],
-                [0, "../resource/shampoo/ALTERNA-βJ.png", "柠檬香", "强效修护","不含硅油，无防腐剂添加，不含硫酸盐", "清热解毒，消食醒酒","9"],
-                [0, "../resource/shampoo/ALTERNA-ωK.png", "柠檬香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "清热解毒，消食醒酒","10"],        
+                [0, "../resource/shampoo/ALTERNA-γD.png", "玫瑰香", "丝滑水润","不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦","11"],
+                [0, "../resource/shampoo/ALTERNA-δD.png", "椰子香", "丝滑水润", "不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦","16"],
+                [0, "../resource/shampoo/ALTERNA-ωF.png", "栀子香", "丝滑水润", "不含硅油，无防腐剂添加，不含硫酸盐","抗老，防癌，养颜，抗菌","5"],
             ],
+
             "product2":[
-                [0, "../resource/shampoo/ALTERNA-αD.png", "海洋味", "丝滑水润", "不含硅油，无防腐剂添加，不含硫酸盐","提神醒脑，清心明目","1"],
-                [0, "../resource/shampoo/ALTERNA-αG.png", "海洋味", "防晒锁色", "不含硅油，无防腐剂添加，不含硫酸盐","消脂减脂，净化肠胃","2"],
-                [0, "../resource/shampoo/ALTERNA-αH.png", "海洋味", "清爽控油", "不含硅油，无防腐剂添加，不含硫酸盐","降低血脂，防癌抗癌，抗菌消炎","3"],
-                [0, "../resource/shampoo/ALTERNA-αJ.png", "海洋味", "强效修护", "不含硅油，无防腐剂添加，不含硫酸盐","促进血液循环，松弛平滑肌","4"],
-                [0, "../resource/shampoo/ALTERNA-ωF.png", "海洋味", "丝滑水润", "不含硅油，无防腐剂添加，不含硫酸盐","抗老，防癌，养颜，抗菌","5"],
+                [0, "../resource/shampoo/ALTERNA-αG.png", "栀子香", "防晒锁色", "不含硅油，无防腐剂添加，不含硫酸盐","消脂减脂，净化肠胃","2"],
+                [0, "../resource/shampoo/ALTERNA-βG.png", "柠檬香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "降压降脂，清热消暑","7"],
+                [0, "../resource/shampoo/ALTERNA-γG.png", "玫瑰香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "改善皮肤敏感溃烂，延缓衰老","12"],
+                [0, "../resource/shampoo/ALTERNA-δG.png", "椰子香", "防晒锁色", "不含硅油，无防腐剂添加，不含硫酸盐", "利尿排毒，强壮骨骼，护心养胃","17"],
+                [0, "../resource/shampoo/ALTERNA-ωK.png", "柠檬香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "清热解毒，消食醒酒","10"], 
             ],
             "product3":[
-                [0, "../resource/shampoo/ALTERNA-γD.png", "迷迭香", "丝滑水润","不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦","11"],
-                [0, "../resource/shampoo/ALTERNA-γG.png", "迷迭香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "改善皮肤敏感溃烂，延缓衰老","12"],
-                [0, "../resource/shampoo/ALTERNA-γH.png", "迷迭香", "清爽控油","不含硅油，无防腐剂添加，不含硫酸盐", "美白抗氧化，醒酒敌烟","13"],
-                [0, "../resource/shampoo/ALTERNA-γJ.png", "迷迭香", "强效修护","不含硅油，无防腐剂添加，不含硫酸盐", "耐泡，好喝","14"],
-                [0, "../resource/shampoo/ALTERNA-ωN.png", "迷迭香", "清爽控油","不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦","15"],
+                [0, "../resource/shampoo/ALTERNA-αH.png", "栀子香", "清爽控油", "不含硅油，无防腐剂添加，不含硫酸盐","降低血脂，防癌抗癌，抗菌消炎","3"],
+                [0, "../resource/shampoo/ALTERNA-βH.png", "柠檬香", "清爽控油","不含硅油，无防腐剂添加，不含硫酸盐", "护肤美容，排毒护肝","8"],
+                [0, "../resource/shampoo/ALTERNA-γH.png", "玫瑰香", "清爽控油","不含硅油，无防腐剂添加，不含硫酸盐", "美白抗氧化，醒酒敌烟","13"],
+                [0, "../resource/shampoo/ALTERNA-δH.png", "椰子香", "清爽控油", "不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦","18"],
+                [0, "../resource/shampoo/ALTERNA-ωN.png", "玫瑰香", "清爽控油","不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦","15"],
             ],
             "product4":[
-                [0, "../resource/shampoo/ALTERNA-δD.png", "松木香", "丝滑水润", "不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦","16"],
-                [0, "../resource/shampoo/ALTERNA-δG.png", "松木香", "防晒锁色", "不含硅油，无防腐剂添加，不含硫酸盐", "利尿排毒，强壮骨骼，护心养胃","17"],
-                [0, "../resource/shampoo/ALTERNA-δH.png", "松木香", "清爽控油", "不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦","18"],
-                [0, "../resource/shampoo/ALTERNA-δJ.png", "松木香", "强效修护", "不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦","19"],
-                [0, "../resource/shampoo/ALTERNA-ωS.png", "松木香", "强效修护", "不含硅油，无防腐剂添加，不含硫酸盐", "消炎杀菌，利尿解毒","20"],            
+                [0, "../resource/shampoo/ALTERNA-αJ.png", "栀子香", "强效修护", "不含硅油，无防腐剂添加，不含硫酸盐","促进血液循环，松弛平滑肌","4"],
+                [0, "../resource/shampoo/ALTERNA-βJ.png", "柠檬香", "强效修护","不含硅油，无防腐剂添加，不含硫酸盐", "清热解毒，消食醒酒","9"],
+                [0, "../resource/shampoo/ALTERNA-γJ.png", "玫瑰香", "强效修护","不含硅油，无防腐剂添加，不含硫酸盐", "耐泡，好喝","14"],
+                [0, "../resource/shampoo/ALTERNA-δJ.png", "椰子香", "强效修护", "不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦","19"],
+                [0, "../resource/shampoo/ALTERNA-ωS.png", "椰子香", "强效修护", "不含硅油，无防腐剂添加，不含硫酸盐", "消炎杀菌，利尿解毒","20"],
             ],
         };
 
@@ -329,7 +255,7 @@
                 [
                     {"id":"shampoo_01", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/shampoo/ALTERNA-αD.png", "name":"ALTERNA-αD", "benefit":"丝滑水润", "attribute":"海洋味"},
+                            {"src":"../resource/shampoo/ALTERNA-αD.png", "name":"ALTERNA-αD", "benefit":"丝滑水润", "attribute":"栀子香"},
                         ],
                     },
                     {"id":"shampoo_02", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
@@ -349,7 +275,7 @@
                     }, 
                     {"id":"shampoo_05", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/shampoo/ALTERNA-γH.png", "name":"ALTERNA-γH", "benefit":"清爽控油", "attribute":"迷迭香"},
+                            {"src":"../resource/shampoo/ALTERNA-γH.png", "name":"ALTERNA-γH", "benefit":"清爽控油", "attribute":"玫瑰香"},
                         ],
                     },
                     {"id":"shampoo_06", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
@@ -359,7 +285,7 @@
                     }, 
                     {"id":"shampoo_07", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/shampoo/ALTERNA-δJ.png", "name":"ALTERNA-δJ", "benefit":"强效修护", "attribute":"松木香"},
+                            {"src":"../resource/shampoo/ALTERNA-δJ.png", "name":"ALTERNA-δJ", "benefit":"强效修护", "attribute":"椰子香"},
                         ],
                     },
                     {"id":"shampoo_08", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
@@ -369,12 +295,12 @@
                     },
                     {"id":"shampoo_09", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/shampoo/ALTERNA-αG.png", "name":"ALTERNA-αG", "benefit":"防晒锁色", "attribute":"海洋味"},
+                            {"src":"../resource/shampoo/ALTERNA-αG.png", "name":"ALTERNA-αG", "benefit":"防晒锁色", "attribute":"栀子香"},
                         ],
                     },
                     {"id":"shampoo_10", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss1/ALTERNA-αF.png", "name":"ALTERNA-αF", "benefit":"丰盈蓬松", "attribute":"海洋味"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-αF.png", "name":"ALTERNA-αF", "benefit":"丰盈蓬松", "attribute":"栀子香"},
                         ],
                     },
                     {"id":"shampoo_11", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
@@ -389,22 +315,22 @@
                     },
                     {"id":"shampoo_13", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/shampoo/ALTERNA-γJ.png", "name":"ALTERNA-γJ", "benefit":"强效修护", "attribute":"迷迭香"},
+                            {"src":"../resource/shampoo/ALTERNA-γJ.png", "name":"ALTERNA-γJ", "benefit":"强效修护", "attribute":"玫瑰香"},
                         ],
                     },
                     {"id":"shampoo_14", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss1/ALTERNA-γN.png", "name":"ALTERNA-γN", "benefit":"防脱固发", "attribute":"迷迭香"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-γN.png", "name":"ALTERNA-γN", "benefit":"防脱固发", "attribute":"玫瑰香"},
                         ],
                     },                    
                     {"id":"shampoo_15", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
                         "pictures":[
-                            {"src":"../resource/shampoo/ALTERNA-δD.png", "name":"ALTERNA-δD", "benefit":"丝滑水润", "attribute":"松木香"},
+                            {"src":"../resource/shampoo/ALTERNA-δD.png", "name":"ALTERNA-δD", "benefit":"丝滑水润", "attribute":"椰子香"},
                         ],
                     },
                     {"id":"shampoo_16", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss1/ALTERNA-δS.png", "name":"ALTERNA-δS", "benefit":"柔顺亮泽", "attribute":"松木香"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-δS.png", "name":"ALTERNA-δS", "benefit":"柔顺亮泽", "attribute":"椰子香"},
                         ],
                     },  
                 ],
@@ -414,31 +340,31 @@
 
         var config_brush = { 
             "name": "brush",
-            "product1":[
+            "product1":[//健康清洁
                 [0, "../resource/brush/GOVINO-αD.png", "电动喷雾型", "健康清洁", "个性化辅导，精锐感知科技，智能刷头感应","延缓衰老，防癌抗癌","1"],
-                [0, "../resource/brush/GOVINO-αG.png", "电动喷雾型", "抗敏护龈", "个性化辅导，精锐感知科技，智能刷头感应","提神醒脑，清心明目","2"],
-                [0, "../resource/brush/GOVINO-αH.png", "电动喷雾型", "杀菌祛斑", "个性化辅导，精锐感知科技，智能刷头感应","消脂减脂，净化肠胃","3"],
-                [0, "../resource/brush/GOVINO-αJ.png", "电动喷雾型", "深层美白", "个性化辅导，精锐感知科技，智能刷头感应","降低血脂，防癌抗癌，抗菌消炎","4"],
+                [0, "../resource/brush/GOVINO-βD.png", "声波振动型", "健康清洁", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦","6"],
+                [0, "../resource/brush/GOVINO-γD.png", "机械转动型", "健康清洁","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦","11"],
+                [0, "../resource/brush/GOVINO-δD.png", "超声波型", "健康清洁","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦","16"],
                 [0, "../resource/brush/GOVINO-ωF.png", "电动喷雾型", "健康清洁", "个性化辅导，精锐感知科技，智能刷头感应","促进血液循环，松弛平滑肌","5"],
             ],
-            "product2":[
-                [0, "../resource/brush/GOVINO-βD.png", "声波振动型", "健康清洁", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦","6"],
+            "product2":[//抗敏护龈
+                [0, "../resource/brush/GOVINO-αG.png", "电动喷雾型", "抗敏护龈", "个性化辅导，精锐感知科技，智能刷头感应","提神醒脑，清心明目","2"],
                 [0, "../resource/brush/GOVINO-βG.png", "声波振动型", "抗敏护龈", "个性化辅导，精锐感知科技，智能刷头感应", "利尿排毒，强壮骨骼，护心养胃","7"],
-                [0, "../resource/brush/GOVINO-βH.png", "声波振动型", "杀菌祛斑", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦","8"],
-                [0, "../resource/brush/GOVINO-βJ.png", "声波振动型", "深层美白", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦","9"],
+                [0, "../resource/brush/GOVINO-γG.png", "机械转动型", "抗敏护龈","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦","12"],
+                [0, "../resource/brush/GOVINO-δG.png", "超声波型", "抗敏护龈","个性化辅导，精锐感知科技，智能刷头感应", "消脂减肥，促进消化","17"],
                 [0, "../resource/brush/GOVINO-ωK.png", "声波振动型", "抗敏护龈", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦","10"],
             ],
-            "product3":[
-                [0, "../resource/brush/GOVINO-γD.png", "机械转动型", "健康清洁","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦","11"],
-                [0, "../resource/brush/GOVINO-γG.png", "机械转动型", "抗敏护龈","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦","12"],
+            "product3":[//杀菌祛斑
+                [0, "../resource/brush/GOVINO-αH.png", "电动喷雾型", "杀菌祛斑", "个性化辅导，精锐感知科技，智能刷头感应","消脂减脂，净化肠胃","3"],
+                [0, "../resource/brush/GOVINO-βH.png", "声波振动型", "杀菌祛斑", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦","8"],
                 [0, "../resource/brush/GOVINO-γH.png", "机械转动型", "杀菌祛斑","个性化辅导，精锐感知科技，智能刷头感应", "改善皮肤敏感溃烂，延缓衰老","13"],
-                [0, "../resource/brush/GOVINO-γJ.png", "机械转动型", "深层美白","个性化辅导，精锐感知科技，智能刷头感应", "美白抗氧化，醒酒敌烟","14"],
+                [0, "../resource/brush/GOVINO-δH.png", "超声波型", "杀菌祛斑","个性化辅导，精锐感知科技，智能刷头感应", "降压降脂，清热消暑","18"],
                 [0, "../resource/brush/GOVINO-ωN.png", "机械转动型", "杀菌祛斑","个性化辅导，精锐感知科技，智能刷头感应", "耐泡，好喝","15"],
             ],
-            "product4":[
-                [0, "../resource/brush/GOVINO-δD.png", "超声波型", "健康清洁","个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦","16"],
-                [0, "../resource/brush/GOVINO-δG.png", "超声波型", "抗敏护龈","个性化辅导，精锐感知科技，智能刷头感应", "消脂减肥，促进消化","17"],
-                [0, "../resource/brush/GOVINO-δH.png", "超声波型", "杀菌祛斑","个性化辅导，精锐感知科技，智能刷头感应", "降压降脂，清热消暑","18"],
+            "product4":[//深层美白
+                [0, "../resource/brush/GOVINO-αJ.png", "电动喷雾型", "深层美白", "个性化辅导，精锐感知科技，智能刷头感应","降低血脂，防癌抗癌，抗菌消炎","4"],
+                [0, "../resource/brush/GOVINO-βJ.png", "声波振动型", "深层美白", "个性化辅导，精锐感知科技，智能刷头感应", "好喝，身心愉悦","9"],
+                [0, "../resource/brush/GOVINO-γJ.png", "机械转动型", "深层美白","个性化辅导，精锐感知科技，智能刷头感应", "美白抗氧化，醒酒敌烟","14"],
                 [0, "../resource/brush/GOVINO-δJ.png", "超声波型", "深层美白","个性化辅导，精锐感知科技，智能刷头感应", "护肤美容，排毒护肝","19"],
                 [0, "../resource/brush/GOVINO-ωS.png", "超声波型", "深层美白","个性化辅导，精锐感知科技，智能刷头感应", "清热解毒，消食醒酒","20"],
             ],
@@ -705,7 +631,7 @@
 
         #tea_main_menu li a {
             display:block; 
-            background: url(../resource/menu2.png);
+            background: url(../resource/menu5.png);
             overflow: hidden;
             transition: all 0.2s ease;
         }
@@ -738,7 +664,7 @@
 
         #tea_left_menu li a {
             display:block;
-            background: url(../resource/menu4.png);
+            background: url(../resource/menu6.png);
             overflow: hidden;
             transition: all 0.2s ease;
         }
@@ -1226,6 +1152,37 @@
         60: {"next":60, "html":page_phrase_transition, "wait":10000, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
     };
 
+
+    function generate_pages_1(first){
+        var pages = {
+            1: {"next":3, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
+            3: {"next":10, "html":page_teach_preview, "wait":10, "auto":0, "before_init":null, "after_init":page_preview_after_init},
+            10: {"next":10, "html":page_teach_menu, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_menu_after_init},
+            11: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product1_after_init},
+            12: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product2_after_init},
+            13: {"next":40, "html":page_teach_product, "wait":10000, "auto":0, "before_init":null, "after_init":page_teach_product3_after_init},
+            40: {"next":40, "html":page_teach_transition, "wait":1, "auto":0, "before_init":null, "after_init":page_phrase_transition_after_init},
+        };
+        var max_index = 0;
+        var base = 1000;
+        for(var item in first){
+            item = parseInt(item)
+            pages[item + base] = first[item];
+            pages[item + base]["next"] += base;
+            max_index = Math.max(max_index, item + base);
+        }
+        console.log(pages)
+        // 找到最后一项, 最大一项
+
+        pages[max_index]["html"] = page_final_submit;
+        pages[max_index]["after_init"] = page_final_submit_after_init;
+        console.log("max index:", max_index);
+        console.log(pages)
+        return pages;
+    }
+
+
+
     function generate_pages_2(first, second){
         var pages = {
             1: {"next":3, "html":page_introduction, "wait":0, "auto":0, "before_init":null, "after_init":null},
@@ -1345,64 +1302,72 @@
         }
     };
 
-    function reset_config_2(number) {
-        console.log("number:", number)
-        if(number == 1){
-            config["pages"] = generate_pages_2(page_shampoo_item, page_brush_item);
-            order_number = 1;
-            order_sign = "shampoo_brush";
-            console.log("page_shampoo_item, page_brush_item", order_number, order_sign)
-        }else if (number == 2){
-            config["pages"] = generate_pages_2(page_brush_item, page_shampoo_item);
-            order_number = 2;
-            order_sign = "brush_shampoo";
-            console.log("page_brush_item, page_shampoo_item", order_number, order_sign)
-        }else{
-            config["pages"] = generate_pages_2(page_shampoo_item, page_brush_item);
-            order_number = 1;
-            order_sign = "shampoo_brush";
-            console.log("page_shampoo_item, page_brush_item", order_number, order_sign)
+
+    function get_arrange(items){
+        var arrange_arr = [];
+        var get_arrange_rec = function(result, arrange, index) {
+            if(index==arrange.length-1){
+                result.push(arrange.slice(0));
+                return;
+            }
+            for(var i=index; i<arrange.length; ++i){
+                var tmp = arrange[index];
+                arrange[index] = arrange[i];
+                arrange[i] = tmp;
+                get_arrange_rec(result, arrange, index + 1);
+                arrange[i] = arrange[index];
+                arrange[index] = tmp;
+            }
         }
+        get_arrange_rec(arrange_arr, items, 0);
+        return arrange_arr;
     }
 
-    function reset_config_3(number) {
-        console.log("number:", number)
-        if(number == 1){
-            config["pages"] = generate_pages_3(page_tea_item, page_shampoo_item, page_brush_item);
-            order_number = 1;
-            order_sign = "tea_shampoo_brush";
-            console.log("page_tea_item, page_shampoo_item, page_brush_item", order_number, order_sign)
-        }else if (number == 2){
-            config["pages"] = generate_pages_3(page_tea_item, page_brush_item, page_shampoo_item);
-            order_number = 2;
-            order_sign = "tea_brush_shampoo";
-            console.log("page_tea_item, page_brush_item, page_shampoo_item", order_number, order_sign)
-        }else if (number == 3){
-            config["pages"] = generate_pages_3(page_shampoo_item, page_tea_item, page_brush_item);
-            order_number = 3;
-            order_sign = "shampoo_tea_brush";
-            console.log("page_shampoo_item, page_tea_item, page_brush_item", order_number, order_sign)
-        }else if (number == 4){
-            config["pages"] = generate_pages_3(page_shampoo_item, page_brush_item, page_tea_item);
-            order_number = 4;
-            order_sign = "shampoo_brush_tea";
-            console.log("page_shampoo_item, page_brush_item, page_tea_item", order_number, order_sign)
-        }else if (number == 5){
-            config["pages"] = generate_pages_3(page_brush_item, page_tea_item, page_shampoo_item);
-            order_number = 5;
-            order_sign = "brush_tea_shampoo";
-            console.log("page_brush_item, page_tea_item, page_shampoo_item", order_number, order_sign)
-        }else if (number == 6){
-            config["pages"] = generate_pages_3(page_brush_item, page_shampoo_item, page_tea_item);
-            order_number = 6;
-            order_sign = "brush_shampoo_tea";
-            console.log("page_brush_item, page_shampoo_item, page_tea_item", order_number, order_sign)
-        }else{
-            config["pages"] = generate_pages_3(page_tea_item, page_shampoo_item, page_brush_item);
-            order_number = 1;
-            order_sign = "tea_shampoo_brush";
-            console.log("page_tea_item, page_shampoo_item, page_brush_item", order_number, order_sign)
+    function get_number_by_items(items){
+        var items_order = [];
+        for(var i = 0; i< output_order.length; ++i){
+            if(items.indexOf(output_order[i])>-1){
+                items_order.push(output_order[i]);
+            }
         }
+        var arrange_arr = get_arrange(items_order);
+        var signature = items.join("_");
+        var index = 0;
+        for(index=0; index<arrange_arr.length; ++index){
+            if(signature == arrange_arr[index].join("_")){
+                console.log("find item:", index, "sign:", signature);
+                break;
+            }
+        }
+        return index + 1;
+    }
+
+    function get_page_item_by_name(name){
+        var page_item = null;
+        if(name=="tea"){
+            page_item = page_tea_item;
+        }else if(name=="brush"){
+            page_item = page_brush_item;
+        }else if(name=="shampoo"){
+            page_item = page_shampoo_item
+        }
+        return page_item;
+    }
+
+    function reset_config(items) {
+        console.log("items:", items);
+        if(items.length == 1){
+            config["pages"] = generate_pages_1(get_page_item_by_name(items[0]));
+        }        
+        else if(items.length == 2){
+            config["pages"] = generate_pages_2(get_page_item_by_name(items[0]), get_page_item_by_name(items[1]));
+        }
+        else if(items.length == 3){
+            config["pages"] = generate_pages_3(get_page_item_by_name(items[0]), get_page_item_by_name(items[1]), get_page_item_by_name(items[2]));
+        }
+        order_number = get_number_by_items(items);
+        order_sign = items.join("_");
+        console.log("order_number:", order_number, "order_sign:", order_sign);
     }
 
     // 对Date的扩展，将 Date 转化为指定格式的String
@@ -1779,10 +1744,15 @@
 
     function set_page_detail(choice) {
         // 设置标题
-        var attribute = get_product_attribute(choice[0]);
-        $("#assortment_title").html(attribute);
-        if(title_color_map[attribute] != null){
-            $("#assortment_title").css("background-color", title_color_map[attribute]);
+        var assortment_title = "";
+        if(condition=="attribute"){
+            assortment_title = get_product_attribute(choice[0]);
+        }else if(condition=="benefit"){
+            assortment_title = get_product_benefit(choice[0]);
+        }
+        $("#assortment_title").html(assortment_title);
+        if(title_color_map[assortment_title] != null){
+            $("#assortment_title").css("background-color", title_color_map[assortment_title]);
         }
 
         // 设置名称
@@ -2172,6 +2142,10 @@
         arr.push("1");                                          // ID
         for(var i=0; i<output_order.length; ++i){
             var name = output_order[i];
+            if(!choice_infos.hasOwnProperty(name)){
+                console.log("data doesn't have property:", name);
+                continue;
+            }
             var choose_info = choice_infos[name];
             arr.push(choose_info["start"]);                     // startTime
         }
@@ -2187,7 +2161,10 @@
         arr.push(order_number);                                 // order_number
         for(var i=0; i<output_order.length; ++i){
             var name = output_order[i];
-
+            if(!choice_infos.hasOwnProperty(name)){
+                console.log("data doesn't have property:", name);
+                continue;
+            }
             var choose_info = choice_infos[name];
             arr.push(choose_info["spend"]);                     // chooseTime
             for(var j=0; j<choose_info["product"].length; ++j){
@@ -2250,22 +2227,16 @@
     }
 
     function main() {
-
-        var number = order_number;
-        if(number == 0){
-            var url = location.href;
-            console.log("url:", url)
-            var number_str = url.substring(url.lastIndexOf("_")+1, url.lastIndexOf("."));
-            var number = parseInt(number_str);
-            if(number == NaN){
-                number = 0;
-                console.log("invalid number, reset to 0");
+        // 去除order_pages中的空元素
+        for(var i=0;i<order_pages.length;){
+            if(order_pages[i]==null || order_pages[i].length == 0){
+                order_pages.splice(i, 1);
+            }else{
+                ++i;
             }
-        }else{
-            console.log("using order number:", number);
         }
-        reset_config_2(number);
-
+        console.log("input order_pages:", order_pages);
+        reset_config(order_pages);
         print_config(config);
         register_key_event(config);
         change_state(config);
