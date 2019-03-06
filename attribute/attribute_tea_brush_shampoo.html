@@ -8,11 +8,14 @@
     <script type="text/javascript" src="template_5.js"></script>
     <script type="text/javascript" src="template_7.js"></script>
     <script type="text/javascript" src="template_9.js"></script>
-    <script type="text/javascript" src="template_9_example.js"></script>    
+    <script type="text/javascript" src="template_BIF_example.js"></script>
+    <script type="text/javascript" src="template_BIF.js"></script>
+    <script type="text/javascript" src="template_9_example.js"></script>             
     <script type="text/javascript" src="template_9_dyh.js"></script>
     <script type="text/javascript" src="template_9_quality.js"></script>    
     <script type="text/javascript" src="template_10.js"></script>
     <script type="text/javascript" src="page_test.js"></script>
+    <script type="text/javascript" src="template_tea_TF1_example.js"></script>
     <script type="text/javascript" src="template_tea_TF1.js"></script>
     <script type="text/javascript" src="template_tea_TF2.js"></script>
     <script type="text/javascript" src="template_shampoo_TF1_example.js"></script>
@@ -41,7 +44,7 @@
         var name_type = 1;
         var output_order = ["tea","shampoo","brush"];   // 关键配置, 最后的输出顺序
         var order_pages = ["tea"];          // 关键配置, 后续页面跟随这个, 支持 tea, shampoo, brush
-        var order_number = 1;                           // 无需设置, 跟随order_page设定自动修改
+        var order_number = 2;                           // 无需设置, 跟随order_page设定自动修改
         var order_sign = "shampoo_brush";               // 无需设置, 跟随order_page设定自动修改
 
         console.log("order:", order_number);
@@ -61,32 +64,33 @@
 	    var config_tea = {
             "name": "tea",
 	        "product1":[
-	            [0, "../resource/tea/雪水云绿.JPG", "绿茶", "美容养颜", "银剑出鞘，茸毫隐翠，林间香气","延缓衰老，防癌抗癌","1"],
+                [0, "../resource/tea/雪水云绿.JPG", "绿茶", "美容养颜", "银剑出鞘，茸毫隐翠，林间香气","延缓衰老，防癌抗癌","1"],
+                [0, "../resource/tea/狗牯脑茶.JPG", "绿茶", "保健养生","紧结微勾，黛绿莹润，清心雅郁","利尿解毒，防治心血管疾病","5"],  
+                [0, "../resource/tea/太平猴魁.JPG", "绿茶", "舒缓压力", "两叶抱芽，绿中隐红，兰香高爽","促进血液循环，松弛平滑肌","3"],
+                [0, "../resource/tea/六安瓜片.JPG", "绿茶", "减肥瘦身", "瓜子形单叶，叶底嫩黄，熟栗香味","降低血脂，促进消化","4"],                              
                 [0, "../resource/tea/千岛玉叶.JPG", "绿茶", "美容养颜", "扁平挺直，翠绿嫩黄，兰蕙之清","抗老，防癌，养颜，抗菌","2"],                
-                [0, "../resource/tea/太平猴魁.JPG", "绿茶", "舒缓压力", "两叶抱芽，绿中隐红，兰香高爽","促进血液循环，松弛平滑肌","3"],                
-                [0, "../resource/tea/六安瓜片.JPG", "绿茶", "减肥瘦身", "瓜子形单叶，叶底嫩黄，熟栗香味","降低血脂，促进消化","4"],
-                [0, "../resource/tea/狗牯脑茶.JPG", "绿茶", "保健养生","紧结微勾，黛绿莹润，清心雅郁","利尿解毒，防治心血管疾病","5"],
 	        ],
 	        "product2":[
                 [0, "../resource/tea/金骏眉.JPG", "红茶", "美容养颜", "条索紧细，乌润带金，花果清香", "排毒养颜，抗氧化","6"],
+                [0, "../resource/tea/正山小种.JPG", "红茶", "保健养生", "条索肥壮，呈红褐色，有松烟香", "利尿排毒，强壮骨骼，护心养胃","9"],
 	            [0, "../resource/tea/政和工夫.JPG", "红茶", "舒缓压力", "条索重实，毫尖金黄，紫罗兰香", "好喝，身心愉悦","7"],
                 [0, "../resource/tea/坦洋工夫.JPG", "红茶", "减肥瘦身", "条索紧细，毫尖金黄，桂圆香气", "减肥瘦身，养胃护胃","8"],
-	            [0, "../resource/tea/正山小种.JPG", "红茶", "保健养生", "条索肥壮，呈红褐色，有松烟香", "利尿排毒，强壮骨骼，护心养胃","9"],
                 [0, "../resource/tea/信阳红.JPG", "红茶", "保健养生", "条索匀整，乌黑披金，有花果香", "消炎杀菌，利尿解毒","10"],
 	        ],
 	        "product3":[
                 [0, "../resource/tea/凤凰单枞.JPG", "青茶", "美容养颜","条索匀直，黄褐油润，独特花香", "改善皮肤过敏，养颜促代谢","11"],
-                [0, "../resource/tea/东方美人.JPG", "青茶", "减肥瘦身","茶心肥厚，满披茸毛，有熟果香", "消脂减肥，降低血脂","12"],
-                [0, "../resource/tea/水金龟.JPG", "青茶", "舒缓压力","条索紧结，色泽青褐，清雅高长", "好喝，身心愉悦","13"],                
-	            [0, "../resource/tea/永春佛手.JPG", "青茶", "舒缓压力","紧结肥壮，砂率乌润，香气悠长", "回甘，身心愉悦","14"],
                 [0, "../resource/tea/冻顶乌龙.JPG", "青茶", "保健养生","呈半球形，色泽墨绿，有桂花香", "抗氧化，防治龋齿","15"],
+                [0, "../resource/tea/水金龟.JPG", "青茶", "舒缓压力","条索紧结，色泽青褐，清雅高长", "好喝，身心愉悦","13"],  
+                [0, "../resource/tea/东方美人.JPG", "青茶", "减肥瘦身","茶心肥厚，满披茸毛，有熟果香", "消脂减肥，降低血脂","12"],              
+	            [0, "../resource/tea/永春佛手.JPG", "青茶", "舒缓压力","紧结肥壮，砂率乌润，香气悠长", "回甘，身心愉悦","14"],
+
 	        ],
 	        "product4":[
                 [0, "../resource/tea/黄山贡菊.JPG", "花茶", "美容养颜","朵大均匀，色白蒂绿，菊花香味", "护肤美容，排毒护肝","16"],
+                [0, "../resource/tea/杭白菊.JPG", "花茶", "保健养生","花形完整，嫩黄鲜亮，香气清冽", "清热解毒，消食醒酒","20"],
 	            [0, "../resource/tea/茉莉花茶.JPG", "花茶", "舒缓压力","紧细圆整，黄中带褐，灵香持久", "好喝，身心愉悦","17"],
 	            [0, "../resource/tea/玫瑰花茶.JPG", "花茶", "减肥瘦身","朵大饱满，色泽均匀，香味清淡", "消脂减肥，促进消化","18"],
 	            [0, "../resource/tea/苦丁茶.JPG", "花茶", "减肥瘦身","条索紧结，灰绿相间，清香带苦", "降压降脂，清热消暑","19"],
-	            [0, "../resource/tea/杭白菊.JPG", "花茶", "保健养生","花形完整，嫩黄鲜亮，香气清冽", "清热解毒，消食醒酒","20"],
 	        ],
 	    };
 
@@ -95,55 +99,55 @@
             "names": [
                 "雪水云绿",
                 "正山小种",
-                "东方美人",
-                "茉莉花茶",
+                "水金龟",
+                "玫瑰花茶",
             ]
         };
 
 	    var question_tea = {
             "questions":[
                 {"id":"construal_0", "example": 1, "template": template_9_example, "content":"例题：小明买了一张彩票，他有多大可能性中大奖？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_1", "example": 0, "template": template_9, "content":"Jeff正在考虑周末去拜访一个朋友。他最后这样做可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_2", "example": 0, "template": template_9, "content":"Mary正在考虑给自己买一双新鞋。她最后这样做可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_3", "example": 0, "template": template_9, "content":"Rachel正在考虑养一只宠物，她最后这样做可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_4", "example": 0, "template": template_9, "content":"Andy正在考虑举办一个新居乔迁宴会。她最后这样做可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_5", "example": 0, "template": template_9, "content":"Charley正在考虑买一台新笔记本电脑。他最后这样做可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_1", "example": 0, "template": template_9, "content":"Jeff正在考虑周末去拜访一个朋友。他最后这样做的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_2", "example": 0, "template": template_9, "content":"Mary正在考虑给自己买一双新鞋。她最后这样做的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_3", "example": 0, "template": template_9, "content":"Rachel正在考虑养一只宠物，她最后这样做的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_4", "example": 0, "template": template_9, "content":"Andy正在考虑举办一个新居乔迁宴会。她最后这样做的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_5", "example": 0, "template": template_9, "content":"Charley正在考虑买一台新笔记本电脑。他最后这样做的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
                 {"id":"construal_6", "example": 0, "template": template_9, "content":"Jack正在浏览邮件。他有多大可能在邮件中收到一个信用卡还款通知？", "left": "非常不可能", "right": "非常可能"},
                 {"id":"construal_7", "example": 0, "template": template_9, "content":"RAlex打算进行一次全国公路越野旅行。他有多大可能在途中遇到老乡？", "left": "非常不可能", "right": "非常可能"},
                 {"id":"construal_8", "example": 0, "template": template_9, "content":"Kaila每天自己开车上下班。她的车有多大可能发生刮碰？", "left": "非常不可能", "right": "非常可能"},
                 {"id":"construal_9", "example": 0, "template": template_9, "content":"Gataka正在等地铁。这趟地铁有多大可能晚点？", "left": "非常不可能", "right": "非常可能"},
                 {"id":"construal_10", "example": 0, "template": template_9, "content":"Akemy打算去超市买洗发水。该商品有多大可能正在打折？", "left": "非常不可能", "right": "非常可能"},
 
-                {"id":"similarity_1", "example": 0, "template": template_7, "content":"总的来说，你认为御茗阁提供的茶叶之间有多相似？", "left": "完全不相似", "right": "非常相似"},
-                {"id":"variety_1", "example": 0, "template": template_9_dyh, "content":"御茗阁的商品陈列为我提供了多样化的选择", "left": "非常不符合", "right": "非常符合"},
-                {"id":"variety_2", "example": 0, "template": template_9_dyh, "content":"在进行选择的时候，我感觉有较多的茶叶供我选择", "left": "非常不符合", "right": "非常符合"},
-                {"id":"variety_3", "example": 0, "template": template_9_dyh, "content":"在挑选茶叶的时候，我感觉有较多的选择余地", "left": "非常不符合", "right": "非常符合"},
+                {"id":"similarity_1", "example": 0, "template": template_7, "content":"总的来说，你认为御茗阁提供的茶叶之间有多相似？", "left": "非常不相似", "right": "非常相似"},
+                {"id":"variety_1", "example": 0, "template": template_9_dyh, "content":"御茗阁的商品陈列为我提供了多样化的选择", "left": "非常不同意", "right": "非常同意"},
+                {"id":"variety_2", "example": 0, "template": template_9_dyh, "content":"在进行选择的时候，我感觉有较多的茶叶供我选择", "left": "非常不同意", "right": "非常同意"},
+                {"id":"variety_3", "example": 0, "template": template_9_dyh, "content":"在挑选茶叶的时候，我感觉有较多的选择余地", "left": "非常不同意", "right": "非常同意"},
 
-                {"id":"labFamiliar_1", "example": 0, "template": template_4, "content":"我理解茶叶分类标签的含义", "left": "非常不符合", "right": "非常符合"},
-                {"id":"labFamiliar_1", "example": 0, "template": template_4, "content":"我认为茶叶分类标签的语义很抽象", "left": "非常不符合", "right": "非常符合"},
+                {"id":"labFamiliar_1", "example": 0, "template": template_5, "content":"我理解茶叶分类标签的含义(如绿茶、红茶等)", "left": "非常不同意", "right": "非常同意"},
+                {"id":"labFamiliar_1", "example": 0, "template": template_5, "content":"我熟悉茶叶分类标签的含义(如绿茶、红茶等)", "left": "非常不同意", "right": "非常同意"},
 
                 {"id":"quality_1", "example": 0, "template": template_9_quality, "content":"这些茶叶是高质量的茶叶", "left": "非常不同意", "right": "非常同意"},
                 {"id":"quality_1", "example": 0, "template": template_9_quality, "content":"这些茶叶的品质存在问题", "left": "非常不同意", "right": "非常同意"},
                 {"id":"quality_3", "example": 0, "template": template_9_quality, "content":"这些茶叶是让人觉得安全放心的", "left": "非常不同意", "right": "非常同意"},
                 {"id":"quality_4", "example": 0, "template": template_9_quality, "content":"在我看来，这些茶叶的质量具有保证", "left": "非常不同意", "right": "非常同意"},                                               
-                {"id":"difficulty_1", "example": 0, "template": template_4, "content":"我感觉难以挑选出自己偏好的一款茶叶", "left": "非常不符合", "right": "非常符合"},
-                {"id":"difficulty_2", "example": 0, "template": template_4, "content":"我感觉完成茶叶挑选的任务是困难的", "left": "非常不符合", "right": "非常符合"},
-                {"id":"difficulty_3", "example": 0, "template": template_4, "content":"我感觉完成茶叶挑选的任务需要耗费精力", "left": "非常不符合", "right": "非常符合"},
-                {"id":"difficulty_4", "example": 0, "template": template_4, "content":"我感觉完成茶叶挑选的任务需要进行较多的思考", "left": "非常不符合", "right": "非常符合"},
-                {"id":"difficulty_5", "example": 0, "template": template_4, "content":"我感觉完成茶叶挑选的任务花费了较长的时间", "left": "非常不符合", "right": "非常符合"},
+                {"id":"difficulty_1", "example": 0, "template": template_4, "content":"我感觉难以挑选出自己偏好的一款茶叶", "left": "非常不同意", "right": "非常同意"},
+                {"id":"difficulty_2", "example": 0, "template": template_4, "content":"我感觉完成茶叶挑选的任务是困难的", "left": "非常不同意", "right": "非常同意"},
+                {"id":"difficulty_3", "example": 0, "template": template_4, "content":"我感觉完成茶叶挑选的任务需要耗费精力", "left": "非常不同意", "right": "非常同意"},
+                {"id":"difficulty_4", "example": 0, "template": template_4, "content":"我感觉完成茶叶挑选的任务需要进行较多的思考", "left": "非常不同意", "right": "非常同意"},
+                {"id":"difficulty_5", "example": 0, "template": template_4, "content":"我感觉完成茶叶挑选的任务花费了较长的时间", "left": "非常不同意", "right": "非常同意"},
 
-                {"id":"brandFamiliarity", "example": 0, "template": template_4, "content":"我之前了解御茗阁这个品牌", "left": "非常不符合", "right": "非常符合"},
-                {"id":"productFamiliarity", "example": 0, "template": template_4, "content":"我了解茶叶知识", "left": "非常不符合", "right": "非常符合"},
+                {"id":"brandFamiliarity", "example": 0, "template": template_4, "content":"我之前了解御茗阁这个品牌", "left": "非常不同意", "right": "非常同意"},
+                {"id":"productFamiliarity", "example": 0, "template": template_4, "content":"我了解茶叶知识", "left": "非常不同意", "right": "非常同意"},
             ],
         };
-
+ 
 	    var test_tea = {
             // 问卷的第一张控件, 图片: TF_pic1, 名称 TF_name1, TF_benefit1, TF_attribute1,
             "tests":[
                 [
-                    {"id":"tea_00", "example": 1, "template": template_tea_TF1, "content":"例题：下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                    {"id":"tea_00", "example": 1, "template": template_tea_TF1_example, "content":"例题：下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/tea/千岛玉叶.JPG", "name":"千岛玉叶", "benefit":"美容养颜", "attribute":"绿茶"},
+                            {"src":"../resource/tea/蒙顶甘露.JPG", "name":"千岛玉叶", "benefit":"利尿消肿", "attribute":"绿茶"},
                         ],
                     },
                 ],
@@ -155,7 +159,7 @@
                     },
                     {"id":"tea_02", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/tea/莲心绿茶.JPG", "name":"莲心绿茶", "benefit":"保健养生", "attribute":"绿茶"},
+                            {"src":"../resource/tea/黄金桂.JPG", "name":"蒙顶黄芽", "benefit":"保健养生", "attribute":"黄茶"},
                         ],
                     },
                     {"id":"tea_03", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
@@ -165,7 +169,7 @@
                     },
                     {"id":"tea_04", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/tea/银骏眉.JPG", "name":"银骏眉", "benefit":"舒缓压力", "attribute":"红茶"},
+                            {"src":"../resource/tea/贡眉.JPG", "name":"银骏眉", "benefit":"舒缓压力", "attribute":"白茶"},
                         ],
                     },
                     {"id":"tea_05", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
@@ -175,7 +179,7 @@
                     },
                     {"id":"tea_06", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/tea/武夷大红袍.JPG", "name":"武夷大红袍", "benefit":"美容养颜", "attribute":"青茶"},
+                            {"src":"../resource/tea/武夷大红袍.JPG", "name":"武夷大红袍", "benefit":"减肥瘦身", "attribute":"黑茶"},
                         ],
                     },
                     {"id":"tea_07", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
@@ -185,9 +189,51 @@
                     },
                     {"id":"tea_08", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/tea/白芽奇兰.JPG", "name":"白芽奇兰", "benefit":"舒缓压力", "attribute":"花茶"},
+                            {"src":"../resource/tea/休宁松萝.JPG", "name":"生沱茶", "benefit":"美容养颜", "attribute":"砖茶"},
                         ],
                     },
+                    {"id":"tea_01", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/狗牯脑茶.JPG", "name":"狗牯脑茶", "benefit":"保健养生", "attribute":"绿茶"},
+                        ],
+                    },
+                    {"id":"tea_02", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/径山茶.JPG", "name":"径山茶", "benefit":"提神醒脑", "attribute":"绿茶"},
+                        ],
+                    },
+                    {"id":"tea_03", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/政和工夫.JPG", "name":"政和工夫", "benefit":"舒缓压力", "attribute":"红茶"},
+                        ],
+                    },
+                    {"id":"tea_04", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/九曲红梅.JPG", "name":"九曲红梅", "benefit":"清热解暑", "attribute":"红茶"},
+                        ],
+                    },
+                    {"id":"tea_05", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/东方美人.JPG", "name":"东方美人", "benefit":"减肥瘦身", "attribute":"青茶"},
+                        ],
+                    },
+                    {"id":"tea_06", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/铁罗汉.JPG", "name":"铁罗汉", "benefit":"生津止渴", "attribute":"青茶"},
+                        ],
+                    },
+                    {"id":"tea_07", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"1",
+                        "pictures":[
+                            {"src":"../resource/tea/黄山贡菊.JPG", "name":"黄山贡菊", "benefit":"美容养颜", "attribute":"花茶"},
+                        ],
+                    },
+                    {"id":"tea_08", "example": 0, "template": template_tea_TF1, "content":"下图所示的茶叶是否在茶叶目录中出现过？", "left": "是", "right": "否", "true":"2",
+                        "pictures":[
+                            {"src":"../resource/tea/白芽奇兰.JPG", "name":"白芽奇兰", "benefit":"清新口气", "attribute":"花茶"},
+                        ],
+                    },
+
+
                 ],
             ],
         };
@@ -196,18 +242,18 @@
         var config_shampoo = {
             "name": "shampoo",
             "product1":[
-                [0, "../resource/shampoo/ALTERNA-βD.png", "柠檬香", "丝滑水润","不含硅油，无防腐剂添加，不含硫酸盐", "消脂减肥，促进消化","6"],
-                [0, "../resource/shampoo/ALTERNA-βG.png", "柠檬香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "降压降脂，清热消暑","7"],
-                [0, "../resource/shampoo/ALTERNA-βH.png", "柠檬香", "清爽控油","不含硅油，无防腐剂添加，不含硫酸盐", "护肤美容，排毒护肝","8"],
-                [0, "../resource/shampoo/ALTERNA-βJ.png", "柠檬香", "强效修护","不含硅油，无防腐剂添加，不含硫酸盐", "清热解毒，消食醒酒","9"],
-                [0, "../resource/shampoo/ALTERNA-ωK.png", "柠檬香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "清热解毒，消食醒酒","10"],        
-            ],
-            "product2":[
                 [0, "../resource/shampoo/ALTERNA-αD.png", "栀子香", "丝滑水润", "不含硅油，无防腐剂添加，不含硫酸盐","提神醒脑，清心明目","1"],
                 [0, "../resource/shampoo/ALTERNA-αG.png", "栀子香", "防晒锁色", "不含硅油，无防腐剂添加，不含硫酸盐","消脂减脂，净化肠胃","2"],
                 [0, "../resource/shampoo/ALTERNA-αH.png", "栀子香", "清爽控油", "不含硅油，无防腐剂添加，不含硫酸盐","降低血脂，防癌抗癌，抗菌消炎","3"],
                 [0, "../resource/shampoo/ALTERNA-αJ.png", "栀子香", "强效修护", "不含硅油，无防腐剂添加，不含硫酸盐","促进血液循环，松弛平滑肌","4"],
                 [0, "../resource/shampoo/ALTERNA-ωF.png", "栀子香", "丝滑水润", "不含硅油，无防腐剂添加，不含硫酸盐","抗老，防癌，养颜，抗菌","5"],
+            ],
+            "product2":[
+                [0, "../resource/shampoo/ALTERNA-βD.png", "柠檬香", "丝滑水润","不含硅油，无防腐剂添加，不含硫酸盐", "消脂减肥，促进消化","6"],
+                [0, "../resource/shampoo/ALTERNA-βG.png", "柠檬香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "降压降脂，清热消暑","7"],
+                [0, "../resource/shampoo/ALTERNA-βH.png", "柠檬香", "清爽控油","不含硅油，无防腐剂添加，不含硫酸盐", "护肤美容，排毒护肝","8"],
+                [0, "../resource/shampoo/ALTERNA-βJ.png", "柠檬香", "强效修护","不含硅油，无防腐剂添加，不含硫酸盐", "清热解毒，消食醒酒","9"],
+                [0, "../resource/shampoo/ALTERNA-ωK.png", "柠檬香", "防晒锁色","不含硅油，无防腐剂添加，不含硫酸盐", "清热解毒，消食醒酒","10"],        
             ],
             "product3":[
                 [0, "../resource/shampoo/ALTERNA-γD.png", "玫瑰香", "丝滑水润","不含硅油，无防腐剂添加，不含硫酸盐", "好喝，身心愉悦","11"],
@@ -238,30 +284,53 @@
 
         var question_shampoo = {
             "questions":[
-                {"id":"construal_0", "example": 1, "template": template_9_example, "content":"例题：小明买了一张彩票，他有多大可能性中大奖？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_1", "example": 0, "template": template_9, "content":"Jeff正在考虑周末去拜访一个朋友。他去拜访的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_2", "example": 0, "template": template_9, "content":"Mary正在考虑给自己买一双新鞋。她买的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_3", "example": 0, "template": template_9, "content":"Diko正在查看某一天的天气预报。那天下雨的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_4", "example": 0, "template": template_9, "content":"Akemy打算去超市买洗发水。该商品降价的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_5", "example": 0, "template": template_9, "content":"Andy正在决定要不要举办一个新居乔迁宴会。她举办的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
-                {"id":"construal_6", "example": 0, "template": template_9, "content":"Rob主修哲学，正在考虑上法律学院。她向法律学院发出申请的可能性有多大？", "left": "非常不可能", "right": "非常可能"},
+                {"id":"construal_0", "example": 1, "template": template_BIF_example, "content":"例题：画画", "left": "消遣时间", "right": "修身养性"},
+                {"id":"construal_1", "example": 0, "template": template_BIF, "content":"列清单", "left": "提高工作效率", "right": "把事情逐条记录下来"},
+                {"id":"construal_2", "example": 0, "template": template_BIF, "content":"阅读", "left": "逐字逐句地看", "right": "获得知识"},
+                {"id":"construal_3", "example": 0, "template": template_BIF, "content":"洗衣服", "left": "浸泡揉搓漂洗", "right": "去除衣服上的污渍"},
+                {"id":"construal_4", "example": 0, "template": template_BIF, "content":"砍树", "left": "获得木材", "right": "用斧子伐"},
+                {"id":"construal_5", "example": 0, "template": template_BIF, "content":"打扫房间", "left": "保持清洁", "right": "扫地擦玻璃"},
+                {"id":"construal_6", "example": 0, "template": template_BIF, "content":"付房租", "left": "交钱", "right": "为了有居住的地方"},
 
-                {"id":"shampoo7", "example": 0, "template": template_7, "content":"总的来说，你认为ALTERNA提供的这些洗发水产品之间有多相似？", "left": "完全不相似", "right": "非常相似"},
-                {"id":"shampoo8", "example": 0, "template": template_9_dyh, "content":"ALTERNA的商品陈列为我提供了多样化的选择", "left": "非常不符合", "right": "非常符合"},
-                {"id":"shampoo9", "example": 0, "template": template_9_dyh, "content":"在进行选择的时候，我感觉较多的洗发水产品供我选择", "left": "非常不符合", "right": "非常符合"},
-                {"id":"shampoo10", "example": 0, "template": template_9_dyh, "content":"在挑选洗发水的时候，我感觉也有较多的选择余地", "left": "非常不符合", "right": "非常符合"},
+                {"id":"construal_7", "example": 0, "template": template_BIF, "content":"养花", "left": "定期浇水施肥", "right": "陶冶情操美化环境"},
+                {"id":"construal_8", "example": 0, "template": template_BIF, "content":"投票", "left": "影响选举结果", "right": "填写选票"},
+                {"id":"construal_9", "example": 0, "template": template_BIF, "content":"做心理测试", "left": "回答问题", "right": "了解自己"},
+                {"id":"construal_10", "example": 0, "template": template_BIF, "content":"考试", "left": "填写考卷", "right": "考察知识"},
+                {"id":"construal_11", "example": 0, "template": template_BIF, "content":"打招呼", "left": "见面说：你好", "right": "表达友好态度"},
+                {"id":"construal_12", "example": 0, "template": template_BIF, "content":"吃饭", "left": "吸取营养", "right": "咀嚼与吞咽"},
+                {"id":"construal_13", "example": 0, "template": template_BIF, "content":"种菜", "left": "撒种耕地施肥", "right": "获得新鲜蔬菜"},
+                {"id":"construal_14", "example": 0, "template": template_BIF, "content":"照相", "left": "记录当前", "right": "用相机捕捉画面"},
+                {"id":"construal_15", "example": 0, "template": template_BIF, "content":"拒绝不良诱惑", "left": "自制回避谢绝", "right": "保持道德品质"},
+                {"id":"construal_16", "example": 0, "template": template_BIF, "content":"量肩宽", "left": "裁衣服", "right": "用软尺测量"},
+                {"id":"construal_17", "example": 0, "template": template_BIF, "content":"补牙", "left": "去看牙医", "right": "保持牙齿健康"},
+                {"id":"construal_18", "example": 0, "template": template_BIF, "content":"粉刷墙壁", "left": "用刷子将涂料刷在墙上", "right": "让房屋焕然一新"},
+                {"id":"construal_19", "example": 0, "template": template_BIF, "content":"敲门", "left": "确认房间里是否有人", "right": "用手指轻敲门板"},
+                {"id":"construal_20", "example": 0, "template": template_BIF, "content":"锁门", "left": "把钥匙插进门锁并转动", "right": "防盗"},
+                {"id":"construal_21", "example": 0, "template": template_BIF, "content":"爬树", "left": "获得更广阔的视野", "right": "沿着树枝攀爬"},
+                {"id":"construal_22", "example": 0, "template": template_BIF, "content":"洗手", "left": "保持清洁卫生", "right": "涂洗手液并用清水冲洗"},
+                {"id":"construal_23", "example": 0, "template": template_BIF, "content":"刷牙", "left": "防止蛀牙", "right": "用牙刷和牙膏清洁牙齿"},
+                {"id":"construal_24", "example": 0, "template": template_BIF, "content":"驾车出行", "left": "出游", "right": "根据地图导航到达目的地"},                
 
-                {"id":"shampoo11", "example": 0, "template": template_9_quality, "content":"这些洗发水是高质量的产品", "left": "非常不同意", "right": "非常同意"},
-                {"id":"shampoo12", "example": 0, "template": template_9_quality, "content":"这些洗发水的品质存在问题", "left": "非常不同意", "right": "非常同意"},
-                {"id":"shampoo13", "example": 0, "template": template_9_quality, "content":"这些洗发水是让人觉得安全放心的", "left": "非常不同意", "right": "非常同意"},
-                {"id":"shampoo14", "example": 0, "template": template_9_quality, "content":"在我看来，这些洗发水的质量具有保证", "left": "非常不同意", "right": "非常同意"},                                               
-                {"id":"shampoo15", "example": 0, "template": template_4, "content":"我感觉难以挑选出自己偏好的一款洗发水", "left": "非常不符合", "right": "非常符合"},
-                {"id":"shampoo16", "example": 0, "template": template_4, "content":"我感觉完成洗发水挑选的任务是困难的", "left": "非常不符合", "right": "非常符合"},
-                {"id":"shampoo17", "example": 0, "template": template_4, "content":"我感觉完成洗发水挑选的任务需要耗费精力", "left": "非常不符合", "right": "非常符合"},
-                {"id":"shampoo18", "example": 0, "template": template_4, "content":"我感觉完成洗发水挑选的任务需要进行较多的思考", "left": "非常不符合", "right": "非常符合"},
-                {"id":"shampoo19", "example": 0, "template": template_4, "content":"我感觉完成洗发水挑选的任务花费了较长的时间", "left": "非常不符合", "right": "非常符合"},
-                {"id":"shampoo20", "example": 0, "template": template_4, "content":"我之前了解ALTERNA这个品牌", "left": "非常不符合", "right": "非常符合"},
-                {"id":"shampoo21", "example": 0, "template": template_4, "content":"我了解洗发水知识", "left": "非常不符合", "right": "非常符合"},
+                {"id":"similarity_1", "example": 0, "template": template_7, "content":"总的来说，你认为ALTERNA提供的这些洗发水产品之间有多相似？", "left": "非常不相似", "right": "非常相似"},
+                {"id":"variety_1", "example": 0, "template": template_9_dyh, "content":"ALTERNA的商品陈列为我提供了多样化的选择", "left": "非常不同意", "right": "非常同意"},
+                {"id":"variety_2", "example": 0, "template": template_9_dyh, "content":"在进行选择的时候，我感觉较多的洗发水产品供我选择", "left": "非常不同意", "right": "非常同意"},
+                {"id":"variety_3", "example": 0, "template": template_9_dyh, "content":"在挑选洗发水的时候，我感觉也有较多的选择余地", "left": "非常不同意", "right": "非常同意"},
+
+                {"id":"labFamiliar_1", "example": 0, "template": template_5, "content":"我理解洗发水分类标签的含义(如柠檬香、玫瑰香等)", "left": "非常不同意", "right": "非常同意"},
+                {"id":"labFamiliar_1", "example": 0, "template": template_5, "content":"我熟悉茶叶分类标签的含义(如柠檬香、玫瑰香等)", "left": "非常不同意", "right": "非常同意"},
+
+                {"id":"quality_1", "example": 0, "template": template_9_quality, "content":"这些洗发水是高质量的产品", "left": "非常不同意", "right": "非常同意"},
+                {"id":"quality_1", "example": 0, "template": template_9_quality, "content":"这些洗发水的品质存在问题", "left": "非常不同意", "right": "非常同意"},
+                {"id":"quality_3", "example": 0, "template": template_9_quality, "content":"这些洗发水是让人觉得安全放心的", "left": "非常不同意", "right": "非常同意"},
+                {"id":"quality_4", "example": 0, "template": template_9_quality, "content":"在我看来，这些洗发水的质量具有保证", "left": "非常不同意", "right": "非常同意"},                                               
+                {"id":"difficulty_1", "example": 0, "template": template_4, "content":"我感觉难以挑选出自己偏好的一款洗发水", "left": "非常不同意", "right": "非常同意"},
+                {"id":"difficulty_2", "example": 0, "template": template_4, "content":"我感觉完成洗发水挑选的任务是困难的", "left": "非常不同意", "right": "非常同意"},
+                {"id":"difficulty_3", "example": 0, "template": template_4, "content":"我感觉完成洗发水挑选的任务需要耗费精力", "left": "非常不同意", "right": "非常同意"},
+                {"id":"difficulty_4", "example": 0, "template": template_4, "content":"我感觉完成洗发水挑选的任务需要进行较多的思考", "left": "非常不同意", "right": "非常同意"},
+                {"id":"difficulty_5", "example": 0, "template": template_4, "content":"我感觉完成洗发水挑选的任务花费了较长的时间", "left": "非常不同意", "right": "非常同意"},
+
+                {"id":"brandFamiliarity", "example": 0, "template": template_4, "content":"我之前了解ALTERNA这个品牌", "left": "非常不同意", "right": "非常同意"},
+                {"id":"productFamiliarity", "example": 0, "template": template_4, "content":"我了解洗发水知识", "left": "非常不同意", "right": "非常同意"},                           
             ],
         };
 
@@ -283,7 +352,7 @@
                     },
                     {"id":"shampoo_02", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss1/ALTERNA-αB.png", "name":"ALTERNA-αB", "benefit":"防晒锁色", "attribute":"阳光味"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-αB.png", "name":"ALTERNA-αB", "benefit":"防晒锁色", "attribute":"蜜桃香"},
                         ],
                     },
                     {"id":"shampoo_03", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
@@ -303,7 +372,7 @@
                     },
                     {"id":"shampoo_06", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss1/ALTERNA-δY.png", "name":"ALTERNA-δY", "benefit":"强效修护", "attribute":"百里香"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-δY.png", "name":"ALTERNA-δY", "benefit":"强效修护", "attribute":"百合香"},
                         ],
                     }, 
                     {"id":"shampoo_07", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",
@@ -313,7 +382,7 @@
                     },
                     {"id":"shampoo_08", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"2",
                         "pictures":[
-                            {"src":"../resource/shampoo/miss1/ALTERNA-βB.png", "name":"ALTERNA-βB", "benefit":"丝滑水润", "attribute":"樟树香"},
+                            {"src":"../resource/shampoo/miss1/ALTERNA-βB.png", "name":"ALTERNA-βB", "benefit":"丝滑水润", "attribute":"松木香"},
                         ],
                     },
                     {"id":"shampoo_09", "example": 0, "template": template_shampoo_TF1, "content":"下图所示的产品是否在洗发水目录中出现过？", "left": "是", "right": "否", "true":"1",

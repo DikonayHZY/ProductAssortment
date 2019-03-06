@@ -4,7 +4,7 @@ template_9 =`
 			<div style="width: 80%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-size: 24px; line-height: 2;"> 
 			<p><strong>本题与你之前浏览的所有页面均无关联</strong><br>
 			   请仔细阅读下列描述，并<strong>判断事件发生的可能性</strong>：“1”= 非常不可能，“9”= 非常可能<br>
-			   <strong style="color: red;">回答不分对错</strong>，请按照真实感受来回答<br>
+			   <strong style="color: red;">回答不分对错</strong>，请按照真实感受来回答，<strong>正式作答：</strong>
 			</p>
 			</div>			
 		</div>
