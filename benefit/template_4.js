@@ -10,7 +10,6 @@ template_4 = `
 
 		<div style="width: 100%; height: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center;"><!-- 题目部分 -->
 			<div style="width: 80%; height: 40%; display: flex; align-items: center; justify-content: center; font-size: 26px; line-height: 1.5;" id="content">小张打开电子邮箱后收到垃圾邮件</div>
-			</div>
 			<div style="width: 100%; height: 50%; display: flex; flex-direction: column; align-items: center; justify-content: space-around;"> 
 				<div style="width: 100%; height: 45%; min-height: 70px; display: flex; align-items: center; justify-content: center;">
 					<div style="width: 70px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
