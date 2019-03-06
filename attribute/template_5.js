@@ -3,7 +3,7 @@ template_5 =`
 		<div style="width: 100%; height: 40%; display: flex; align-items: center; justify-content: center;"><!-- 题目说明 -->
 			<div style="width: 80%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-size: 24px; line-height: 2;"> 
 			<p>请仔细读题，根据题意回忆刚才的感受<br>
-			选择<strong>最能表达你真实感受</strong>的数字：“1”= 非常不同意，“9”= 非常同意<br>
+			选择<strong>最能表达你真实感受</strong>的数字：“1”= 非常不同意，“5”= 非常同意<br>
 			<strong style="color: red;">回答不分对错</strong>，请按照真实感受来回答</p>
 			</div>			
 		</div>

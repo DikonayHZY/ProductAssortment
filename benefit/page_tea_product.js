@@ -77,9 +77,8 @@ page_tea_product =`
 						</div>
 						<div style="height: 100%; width: 55%; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; font-size: 22px; line-height: 2.0;">
 
-							<p><strong>品类：</strong><span id="tea_assortment">白松露</span></p>							
 							<p><strong>功效：</strong><span id="tea_benefit">祛屑止痒</span></p>
-
+							<p><strong>品类：</strong><span id="tea_assortment">白松露</span></p>							
 							<p id="other_discription">不含防腐剂，无硅油，不含硫酸盐</p>							
 
 						</div>

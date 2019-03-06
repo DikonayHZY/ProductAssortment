@@ -73,7 +73,7 @@ page_teach_product =`
 
 				<div id="product_tips" style="width: 100%; height: 55%; display: block;">
 					<div style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
-						请点击商品查看详情！找到“月季花”
+						(点击左侧导航可切换标签栏) 请点击商品查看详情！找到“月季花”
 					</div>
 				</div>
 

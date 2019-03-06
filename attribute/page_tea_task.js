@@ -5,7 +5,7 @@ page_tea_task =`
 			<div style="width: 70%; height: 100%; font-size: 28px; line-height: 1.5;">想象一下你正在御茗阁(一家茶馆)喝茶，现在需要你从茶叶目录里<strong>选择一款你偏好的茶叶</strong>，不用考虑价格因素</div>
 		</div>
 		<div style="width: 60%; height: 20%; display: flex; align-items: center; justify-content: center; font-size: 18px; line-height: 1.5;">
-			注：御茗阁是全国连锁的品牌茶馆，通过全产业链管控及先进的运营模式控制优质茶叶资源，为顾客提供天然、绿色、健康、安全的高品质茶叶
+			注：御茗阁是全国连锁的品牌茶馆，通过全产业链管控及先进的运营模式控制优质茶叶资源，为顾客提供天然、绿色、健康的茶叶
 		</div>
 
 		<div style=" height: 15%; width: 70%; display: flex; align-items: center; justify-content: center; ">
