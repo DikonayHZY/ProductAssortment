@@ -1,0 +1,529 @@
+﻿{
+	"username": "李骆维依",
+	"gender": "0",
+	"age": "18",
+	"major": "生物医学工程",
+	"grade": "大一",
+	"phone": "18976966070",
+	"condition": "attribute",
+	"order_number": 1,
+	"order_sign": "tea_shampoo",
+	"purpose": "调查人在目的性不强时对事物的观察力和选择情况",
+	"choice": {
+		"tea": {
+			"start": "2019-03-08_13:55:54",
+			"end": "2019-03-08_13:56:40",
+			"spend": 46,
+			"product": [
+				{
+					"rate": 0,
+					"千岛玉叶": 0,
+					"太平猴魁": 0,
+					"六安瓜片": 0,
+					"狗牯脑茶": 0,
+					"雪水云绿": 0
+				},
+				{
+					"rate": 0,
+					"金骏眉": 0,
+					"政和工夫": 0,
+					"正山小种": 0,
+					"坦洋工夫": 0,
+					"信阳红": 0
+				},
+				{
+					"rate": 0,
+					"东方美人": 0,
+					"凤凰单枞": 0,
+					"冻顶乌龙": 0,
+					"水金龟": 0,
+					"永春佛手": 0
+				},
+				{
+					"rate": 0.8,
+					"苦丁茶": 1,
+					"玫瑰花茶": 1,
+					"茉莉花茶": 1,
+					"黄山贡菊": 1,
+					"杭白菊": 0
+				}
+			],
+			"choose": "茉莉花茶",
+			"choose_id": "17"
+		},
+		"shampoo": {
+			"start": "2019-03-08_14:00:04",
+			"end": "2019-03-08_14:00:24",
+			"spend": 20,
+			"product": [
+				{
+					"rate": 1,
+					"ALTERNA-ωF": 1,
+					"ALTERNA-αD": 1,
+					"ALTERNA-αJ": 1,
+					"ALTERNA-αH": 1,
+					"ALTERNA-αG": 1
+				},
+				{
+					"rate": 0,
+					"ALTERNA-βD": 0,
+					"ALTERNA-βG": 0,
+					"ALTERNA-βJ": 0,
+					"ALTERNA-βH": 0,
+					"ALTERNA-ωK": 0
+				},
+				{
+					"rate": 1,
+					"ALTERNA-γJ": 1,
+					"ALTERNA-γG": 1,
+					"ALTERNA-γD": 1,
+					"ALTERNA-γH": 1,
+					"ALTERNA-ωN": 1
+				},
+				{
+					"rate": 0,
+					"ALTERNA-δG": 0,
+					"ALTERNA-δD": 0,
+					"ALTERNA-δH": 0,
+					"ALTERNA-δJ": 0,
+					"ALTERNA-ωS": 0
+				}
+			],
+			"choose": "ALTERNA-αH",
+			"choose_id": "3"
+		}
+	},
+	"questions": {
+		"tea": [
+			{
+				"id": "construal_1",
+				"answer": 7
+			},
+			{
+				"id": "construal_2",
+				"answer": 4
+			},
+			{
+				"id": "construal_3",
+				"answer": 3
+			},
+			{
+				"id": "construal_4",
+				"answer": 6
+			},
+			{
+				"id": "construal_5",
+				"answer": 3
+			},
+			{
+				"id": "construal_6",
+				"answer": 5
+			},
+			{
+				"id": "construal_7",
+				"answer": 7
+			},
+			{
+				"id": "construal_8",
+				"answer": 4
+			},
+			{
+				"id": "construal_9",
+				"answer": 2
+			},
+			{
+				"id": "construal_10",
+				"answer": 8
+			},
+			{
+				"id": "similarity_1",
+				"answer": 5
+			},
+			{
+				"id": "variety_1",
+				"answer": 5
+			},
+			{
+				"id": "variety_2",
+				"answer": 4
+			},
+			{
+				"id": "variety_3",
+				"answer": 4
+			},
+			{
+				"id": "labFamiliar_1",
+				"answer": 4
+			},
+			{
+				"id": "labFamiliar_1",
+				"answer": 3
+			},
+			{
+				"id": "quality_1",
+				"answer": 4
+			},
+			{
+				"id": "quality_1",
+				"answer": 5
+			},
+			{
+				"id": "quality_3",
+				"answer": 5
+			},
+			{
+				"id": "quality_4",
+				"answer": 5
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 2
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 1
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 1
+			}
+		],
+		"shampoo": [
+			{
+				"id": "construal_1",
+				"answer": 3
+			},
+			{
+				"id": "construal_3",
+				"answer": 6
+			},
+			{
+				"id": "construal_4",
+				"answer": 3
+			},
+			{
+				"id": "construal_5",
+				"answer": 2
+			},
+			{
+				"id": "construal_6",
+				"answer": 4
+			},
+			{
+				"id": "construal_7",
+				"answer": 6
+			},
+			{
+				"id": "construal_8",
+				"answer": 1
+			},
+			{
+				"id": "construal_9",
+				"answer": 4
+			},
+			{
+				"id": "construal_11",
+				"answer": 5
+			},
+			{
+				"id": "construal_12",
+				"answer": 3
+			},
+			{
+				"id": "construal_13",
+				"answer": 6
+			},
+			{
+				"id": "construal_14",
+				"answer": 2
+			},
+			{
+				"id": "construal_15",
+				"answer": 6
+			},
+			{
+				"id": "construal_16",
+				"answer": 6
+			},
+			{
+				"id": "construal_18",
+				"answer": 5
+			},
+			{
+				"id": "construal_19",
+				"answer": 2
+			},
+			{
+				"id": "construal_20",
+				"answer": 5
+			},
+			{
+				"id": "construal_21",
+				"answer": 5
+			},
+			{
+				"id": "construal_22",
+				"answer": 1
+			},
+			{
+				"id": "construal_23",
+				"answer": 4
+			},
+			{
+				"id": "construal_24",
+				"answer": 3
+			},
+			{
+				"id": "similarity_1",
+				"answer": 6
+			},
+			{
+				"id": "variety_1",
+				"answer": 5
+			},
+			{
+				"id": "variety_2",
+				"answer": 6
+			},
+			{
+				"id": "variety_3",
+				"answer": 6
+			},
+			{
+				"id": "labFamiliar_1",
+				"answer": 5
+			},
+			{
+				"id": "labFamiliar_1",
+				"answer": 3
+			},
+			{
+				"id": "quality_1",
+				"answer": 7
+			},
+			{
+				"id": "quality_1",
+				"answer": 3
+			},
+			{
+				"id": "quality_3",
+				"answer": 7
+			},
+			{
+				"id": "quality_4",
+				"answer": 7
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 2
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 1
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 1
+			}
+		]
+	},
+	"tests": {
+		"tea": [
+			{
+				"id": "tea_01",
+				"answer": 1,
+				"RT": 1349
+			},
+			{
+				"id": "tea_01",
+				"answer": 0,
+				"RT": 810
+			},
+			{
+				"id": "tea_02",
+				"answer": 1,
+				"RT": 752
+			},
+			{
+				"id": "tea_02",
+				"answer": 1,
+				"RT": 2238
+			},
+			{
+				"id": "tea_03",
+				"answer": 1,
+				"RT": 1573
+			},
+			{
+				"id": "tea_03",
+				"answer": 0,
+				"RT": 2024
+			},
+			{
+				"id": "tea_04",
+				"answer": 1,
+				"RT": 1798
+			},
+			{
+				"id": "tea_04",
+				"answer": 1,
+				"RT": 2272
+			},
+			{
+				"id": "tea_05",
+				"answer": 1,
+				"RT": 617
+			},
+			{
+				"id": "tea_05",
+				"answer": 0,
+				"RT": 2497
+			},
+			{
+				"id": "tea_06",
+				"answer": 1,
+				"RT": 1890
+			},
+			{
+				"id": "tea_06",
+				"answer": 1,
+				"RT": 640
+			},
+			{
+				"id": "tea_07",
+				"answer": 1,
+				"RT": 920
+			},
+			{
+				"id": "tea_07",
+				"answer": 1,
+				"RT": 2687
+			},
+			{
+				"id": "tea_08",
+				"answer": 1,
+				"RT": 1067
+			},
+			{
+				"id": "tea_08",
+				"answer": 1,
+				"RT": 1124
+			}
+		],
+		"shampoo": [
+			{
+				"id": "shampoo_01",
+				"answer": 1,
+				"RT": 2507
+			},
+			{
+				"id": "shampoo_02",
+				"answer": 1,
+				"RT": 2305
+			},
+			{
+				"id": "shampoo_03",
+				"answer": 1,
+				"RT": 1281
+			},
+			{
+				"id": "shampoo_04",
+				"answer": 1,
+				"RT": 2339
+			},
+			{
+				"id": "shampoo_05",
+				"answer": 1,
+				"RT": 1473
+			},
+			{
+				"id": "shampoo_06",
+				"answer": 1,
+				"RT": 1721
+			},
+			{
+				"id": "shampoo_07",
+				"answer": 1,
+				"RT": 1438
+			},
+			{
+				"id": "shampoo_08",
+				"answer": 1,
+				"RT": 1000
+			},
+			{
+				"id": "shampoo_09",
+				"answer": 1,
+				"RT": 1292
+			},
+			{
+				"id": "shampoo_10",
+				"answer": 1,
+				"RT": 3092
+			},
+			{
+				"id": "shampoo_11",
+				"answer": 1,
+				"RT": 1563
+			},
+			{
+				"id": "shampoo_12",
+				"answer": 0,
+				"RT": 1776
+			},
+			{
+				"id": "shampoo_13",
+				"answer": 1,
+				"RT": 2181
+			},
+			{
+				"id": "shampoo_14",
+				"answer": 1,
+				"RT": 1933
+			},
+			{
+				"id": "shampoo_15",
+				"answer": 1,
+				"RT": 1708
+			},
+			{
+				"id": "shampoo_16",
+				"answer": 1,
+				"RT": 1529
+			}
+		]
+	},
+	"output": "1|2019-03-08_13:55:54|2019-03-08_14:00:04|李骆维依|0|18|大一|2|生物医学工程|1|1|tea_shampoo|1|46|0|0|0|0.8|茉莉花茶|17|7|4|3|6|3|5|7|4|2|8|5|5|4|4|4|3|4|5|5|5|2|2|3|3|2|1|1|1|0|1|1|1|0|1|1|1|0|1|1|1|1|1|1|0.8125|1349|810|752|2238|1573|2024|1798|2272|617|2497|1890|640|920|2687|1067|1124|20|1|0|1|0|ALTERNA-αH|3|3|6|3|2|4|6|1|4|5|3|6|2|6|6|5|2|5|5|1|4|3|6|5|6|6|5|3|7|3|7|7|2|2|2|2|2|1|1|1|1|1|1|1|1|1|1|1|1|1|0|1|1|1|1|0.9375|2507|2305|1281|2339|1473|1721|1438|1000|1292|3092|1563|1776|2181|1933|1708|1529|18976966070|调查人在目的性不强时对事物的观察力和选择情况"
+}
