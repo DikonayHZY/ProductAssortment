@@ -1,0 +1,529 @@
+﻿{
+	"username": "王其",
+	"gender": "0",
+	"age": "20",
+	"major": "环境科学",
+	"grade": "大三",
+	"phone": "18107728484",
+	"condition": "benefit",
+	"order_number": 1,
+	"order_sign": "tea_shampoo",
+	"purpose": "用户倾向于什么样的产品",
+	"choice": {
+		"tea": {
+			"start": "2019-03-07_14:17:29",
+			"end": "2019-03-07_14:17:43",
+			"spend": 15,
+			"product": [
+				{
+					"rate": 0.2,
+					"六安瓜片": 0,
+					"玫瑰花茶": 1,
+					"东方美人": 0,
+					"坦洋工夫": 0,
+					"苦丁茶": 0
+				},
+				{
+					"rate": 0,
+					"水金龟": 0,
+					"茉莉花茶": 0,
+					"政和工夫": 0,
+					"永春佛手": 0,
+					"太平猴魁": 0
+				},
+				{
+					"rate": 0,
+					"正山小种": 0,
+					"信阳红": 0,
+					"狗牯脑茶": 0,
+					"杭白菊": 0,
+					"冻顶乌龙": 0
+				},
+				{
+					"rate": 0,
+					"千岛玉叶": 0,
+					"黄山贡菊": 0,
+					"凤凰单枞": 0,
+					"金骏眉": 0,
+					"雪水云绿": 0
+				}
+			],
+			"choose": "玫瑰花茶",
+			"choose_id": "18"
+		},
+		"shampoo": {
+			"start": "2019-03-07_14:21:05",
+			"end": "2019-03-07_14:21:38",
+			"spend": 33,
+			"product": [
+				{
+					"rate": 0,
+					"ALTERNA-αH": 0,
+					"ALTERNA-αD": 0,
+					"ALTERNA-ωF": 0,
+					"ALTERNA-αG": 0,
+					"ALTERNA-αJ": 0
+				},
+				{
+					"rate": 0,
+					"ALTERNA-βH": 0,
+					"ALTERNA-ωK": 0,
+					"ALTERNA-βJ": 0,
+					"ALTERNA-βD": 0,
+					"ALTERNA-βG": 0
+				},
+				{
+					"rate": 0.2,
+					"ALTERNA-ωN": 1,
+					"ALTERNA-γJ": 0,
+					"ALTERNA-γG": 0,
+					"ALTERNA-γD": 0,
+					"ALTERNA-γH": 0
+				},
+				{
+					"rate": 0,
+					"ALTERNA-ωS": 0,
+					"ALTERNA-δD": 0,
+					"ALTERNA-δG": 0,
+					"ALTERNA-δH": 0,
+					"ALTERNA-δJ": 0
+				}
+			],
+			"choose": "ALTERNA-ωN",
+			"choose_id": "15"
+		}
+	},
+	"questions": {
+		"tea": [
+			{
+				"id": "construal_1",
+				"answer": 7
+			},
+			{
+				"id": "construal_2",
+				"answer": 7
+			},
+			{
+				"id": "construal_3",
+				"answer": 6
+			},
+			{
+				"id": "construal_4",
+				"answer": 7
+			},
+			{
+				"id": "construal_5",
+				"answer": 8
+			},
+			{
+				"id": "construal_6",
+				"answer": 5
+			},
+			{
+				"id": "construal_7",
+				"answer": 2
+			},
+			{
+				"id": "construal_8",
+				"answer": 3
+			},
+			{
+				"id": "construal_9",
+				"answer": 4
+			},
+			{
+				"id": "construal_10",
+				"answer": 5
+			},
+			{
+				"id": "similarity_1",
+				"answer": 4
+			},
+			{
+				"id": "variety_1",
+				"answer": 9
+			},
+			{
+				"id": "variety_2",
+				"answer": 9
+			},
+			{
+				"id": "variety_3",
+				"answer": 9
+			},
+			{
+				"id": "labFamiliar_1",
+				"answer": 5
+			},
+			{
+				"id": "labFamiliar_1",
+				"answer": 3
+			},
+			{
+				"id": "quality_1",
+				"answer": 8
+			},
+			{
+				"id": "quality_1",
+				"answer": 2
+			},
+			{
+				"id": "quality_3",
+				"answer": 7
+			},
+			{
+				"id": "quality_4",
+				"answer": 7
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 1
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 1
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 1
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 2
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 1
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 1
+			}
+		],
+		"shampoo": [
+			{
+				"id": "construal_1",
+				"answer": 2
+			},
+			{
+				"id": "construal_3",
+				"answer": 7
+			},
+			{
+				"id": "construal_4",
+				"answer": 1
+			},
+			{
+				"id": "construal_5",
+				"answer": 1
+			},
+			{
+				"id": "construal_6",
+				"answer": 4
+			},
+			{
+				"id": "construal_7",
+				"answer": 5
+			},
+			{
+				"id": "construal_8",
+				"answer": 2
+			},
+			{
+				"id": "construal_9",
+				"answer": 4
+			},
+			{
+				"id": "construal_11",
+				"answer": 3
+			},
+			{
+				"id": "construal_12",
+				"answer": 1
+			},
+			{
+				"id": "construal_13",
+				"answer": 4
+			},
+			{
+				"id": "construal_14",
+				"answer": 4
+			},
+			{
+				"id": "construal_15",
+				"answer": 7
+			},
+			{
+				"id": "construal_16",
+				"answer": 1
+			},
+			{
+				"id": "construal_18",
+				"answer": 3
+			},
+			{
+				"id": "construal_19",
+				"answer": 1
+			},
+			{
+				"id": "construal_20",
+				"answer": 7
+			},
+			{
+				"id": "construal_21",
+				"answer": 1
+			},
+			{
+				"id": "construal_22",
+				"answer": 1
+			},
+			{
+				"id": "construal_23",
+				"answer": 1
+			},
+			{
+				"id": "construal_24",
+				"answer": 3
+			},
+			{
+				"id": "similarity_1",
+				"answer": 4
+			},
+			{
+				"id": "variety_1",
+				"answer": 9
+			},
+			{
+				"id": "variety_2",
+				"answer": 9
+			},
+			{
+				"id": "variety_3",
+				"answer": 9
+			},
+			{
+				"id": "labFamiliar_1",
+				"answer": 3
+			},
+			{
+				"id": "labFamiliar_1",
+				"answer": 3
+			},
+			{
+				"id": "quality_1",
+				"answer": 8
+			},
+			{
+				"id": "quality_1",
+				"answer": 1
+			},
+			{
+				"id": "quality_3",
+				"answer": 7
+			},
+			{
+				"id": "quality_4",
+				"answer": 7
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 1
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 1
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 2
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 3
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 1
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 1
+			}
+		]
+	},
+	"tests": {
+		"tea": [
+			{
+				"id": "tea_01",
+				"answer": 0,
+				"RT": 4808
+			},
+			{
+				"id": "tea_01",
+				"answer": 1,
+				"RT": 3384
+			},
+			{
+				"id": "tea_02",
+				"answer": 0,
+				"RT": 2756
+			},
+			{
+				"id": "tea_02",
+				"answer": 1,
+				"RT": 1788
+			},
+			{
+				"id": "tea_03",
+				"answer": 1,
+				"RT": 1168
+			},
+			{
+				"id": "tea_03",
+				"answer": 1,
+				"RT": 1101
+			},
+			{
+				"id": "tea_04",
+				"answer": 0,
+				"RT": 1067
+			},
+			{
+				"id": "tea_04",
+				"answer": 1,
+				"RT": 2102
+			},
+			{
+				"id": "tea_05",
+				"answer": 1,
+				"RT": 1124
+			},
+			{
+				"id": "tea_05",
+				"answer": 1,
+				"RT": 910
+			},
+			{
+				"id": "tea_06",
+				"answer": 1,
+				"RT": 2789
+			},
+			{
+				"id": "tea_06",
+				"answer": 0,
+				"RT": 2079
+			},
+			{
+				"id": "tea_07",
+				"answer": 1,
+				"RT": 3772
+			},
+			{
+				"id": "tea_07",
+				"answer": 1,
+				"RT": 1338
+			},
+			{
+				"id": "tea_08",
+				"answer": 1,
+				"RT": 2092
+			},
+			{
+				"id": "tea_08",
+				"answer": 0,
+				"RT": 1484
+			}
+		],
+		"shampoo": [
+			{
+				"id": "shampoo_01",
+				"answer": 1,
+				"RT": 1416
+			},
+			{
+				"id": "shampoo_02",
+				"answer": 1,
+				"RT": 1472
+			},
+			{
+				"id": "shampoo_03",
+				"answer": 1,
+				"RT": 494
+			},
+			{
+				"id": "shampoo_04",
+				"answer": 0,
+				"RT": 954
+			},
+			{
+				"id": "shampoo_05",
+				"answer": 1,
+				"RT": 562
+			},
+			{
+				"id": "shampoo_06",
+				"answer": 1,
+				"RT": 1113
+			},
+			{
+				"id": "shampoo_07",
+				"answer": 1,
+				"RT": 640
+			},
+			{
+				"id": "shampoo_08",
+				"answer": 0,
+				"RT": 538
+			},
+			{
+				"id": "shampoo_09",
+				"answer": 1,
+				"RT": 1146
+			},
+			{
+				"id": "shampoo_10",
+				"answer": 0,
+				"RT": 1113
+			},
+			{
+				"id": "shampoo_11",
+				"answer": 1,
+				"RT": 2192
+			},
+			{
+				"id": "shampoo_12",
+				"answer": 0,
+				"RT": 584
+			},
+			{
+				"id": "shampoo_13",
+				"answer": 1,
+				"RT": 561
+			},
+			{
+				"id": "shampoo_14",
+				"answer": 1,
+				"RT": 4826
+			},
+			{
+				"id": "shampoo_15",
+				"answer": 1,
+				"RT": 2272
+			},
+			{
+				"id": "shampoo_16",
+				"answer": 1,
+				"RT": 1540
+			}
+		]
+	},
+	"output": "1|2019-03-07_14:17:29|2019-03-07_14:21:05|王其|0|20|大三|4|环境科学|2|1|tea_shampoo|1|15|0.2|0|0|0|玫瑰花茶|18|7|7|6|7|8|5|2|3|4|5|4|9|9|9|5|3|8|2|7|7|1|1|1|3|2|1|1|0|1|0|1|1|1|0|1|1|1|1|0|1|1|1|0|0.6875|4808|3384|2756|1788|1168|1101|1067|2102|1124|910|2789|2079|3772|1338|2092|1484|33|0|0|0.2|0|ALTERNA-ωN|15|2|7|1|1|4|5|2|4|3|1|4|4|7|1|3|1|7|1|1|1|3|4|9|9|9|3|3|8|1|7|7|1|1|3|2|3|1|1|1|1|1|0|1|1|1|0|1|0|1|0|1|1|1|1|0.75|1416|1472|494|954|562|1113|640|538|1146|1113|2192|584|561|4826|2272|1540|18107728484|用户倾向于什么样的产品"
+}

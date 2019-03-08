@@ -1,0 +1,529 @@
+﻿{
+	"username": "曾智超",
+	"gender": "1",
+	"age": "22",
+	"major": "计算机",
+	"grade": "大三",
+	"phone": "15902013785",
+	"condition": "benefit",
+	"order_number": 1,
+	"order_sign": "tea_shampoo",
+	"purpose": "对人的短暂记忆的实验",
+	"choice": {
+		"tea": {
+			"start": "2019-03-08_10:52:48",
+			"end": "2019-03-08_10:54:47",
+			"spend": 118,
+			"product": [
+				{
+					"rate": 0,
+					"玫瑰花茶": 0,
+					"东方美人": 0,
+					"坦洋工夫": 0,
+					"六安瓜片": 0,
+					"苦丁茶": 0
+				},
+				{
+					"rate": 1,
+					"政和工夫": 1,
+					"茉莉花茶": 1,
+					"水金龟": 1,
+					"永春佛手": 1,
+					"太平猴魁": 1
+				},
+				{
+					"rate": 1,
+					"杭白菊": 1,
+					"正山小种": 1,
+					"冻顶乌龙": 1,
+					"信阳红": 1,
+					"狗牯脑茶": 1
+				},
+				{
+					"rate": 1,
+					"雪水云绿": 1,
+					"千岛玉叶": 1,
+					"金骏眉": 1,
+					"黄山贡菊": 1,
+					"凤凰单枞": 1
+				}
+			],
+			"choose": "冻顶乌龙",
+			"choose_id": "15"
+		},
+		"shampoo": {
+			"start": "2019-03-08_11:00:05",
+			"end": "2019-03-08_11:01:37",
+			"spend": 92,
+			"product": [
+				{
+					"rate": 1,
+					"ALTERNA-αJ": 1,
+					"ALTERNA-αG": 1,
+					"ALTERNA-αH": 1,
+					"ALTERNA-αD": 1,
+					"ALTERNA-ωF": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-βH": 1,
+					"ALTERNA-βD": 1,
+					"ALTERNA-ωK": 1,
+					"ALTERNA-βG": 1,
+					"ALTERNA-βJ": 1
+				},
+				{
+					"rate": 1,
+					"ALTERNA-γH": 1,
+					"ALTERNA-γJ": 1,
+					"ALTERNA-γD": 1,
+					"ALTERNA-ωN": 1,
+					"ALTERNA-γG": 1
+				},
+				{
+					"rate": 0,
+					"ALTERNA-ωS": 0,
+					"ALTERNA-δH": 0,
+					"ALTERNA-δJ": 0,
+					"ALTERNA-δG": 0,
+					"ALTERNA-δD": 0
+				}
+			],
+			"choose": "ALTERNA-γD",
+			"choose_id": "3"
+		}
+	},
+	"questions": {
+		"tea": [
+			{
+				"id": "construal_1",
+				"answer": 9
+			},
+			{
+				"id": "construal_2",
+				"answer": 8
+			},
+			{
+				"id": "construal_3",
+				"answer": 5
+			},
+			{
+				"id": "construal_4",
+				"answer": 8
+			},
+			{
+				"id": "construal_5",
+				"answer": 8
+			},
+			{
+				"id": "construal_6",
+				"answer": 3
+			},
+			{
+				"id": "construal_7",
+				"answer": 2
+			},
+			{
+				"id": "construal_8",
+				"answer": 3
+			},
+			{
+				"id": "construal_9",
+				"answer": 2
+			},
+			{
+				"id": "construal_10",
+				"answer": 4
+			},
+			{
+				"id": "similarity_1",
+				"answer": 4
+			},
+			{
+				"id": "variety_1",
+				"answer": 8
+			},
+			{
+				"id": "variety_2",
+				"answer": 8
+			},
+			{
+				"id": "variety_3",
+				"answer": 8
+			},
+			{
+				"id": "labFamiliar_1",
+				"answer": 5
+			},
+			{
+				"id": "labFamiliar_1",
+				"answer": 5
+			},
+			{
+				"id": "quality_1",
+				"answer": 5
+			},
+			{
+				"id": "quality_1",
+				"answer": 2
+			},
+			{
+				"id": "quality_3",
+				"answer": 5
+			},
+			{
+				"id": "quality_4",
+				"answer": 5
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 3
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 1
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 1
+			}
+		],
+		"shampoo": [
+			{
+				"id": "construal_1",
+				"answer": 4
+			},
+			{
+				"id": "construal_3",
+				"answer": 7
+			},
+			{
+				"id": "construal_4",
+				"answer": 4
+			},
+			{
+				"id": "construal_5",
+				"answer": 1
+			},
+			{
+				"id": "construal_6",
+				"answer": 7
+			},
+			{
+				"id": "construal_7",
+				"answer": 7
+			},
+			{
+				"id": "construal_8",
+				"answer": 1
+			},
+			{
+				"id": "construal_9",
+				"answer": 4
+			},
+			{
+				"id": "construal_11",
+				"answer": 7
+			},
+			{
+				"id": "construal_12",
+				"answer": 1
+			},
+			{
+				"id": "construal_13",
+				"answer": 7
+			},
+			{
+				"id": "construal_14",
+				"answer": 7
+			},
+			{
+				"id": "construal_15",
+				"answer": 7
+			},
+			{
+				"id": "construal_16",
+				"answer": 7
+			},
+			{
+				"id": "construal_18",
+				"answer": 4
+			},
+			{
+				"id": "construal_19",
+				"answer": 7
+			},
+			{
+				"id": "construal_20",
+				"answer": 7
+			},
+			{
+				"id": "construal_21",
+				"answer": 7
+			},
+			{
+				"id": "construal_22",
+				"answer": 1
+			},
+			{
+				"id": "construal_23",
+				"answer": 4
+			},
+			{
+				"id": "construal_24",
+				"answer": 1
+			},
+			{
+				"id": "similarity_1",
+				"answer": 6
+			},
+			{
+				"id": "variety_1",
+				"answer": 7
+			},
+			{
+				"id": "variety_2",
+				"answer": 7
+			},
+			{
+				"id": "variety_3",
+				"answer": 7
+			},
+			{
+				"id": "labFamiliar_1",
+				"answer": 5
+			},
+			{
+				"id": "labFamiliar_1",
+				"answer": 5
+			},
+			{
+				"id": "quality_1",
+				"answer": 5
+			},
+			{
+				"id": "quality_1",
+				"answer": 5
+			},
+			{
+				"id": "quality_3",
+				"answer": 5
+			},
+			{
+				"id": "quality_4",
+				"answer": 5
+			},
+			{
+				"id": "difficulty_1",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_2",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_3",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_4",
+				"answer": 3
+			},
+			{
+				"id": "difficulty_5",
+				"answer": 3
+			},
+			{
+				"id": "brandFamiliarity",
+				"answer": 1
+			},
+			{
+				"id": "productFamiliarity",
+				"answer": 3
+			}
+		]
+	},
+	"tests": {
+		"tea": [
+			{
+				"id": "tea_01",
+				"answer": 1,
+				"RT": 1191
+			},
+			{
+				"id": "tea_01",
+				"answer": 1,
+				"RT": 1092
+			},
+			{
+				"id": "tea_02",
+				"answer": 1,
+				"RT": 2653
+			},
+			{
+				"id": "tea_02",
+				"answer": 1,
+				"RT": 10212
+			},
+			{
+				"id": "tea_03",
+				"answer": 1,
+				"RT": 3092
+			},
+			{
+				"id": "tea_03",
+				"answer": 1,
+				"RT": 2137
+			},
+			{
+				"id": "tea_04",
+				"answer": 1,
+				"RT": 4340
+			},
+			{
+				"id": "tea_04",
+				"answer": 0,
+				"RT": 2046
+			},
+			{
+				"id": "tea_05",
+				"answer": 1,
+				"RT": 851
+			},
+			{
+				"id": "tea_05",
+				"answer": 1,
+				"RT": 2024
+			},
+			{
+				"id": "tea_06",
+				"answer": 0,
+				"RT": 5841
+			},
+			{
+				"id": "tea_06",
+				"answer": 1,
+				"RT": 6557
+			},
+			{
+				"id": "tea_07",
+				"answer": 1,
+				"RT": 2002
+			},
+			{
+				"id": "tea_07",
+				"answer": 1,
+				"RT": 4374
+			},
+			{
+				"id": "tea_08",
+				"answer": 1,
+				"RT": 7007
+			},
+			{
+				"id": "tea_08",
+				"answer": 1,
+				"RT": 1102
+			}
+		],
+		"shampoo": [
+			{
+				"id": "shampoo_01",
+				"answer": 1,
+				"RT": 7795
+			},
+			{
+				"id": "shampoo_02",
+				"answer": 0,
+				"RT": 5465
+			},
+			{
+				"id": "shampoo_03",
+				"answer": 1,
+				"RT": 5510
+			},
+			{
+				"id": "shampoo_04",
+				"answer": 0,
+				"RT": 1933
+			},
+			{
+				"id": "shampoo_05",
+				"answer": 1,
+				"RT": 1822
+			},
+			{
+				"id": "shampoo_06",
+				"answer": 0,
+				"RT": 1891
+			},
+			{
+				"id": "shampoo_07",
+				"answer": 1,
+				"RT": 1169
+			},
+			{
+				"id": "shampoo_08",
+				"answer": 0,
+				"RT": 4499
+			},
+			{
+				"id": "shampoo_09",
+				"answer": 1,
+				"RT": 2544
+			},
+			{
+				"id": "shampoo_10",
+				"answer": 0,
+				"RT": 1866
+			},
+			{
+				"id": "shampoo_11",
+				"answer": 1,
+				"RT": 1856
+			},
+			{
+				"id": "shampoo_12",
+				"answer": 1,
+				"RT": 1326
+			},
+			{
+				"id": "shampoo_13",
+				"answer": 1,
+				"RT": 2047
+			},
+			{
+				"id": "shampoo_14",
+				"answer": 0,
+				"RT": 4105
+			},
+			{
+				"id": "shampoo_15",
+				"answer": 1,
+				"RT": 1259
+			},
+			{
+				"id": "shampoo_16",
+				"answer": 1,
+				"RT": 2777
+			}
+		]
+	},
+	"output": "1|2019-03-08_10:52:48|2019-03-08_11:00:05|曾智超|1|22|大三|4|计算机|2|1|tea_shampoo|1|118|0|1|1|1|冻顶乌龙|15|9|8|5|8|8|3|2|3|2|4|4|8|8|8|5|5|5|2|5|5|3|3|3|3|3|1|1|1|1|1|1|1|1|1|0|1|1|0|1|1|1|1|1|0.875|1191|1092|2653|10212|3092|2137|4340|2046|851|2024|5841|6557|2002|4374|7007|1102|92|1|1|1|0|ALTERNA-γD|3|4|7|4|1|7|7|1|4|7|1|7|7|7|7|4|7|7|7|1|4|1|6|7|7|7|5|5|5|5|5|5|3|3|3|3|3|1|3|1|0|1|0|1|0|1|0|1|0|1|1|1|0|1|1|0.625|7795|5465|5510|1933|1822|1891|1169|4499|2544|1866|1856|1326|2047|4105|1259|2777|15902013785|对人的短暂记忆的实验"
+}
