@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		/*单选*/
+
+		.radio_box{ display:inline-block; position:relative;}
+
+		.radio_box input {display: none;}
+
+		.radio_box label{ width:15px; height:15px; position:absolute; top:10px; left:10px; border:2px solid #ef4949; border-radius:50%; background:#fff; cursor:pointer;}
+
+		.radio_box input:checked + label:after{ content:''; width:9px; height:9px; position:absolute; top:3px; left:3px; background:#ef4949; border-radius:50%;}
+
+		.check_box em{ margin:0 0 0 5px;}
+	</style>
+
+</head>
+<body>
+	<h2>单选框:</h2>
+
+    <span class="radio_box">
+
+		<input type="radio" id="radio_1" name="radio" checked>
+
+		<label for="radio_1"></label>
+
+        <em>选项1</em>
+
+    </span>  
+
+    <br><br>
+
+   
+    <span class="radio_box">
+
+        <input type="radio" id="radio_2" name="radio">
+
+        <label for="radio_2"></label>
+
+        <em>选项2</em>
+
+    </span>
+
+</body>
+</html>
